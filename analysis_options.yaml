@@ -1,0 +1,50 @@
+# This file configures the analyzer, which statically analyzes Dart code to
+# check for errors, warnings, and lints.
+#
+# The issues identified by the analyzer are surfaced in the UI of Dart-enabled
+# IDEs (https://dart.dev/tools#ides-and-editors). The analyzer can also be
+# invoked from the command line by running `flutter analyze`.
+#
+# The following line activates a set of recommended lints for Flutter apps,
+# packages, and plugins designed to encourage good coding practices.
+analyzer:
+  exclude:
+    - build/**
+    - android/**
+    - ios/**
+    - web/**
+    - windows/**
+    - macos/**
+    - linux/**
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  # The lint rules applied to this project can be customized in the
+  # section below to disable rules from the `package:flutter_lints/flutter.yaml`
+  # included above or to enable additional rules. A list of all available lints
+  # and their documentation is published at https://dart.dev/lints.
+  #
+  # Instead of disabling a lint rule for the entire project in the
+  # section below, it can also be suppressed for a single line of code
+  # or a specific dart file by using the `// ignore: name_of_lint` and
+  # `// ignore_for_file: name_of_lint` syntax on the line or in the file
+  # producing the lint.
+  rules:
+    # Delivery hygiene. `flutter_lints` already covers context-after-await, but
+    # these three are the remaining ways a fire-and-forget future, an
+    # undisposed subscription or an open sink survives code review: each one is
+    # a leak that only shows up as a frozen screen or a growing memory in a
+    # long session, never as an analyzer error.
+    unawaited_futures: true
+    cancel_subscriptions: true
+    close_sinks: true
+
+    # Leftovers that reach a shipped build: a debug print, an injected value a
+    # widget never reads, a magic number or string repeated in a list.
+    avoid_print: true
+    avoid_unused_constructor_parameters: true
+    use_named_constants: true
+    unnecessary_lambdas: true
+    unnecessary_parenthesis: true
+    no_adjacent_strings_in_list: true
+    prefer_iterable_whereType: true
