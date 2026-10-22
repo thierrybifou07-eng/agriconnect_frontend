@@ -1,0 +1,1064 @@
+{
+  "@@locale": "en",
+
+  "tagline": "The connected agricultural marketplace",
+
+  "splashLoading": "Loading your workspace…",
+
+  "loginGreeting": "Welcome back",
+  "loginSubtitle": "Sign in to access your workspace",
+  "emailLabel": "Email address",
+  "passwordLabel": "Password",
+  "showPassword": "Show password",
+  "hidePassword": "Hide password",
+  "signIn": "Sign in",
+  "signingIn": "Signing in…",
+  "demoAccountsTitle": "Demo accounts",
+  "demoAccountsHint": "Tap an account to pre-fill the form.",
+
+  "validationEmailRequired": "Please enter your email address.",
+  "validationEmailInvalid": "Invalid email address.",
+  "validationPasswordRequired": "Please enter your password.",
+
+  "errInvalidCredentials": "Invalid credentials. Please try again.",
+  "errNetwork": "Network error. Check your connection.",
+  "errTimeout": "The request timed out. Please retry.",
+  "errServer": "Server error. Please retry later.",
+  "errCache": "Unable to access local storage.",
+  "errUnexpected": "Something went wrong. Please try again.",
+  "errRoleNotAllowed": "Creating an account for this role is not allowed.",
+  "errAccessDenied": "Your session is not allowed to perform this action.",
+  "errSessionExpired": "Your session has expired. Please sign in again.",
+
+  "roleSupplier": "Supplier",
+  "roleBuyer": "Buyer",
+  "roleDriver": "Driver",
+  "roleAgent": "Agent",
+  "roleAdmin": "Administrator",
+  "roleRoot": "Root",
+
+  "sectionDashboard": "Dashboard",
+  "sectionProducts": "My products",
+  "sectionOrders": "Orders",
+  "sectionProfile": "Profile",
+  "sectionCatalog": "Catalog",
+  "sectionDeliveries": "Deliveries",
+  "sectionTrips": "Trips",
+  "sectionUsers": "Users",
+  "sectionAnalytics": "Analytics",
+  "sectionPlatform": "Platform",
+  "notificationsTitle": "Notifications",
+  "notificationsMarkAllRead": "Mark all read",
+  "notificationsMarkRead": "Mark as read",
+  "notificationsRead": "Read",
+  "notificationsUnreadCount": "Unread: {count}",
+  "@notificationsUnreadCount": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "notificationsDemoNotice": "Demonstration examples only. These are not live alerts and are not synchronized with a server.",
+  "notificationsEmptyTitle": "You’re all caught up",
+  "notificationsEmptyBody": "There are no demonstration notifications for this account.",
+  "notificationsLoadError": "Notifications could not be loaded.",
+  "notificationsCategoryOrders": "Orders",
+  "notificationsCategoryProducts": "Products",
+  "notificationsCategoryDeliveries": "Deliveries",
+  "notificationsCategorySupport": "Support",
+  "notificationsCategoryAdministration": "Administration",
+  "notificationBuyerOrderTitle": "Example order update",
+  "notificationBuyerOrderBody": "A sample order status update is shown here.",
+  "notificationBuyerDeliveryTitle": "Example delivery update",
+  "notificationBuyerDeliveryBody": "A sample delivery progress update is shown here.",
+  "notificationSupplierOrderTitle": "Example incoming order",
+  "notificationSupplierOrderBody": "A sample buyer order is listed in your orders.",
+  "notificationSupplierProductTitle": "Example product action",
+  "notificationSupplierProductBody": "A sample product may need attention in your catalog.",
+  "notificationDriverDeliveryTitle": "Example assigned delivery",
+  "notificationDriverDeliveryBody": "A sample delivery is available in your delivery list.",
+  "notificationDriverTripTitle": "Example trip update",
+  "notificationDriverTripBody": "A sample route update is available in your trips.",
+  "notificationAgentSupportTitle": "Example support request",
+  "notificationAgentSupportBody": "A sample buyer request is available in the support queue.",
+  "notificationAgentOrderTitle": "Example order task",
+  "notificationAgentOrderBody": "A sample order task is available for processing.",
+  "notificationAgentStockTitle": "Example stock review",
+  "notificationAgentStockBody": "A sample stock declaration is available for review.",
+  "notificationAdminProductTitle": "Example product review",
+  "notificationAdminProductBody": "A sample product is available in the moderation list.",
+  "notificationAdminOrderTitle": "Example order activity",
+  "notificationAdminOrderBody": "A sample order is available in the administration workspace.",
+  "notificationRootPlatformTitle": "Example platform activity",
+  "notificationRootPlatformBody": "A sample platform event is available in the platform console.",
+  "notificationRootStaffTitle": "Example staff activity",
+  "notificationRootStaffBody": "A sample staff event is available in the user directory.",
+
+  "underConstructionTitle": "Section under construction",
+  "underConstructionBody": "This section will be available in a coming stage of AgriConnect.",
+  "comingSoonBadge": "Coming soon",
+
+  "routeNotFoundTitle": "Page not found",
+  "routeNotFoundBody": "The address you requested does not exist.",
+  "routeNotFoundHome": "Back to home",
+
+  "dashboardWelcome": "Hello, {name}",
+  "@dashboardWelcome": {
+    "description": "Greeting shown on the role dashboard.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "dashboardSubtitle": "Welcome to your workspace",
+  "dashboardQuickActions": "Quick access",
+  "dashboardQuickOrders": "Received orders",
+
+  "signOut": "Sign out",
+  "signOutConfirmTitle": "Sign out",
+  "signOutConfirmBody": "Are you sure you want to sign out?",
+  "cancel": "Cancel",
+  "back": "Back",
+  "@back": {
+    "description": "Action that returns to the previous screen."
+  },
+  "confirm": "Confirm",
+
+  "connectedAs": "Signed in as",
+  "accountInfo": "Account information",
+  "profileEditAction": "Edit profile",
+  "profileEditTitle": "Edit your profile",
+  "profileEditDescription": "Update the name displayed on your account.",
+  "profileSaveAction": "Save changes",
+  "profileUpdated": "Profile updated on this device.",
+  "profileDiscardTitle": "Discard changes?",
+  "profileDiscardBody": "Your unsaved name change will be lost.",
+  "profileDiscardAction": "Discard",
+  "profileKeepEditingAction": "Keep editing",
+  "profileNameInvalid": "Enter a valid name between 2 and 80 characters.",
+  "permissionsTitle": "Permissions",
+  "capabilityBuyerSupport": "Buyer support",
+  "capabilityStockValidation": "Stock validation",
+  "capabilityOrderProcessing": "Order processing",
+  "capabilityPaymentFollowup": "Payment follow-up",
+
+  "onboardingSkip": "Skip",
+  "onboardingNext": "Next",
+  "onboardingGetStarted": "Get started",
+  "onboardingSlide1Title": "A connected agricultural marketplace",
+  "onboardingSlide1Body": "Buy and sell fresh, local produce directly between suppliers, buyers and traders.",
+  "onboardingSlide2Title": "Trusted deliveries",
+  "onboardingSlide2Body": "Reliable drivers move your goods, from the farm to the point of sale, with complete peace of mind.",
+  "onboardingSlide3Title": "A community that connects you",
+  "onboardingSlide3Body": "Suppliers, buyers, drivers and administrators united for transparent, efficient exchanges.",
+
+  "languageTitle": "Choose your language",
+  "languageSubtitle": "You can change it at any time.",
+  "languageFrench": "French",
+  "languageEnglish": "English",
+
+  "roleTitle": "What is your profile?",
+  "roleSubtitle": "Pick the role that matches you to personalize your experience.",
+  "roleSupplierDesc": "I sell my agricultural products",
+  "roleBuyerDesc": "I buy local products",
+  "roleDriverDesc": "I deliver and transport goods",
+  "roleAgentDesc": "I support users and the platform",
+  "roleAdminDesc": "I manage users and the platform",
+  "roleRootDesc": "I oversee the entire platform",
+
+  "loginSelectedRole": "Selected profile",
+  "loginChangeRole": "Change role",
+  "loginNoAccount": "Don't have an account?",
+  "loginCreateAccount": "Create an account",
+
+  "registerTitle": "Create your account",
+  "registerSubtitle": "Join the marketplace in seconds.",
+  "fullNameLabel": "Full name",
+  "confirmPasswordLabel": "Confirm password",
+  "registerCreate": "Create my account",
+  "registerCreating": "Creating…",
+  "registerAlreadyAccount": "Already have an account?",
+  "registerSignIn": "Sign in",
+
+  "validationNameRequired": "Please enter your full name.",
+  "validationPasswordMismatch": "Passwords do not match.",
+  "validationPasswordTooShort": "The password must be at least 8 characters long.",
+  "validationNameTooShort": "The name must be at least 2 characters long.",
+  "validationNameTooLong": "The name is too long (maximum 80 characters).",
+  "errEmailExists": "An account already exists with this email address.",
+  "errRoleMismatch": "This email address is not associated with the selected role.",
+  "registerAsRoleTitle": "You are registering as",
+
+  "retry": "Try again",
+  "seeAll": "See all",
+  "dashboardOverview": "Overview",
+
+  "productStatusOnSale": "On sale",
+  "productStatusOutOfStock": "Out of stock",
+  "declarationStatusDraft": "Draft",
+  "declarationStatusPendingReview": "Pending review",
+  "declarationStatusAdditionalInfoRequired": "Additional information required",
+  "declarationStatusUnderDiscussion": "Under discussion",
+  "declarationStatusApprovedForPublication": "Approved for publication",
+  "declarationStatusRejected": "Rejected",
+  "declarationStatusSection": "Declaration status",
+  "declarationDemoNotice": "Demo states. In the final version, the AgriConnect team reviews every declaration and contacts you before any publication.",
+  "declarationSaveDraftAction": "Save the draft",
+  "declarationSubmittedSnack": "Declaration submitted. It will be reviewed before any publication.",
+  "declarationDraftSavedSnack": "Draft saved. It is not visible to buyers.",
+  "supplierWelcomeTitle": "Welcome to your supplier workspace",
+  "supplierWelcomeGreeting": "Hello {name}",
+  "@supplierWelcomeGreeting": {
+    "placeholders": {
+      "name": {"type": "String"}
+    }
+  },
+  "supplierWelcomeBody": "Declare your products in a few minutes. The AgriConnect team reviews every declaration and contacts you before any publication: nothing is published automatically.",
+  "supplierWelcomePrimary": "Start declaring my products",
+  "supplierWelcomeSecondary": "Go to my dashboard",
+  "buyerWelcomeTitle": "Welcome to AgriConnect",
+  "buyerWelcomeGreeting": "Hello {name}",
+  "@buyerWelcomeGreeting": {
+    "placeholders": {
+      "name": {"type": "String"}
+    }
+  },
+  "buyerWelcomeBody": "Discover fresh products from local farmers and build your basket in a few minutes.",
+  "buyerWelcomePrimary": "Browse the catalog",
+  "buyerWelcomeDismiss": "Later",
+  "addProduct": "New product",
+  "editProduct": "Edit product",
+  "saveProduct": "Save product",
+  "savingProduct": "Saving…",
+  "productSaved": "Product saved successfully.",
+  "productsDeclaredStat": "Declared products",
+  "statConfirmedOrders": "Confirmed",
+  "ordersPendingStat": "Awaiting confirmation",
+  "productsEmptyTitle": "No products yet",
+  "productsEmptyBody": "Declare your first product. The AgriConnect team will review it before any publication.",
+  "productsNoResultTitle": "No product found",
+  "productsNoResultBody": "Change your search or switch the filter.",
+  "recentProducts": "Recent products",
+  "recentOrders": "Recent orders",
+  "supplierProductsOnSaleTitle": "Products currently on sale",
+  "dashboardManageProducts": "Manage my products",
+  "dashboardRefreshTooltip": "Refresh the dashboard",
+  "dashboardQuickAddProduct": "Add a product",
+  "dashboardQuickExplore": "Explore products",
+  "dashboardQuickCart": "My cart",
+  "dashboardQuickMyOrders": "My orders",
+  "dashboardCartEmpty": "Empty cart",
+  "buyerHeroSubtitle": "The finest produce from the farm, delivered to you.",
+  "ordersPlacedStat": "Orders placed",
+  "chatTitle": "Messages",
+  "roleStaffBadge": "Staff",
+  "chatEmptyTitle": "No conversation yet",
+  "chatEmptyBody": "Your exchanges with buyers and drivers will appear here.",
+  "chatThreadEmptyTitle": "Start the conversation",
+  "chatThreadEmptyBody": "Send a first message to kick things off.",
+  "chatComposerHint": "Your message",
+  "chatSend": "Send",
+  "productInStock": "{quantity} {unit} in stock",
+  "@productInStock": {
+    "placeholders": {
+      "quantity": {"type": "int"},
+      "unit": {"type": "String"}
+    }
+  },
+  "productNameLabel": "Product name",
+  "productDescriptionLabel": "Description",
+  "productPriceLabel": "Price",
+  "productStockLabel": "Available stock",
+  "productUnitLabel": "Unit",
+  "productDeclaredOn": "Declared on",
+  "addPhoto": "Add a photo",
+  "productNotFound": "Product not found",
+  "productNotFoundBody": "This product is no longer available. It may have been deleted.",
+  "productFormInfoSection": "Product information",
+  "productFormPricingSection": "Price and availability",
+  "productFormPhotosSection": "Product photos",
+  "productFormPhotosHint": "Add up to 5 photos. The first one becomes the main photo.",
+  "productFormPhotosEmpty": "No photo yet",
+  "productFormReplacePhoto": "Replace the photos",
+  "productFormRemovePhoto": "Remove the photo",
+  "productFormPickingPhotos": "Reading the photos…",
+  "productFormPhotoError": "These photos could not be read. Try again.",
+  "productFormPublishAction": "Submit the declaration",
+  "productFormUpdateAction": "Submit the changes",
+  "productFormStatusSection": "Visibility",
+  "productFormCreateHint": "Fill in the product, its price and its stock. Your declaration will be reviewed before any publication.",
+  "productFormEditHint": "Adjust the details, then submit your declaration again.",
+  "productFormStatusHint": "The status follows the stock you enter.",
+  "productFormOutOfStockHint": "A stock of 0 puts the product out of stock.",
+  "productFormSaveErrorTitle": "The product was not saved",
+  "productFormValidationSummary": "Fix the highlighted fields before saving.",
+  "discardChangesTitle": "Unsaved changes",
+  "discardChangesBody": "Your changes will be lost if you leave this page.",
+  "leaveFormAction": "Leave",
+  "keepEditingAction": "Keep editing",
+  "validationProductNameRequired": "Please enter a product name.",
+  "validationProductNameTooLong": "The product name is too long (maximum 80 characters).",
+  "validationPriceInvalid": "Please enter a valid price.",
+  "validationPricePositive": "The price must be greater than zero.",
+  "validationStockInvalid": "Please enter a valid quantity.",
+  "ordersEmptyTitle": "No orders yet",
+  "ordersEmptyBody": "Your customers' orders will appear here.",
+  "ordersNotFoundTitle": "Order not found",
+  "ordersNotFoundBody": "This order no longer exists or could not be loaded.",
+  "ordersBackToList": "Back to orders",
+  "ordersSearchHint": "Reference, buyer or product",
+  "ordersStatPending": "To confirm",
+  "ordersStatConfirmed": "Confirmed",
+  "ordersStatCancelled": "Cancelled",
+  "ordersResultsCount": "{count, plural, =0{No orders} =1{1 order} other{{count} orders}}",
+  "@ordersResultsCount": {
+    "placeholders": {"count": {"type": "int"}}
+  },
+  "ordersNoResultTitle": "No matching order",
+  "ordersNoResultBody": "Change your search or switch the filter to see your orders.",
+  "ordersClearFilters": "Clear",
+  "ordersConfirmedRevenue": "Confirmed revenue: {amount}",
+  "@ordersConfirmedRevenue": {
+    "placeholders": {"amount": {"type": "String"}}
+  },
+  "ordersMoreItems": "+{count} more",
+  "@ordersMoreItems": {
+    "placeholders": {"count": {"type": "int"}}
+  },
+  "ordersSummaryTitle": "Summary",
+  "ordersReferenceLabel": "Reference",
+  "ordersArticlesLabel": "Items",
+  "ordersArticlesCount": "{lines, plural, =1{1 line} other{{lines} lines}} · {total} unit(s)",
+  "@ordersArticlesCount": {
+    "placeholders": {
+      "lines": {"type": "int"},
+      "total": {"type": "int"}
+    }
+  },
+  "ordersBuyerTitle": "Buyer",
+  "ordersPhoneLabel": "Phone",
+  "ordersConfirmHelp": "Confirm the order to validate the parcel preparation.",
+  "ordersItemDetail": "{quantity} × {price}",
+  "@ordersItemDetail": {
+    "placeholders": {
+      "quantity": {"type": "int"},
+      "price": {"type": "String"}
+    }
+  },
+  "statusOrderPending": "Pending",
+  "statusOrderConfirmed": "Confirmed",
+  "statusOrderCancelled": "Cancelled",
+  "confirmOrderAction": "Confirm order",
+  "confirmingOrder": "Confirming…",
+  "orderConfirmed": "Order confirmed successfully.",
+  "confirmOrderError": "The confirmation failed.",
+  "confirmOrderHint": "The real status was not updated automatically. Verify it before any new attempt.",
+  "verifyStatus": "Check status",
+  "totalLabel": "Total",
+
+  "activeOrdersStat": "Active orders",
+  "statInTransit": "In transit",
+  "statDelivered": "Delivered",
+  "featuredCatalog": "Featured catalog",
+  "buyerOrdersEmptyTitle": "No orders yet",
+  "buyerOrdersEmptyBody": "Your orders will appear here.",
+  "buyerOrdersOngoingTitle": "In progress",
+  "buyerOrdersClosedTitle": "Finished",
+  "buyerOrdersFilterBody": "The selected status no longer holds any order. Clear the filter to see them all again.",
+  "catalogEmptyTitle": "No products available",
+  "catalogEmptyBody": "The catalog will fill up soon.",
+  "searchCatalog": "Search for a product",
+  "filterCategory": "Category",
+  "filterLocation": "Location",
+  "filterAll": "All",
+  "resultsCount": "{count} result(s)",
+  "@resultsCount": {
+    "description": "Number of products matching the catalog filters.",
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "catalogTotalProducts": "{count} products in the catalog",
+  "@catalogTotalProducts": {
+    "description": "Number of products in the catalog before filtering, read by accessibility.",
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "quantityIncrease": "Increase quantity",
+  "@quantityIncrease": {
+    "description": "Action that increases the quantity of a product."
+  },
+  "quantityDecrease": "Decrease quantity",
+  "@quantityDecrease": {
+    "description": "Action that decreases the quantity of a product."
+  },
+  "addToCart": "Add to cart",
+  "addedToCart": "{name} added to cart.",
+  "@addedToCart": {
+    "description": "Confirmation that a product was added to the cart.",
+    "placeholders": {
+      "name": {"type": "String"}
+    }
+  },
+  "goToCart": "Order",
+  "quantityLabel": "Quantity",
+  "cartTitle": "Cart",
+  "cartEmptyTitle": "Your cart is empty",
+  "cartEmptyBody": "Browse the catalog and add products.",
+  "viewCatalog": "View catalog",
+  "cartClear": "Clear",
+  "itemsCount": "{count} item(s)",
+  "@itemsCount": {
+    "description": "Number of items selected in a cart or an order.",
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "cartClearTitle": "Empty the cart?",
+  "cartClearBody": "The {count} selected item(s) will be removed from the cart.",
+  "@cartClearBody": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "cartClearConfirm": "Empty the cart",
+  "cartContinueShopping": "Continue shopping",
+  "cartStockRemaining": "Available stock: {count}",
+  "@cartStockRemaining": {
+    "description": "Remaining stock when it caps the quantity of a cart line.",
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "checkoutTitle": "Checkout",
+  "checkoutTitleAction": "Checkout",
+  "checkoutEditCart": "Edit the cart",
+  "checkoutSummary": "{count} item(s) · {total}",
+  "@checkoutSummary": {
+    "description": "Cart recap before the order is validated.",
+    "placeholders": {
+      "count": {"type": "int"},
+      "total": {"type": "String"}
+    }
+  },
+  "checkoutErrorTitle": "Order not placed",
+  "removeFromCart": "Remove from cart",
+  "checkoutDeliveryTitle": "Delivery address",
+  "checkoutAddressLabel": "Address",
+  "checkoutPhoneLabel": "Phone",
+  "checkoutNoteLabel": "Delivery note (optional)",
+  "checkoutItemsTitle": "Items",
+  "placeOrder": "Place the order",
+  "placingOrder": "Placing order…",
+  "confirmationTitle": "Order confirmed",
+  "confirmationHeadline": "Thank you, your order is registered.",
+  "confirmationBody": "The sellers received your request. You will be notified at every delivery step.",
+  "confirmationNextTitle": "What happens next?",
+  "confirmationStepSeller": "The seller prepares your products",
+  "confirmationStepDriver": "A driver is assigned to the delivery",
+  "confirmationStepDelivered": "You receive your products",
+  "confirmationTrackOrder": "Track my order",
+  "confirmationContinueShopping": "Continue shopping",
+  "productPricePerUnit": "/ {unit}",
+  "@productPricePerUnit": {
+    "description": "Selling unit displayed next to a product price.",
+    "placeholders": {
+      "unit": {"type": "String"}
+    }
+  },
+  "productAlreadyInCart": "Already in the cart · {count}",
+  "@productAlreadyInCart": {
+    "description": "Quantity of the product already present in the cart.",
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "validationAddressRequired": "Please enter an address.",
+  "validationPhoneRequired": "Please enter your phone number.",
+  "validationPhoneInvalid": "Invalid phone number.",
+  "orderDetailTitle": "Order details",
+  "orderItemsLabel": "Ordered items",
+  "buyerEmailLabel": "Buyer email",
+  "orderDateLabel": "Order date",
+  "orderNotFound": "Order not found.",
+  "orderNumber": "Order {id}",
+  "@orderNumber": {
+    "description": "Displayed reference of an order.",
+    "placeholders": {
+      "id": {"type": "String"}
+    }
+  },
+  "orderNumberItems": "{count} item(s)",
+  "@orderNumberItems": {
+    "description": "Number of items in an order.",
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "placedOn": "Placed on",
+  "orderCancelled": "This order has been cancelled.",
+  "trackingTitle": "Delivery tracking",
+  "trackingStepOf": "Step {current} of {total}",
+  "@trackingStepOf": {
+    "description": "Delivery progress shown in the order tracking.",
+    "placeholders": {
+      "current": {"type": "int"},
+      "total": {"type": "int"}
+    }
+  },
+  "trackingStepDone": "Done",
+  "statusOrderInTransit": "In transit",
+  "statusOrderDelivered": "Delivered",
+  "driverTitle": "Driver",
+  "driverAssignedLater": "A driver will be assigned after the order is confirmed.",
+  "contactDriver": "Contact driver",
+  "copyNumber": "Copy number",
+  "phoneCopied": "Number copied.",
+  "deliveryInfoLabel": "Delivery information",
+  "deliveryAddressLabel": "Delivery address",
+  "phoneLabel": "Phone",
+  "noteLabel": "Note",
+  "orderDeliveryStatusLabel": "Delivery status",
+  "sellerLabel": "Seller",
+
+  "driverStatusPickUp": "To collect",
+  "driverStatusInTransit": "In transit",
+  "driverStatusDelivered": "Delivered",
+  "driverStatToCollect": "To deliver",
+  "driverRecentDeliveries": "Recent deliveries",
+  "driverUpcomingTrips": "Upcoming trips",
+  "tripStatusUpcoming": "Upcoming",
+  "tripStatusActive": "In progress",
+  "tripStatusCompleted": "Completed",
+  "driverStartDelivery": "Start delivery",
+  "driverStartingDelivery": "Starting…",
+  "driverMarkDelivered": "Mark as delivered",
+  "driverMarkingDelivered": "Marking…",
+  "driverDeliveryStarted": "Delivery started.",
+  "driverDeliveryDelivered": "Delivery completed successfully.",
+  "driverActionError": "The action could not be completed.",
+  "driverActionHint": "The real status was not updated automatically. Verify it before any new action.",
+  "driverDetailTitle": "Delivery details",
+  "driverRouteTitle": "Route",
+  "driverPickupLabel": "Pickup point",
+  "driverScheduledLabel": "Scheduled on",
+  "driverContactCustomer": "Contact customer",
+  "driverCustomerLabel": "Customer",
+  "driverDeliveriesEmptyTitle": "No deliveries",
+  "driverDeliveriesEmptyBody": "Your deliveries will appear here.",
+  "driverTripsEmptyTitle": "No trips",
+  "driverTripsEmptyBody": "Your trips will appear here.",
+  "driverNoUpcomingTripTitle": "No upcoming trip",
+  "driverNoUpcomingTripBody": "Completed routes stay in your history.",
+  "driverDeliveryNotFound": "Delivery not found.",
+  "driverHeroSubtitle": "Your routes and deliveries, all in one place.",
+  "driverQuickDeliveries": "My deliveries",
+  "driverQuickActiveDelivery": "Active delivery",
+  "driverQuickHistory": "History",
+  "driverActiveDeliveriesCount": "{count} ongoing delivery(ies)",
+  "@driverActiveDeliveriesCount": {
+    "description": "Number of deliveries actually in progress for the driver.",
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "driverNoActiveDelivery": "No ongoing delivery",
+  "driverLoadingDeliveries": "Loading your deliveries\u2026",
+  "tripStopsProgress": "{completed} / {total} stops delivered",
+  "@tripStopsProgress": {
+    "description": "Progress of a trip: delivered stops over total stops.",
+    "placeholders": {
+      "completed": {"type": "int"},
+      "total": {"type": "int"}
+    }
+  },
+
+  "adminStatusPickUp": "To collect",
+  "adminStatusInTransit": "In transit",
+  "adminStatusDelivered": "Delivered",
+  "adminStatusCancelled": "Cancelled",
+  "adminDeliveriesTitle": "Deliveries",
+  "adminDeliveriesSearch": "Search a delivery…",
+  "adminDeliveriesEmptyTitle": "No deliveries",
+  "adminDeliveriesEmptyBody": "Deliveries under supervision will appear here.",
+  "adminDeliveryNotFound": "Delivery not found.",
+  "adminDeliveryPickup": "Pickup",
+  "adminDeliveryDestination": "Destination",
+  "adminDeliveryDistance": "Distance",
+  "adminDeliveryTracking": "Tracking",
+  "adminDeliveryBaseFee": "Base fee",
+  "adminDeliveryTotalFee": "Total fee",
+  "adminDeliveryMarkInTransit": "Mark as in transit",
+  "adminDeliveryMarkDelivered": "Mark as delivered",
+  "adminDeliveryAssignDriver": "Assign driver",
+  "adminDeliveryUpdated": "Delivery updated successfully.",
+  "adminDeliveryAssigned": "Driver assigned successfully.",
+  "adminDeliveryNoDriver": "No driver",
+  "adminDeliveryAssignHint": "Tap to assign a driver",
+  "adminDeliveryDriverCaption": "Driver {id}",
+  "adminDeliveryDriverNameHint": "Driver name…",
+  "adminDeliveryAssignAction": "Assign",
+  "adminActionFailed": "The operation failed. Please try again.",
+
+  "adminFilterAll": "All",
+  "adminModerationPending": "Pending",
+  "adminModerationValidated": "Live",
+  "adminModerationSuspended": "Suspended",
+  "adminModerationRejected": "Rejected",
+  "adminModerationArchived": "Archived",
+
+  "adminUsersSearchHint": "Search an account…",
+  "adminUsersEmpty": "No account matches",
+  "adminUsersUpdated": "User updated.",
+  "adminUserApprove": "Approve",
+  "adminUserRestrict": "Restrict",
+  "adminUserReactivate": "Reactivate",
+  "adminUserActivityCaption": "{orders, plural, =0{No orders} =1{1 order} other{{orders} orders}} · {products, plural, =0{No products} =1{1 product} other{{products} products}}",
+  "@adminUserActivityCaption": {
+    "placeholders": {
+      "orders": { "type": "int" },
+      "products": { "type": "int" }
+    }
+  },
+
+  "adminProductsTitle": "Product management",
+  "adminProductsSearchHint": "Search a product…",
+  "adminProductsEmpty": "No product matches",
+  "adminProductsUpdated": "Product updated.",
+  "adminProductsRejectTitle": "Reject product",
+  "adminProductsRejectReasonHint": "Reason for rejection…",
+  "adminProductsRejectAction": "Reject",
+  "adminProductApprove": "Approve",
+  "adminProductArchive": "Archive",
+
+  "categoryCereals": "Cereals",
+  "categoryVegetables": "Vegetables",
+  "categoryFruits": "Fruits",
+  "categoryTubers": "Tubers",
+  "categorySpices": "Spices",
+
+  "catalogSubtitle": "Fresh produce, straight from our partner suppliers.",
+  "catalogSearchClear": "Clear search",
+  "catalogFiltersReset": "Reset filters",
+  "catalogNoResultsTitle": "No matching product",
+  "catalogNoResultsBody": "Try another keyword or reset the filters to browse the whole catalog.",
+  "catalogProductStock": "{count} {unit} in stock",
+
+  "adminConsoleLabel": "Administration console",
+  "adminConsoleSubtitle": "Platform supervision",
+  "adminRefreshTooltip": "Refresh the dashboard",
+  "adminTodayLabel": "Today",
+  "adminOverviewTitle": "Key figures",
+  "adminStatRevenue": "Order revenue",
+  "adminStatRevenueCaption": "All orders recorded by the platform",
+  "adminStatUsers": "Users",
+  "adminStatProducts": "Products",
+  "adminStatOrders": "Orders",
+  "adminStatDeliveries": "Deliveries",
+  "adminStatUsersCaption": "{count, plural, =0{No account to validate} =1{1 account to validate} other{{count} accounts to validate}}",
+  "@adminStatUsersCaption": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "adminStatProductsCaption": "{count, plural, =0{No product to moderate} =1{1 product to moderate} other{{count} products to moderate}}",
+  "@adminStatProductsCaption": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "adminStatOrdersCaption": "{count, plural, =0{Nothing to confirm} =1{1 order to confirm} other{{count} orders to confirm}}",
+  "@adminStatOrdersCaption": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "adminStatDeliveriesCaption": "{count, plural, =0{No delivery running} =1{1 delivery running} other{{count} deliveries running}}",
+  "@adminStatDeliveriesCaption": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "adminAttentionTitle": "Needs your attention",
+  "adminAttentionUsers": "{count, plural, =1{Account awaiting validation} other{{count} accounts awaiting validation}}",
+  "@adminAttentionUsers": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "adminAttentionProducts": "{count, plural, =1{Product to moderate} other{{count} products to moderate}}",
+  "@adminAttentionProducts": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "adminAttentionOrders": "{count, plural, =1{Order awaiting confirmation} other{{count} orders awaiting confirmation}}",
+  "@adminAttentionOrders": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "adminAttentionDeliveries": "{count, plural, =1{Delivery in progress} other{{count} deliveries in progress}}",
+  "@adminAttentionDeliveries": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "adminAttentionClearTitle": "Nothing needs your attention",
+  "adminAttentionClearBody": "No account, product or order is waiting for a decision.",
+  "distributionEmpty": "Nothing to distribute yet",
+  "adminQuickActionsTitle": "Shortcuts",
+  "adminQuickActionProducts": "Products",
+  "adminQuickActionUsers": "Users",
+  "adminQuickActionDeliveries": "Deliveries",
+  "adminQuickActionAnalytics": "Analytics",
+  "adminDistributionTitle": "Distribution",
+  "adminDistributionOrders": "Orders by status",
+  "adminDistributionDeliveries": "Deliveries by status",
+  "adminDistributionUsers": "Users by role",
+  "adminDistributionProducts": "Products by status",
+  "adminAnalyticsTitle": "Platform analytics",
+  "adminAnalyticsSubtitle": "Indicators computed from the administration console data.",
+  "adminAnalyticsVolumeTitle": "Platform volume",
+  "adminAnalyticsIndicatorsTitle": "Tracking indicators",
+  "adminAnalyticsPublished": "Published products",
+  "adminAnalyticsActiveOrders": "Active orders",
+  "adminAnalyticsCompletedDeliveries": "Completed deliveries",
+  "adminAnalyticsEmpty": "No data to analyze yet",
+  "adminAnalyticsNoHistory": "History and time series are not available: the administration console does not record history yet.",
+  
+  "adminModerationTitle": "Products to moderate",
+  "adminModerationEmpty": "No product is waiting for a decision",
+  "adminRecentOrdersTitle": "Latest orders",
+  "adminRecentOrdersEmpty": "No order recorded yet",
+  "adminOrderBuyerCaption": "{buyer} · {amount}",
+  "@adminOrderBuyerCaption": {
+    "placeholders": {
+      "buyer": { "type": "String" },
+      "amount": { "type": "String" }
+    }
+  },
+  "adminSectionLoadError": "This section could not be loaded",
+  "adminSectionLoadErrorDetail": "{message}",
+  "@adminSectionLoadErrorDetail": {
+    "placeholders": { "message": { "type": "String" } }
+  },
+
+  "adminOrdersSearchHint": "Search an order…",
+  "adminOrdersEmptyTitle": "No orders",
+  "adminOrdersEmptyBody": "Recorded orders will appear here.",
+  "adminOrderArticlesCaption": "{count, plural, =0{No items} =1{1 item} other{{count} items}}",
+  "@adminOrderArticlesCaption": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "adminOrderDetailTitle": "Order detail",
+  "adminOrderNotFound": "Order not found.",
+  "adminOrderPlacedAt": "Placed on",
+  "adminOrderBuyerLabel": "Buyer",
+  "adminOrderSellerLabel": "Seller",
+  "adminOrderAccountCaption": "Account {id}",
+  "@adminOrderAccountCaption": {
+    "placeholders": { "id": { "type": "String" } }
+  },
+  "adminOrderAmountLabel": "Amount",
+  "adminOrderItemsTitle": "Items",
+  "adminOrderItemsEmpty": "No line items available for this order.",
+  "adminOrderLinkedDelivery": "Linked delivery",
+  "adminOrderStatusLockedTitle": "Status change unavailable",
+  "adminOrderStatusLockedBody": "The order status transition workflow is not defined yet. Order consultation remains available.",
+  "navMore": "More",
+  "navHome": "Home",
+
+  "superAdminConsoleSubtitle": "Platform-wide oversight of AgriConnect.",
+  "superAdminRefreshTooltip": "Refresh the console",
+  "superAdminConsoleLabel": "Platform console",
+  "superAdminTodayLabel": "Today",
+  "superAdminOverviewTitle": "Overview",
+  "superAdminStatUsers": "Users",
+  "superAdminStatUsersCaption": "{count} awaiting verification",
+  "@superAdminStatUsersCaption": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "superAdminStatStaff": "Staff",
+  "superAdminStatStaffCaption": "accounts active on the platform",
+  "superAdminStatProducts": "Products",
+  "superAdminStatProductsCaption": "{count} products published",
+  "@superAdminStatProductsCaption": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "superAdminStatDeliveries": "Deliveries",
+  "superAdminStatDeliveriesCaption": "{count} currently in progress",
+  "@superAdminStatDeliveriesCaption": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "superAdminStatGmv": "Gross merchandise value",
+  "superAdminStatGmvCaption": "Total value of every recorded order",
+  "superAdminAttentionTitle": "Needs supervision",
+  "superAdminAttentionModeration": "Products to moderate",
+  "superAdminAttentionUsers": "Accounts to verify",
+  "superAdminAttentionDeliveries": "Deliveries in progress",
+  "superAdminAttentionClearTitle": "The platform asks for nothing",
+  "superAdminAttentionClearBody": "No product, account or delivery is waiting for a decision.",
+  "superAdminQuickActionsTitle": "Quick access",
+  "superAdminQuickActionStaff": "Staff",
+  "superAdminQuickActionPlatform": "Platform",
+  "superAdminQuickActionAnalytics": "Analytics",
+  "superAdminDistributionTitle": "Distribution",
+  "superAdminDistributionStaff": "Staff by access level",
+  "superAdminActivityTitle": "Recent activity",
+  "superAdminActivityEmpty": "No activity recorded yet",
+  "superAdminActivityActor": "{actor} — {action}",
+  "@superAdminActivityActor": {
+    "placeholders": {
+      "actor": { "type": "String" },
+      "action": { "type": "String" }
+    }
+  },
+  "superAdminSectionLoadError": "This section could not be loaded",
+  "superAdminSectionLoadErrorDetail": "{message}",
+  "@superAdminSectionLoadErrorDetail": {
+    "placeholders": { "message": { "type": "String" } }
+  },
+  "superAdminStaffTitle": "Staff management",
+  "superAdminStaffSubtitle": "Staff accounts and the rights granted to them",
+  "superAdminStaffSearchHint": "Search a staff member",
+  "superAdminStaffSearchLabel": "Search the staff directory",
+  "superAdminStaffEmpty": "No staff member matches this search",
+  "superAdminStaffFilterRole": "Role",
+  "superAdminStaffFilterStatus": "Status",
+  "superAdminStaffStatusActive": "Active",
+  "superAdminStaffStatusSuspended": "Suspended",
+  "superAdminStaffReset": "Reset",
+  "superAdminStaffCount": "{count, plural, =0{No staff member} =1{1 staff member} other{{count} staff members}}",
+  "@superAdminStaffCount": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "superAdminStaffLastActive": "Active {date}",
+  "@superAdminStaffLastActive": {
+    "placeholders": { "date": { "type": "String" } }
+  },
+  "superAdminStaffPermissionCount": "{count, plural, =0{No rights} =1{1 right} other{{count} rights}}",
+  "@superAdminStaffPermissionCount": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "superAdminStaffProtectedNotice": "This account cannot be modified from the console.",
+  "superAdminStaffAccessReadOnly": "Read only",
+  "superAdminStaffAccessFull": "Full access",
+  "superAdminStaffAccessSuspended": "Suspended",
+  "superAdminStaffSuspend": "Suspend the account",
+  "superAdminStaffRestore": "Restore as read only",
+  "superAdminStaffPermissionsTitle": "Rights of {name}",
+  "@superAdminStaffPermissionsTitle": {
+    "placeholders": { "name": { "type": "String" } }
+  },
+  "superAdminStaffPermissionsSubtitle": "Settings rights stay reserved to the Root.",
+  "superAdminStaffPermissionsSave": "Save rights",
+  "superAdminStaffPermissionsSaved": "Rights updated",
+  "superAdminStaffSuspended": "Account suspended",
+  "superAdminStaffRestored": "Account restored as read only",
+  "superAdminPermissionMarketplace": "Marketplace",
+  "superAdminPermissionPeople": "Users",
+  "superAdminPermissionPlatform": "Platform",
+  "superAdminPermissionModerateProducts": "Moderate products",
+  "superAdminPermissionModerateProductsBody": "Approve, reject and archive products.",
+  "superAdminPermissionManageUsers": "Manage users",
+  "superAdminPermissionManageUsersBody": "Verify accounts and apply sanctions.",
+  "superAdminPermissionSuperviseDeliveries": "Supervise deliveries",
+  "superAdminPermissionSuperviseDeliveriesBody": "Follow routes and assign drivers.",
+  "superAdminPermissionManageOrders": "Process orders",
+  "superAdminPermissionManageOrdersBody": "Move orders to the right state.",
+  "superAdminPermissionViewAnalytics": "View analytics",
+  "superAdminPermissionViewAnalyticsBody": "Read the platform indicators.",
+  "superAdminPermissionManageSettings": "Manage settings",
+  "superAdminPermissionManageSettingsBody": "Change the platform configuration.",
+  "superAdminPermissionLocked": "Reserved to the Root",
+  "superAdminActionSuspended": "suspended",
+  "superAdminActionRestored": "restored",
+  "superAdminActionUpdatedPermissions": "changed the rights of",
+  "superAdminActionUpdatedSettings": "updated",
+  "superAdminActionModeratedProduct": "moderated the product",
+  "superAdminPlatformTitle": "System settings",
+  "superAdminPlatformSubtitle": "Configuration applied to the whole platform",
+  "superAdminSettingRegistrations": "Open registrations",
+  "superAdminSettingRegistrationsBody": "Allows or blocks the creation of new accounts.",
+  "superAdminSettingAutoModeration": "Automatic moderation",
+  "superAdminSettingAutoModerationBody": "Publishes products without a human review.",
+  "superAdminSettingAutoModerationWarning": "Products will be visible without review.",
+  "superAdminSettingMaintenance": "Maintenance mode",
+  "superAdminSettingMaintenanceBody": "Hides the marketplace from users.",
+  "superAdminSettingMaintenanceWarning": "The marketplace will be unreachable.",
+  "superAdminSettingSupportEmail": "Support email",
+  "superAdminSettingSupportEmailBody": "Address shown to users when they need help.",
+  "superAdminSettingSupportEmailInvalid": "Invalid email address.",
+  "superAdminSettingMaxUpload": "Maximum photo size",
+  "superAdminSettingMaxUploadBody": "In megabytes, applied to products.",
+  "superAdminSettingMaxUploadInvalid": "The value must be between 1 and 20 MB.",
+  "superAdminSettingUpdatedAt": "Last updated: {date}",
+  "@superAdminSettingUpdatedAt": {
+    "placeholders": { "date": { "type": "String" } }
+  },
+  "superAdminSettingsSaved": "Settings saved",
+  "superAdminSettingsUnsaved": "Unsaved changes. They take effect when you save.",
+  "superAdminSettingsSave": "Save settings",
+  "superAdminSettingsSaveError": "The settings could not be saved.",
+  "superAdminAnalyticsTitle": "Platform analytics",
+  "superAdminAnalyticsSubtitle": "Figures computed across the whole marketplace",
+  "superAdminAnalyticsAudience": "Accounts by role",
+  "superAdminAnalyticsOrdersCaption": "{count} orders in total",
+  "@superAdminAnalyticsOrdersCaption": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "superAdminAnalyticsOpenOrdersCaption": "{count} orders still open",
+  "@superAdminAnalyticsOpenOrdersCaption": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "superAdminAnalyticsPublishedCaption": "{count} products live",
+  "@superAdminAnalyticsPublishedCaption": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "superAdminAnalyticsNoTrend": "History is not available on this demo build yet.",
+  "superAdminAnalyticsStaffCaption": "Staff accounts",
+  "superAdminStatOrders": "Orders",
+  "superAdminAnalyticsOpenOrders": "Open orders",
+  "superAdminAnalyticsStaffShare": "Rights granted to staff",
+
+  "sectionBuyerSupport": "Buyer support",
+  "sectionStockValidation": "Stock validation",
+  "sectionOrderProcessing": "Order processing",
+  "sectionPaymentFollowup": "Payment follow-up",
+
+  "agentNavigationGroupOperations": "Operations",
+  "agentNavigationGroupSupport": "Support",
+  "agentNavigationGroupFollowup": "Follow-up",
+
+  "agentConsoleSubtitle": "Buyer support, stock, orders and payments in one workspace.",
+  "agentRefreshTooltip": "Refresh the workspace",
+  "agentTodayLabel": "Today",
+  "agentOverviewTitle": "Overview",
+  "agentQuickActionsTitle": "Quick access",
+  "agentAttentionTitle": "Needs your attention",
+  "agentAttentionClearTitle": "Nothing waiting",
+  "agentAttentionClearBody": "No request or case needs a decision right now.",
+  "agentNoCapabilitiesTitle": "No operational access",
+  "agentNoCapabilitiesBody": "No agent capability has been granted to your account yet.",
+  "agentLoading": "Loading the workspace\u2026",
+  "agentRefreshing": "Refreshing\u2026",
+  "agentStaleQueueCount": "Last known value: {count}",
+  "@agentStaleQueueCount": {
+    "placeholders": { "count": { "type": "String" } }
+  },
+  "agentSectionLoadError": "This section could not be loaded",
+  "agentSectionLoadErrorDetail": "{message}",
+  "@agentSectionLoadErrorDetail": {
+    "placeholders": { "message": { "type": "String" } }
+  },
+  "agentAccessDeniedTitle": "Access not allowed",
+  "agentAccessDeniedBody": "Your account does not hold the capability required for this section.",
+  "agentActionError": "The action could not be completed.",
+  "agentActionHint": "The real status was not updated automatically. Verify it before any new action.",
+  "agentSearchHint": "Search a reference or a name",
+  "agentFilterStatus": "Status",
+  "agentFilterAll": "All",
+  "agentClearFilters": "Reset",
+  "agentResultsCount": "{count, plural, =0{No case} =1{1 case} other{{count} cases}}",
+  "@agentResultsCount": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "agentEmptyTitle": "Nothing to show",
+  "agentEmptyBody": "New cases will appear here.",
+  "agentNoResultTitle": "No matching case",
+  "agentNoResultBody": "Change the search or the status filter.",
+  "agentDetailTitle": "Case details",
+  "agentReferenceLabel": "Reference",
+  "agentReceivedLabel": "Received on",
+  "agentCloseAction": "Close",
+  "agentBackToList": "Back to the list",
+
+  "agentStatSupport": "Support requests",
+  "agentStatSupportCaption": "{count, plural, =0{Nothing open} =1{1 open request} other{{count} open requests}}",
+  "@agentStatSupportCaption": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "agentStatStock": "Stock cases",
+  "agentStatStockCaption": "{count, plural, =0{Nothing pending} =1{1 pending case} other{{count} pending cases}}",
+  "@agentStatStockCaption": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "agentStatOrders": "Orders to process",
+  "agentStatOrdersCaption": "{count, plural, =0{Nothing to process} =1{1 order to process} other{{count} orders to process}}",
+  "@agentStatOrdersCaption": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "agentStatPayments": "Payments to follow",
+  "agentStatPaymentsCaption": "{count, plural, =0{Nothing to follow} =1{1 payment to follow} other{{count} payments to follow}}",
+  "@agentStatPaymentsCaption": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "agentAttentionSupport": "{count, plural, =1{Request awaiting an answer} other{{count} requests awaiting an answer}}",
+  "@agentAttentionSupport": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "agentAttentionStock": "{count, plural, =1{Stock case to validate} other{{count} stock cases to validate}}",
+  "@agentAttentionStock": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "agentAttentionOrders": "{count, plural, =1{Order to process} other{{count} orders to process}}",
+  "@agentAttentionOrders": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "agentAttentionPayments": "{count, plural, =1{Payment to follow up} other{{count} payments to follow up}}",
+  "@agentAttentionPayments": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "agentQuickSupport": "Buyer support",
+  "agentQuickStock": "Stock validation",
+  "agentQuickOrders": "Order processing",
+  "agentQuickPayments": "Payment follow-up",
+
+  "agentSupportBuyerLabel": "Buyer",
+  "agentSupportSubjectLabel": "Subject",
+  "agentSupportPriorityLabel": "Priority",
+  "agentSupportPriorityHigh": "High",
+  "agentSupportPriorityNormal": "Normal",
+  "agentSupportStatusOpen": "Open",
+  "agentSupportStatusInProgress": "In progress",
+  "agentSupportStatusResolved": "Resolved",
+  "agentSupportTakeAction": "Take charge",
+  "agentSupportResolveAction": "Mark as resolved",
+  "agentSupportUpdated": "Request updated.",
+  "agentSupportEmptyTitle": "No support request",
+  "agentSupportEmptyBody": "Buyer requests will appear here.",
+
+  "agentStockProductLabel": "Product",
+  "agentStockSupplierLabel": "Supplier",
+  "agentStockLocationLabel": "Location",
+  "agentStockDeclaredQty": "{quantity} {unit} declared",
+  "@agentStockDeclaredQty": {
+    "placeholders": {
+      "quantity": { "type": "int" },
+      "unit": { "type": "String" }
+    }
+  },
+  "agentStockStatusPending": "Pending",
+  "agentStockStatusValidated": "Validated",
+  "agentStockStatusRejected": "Rejected",
+  "agentStockValidateAction": "Validate",
+  "agentStockRejectAction": "Reject",
+  "agentStockUpdated": "Case updated.",
+  "agentStockEmptyTitle": "No stock case",
+  "agentStockEmptyBody": "Declared stock to check will appear here.",
+
+  "agentOrderBuyerLabel": "Buyer",
+  "agentOrderSellerLabel": "Seller",
+  "agentOrderItemsLabel": "Items",
+  "agentOrderAmountLabel": "Amount",
+  "agentOrderStatusAwaiting": "To process",
+  "agentOrderStatusProcessing": "In progress",
+  "agentOrderStatusProcessed": "Processed",
+  "agentOrderStartAction": "Start processing",
+  "agentOrderCompleteAction": "Mark as processed",
+  "agentOrderUpdated": "Order updated.",
+  "agentOrderEmptyTitle": "No order to process",
+  "agentOrderEmptyBody": "Orders to move forward will appear here.",
+
+  "agentPaymentPayerLabel": "Payer",
+  "agentPaymentAmountLabel": "Amount",
+  "agentPaymentMethodLabel": "Method",
+  "agentPaymentDueLabel": "Due on",
+  "agentPaymentStatusDue": "To follow up",
+  "agentPaymentStatusAwaiting": "Awaiting confirmation",
+  "agentPaymentStatusConfirmed": "Confirmed",
+  "agentPaymentConfirmAction": "Confirm receipt",
+  "agentPaymentConfirmHelp": "Only confirm once the payment is actually received by the platform.",
+  "agentPaymentNotReceivedNotice": "This payment is not confirmed as received.",
+  "agentPaymentUpdated": "Payment updated.",
+  "agentPaymentEmptyTitle": "No payment to follow",
+  "agentPaymentEmptyBody": "Payments to track will appear here."
+}

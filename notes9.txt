@@ -1,0 +1,7 @@
+﻿Chat — domain
+  ChatConversation {conversationId, partnerName, partnerRole, partnerInitials, unreadCount, lastMessage, lastMessageAt, scheduledAt, createdAt}
+  ChatMessage {id, conversationId, senderId, senderName, text, sentAt, isMine, status}
+  ChatStatus s = s
+
+Chat — data
+  DemoChatRepository { fetchConversations(), fetchMessages(convId), sendMessage(convId, senderId, text) }
