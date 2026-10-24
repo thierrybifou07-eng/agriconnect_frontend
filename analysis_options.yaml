@@ -9,6 +9,9 @@
 # packages, and plugins designed to encourage good coding practices.
 analyzer:
   exclude:
+    - lib_legacy/**
+    - test_legacy/**
+    - assets_legacy/**
     - build/**
     - android/**
     - ios/**

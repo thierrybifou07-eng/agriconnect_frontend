@@ -4585,6 +4585,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Payments to track will appear here.'**
   String get agentPaymentEmptyBody;
+
+  /// No description provided for @migrationInProgress.
+  ///
+  /// In en, this message translates to:
+  /// **'AgriConnect — migration in progress'**
+  String get migrationInProgress;
 }
 
 class _AppLocalizationsDelegate

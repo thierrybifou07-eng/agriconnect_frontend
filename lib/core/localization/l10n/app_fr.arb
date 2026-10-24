@@ -1060,5 +1060,6 @@
   "agentPaymentNotReceivedNotice": "Ce paiement n'est pas confirmé comme reçu.",
   "agentPaymentUpdated": "Paiement mis à jour.",
   "agentPaymentEmptyTitle": "Aucun paiement à suivre",
-  "agentPaymentEmptyBody": "Les paiements à suivre apparaîtront ici."
+  "agentPaymentEmptyBody": "Les paiements à suivre apparaîtront ici.",
+  "migrationInProgress": "AgriConnect — migration en cours"
 }

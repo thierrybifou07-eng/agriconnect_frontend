@@ -2634,4 +2634,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get agentPaymentEmptyBody => 'Payments to track will appear here.';
+
+  @override
+  String get migrationInProgress => 'AgriConnect — migration in progress';
 }
