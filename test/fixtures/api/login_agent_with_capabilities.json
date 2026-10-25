@@ -1,0 +1,35 @@
+{
+  "user": {
+    "id": 205,
+    "firstname": "Agent",
+    "lastname": "Complet",
+    "email": "agent@example.test",
+    "phone": "+237612345679",
+    "location": null,
+    "role": { "code": "AGENT", "label": "Agent" },
+    "userStatus": { "code": "ACTIVE", "label": "Actif" },
+    "emailVerified": true,
+    "profileVerificationStatus": "VERIFIED",
+    "referralCode": null,
+    "createdAt": "2026-10-25T12:00:00.000Z",
+    "agent": {
+      "id": 7,
+      "displayName": "Agent complet",
+      "kind": "HUMAN",
+      "autonomy": "SUGGEST_ONLY",
+      "capabilities": [
+        "BUYER_SUPPORT",
+        "DISPATCH_COORDINATION",
+        "DISPUTE_HANDLING",
+        "LISTING_MANAGEMENT",
+        "ORDER_PROCESSING",
+        "PAYMENT_FOLLOWUP",
+        "STOCK_VALIDATION",
+        "SUPPLIER_SUPPORT",
+        "USER_VERIFICATION"
+      ]
+    }
+  },
+  "accessToken": "fixture-access-token",
+  "refreshToken": "fixture-refresh-token"
+}

@@ -2718,4 +2718,163 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get sessionRevokedNotice => 'Votre session a été fermée.';
+
+  @override
+  String get authInvalidCredentials =>
+      'Adresse e-mail ou mot de passe incorrect.';
+
+  @override
+  String get authAccountSuspended =>
+      'Ce compte a été suspendu. Contactez notre équipe.';
+
+  @override
+  String get authTooManyAttempts =>
+      'Trop de tentatives. Veuillez patienter avant de réessayer.';
+
+  @override
+  String get authUnexpectedError =>
+      'Une erreur est survenue. Veuillez réessayer.';
+
+  @override
+  String get authNetworkError =>
+      'Connexion impossible. Vérifiez votre réseau puis réessayez.';
+
+  @override
+  String get authForgotLink => 'Mot de passe oublié ?';
+
+  @override
+  String get authNoAccount => 'Pas encore de compte ?';
+
+  @override
+  String get authCreateAccount => 'Créer un compte';
+
+  @override
+  String get authRolePrompt => 'Comment souhaitez-vous utiliser AgriConnect ?';
+
+  @override
+  String get authSupplierChoice => 'Je vends (fournisseur)';
+
+  @override
+  String get authBuyerChoice => 'J\'achète (acheteur)';
+
+  @override
+  String get authLanguageLabel => 'Langue';
+
+  @override
+  String get authContinue => 'Continuer';
+
+  @override
+  String get authFirstName => 'Prénom';
+
+  @override
+  String get authLastName => 'Nom';
+
+  @override
+  String get authPhone => 'Téléphone';
+
+  @override
+  String get authLocation => 'Ville ou localité (facultatif)';
+
+  @override
+  String get authFarmName => 'Nom de l\'exploitation';
+
+  @override
+  String get authBuyerType => 'Type d\'acheteur';
+
+  @override
+  String get authBusinessName => 'Nom de l\'entreprise (facultatif)';
+
+  @override
+  String get authReferralCode => 'Code de parrainage (facultatif)';
+
+  @override
+  String get authBuyerRetailer => 'Détaillant';
+
+  @override
+  String get authBuyerFarmer => 'Agriculteur';
+
+  @override
+  String get authBuyerWholesaler => 'Grossiste';
+
+  @override
+  String get authBuyerOther => 'Autre';
+
+  @override
+  String get authPasswordHelp =>
+      '8 caractères minimum, une minuscule, une majuscule, un chiffre et un caractère parmi @\$!%*?&. Quatre caractères identiques à la suite sont interdits.';
+
+  @override
+  String get authAcceptTerms => 'J\'accepte les';
+
+  @override
+  String get authGeneralTerms => 'Conditions générales d\'utilisation';
+
+  @override
+  String get authRoleTerms => 'conditions de consignation fournisseur';
+
+  @override
+  String get authBuyerTerms => 'conditions d\'achat';
+
+  @override
+  String get authTermsRequired =>
+      'Veuillez accepter les deux documents pour continuer.';
+
+  @override
+  String get authRegistrationConflict =>
+      'Cette adresse e-mail ou ce téléphone est déjà utilisé.';
+
+  @override
+  String get authCreate => 'Créer mon compte';
+
+  @override
+  String get authCreating => 'Création du compte…';
+
+  @override
+  String get authHaveAccount => 'Vous avez déjà un compte ?';
+
+  @override
+  String get authForgotIntro =>
+      'Saisissez votre adresse e-mail. Si elle est associée à un compte, vous recevrez un lien de réinitialisation.';
+
+  @override
+  String get authSendReset => 'Envoyer le lien';
+
+  @override
+  String get authResetSent =>
+      'Si cette adresse correspond à un compte, un lien de réinitialisation vient d\'être envoyé.';
+
+  @override
+  String get authBackToLogin => 'Retour à la connexion';
+
+  @override
+  String get authLegalUnavailable =>
+      'Ce document n\'est pas disponible pour le moment.';
+
+  @override
+  String get authEmailUnverified =>
+      'Veuillez vérifier votre adresse e-mail pour profiter de toutes les fonctionnalités.';
+
+  @override
+  String get authResendVerification => 'Renvoyer';
+
+  @override
+  String get authVerificationSent =>
+      'Un nouveau lien de vérification a été envoyé.';
+
+  @override
+  String get authVerificationWait =>
+      'Veuillez attendre 5 minutes avant de demander un autre lien.';
+
+  @override
+  String get authPasswordPolicyInvalid =>
+      'Le mot de passe ne respecte pas les critères affichés.';
+
+  @override
+  String get authOnboardingSubtitle => 'Le marché agricole connecté';
+
+  @override
+  String get authValueInvalid => 'Cette valeur n\'est pas valide.';
+
+  @override
+  String get authOptional => 'Facultatif';
 }

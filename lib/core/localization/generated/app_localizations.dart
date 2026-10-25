@@ -4681,6 +4681,294 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Your session has been closed.'**
   String get sessionRevokedNotice;
+
+  /// No description provided for @authInvalidCredentials.
+  ///
+  /// In en, this message translates to:
+  /// **'Incorrect email address or password.'**
+  String get authInvalidCredentials;
+
+  /// No description provided for @authAccountSuspended.
+  ///
+  /// In en, this message translates to:
+  /// **'This account has been suspended. Contact our team.'**
+  String get authAccountSuspended;
+
+  /// No description provided for @authTooManyAttempts.
+  ///
+  /// In en, this message translates to:
+  /// **'Too many attempts. Please wait before trying again.'**
+  String get authTooManyAttempts;
+
+  /// No description provided for @authUnexpectedError.
+  ///
+  /// In en, this message translates to:
+  /// **'Something went wrong. Please try again.'**
+  String get authUnexpectedError;
+
+  /// No description provided for @authNetworkError.
+  ///
+  /// In en, this message translates to:
+  /// **'Could not connect. Check your network and try again.'**
+  String get authNetworkError;
+
+  /// No description provided for @authForgotLink.
+  ///
+  /// In en, this message translates to:
+  /// **'Forgot password?'**
+  String get authForgotLink;
+
+  /// No description provided for @authNoAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Don\'t have an account yet?'**
+  String get authNoAccount;
+
+  /// No description provided for @authCreateAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Create an account'**
+  String get authCreateAccount;
+
+  /// No description provided for @authRolePrompt.
+  ///
+  /// In en, this message translates to:
+  /// **'How would you like to use AgriConnect?'**
+  String get authRolePrompt;
+
+  /// No description provided for @authSupplierChoice.
+  ///
+  /// In en, this message translates to:
+  /// **'I sell (supplier)'**
+  String get authSupplierChoice;
+
+  /// No description provided for @authBuyerChoice.
+  ///
+  /// In en, this message translates to:
+  /// **'I buy (buyer)'**
+  String get authBuyerChoice;
+
+  /// No description provided for @authLanguageLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Language'**
+  String get authLanguageLabel;
+
+  /// No description provided for @authContinue.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue'**
+  String get authContinue;
+
+  /// No description provided for @authFirstName.
+  ///
+  /// In en, this message translates to:
+  /// **'First name'**
+  String get authFirstName;
+
+  /// No description provided for @authLastName.
+  ///
+  /// In en, this message translates to:
+  /// **'Last name'**
+  String get authLastName;
+
+  /// No description provided for @authPhone.
+  ///
+  /// In en, this message translates to:
+  /// **'Phone'**
+  String get authPhone;
+
+  /// No description provided for @authLocation.
+  ///
+  /// In en, this message translates to:
+  /// **'City or locality (optional)'**
+  String get authLocation;
+
+  /// No description provided for @authFarmName.
+  ///
+  /// In en, this message translates to:
+  /// **'Farm name'**
+  String get authFarmName;
+
+  /// No description provided for @authBuyerType.
+  ///
+  /// In en, this message translates to:
+  /// **'Buyer type'**
+  String get authBuyerType;
+
+  /// No description provided for @authBusinessName.
+  ///
+  /// In en, this message translates to:
+  /// **'Business name (optional)'**
+  String get authBusinessName;
+
+  /// No description provided for @authReferralCode.
+  ///
+  /// In en, this message translates to:
+  /// **'Referral code (optional)'**
+  String get authReferralCode;
+
+  /// No description provided for @authBuyerRetailer.
+  ///
+  /// In en, this message translates to:
+  /// **'Retailer'**
+  String get authBuyerRetailer;
+
+  /// No description provided for @authBuyerFarmer.
+  ///
+  /// In en, this message translates to:
+  /// **'Farmer'**
+  String get authBuyerFarmer;
+
+  /// No description provided for @authBuyerWholesaler.
+  ///
+  /// In en, this message translates to:
+  /// **'Wholesaler'**
+  String get authBuyerWholesaler;
+
+  /// No description provided for @authBuyerOther.
+  ///
+  /// In en, this message translates to:
+  /// **'Other'**
+  String get authBuyerOther;
+
+  /// No description provided for @authPasswordHelp.
+  ///
+  /// In en, this message translates to:
+  /// **'At least 8 characters, one lowercase, one uppercase, one number and one of @\$!%*?&. Four identical characters in a row are not allowed.'**
+  String get authPasswordHelp;
+
+  /// No description provided for @authAcceptTerms.
+  ///
+  /// In en, this message translates to:
+  /// **'I accept the'**
+  String get authAcceptTerms;
+
+  /// No description provided for @authGeneralTerms.
+  ///
+  /// In en, this message translates to:
+  /// **'Terms of use'**
+  String get authGeneralTerms;
+
+  /// No description provided for @authRoleTerms.
+  ///
+  /// In en, this message translates to:
+  /// **'supplier consignment terms'**
+  String get authRoleTerms;
+
+  /// No description provided for @authBuyerTerms.
+  ///
+  /// In en, this message translates to:
+  /// **'buyer terms'**
+  String get authBuyerTerms;
+
+  /// No description provided for @authTermsRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Please accept both documents to continue.'**
+  String get authTermsRequired;
+
+  /// No description provided for @authRegistrationConflict.
+  ///
+  /// In en, this message translates to:
+  /// **'This email address or phone number is already in use.'**
+  String get authRegistrationConflict;
+
+  /// No description provided for @authCreate.
+  ///
+  /// In en, this message translates to:
+  /// **'Create my account'**
+  String get authCreate;
+
+  /// No description provided for @authCreating.
+  ///
+  /// In en, this message translates to:
+  /// **'Creating account…'**
+  String get authCreating;
+
+  /// No description provided for @authHaveAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Already have an account?'**
+  String get authHaveAccount;
+
+  /// No description provided for @authForgotIntro.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your email address. If it is associated with an account, you will receive a reset link.'**
+  String get authForgotIntro;
+
+  /// No description provided for @authSendReset.
+  ///
+  /// In en, this message translates to:
+  /// **'Send the link'**
+  String get authSendReset;
+
+  /// No description provided for @authResetSent.
+  ///
+  /// In en, this message translates to:
+  /// **'If this address matches an account, a password reset link has been sent.'**
+  String get authResetSent;
+
+  /// No description provided for @authBackToLogin.
+  ///
+  /// In en, this message translates to:
+  /// **'Back to sign in'**
+  String get authBackToLogin;
+
+  /// No description provided for @authLegalUnavailable.
+  ///
+  /// In en, this message translates to:
+  /// **'This document is not available right now.'**
+  String get authLegalUnavailable;
+
+  /// No description provided for @authEmailUnverified.
+  ///
+  /// In en, this message translates to:
+  /// **'Verify your email address to access all features.'**
+  String get authEmailUnverified;
+
+  /// No description provided for @authResendVerification.
+  ///
+  /// In en, this message translates to:
+  /// **'Resend'**
+  String get authResendVerification;
+
+  /// No description provided for @authVerificationSent.
+  ///
+  /// In en, this message translates to:
+  /// **'A new verification link has been sent.'**
+  String get authVerificationSent;
+
+  /// No description provided for @authVerificationWait.
+  ///
+  /// In en, this message translates to:
+  /// **'Please wait 5 minutes before requesting another link.'**
+  String get authVerificationWait;
+
+  /// No description provided for @authPasswordPolicyInvalid.
+  ///
+  /// In en, this message translates to:
+  /// **'The password does not meet the requirements shown.'**
+  String get authPasswordPolicyInvalid;
+
+  /// No description provided for @authOnboardingSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'The connected agricultural marketplace'**
+  String get authOnboardingSubtitle;
+
+  /// No description provided for @authValueInvalid.
+  ///
+  /// In en, this message translates to:
+  /// **'This value is invalid.'**
+  String get authValueInvalid;
+
+  /// No description provided for @authOptional.
+  ///
+  /// In en, this message translates to:
+  /// **'Optional'**
+  String get authOptional;
 }
 
 class _AppLocalizationsDelegate

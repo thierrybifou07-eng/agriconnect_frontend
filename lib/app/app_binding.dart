@@ -6,6 +6,9 @@ import 'package:agri_connect/core/network/session_events.dart';
 import 'package:agri_connect/core/realtime/socket_service.dart';
 import 'package:agri_connect/core/storage/prefs_storage.dart';
 import 'package:agri_connect/core/storage/token_storage.dart';
+import 'package:agri_connect/features/auth/data/auth_api.dart';
+import 'package:agri_connect/features/auth/data/auth_repository_impl.dart';
+import 'package:agri_connect/features/auth/domain/auth_repository.dart';
 import 'package:agri_connect/features/auth/presentation/controllers/auth_controller.dart';
 
 class AppBinding extends Bindings {
@@ -22,8 +25,14 @@ class AppBinding extends Bindings {
       ApiClient(tokenStorage: tokenStorage, sessionEvents: sessionEvents),
       permanent: true,
     );
+    final authRepository = AuthRepositoryImpl(AuthApi(Get.find<ApiClient>()));
+    Get.put<AuthRepository>(authRepository);
     Get.put<AuthController>(
-      AuthController(tokenStorage: tokenStorage, sessionEvents: sessionEvents),
+      AuthController(
+        tokenStorage: tokenStorage,
+        sessionEvents: sessionEvents,
+        repository: authRepository,
+      ),
       permanent: true,
     );
     Get.put<SocketService>(SocketService(), permanent: true);

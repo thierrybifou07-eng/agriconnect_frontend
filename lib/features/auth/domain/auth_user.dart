@@ -4,17 +4,17 @@ import 'package:agri_connect/features/auth/domain/role_code.dart';
 
 class AgentInfo {
   AgentInfo({
-    required this.id,
-    required this.displayName,
-    required this.kind,
-    required this.autonomy,
+    this.id,
+    this.displayName,
+    this.kind,
+    this.autonomy,
     required Iterable<AgentCapability> capabilities,
   }) : capabilities = Set.unmodifiable(capabilities);
 
-  final int id;
-  final String displayName;
-  final String kind;
-  final String autonomy;
+  final int? id;
+  final String? displayName;
+  final String? kind;
+  final String? autonomy;
   final Set<AgentCapability> capabilities;
 }
 
@@ -23,48 +23,40 @@ sealed class AuthProfile {
 }
 
 class SupplierProfile extends AuthProfile {
-  const SupplierProfile({
-    required this.farmName,
-    this.description,
-    this.zoneId,
-  });
+  const SupplierProfile({this.farmName, this.description, this.zoneId});
 
-  final String farmName;
+  final String? farmName;
   final String? description;
   final int? zoneId;
 }
 
 class BuyerProfile extends AuthProfile {
-  const BuyerProfile({required this.buyerType, this.businessName, this.zoneId});
+  const BuyerProfile({this.buyerType, this.businessName, this.zoneId});
 
-  final String buyerType;
+  final String? buyerType;
   final String? businessName;
   final int? zoneId;
 }
 
 class DriverProfile extends AuthProfile {
-  const DriverProfile({
-    required this.agencyId,
-    this.vehicleType,
-    this.plateNumber,
-  });
+  const DriverProfile({this.agencyId, this.vehicleType, this.plateNumber});
 
   final String? vehicleType;
   final String? plateNumber;
-  final int agencyId;
+  final int? agencyId;
 }
 
 class AuthUser {
   const AuthUser({
-    required this.id,
-    required this.firstname,
-    required this.lastname,
-    required this.email,
-    required this.phone,
-    required this.role,
-    required this.roleLabel,
-    required this.emailVerified,
-    required this.profileVerificationStatus,
+    this.id,
+    this.firstname,
+    this.lastname,
+    this.email,
+    this.phone,
+    this.role = RoleCode.unknown,
+    this.roleLabel,
+    this.emailVerified,
+    this.profileVerificationStatus = ProfileVerificationStatus.unknown,
     this.location,
     this.referralCode,
     this.avatarUrl,
@@ -72,15 +64,15 @@ class AuthUser {
     this.agent,
   });
 
-  final int id;
-  final String firstname;
-  final String lastname;
-  final String email;
-  final String phone;
+  final int? id;
+  final String? firstname;
+  final String? lastname;
+  final String? email;
+  final String? phone;
   final String? location;
   final RoleCode role;
-  final String roleLabel;
-  final bool emailVerified;
+  final String? roleLabel;
+  final bool? emailVerified;
   final ProfileVerificationStatus profileVerificationStatus;
   final String? referralCode;
   final String? avatarUrl;

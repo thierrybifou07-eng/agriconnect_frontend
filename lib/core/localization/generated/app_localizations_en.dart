@@ -2686,4 +2686,159 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get sessionRevokedNotice => 'Your session has been closed.';
+
+  @override
+  String get authInvalidCredentials => 'Incorrect email address or password.';
+
+  @override
+  String get authAccountSuspended =>
+      'This account has been suspended. Contact our team.';
+
+  @override
+  String get authTooManyAttempts =>
+      'Too many attempts. Please wait before trying again.';
+
+  @override
+  String get authUnexpectedError => 'Something went wrong. Please try again.';
+
+  @override
+  String get authNetworkError =>
+      'Could not connect. Check your network and try again.';
+
+  @override
+  String get authForgotLink => 'Forgot password?';
+
+  @override
+  String get authNoAccount => 'Don\'t have an account yet?';
+
+  @override
+  String get authCreateAccount => 'Create an account';
+
+  @override
+  String get authRolePrompt => 'How would you like to use AgriConnect?';
+
+  @override
+  String get authSupplierChoice => 'I sell (supplier)';
+
+  @override
+  String get authBuyerChoice => 'I buy (buyer)';
+
+  @override
+  String get authLanguageLabel => 'Language';
+
+  @override
+  String get authContinue => 'Continue';
+
+  @override
+  String get authFirstName => 'First name';
+
+  @override
+  String get authLastName => 'Last name';
+
+  @override
+  String get authPhone => 'Phone';
+
+  @override
+  String get authLocation => 'City or locality (optional)';
+
+  @override
+  String get authFarmName => 'Farm name';
+
+  @override
+  String get authBuyerType => 'Buyer type';
+
+  @override
+  String get authBusinessName => 'Business name (optional)';
+
+  @override
+  String get authReferralCode => 'Referral code (optional)';
+
+  @override
+  String get authBuyerRetailer => 'Retailer';
+
+  @override
+  String get authBuyerFarmer => 'Farmer';
+
+  @override
+  String get authBuyerWholesaler => 'Wholesaler';
+
+  @override
+  String get authBuyerOther => 'Other';
+
+  @override
+  String get authPasswordHelp =>
+      'At least 8 characters, one lowercase, one uppercase, one number and one of @\$!%*?&. Four identical characters in a row are not allowed.';
+
+  @override
+  String get authAcceptTerms => 'I accept the';
+
+  @override
+  String get authGeneralTerms => 'Terms of use';
+
+  @override
+  String get authRoleTerms => 'supplier consignment terms';
+
+  @override
+  String get authBuyerTerms => 'buyer terms';
+
+  @override
+  String get authTermsRequired => 'Please accept both documents to continue.';
+
+  @override
+  String get authRegistrationConflict =>
+      'This email address or phone number is already in use.';
+
+  @override
+  String get authCreate => 'Create my account';
+
+  @override
+  String get authCreating => 'Creating account…';
+
+  @override
+  String get authHaveAccount => 'Already have an account?';
+
+  @override
+  String get authForgotIntro =>
+      'Enter your email address. If it is associated with an account, you will receive a reset link.';
+
+  @override
+  String get authSendReset => 'Send the link';
+
+  @override
+  String get authResetSent =>
+      'If this address matches an account, a password reset link has been sent.';
+
+  @override
+  String get authBackToLogin => 'Back to sign in';
+
+  @override
+  String get authLegalUnavailable =>
+      'This document is not available right now.';
+
+  @override
+  String get authEmailUnverified =>
+      'Verify your email address to access all features.';
+
+  @override
+  String get authResendVerification => 'Resend';
+
+  @override
+  String get authVerificationSent => 'A new verification link has been sent.';
+
+  @override
+  String get authVerificationWait =>
+      'Please wait 5 minutes before requesting another link.';
+
+  @override
+  String get authPasswordPolicyInvalid =>
+      'The password does not meet the requirements shown.';
+
+  @override
+  String get authOnboardingSubtitle => 'The connected agricultural marketplace';
+
+  @override
+  String get authValueInvalid => 'This value is invalid.';
+
+  @override
+  String get authOptional => 'Optional';
 }

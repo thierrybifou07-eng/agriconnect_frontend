@@ -1,0 +1,19 @@
+{
+  "user": {
+    "id": 105,
+    "firstname": "Amina",
+    "lastname": "Njoya",
+    "email": "supplier@example.test",
+    "phone": "+237612345678",
+    "location": "Douala",
+    "role": { "code": "SUPPLIER", "label": "Fournisseur" },
+    "userStatus": { "code": "ACTIVE", "label": "Actif" },
+    "emailVerified": true,
+    "profileVerificationStatus": "VERIFIED",
+    "referralCode": null,
+    "createdAt": "2026-10-25T12:00:00.000Z",
+    "agent": null
+  },
+  "accessToken": "fixture-access-token",
+  "refreshToken": "fixture-refresh-token"
+}

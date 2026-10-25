@@ -7,6 +7,8 @@ import 'package:agri_connect/app/routes/middlewares/role_middleware.dart';
 import 'package:agri_connect/core/config/app_env.dart';
 import 'package:agri_connect/core/localization/generated/app_localizations.dart';
 import 'package:agri_connect/features/auth/domain/role_code.dart';
+import 'package:agri_connect/features/auth/presentation/bindings/auth_page_bindings.dart';
+import 'package:agri_connect/features/auth/presentation/pages/auth_pages.dart';
 import 'package:agri_connect/shared/widgets/role_placeholder_page.dart';
 
 abstract final class AppPages {
@@ -14,31 +16,41 @@ abstract final class AppPages {
     GetPage(
       name: AppRoutes.splash,
       page: () => AppEnv.isConfigured
-          ? const _PlaceholderPage(title: _PageTitle.splash)
+          ? const SplashPage()
           : const _ConfigurationMissingPage(),
+      binding: SplashBinding(),
     ),
     GetPage(
       name: AppRoutes.onboarding,
-      page: () => const _PlaceholderPage(title: _PageTitle.onboarding),
+      page: () => const OnboardingPage(),
+      binding: OnboardingBinding(),
     ),
     GetPage(
       name: AppRoutes.login,
       middlewares: [GuestMiddleware()],
-      page: () => const _PlaceholderPage(title: _PageTitle.login),
+      page: () => const LoginPage(),
+      binding: LoginBinding(),
     ),
     GetPage(
       name: AppRoutes.register,
       middlewares: [GuestMiddleware()],
-      page: () => const _PlaceholderPage(title: _PageTitle.register),
+      page: () => const RegisterPage(),
+      binding: RegisterBinding(),
     ),
     GetPage(
       name: AppRoutes.forgotPassword,
       middlewares: [GuestMiddleware()],
-      page: () => const _PlaceholderPage(title: _PageTitle.forgotPassword),
+      page: () => const ForgotPasswordPage(),
+      binding: ForgotPasswordBinding(),
     ),
     GetPage(
       name: AppRoutes.legal,
       page: () => const _PlaceholderPage(title: _PageTitle.legal),
+    ),
+    GetPage(
+      name: '${AppRoutes.legal}/:code',
+      page: () => const LegalPage(),
+      binding: LegalBinding(),
     ),
     _rolePage(AppRoutes.supplier, RoleCode.supplier),
     _rolePage(AppRoutes.buyer, RoleCode.buyer),

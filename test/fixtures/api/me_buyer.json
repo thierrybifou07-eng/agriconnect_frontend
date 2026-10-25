@@ -1,0 +1,28 @@
+{
+  "id": 306,
+  "firstname": "Binta",
+  "lastname": "Buyer",
+  "email": "buyer@example.test",
+  "phone": "+237612345680",
+  "location": "Yaoundé",
+  "role": { "code": "BUYER", "label": "Acheteur" },
+  "userStatus": { "code": "ACTIVE", "label": "Actif" },
+  "emailVerified": false,
+  "profileVerificationStatus": "PENDING",
+  "referralCode": "BUYER306",
+  "createdAt": "2026-10-25T12:00:00.000Z",
+  "media": [
+    {
+      "id": 9,
+      "url": "/uploads/avatars/buyer.png",
+      "isPrimary": true,
+      "position": 0
+    }
+  ],
+  "profile": {
+    "buyerType": "WHOLESALER",
+    "businessName": "Marché Central",
+    "zoneId": 3
+  },
+  "agent": null
+}

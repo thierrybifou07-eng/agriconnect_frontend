@@ -116,7 +116,7 @@ un repli sur le statut HTTP + message.
 | `GET /staff/stock-movements` | tableau | paginé |
 | `GET /auth/sessions` | tableau, champs `lastActiveAt`,`closedAt` | `{sessions:[…]}`, champs `lastActivityAt`,`expiresAt`,`userAgent`,`ip` |
 | `GET /auth/me/referral` | `{referralCode, referrals:[{id,kind,status∈PENDING\|APPROVED\|REJECTED,firstname}]}` | `{code, totals:{pending,eligible,paid}, referrals:[{status∈PENDING\|ELIGIBLE\|PAID\|REJECTED, kind, rewardAmount, createdAt, referredFirstname}]}` |
-| `GET /auth/me` | `User + profile` | idem **+ `media: [ {id,url,isPrimary,position} ]`** (l'avatar y figure) |
+| `GET /auth/me` | `User + profile` | idem **+ `media: [ {id,url,isPrimary,position} ]` et `agent: {id,displayName,kind,autonomy,capabilities}`** (l'avatar y figure) |
 | `PATCH /auth/me` | `firstname,lastname,location,latitude,longitude` | accepte `firstname,lastname,**email**,location` ; **latitude/longitude ignorés** ; pas de validation Joi sur cette route. Changer l'email remet `emailVerified` à false |
 | `Conversation.type` | `BUYER\|SUPPLIER` | `BUYER_SUPPORT\|SUPPLIER_SUPPORT` |
 | `Conversation.status` | `OPEN\|ASSIGNED\|ESCALATED\|CLOSED` | `OPEN\|WAITING_CUSTOMER\|CLOSED` (+ `escalatedAt` non nul = escaladée ; assignation via `assignedAgentId`) |
@@ -131,16 +131,14 @@ un repli sur le statut HTTP + message.
 | `GET /admin/payouts`, `/admin/compensations`, `/admin/referrals` params | aucun | + **`status`** (+ `page`,`limit`) |
 | `GET /driver/deliveries/mine` params | aucun | + `status` |
 | `GET /staff/deliveries` params | `page`,`limit` | + `status`, `orderId` |
-| `User.agent` / capacités | absent | **absent aussi du code** → voir §5 |
+| `User.agent` / capacités | absent | présent sur les réponses `login`, `register` et `GET /auth/me` pour AGENT (vérifié sur l'API locale redémarrée le 25/10/2026) |
 
 ## 5. TROUS DU CONTRAT (bloquants — à corriger côté backend, prompt P00)
 
-1. **B1 — Capacités d'un AGENT invisibles du client.** `userToApi` ne renvoie ni `agent` ni
-   `capabilities` ; ni `/auth/login`, ni `/auth/me`. Le seul endpoint qui les expose
-   (`GET /admin/agents`) exige ADMIN. Un agent ne peut donc pas savoir quels onglets afficher.
-   → Ajouter `agent: {id, displayName, kind, autonomy, capabilities: string[]}` (ou `null`) à
-   `userToApi` pour les AGENT. Repli sans changement backend : afficher les onglets staff
-   « optimistes » et traiter `403 "Capacité requise"` — dégradé, déconseillé.
+1. **B1 — Résolu : capacités d'un AGENT accessibles au client.** Après redémarrage du backend local,
+   `POST /auth/login` et `GET /auth/me` renvoient `agent: {id, displayName, kind, autonomy,
+   capabilities: string[]}` pour AGENT (et `null` pour les autres rôles). Vérifié le 25/10/2026
+   avec `agent.complet@demo.agriconnect.test` ; les neuf capacités attendues étaient présentes.
 2. **B2 — Aucun référentiel lisible par SUPPLIER/BUYER.** `GET /admin/products|zones|hubs|units|categories`
    sont `requireMinLevel(50)`. `/catalog/categories` exclut SUPPLIER. Un fournisseur **ne peut pas
    obtenir** `productId`, `zoneId`, `hubId` pour `POST /supplier/lots` ; un acheteur ne peut pas
@@ -180,7 +178,9 @@ Autres manques **assumés par la conception** (ne pas les « corriger » côté 
   profileVerificationStatus:'UNVERIFIED'|'PENDING'|'VERIFIED'|'REJECTED',
   referralCode:string|null, createdAt }
 ```
-`role.code ∈ ROOT|ADMIN|AGENT|SUPPLIER|BUYER|DRIVER`. `GET /auth/me` ajoute `media[]` et `profile`.
+`role.code ∈ ROOT|ADMIN|AGENT|SUPPLIER|BUYER|DRIVER`. Login/register renvoient aussi `agent` pour AGENT.
+`GET /auth/me` ajoute `media[]`, `profile` et `agent` (objet AGENT, sinon `null`).
+`agent` : `{id, displayName, kind, autonomy, capabilities:string[]}`.
 Profils : SUPPLIER `{farmName, description|null, zoneId|null}` ; BUYER `{buyerType, businessName|null, zoneId|null}` ;
 DRIVER `{vehicleType|null, plateNumber|null, agencyId}` ; staff → `profile: null`.
 (`id` du profil **non exposé**, contrairement à la spec.)

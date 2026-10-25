@@ -1,0 +1,7 @@
+{
+  "error": "Données invalides",
+  "details": [
+    { "field": "phone", "message": "Numéro de téléphone invalide" },
+    { "field": "farmName", "message": "Le nom de l'exploitation est requis" }
+  ]
+}

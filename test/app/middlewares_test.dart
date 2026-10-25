@@ -11,6 +11,7 @@ import 'package:agri_connect/features/auth/domain/profile_verification_status.da
 import 'package:agri_connect/features/auth/domain/role_code.dart';
 import 'package:agri_connect/features/auth/presentation/controllers/auth_controller.dart';
 
+import '../features/auth/fake_auth_repository.dart';
 import '../support/get_test_harness.dart';
 
 void main() {
@@ -27,6 +28,7 @@ void main() {
     final controller = AuthController(
       tokenStorage: InMemoryTokenStorage(),
       sessionEvents: SessionEvents(),
+      repository: FakeAuthRepository(),
     );
     Get.put<AuthController>(controller);
     controller.setUser(_buyer());

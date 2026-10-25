@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'package:agri_connect/app/theme/app_colors.dart';
+import 'package:agri_connect/shared/widgets/email_verification_banner.dart';
 
 class ShellTab {
   const ShellTab({
@@ -37,11 +38,18 @@ class RoleShell extends StatelessWidget {
     final theme = Theme.of(context);
     return Scaffold(
       appBar: AppBar(title: Text(title ?? 'AgriConnect')),
-      body: Obx(
-        () => IndexedStack(
-          index: controller.index.value,
-          children: [for (final tab in tabs) Builder(builder: tab.page)],
-        ),
+      body: Column(
+        children: [
+          const EmailVerificationBanner(),
+          Expanded(
+            child: Obx(
+              () => IndexedStack(
+                index: controller.index.value,
+                children: [for (final tab in tabs) Builder(builder: tab.page)],
+              ),
+            ),
+          ),
+        ],
       ),
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
