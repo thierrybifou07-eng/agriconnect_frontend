@@ -505,7 +505,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get registerAsRoleTitle => 'You are registering as';
 
   @override
-  String get retry => 'Try again';
+  String get retry => 'Retry';
 
   @override
   String get seeAll => 'See all';
@@ -2637,4 +2637,53 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get migrationInProgress => 'AgriConnect — migration in progress';
+
+  @override
+  String get configurationMissing => 'Configuration is missing';
+
+  @override
+  String get errUnauthorized =>
+      'Your session is no longer valid. Please sign in again.';
+
+  @override
+  String get errProfileNotVerified =>
+      'Your profile must be verified to continue.';
+
+  @override
+  String get errStateConflict =>
+      'This information has changed. Refresh and try again.';
+
+  @override
+  String get roleHomeTab => 'Home';
+
+  @override
+  String get roleComingSoon => 'Coming soon';
+
+  @override
+  String get pageNotFound => 'This page could not be found.';
+
+  @override
+  String get onboardingPageTitle => 'Welcome';
+
+  @override
+  String get loginPageTitle => 'Sign in';
+
+  @override
+  String get registerPageTitle => 'Create an account';
+
+  @override
+  String get forgotPasswordPageTitle => 'Forgot password';
+
+  @override
+  String get legalPageTitle => 'Legal information';
+
+  @override
+  String get sessionExpiredNotice =>
+      'Your session expired. Please sign in again.';
+
+  @override
+  String get sessionSuspendedNotice => 'Your account is suspended.';
+
+  @override
+  String get sessionRevokedNotice => 'Your session has been closed.';
 }

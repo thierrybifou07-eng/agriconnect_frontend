@@ -2669,4 +2669,53 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get migrationInProgress => 'AgriConnect — migration en cours';
+
+  @override
+  String get configurationMissing => 'Configuration manquante';
+
+  @override
+  String get errUnauthorized =>
+      'Votre session n\'est plus valide. Reconnectez-vous.';
+
+  @override
+  String get errProfileNotVerified =>
+      'Votre profil doit être vérifié pour continuer.';
+
+  @override
+  String get errStateConflict =>
+      'Cette information a changé. Actualisez puis réessayez.';
+
+  @override
+  String get roleHomeTab => 'Accueil';
+
+  @override
+  String get roleComingSoon => 'À venir';
+
+  @override
+  String get pageNotFound => 'Cette page est introuvable.';
+
+  @override
+  String get onboardingPageTitle => 'Bienvenue';
+
+  @override
+  String get loginPageTitle => 'Connexion';
+
+  @override
+  String get registerPageTitle => 'Créer un compte';
+
+  @override
+  String get forgotPasswordPageTitle => 'Mot de passe oublié';
+
+  @override
+  String get legalPageTitle => 'Informations légales';
+
+  @override
+  String get sessionExpiredNotice =>
+      'Votre session a expiré. Reconnectez-vous.';
+
+  @override
+  String get sessionSuspendedNotice => 'Votre compte est suspendu.';
+
+  @override
+  String get sessionRevokedNotice => 'Votre session a été fermée.';
 }

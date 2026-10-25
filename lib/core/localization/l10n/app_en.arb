@@ -1061,5 +1061,21 @@
   "agentPaymentUpdated": "Payment updated.",
   "agentPaymentEmptyTitle": "No payment to follow",
   "agentPaymentEmptyBody": "Payments to track will appear here.",
-  "migrationInProgress": "AgriConnect — migration in progress"
+  "migrationInProgress": "AgriConnect — migration in progress",
+  "configurationMissing": "Configuration is missing",
+  "retry": "Retry",
+  "errUnauthorized": "Your session is no longer valid. Please sign in again.",
+  "errProfileNotVerified": "Your profile must be verified to continue.",
+  "errStateConflict": "This information has changed. Refresh and try again.",
+  "roleHomeTab": "Home",
+  "roleComingSoon": "Coming soon",
+  "pageNotFound": "This page could not be found.",
+  "onboardingPageTitle": "Welcome",
+  "loginPageTitle": "Sign in",
+  "registerPageTitle": "Create an account",
+  "forgotPasswordPageTitle": "Forgot password",
+  "legalPageTitle": "Legal information",
+  "sessionExpiredNotice": "Your session expired. Please sign in again.",
+  "sessionSuspendedNotice": "Your account is suspended.",
+  "sessionRevokedNotice": "Your session has been closed."
 }

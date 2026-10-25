@@ -1025,7 +1025,7 @@ abstract class AppLocalizations {
   /// No description provided for @retry.
   ///
   /// In en, this message translates to:
-  /// **'Try again'**
+  /// **'Retry'**
   String get retry;
 
   /// No description provided for @seeAll.
@@ -4591,6 +4591,96 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'AgriConnect — migration in progress'**
   String get migrationInProgress;
+
+  /// No description provided for @configurationMissing.
+  ///
+  /// In en, this message translates to:
+  /// **'Configuration is missing'**
+  String get configurationMissing;
+
+  /// No description provided for @errUnauthorized.
+  ///
+  /// In en, this message translates to:
+  /// **'Your session is no longer valid. Please sign in again.'**
+  String get errUnauthorized;
+
+  /// No description provided for @errProfileNotVerified.
+  ///
+  /// In en, this message translates to:
+  /// **'Your profile must be verified to continue.'**
+  String get errProfileNotVerified;
+
+  /// No description provided for @errStateConflict.
+  ///
+  /// In en, this message translates to:
+  /// **'This information has changed. Refresh and try again.'**
+  String get errStateConflict;
+
+  /// No description provided for @roleHomeTab.
+  ///
+  /// In en, this message translates to:
+  /// **'Home'**
+  String get roleHomeTab;
+
+  /// No description provided for @roleComingSoon.
+  ///
+  /// In en, this message translates to:
+  /// **'Coming soon'**
+  String get roleComingSoon;
+
+  /// No description provided for @pageNotFound.
+  ///
+  /// In en, this message translates to:
+  /// **'This page could not be found.'**
+  String get pageNotFound;
+
+  /// No description provided for @onboardingPageTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Welcome'**
+  String get onboardingPageTitle;
+
+  /// No description provided for @loginPageTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign in'**
+  String get loginPageTitle;
+
+  /// No description provided for @registerPageTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Create an account'**
+  String get registerPageTitle;
+
+  /// No description provided for @forgotPasswordPageTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Forgot password'**
+  String get forgotPasswordPageTitle;
+
+  /// No description provided for @legalPageTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Legal information'**
+  String get legalPageTitle;
+
+  /// No description provided for @sessionExpiredNotice.
+  ///
+  /// In en, this message translates to:
+  /// **'Your session expired. Please sign in again.'**
+  String get sessionExpiredNotice;
+
+  /// No description provided for @sessionSuspendedNotice.
+  ///
+  /// In en, this message translates to:
+  /// **'Your account is suspended.'**
+  String get sessionSuspendedNotice;
+
+  /// No description provided for @sessionRevokedNotice.
+  ///
+  /// In en, this message translates to:
+  /// **'Your session has been closed.'**
+  String get sessionRevokedNotice;
 }
 
 class _AppLocalizationsDelegate
