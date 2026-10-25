@@ -14,20 +14,42 @@ class SplashPage extends GetView<SplashController> {
   const SplashPage({super.key});
 
   @override
-  Widget build(BuildContext context) => Scaffold(
-    body: Center(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          const Icon(Icons.agriculture_rounded, size: 64),
-          const SizedBox(height: 16),
-          Text(AppLocalizations.of(context).splashLoading),
-          const SizedBox(height: 18),
-          const CircularProgressIndicator(),
-        ],
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
+    return Scaffold(
+      body: Center(
+        child: Obx(
+          () => Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const Icon(Icons.agriculture_rounded, size: 64),
+              const SizedBox(height: 16),
+              Text(
+                controller.hasError.value
+                    ? l10n.authUnexpectedError
+                    : l10n.splashLoading,
+                textAlign: TextAlign.center,
+              ),
+              if (controller.loading.value || !controller.hasError.value) ...[
+                const SizedBox(height: 18),
+                const CircularProgressIndicator(),
+              ] else ...[
+                const SizedBox(height: 18),
+                FilledButton(
+                  onPressed: controller.restoreSession,
+                  child: Text(l10n.retry),
+                ),
+                TextButton(
+                  onPressed: controller.continueToLogin,
+                  child: Text(l10n.signIn),
+                ),
+              ],
+            ],
+          ),
+        ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 class OnboardingPage extends GetView<OnboardingController> {

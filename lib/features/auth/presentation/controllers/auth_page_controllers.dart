@@ -17,23 +17,45 @@ class SplashController extends GetxController {
 
   final AuthController _auth;
   final PrefsStorage _prefs;
+  final RxBool loading = false.obs;
+  final RxBool hasError = false.obs;
+
+  static const _startupTimeout = Duration(seconds: 45);
+  static const _storageTimeout = Duration(seconds: 10);
 
   @override
   void onReady() {
     super.onReady();
-    unawaited(_restore());
+    unawaited(restoreSession());
   }
 
-  Future<void> _restore() async {
-    final user = await _auth.restoreSession();
-    if (user != null) {
-      await Get.offAllNamed(AppRoutes.homeFor(user));
-      return;
+  Future<void> restoreSession() async {
+    if (loading.value) return;
+    loading.value = true;
+    hasError.value = false;
+    try {
+      final user = await _auth.restoreSession().timeout(_startupTimeout);
+      if (user != null) {
+        await Get.offAllNamed(AppRoutes.homeFor(user));
+        return;
+      }
+      final onboardingSeen = await _prefs.readOnboardingSeen().timeout(
+        _storageTimeout,
+      );
+      await Get.offAllNamed(
+        onboardingSeen ? AppRoutes.login : AppRoutes.onboarding,
+      );
+    } on Object catch (error, stackTrace) {
+      debugPrint('Unable to restore the application session: $error');
+      debugPrintStack(stackTrace: stackTrace);
+      hasError.value = true;
+    } finally {
+      loading.value = false;
     }
-    final onboardingSeen = await _prefs.readOnboardingSeen();
-    await Get.offAllNamed(
-      onboardingSeen ? AppRoutes.login : AppRoutes.onboarding,
-    );
+  }
+
+  Future<void> continueToLogin() async {
+    await Get.offAllNamed(AppRoutes.login);
   }
 }
 
