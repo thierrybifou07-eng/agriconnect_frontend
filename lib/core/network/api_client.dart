@@ -2,6 +2,7 @@ import 'package:dio/dio.dart';
 
 import 'package:agri_connect/core/config/app_env.dart';
 import 'package:agri_connect/core/network/api_failure.dart';
+import 'package:agri_connect/core/network/api_failure_events.dart';
 import 'package:agri_connect/core/network/api_interceptors.dart';
 import 'package:agri_connect/core/network/session_events.dart';
 import 'package:agri_connect/core/storage/token_storage.dart';
@@ -10,6 +11,7 @@ class ApiClient {
   ApiClient({
     required TokenStorage tokenStorage,
     required SessionEvents sessionEvents,
+    this.failureEvents,
     String? baseUrl,
     Dio? dio,
     Dio Function(BaseOptions options)? refreshDioFactory,
@@ -34,6 +36,7 @@ class ApiClient {
   }
 
   final Dio dio;
+  final ApiFailureEvents? failureEvents;
 
   Future<dynamic> get(
     String path, {
@@ -160,8 +163,11 @@ class ApiClient {
       return response.data;
     } on DioException catch (error) {
       final failure = error.error;
-      if (failure is ApiFailure) throw failure;
-      throw ApiFailure.fromDio(error);
+      final apiFailure = failure is ApiFailure
+          ? failure
+          : ApiFailure.fromDio(error);
+      failureEvents?.emit(apiFailure);
+      throw apiFailure;
     }
   }
 

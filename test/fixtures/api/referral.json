@@ -1,0 +1,24 @@
+{
+  "code": "AMINA73",
+  "totals": {
+    "pending": 2,
+    "eligible": 1,
+    "paid": 3
+  },
+  "referrals": [
+    {
+      "status": "ELIGIBLE",
+      "kind": "BUYER",
+      "rewardAmount": 1500,
+      "createdAt": "2026-10-23T15:00:00.000Z",
+      "referredFirstname": "Moussa"
+    },
+    {
+      "status": "PENDING",
+      "kind": "SUPPLIER",
+      "rewardAmount": 2500,
+      "createdAt": "2026-10-24T12:30:00.000Z",
+      "referredFirstname": "Fatou"
+    }
+  ]
+}

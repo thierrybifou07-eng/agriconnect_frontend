@@ -133,18 +133,19 @@ un repli sur le statut HTTP + message.
 | `GET /staff/deliveries` params | `page`,`limit` | + `status`, `orderId` |
 | `User.agent` / capacités | absent | présent sur les réponses `login`, `register` et `GET /auth/me` pour AGENT (vérifié sur l'API locale redémarrée le 25/10/2026) |
 
-## 5. TROUS DU CONTRAT (bloquants — à corriger côté backend, prompt P00)
+## 5. ÉCARTS DU CONTRAT ET ÉTAT DE RÉSOLUTION
 
 1. **B1 — Résolu : capacités d'un AGENT accessibles au client.** Après redémarrage du backend local,
    `POST /auth/login` et `GET /auth/me` renvoient `agent: {id, displayName, kind, autonomy,
    capabilities: string[]}` pour AGENT (et `null` pour les autres rôles). Vérifié le 25/10/2026
    avec `agent.complet@demo.agriconnect.test` ; les neuf capacités attendues étaient présentes.
-2. **B2 — Aucun référentiel lisible par SUPPLIER/BUYER.** `GET /admin/products|zones|hubs|units|categories`
-   sont `requireMinLevel(50)`. `/catalog/categories` exclut SUPPLIER. Un fournisseur **ne peut pas
-   obtenir** `productId`, `zoneId`, `hubId` pour `POST /supplier/lots` ; un acheteur ne peut pas
-   choisir sa `zoneId`. **Bloquant pour la déclaration de lot.**
-   → Ajouter des lectures seules `GET /reference/{products|zones|hubs|units|categories}`
-   (rôles SUPPLIER, BUYER, AGENT, ADMIN, ROOT ; éléments actifs ; paginées `limit ≤ 100`).
+2. **B2 — Résolu par P00 : référentiels accessibles aux rôles métier.** Le backend expose
+   `GET /reference/{categories|units|products|zones|hubs}` aux rôles SUPPLIER, BUYER, AGENT,
+   ADMIN et ROOT. Les réponses sont paginées `{items,page,limit,total}` (`limit ≤ 100`).
+   Catégories et unités : `{id,code,label}` ; produits : `{id,name,description,isPerishable,
+   imageUrl,category:{id,code,label},unit:{id,code,label}}` avec filtres `q` et `categoryId` ;
+   zones : `{id,name,city,region}` ; hubs : `{id,name,address,city,latitude,longitude,zoneId,
+   acceptsDropoff,acceptsPickup}` avec filtre `zoneId`.
 3. **B3 — Régénérer `docs/openapi.yaml`** une fois les dérives du §4 corrigées (source : fragments
    `openapi/*.openapi.js`, commande `npm run docs:openapi`).
 

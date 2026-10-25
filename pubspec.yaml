@@ -45,6 +45,7 @@ dependencies:
   socket_io_client: ^3.1.6
   url_launcher: ^6.3.3
   uuid: ^4.6.0
+  file_picker: ^13.2.0
 
 dev_dependencies:
   flutter_test:

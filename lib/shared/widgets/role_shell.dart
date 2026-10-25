@@ -1,8 +1,11 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'package:agri_connect/app/theme/app_colors.dart';
 import 'package:agri_connect/shared/widgets/email_verification_banner.dart';
+import 'package:agri_connect/shared/widgets/verification_banner.dart';
 
 class ShellTab {
   const ShellTab({
@@ -10,12 +13,14 @@ class ShellTab {
     required this.label,
     required this.page,
     this.badge,
+    this.route,
   });
 
   final IconData icon;
   final String label;
   final WidgetBuilder page;
   final RxInt? badge;
+  final String? route;
 }
 
 class RoleShellController extends GetxController {
@@ -41,6 +46,7 @@ class RoleShell extends StatelessWidget {
       body: Column(
         children: [
           const EmailVerificationBanner(),
+          const VerificationBanner(),
           Expanded(
             child: Obx(
               () => IndexedStack(
@@ -61,7 +67,14 @@ class RoleShell extends StatelessWidget {
         child: Obx(
           () => NavigationBar(
             selectedIndex: controller.index.value,
-            onDestinationSelected: controller.select,
+            onDestinationSelected: (index) {
+              final route = tabs[index].route;
+              if (route != null) {
+                unawaited(Get.toNamed(route));
+              } else {
+                controller.select(index);
+              }
+            },
             destinations: [
               for (final tab in tabs)
                 NavigationDestination(

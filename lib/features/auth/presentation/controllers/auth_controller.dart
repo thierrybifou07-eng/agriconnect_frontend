@@ -118,18 +118,7 @@ class AuthController extends GetxController {
     unawaited(Get.offAllNamed(AppRoutes.login));
   }
 
-  Future<void> signOutEverywhere() async {
-    final tokens = await tokenStorage.read();
-    try {
-      await repository.logoutAll();
-      if (tokens != null) await repository.logout(tokens.refresh);
-    } on ApiFailure {
-      // Local logout remains available when the API cannot be reached.
-    } finally {
-      await signOutLocal();
-      unawaited(Get.offAllNamed(AppRoutes.login));
-    }
-  }
+  Future<void> signOutEverywhere() => repository.logoutAll();
 
   Future<void> requestPasswordReset(String email) async {
     try {

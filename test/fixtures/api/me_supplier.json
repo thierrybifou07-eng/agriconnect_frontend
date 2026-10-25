@@ -1,0 +1,34 @@
+{
+  "id": 73,
+  "firstname": "Amina",
+  "lastname": "Fofana",
+  "email": "amina@example.test",
+  "phone": "+237600000073",
+  "location": "Yaoundé",
+  "role": {
+    "code": "SUPPLIER",
+    "label": "Fournisseur"
+  },
+  "userStatus": {
+    "code": "ACTIVE",
+    "label": "Actif"
+  },
+  "emailVerified": true,
+  "profileVerificationStatus": "UNVERIFIED",
+  "referralCode": "AMINA73",
+  "media": [
+    {
+      "id": 82,
+      "url": "/uploads/avatars/73.webp",
+      "isPrimary": true,
+      "position": 0
+    }
+  ],
+  "profile": {
+    "farmName": "Ferme du Centre",
+    "description": "Production maraîchère",
+    "zoneId": 2
+  },
+  "agent": null,
+  "createdAt": "2026-10-25T08:30:00.000Z"
+}

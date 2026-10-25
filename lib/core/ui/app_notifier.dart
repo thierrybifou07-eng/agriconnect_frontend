@@ -1,6 +1,9 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'package:agri_connect/app/routes/app_routes.dart';
 import 'package:agri_connect/core/localization/generated/app_localizations.dart';
 import 'package:agri_connect/core/network/api_failure.dart';
 
@@ -8,6 +11,28 @@ abstract final class AppNotifier {
   static void success(String message) => _show(message);
   static void error(String message) => _show(message);
   static void info(String message) => _show(message);
+
+  static Future<void> showProfileNotVerifiedDialog() async {
+    final context = Get.context;
+    if (context == null || Get.isDialogOpen == true) return;
+    final localizations = AppLocalizations.of(context);
+    await Get.dialog<void>(
+      AlertDialog(
+        title: Text(localizations.verificationRequiredTitle),
+        content: Text(localizations.verificationRequiredMessage),
+        actions: [
+          TextButton(onPressed: Get.back, child: Text(localizations.cancel)),
+          FilledButton(
+            onPressed: () {
+              Get.back<void>();
+              unawaited(Get.toNamed(AppRoutes.documents));
+            },
+            child: Text(localizations.verificationOpenDocuments),
+          ),
+        ],
+      ),
+    );
+  }
 
   static String failureMessage(
     ApiFailure failure,

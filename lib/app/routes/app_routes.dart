@@ -8,6 +8,12 @@ abstract final class AppRoutes {
   static const register = '/register';
   static const forgotPassword = '/forgot-password';
   static const legal = '/legal';
+  static const profile = '/account/profile';
+  static const documents = '/account/documents';
+  static const payoutAccounts = '/account/payout-accounts';
+  static const referral = '/account/referral';
+  static const sessions = '/account/sessions';
+  static const language = '/account/language';
   static String legalDocument(String code) => '$legal/$code';
   static const supplier = '/supplier';
   static const buyer = '/buyer';

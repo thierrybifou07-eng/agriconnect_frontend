@@ -9,6 +9,10 @@ import 'package:agri_connect/core/localization/generated/app_localizations.dart'
 import 'package:agri_connect/features/auth/domain/role_code.dart';
 import 'package:agri_connect/features/auth/presentation/bindings/auth_page_bindings.dart';
 import 'package:agri_connect/features/auth/presentation/pages/auth_pages.dart';
+import 'package:agri_connect/features/account/presentation/bindings/account_bindings.dart';
+import 'package:agri_connect/features/account/presentation/pages/account_pages.dart';
+import 'package:agri_connect/features/account/presentation/pages/profile_page.dart';
+import 'package:agri_connect/features/account/presentation/pages/verification_documents_page.dart';
 import 'package:agri_connect/shared/widgets/role_placeholder_page.dart';
 
 abstract final class AppPages {
@@ -51,6 +55,48 @@ abstract final class AppPages {
       name: '${AppRoutes.legal}/:code',
       page: () => const LegalPage(),
       binding: LegalBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.profile,
+      middlewares: [AuthMiddleware()],
+      page: () => const ProfilePage(),
+      binding: ProfileBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.documents,
+      middlewares: [
+        AuthMiddleware(),
+        RoleMiddleware({RoleCode.supplier, RoleCode.buyer}),
+      ],
+      page: () => const VerificationDocumentsPage(),
+      binding: VerificationDocumentsBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.payoutAccounts,
+      middlewares: [
+        AuthMiddleware(),
+        RoleMiddleware({RoleCode.supplier, RoleCode.buyer}),
+      ],
+      page: () => const PayoutAccountsPage(),
+      binding: PayoutAccountsBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.referral,
+      middlewares: [AuthMiddleware()],
+      page: () => const ReferralPage(),
+      binding: ReferralBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.sessions,
+      middlewares: [AuthMiddleware()],
+      page: () => const SessionsPage(),
+      binding: SessionsBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.language,
+      middlewares: [AuthMiddleware()],
+      page: () => const AccountLanguagePage(),
+      binding: AccountLanguageBinding(),
     ),
     _rolePage(AppRoutes.supplier, RoleCode.supplier),
     _rolePage(AppRoutes.buyer, RoleCode.buyer),

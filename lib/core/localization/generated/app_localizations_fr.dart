@@ -2877,4 +2877,326 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get authOptional => 'Facultatif';
+
+  @override
+  String get accountTab => 'Compte';
+
+  @override
+  String get accountTitle => 'Mon compte';
+
+  @override
+  String get accountProfile => 'Profil';
+
+  @override
+  String get accountDocuments => 'Documents de vérification';
+
+  @override
+  String get accountPayoutAccounts => 'Comptes de paiement';
+
+  @override
+  String get accountReferral => 'Parrainage';
+
+  @override
+  String get accountSessions => 'Sessions et sécurité';
+
+  @override
+  String get accountLanguage => 'Langue';
+
+  @override
+  String get accountEmail => 'Adresse e-mail';
+
+  @override
+  String get accountLocation => 'Localisation';
+
+  @override
+  String get accountFirstName => 'Prénom';
+
+  @override
+  String get accountLastName => 'Nom';
+
+  @override
+  String get accountFarmName => 'Nom de l\'exploitation';
+
+  @override
+  String get accountDescription => 'Description';
+
+  @override
+  String get accountBusinessName => 'Nom commercial';
+
+  @override
+  String get accountBuyerType => 'Type d\'acheteur';
+
+  @override
+  String get accountZone => 'Zone';
+
+  @override
+  String get accountVehicleType => 'Type de véhicule';
+
+  @override
+  String get accountPlateNumber => 'Immatriculation';
+
+  @override
+  String get accountAvatarChange => 'Modifier la photo';
+
+  @override
+  String get accountSaveFailed =>
+      'Impossible d\'enregistrer les modifications.';
+
+  @override
+  String get accountAvatarInvalid =>
+      'Choisissez une image JPEG, PNG ou WebP de 5 Mo maximum.';
+
+  @override
+  String get accountVerificationTitle => 'Vérification du profil';
+
+  @override
+  String get accountVerificationUnverified =>
+      'Vérifiez votre profil pour commencer.';
+
+  @override
+  String get accountVerificationPending =>
+      'Votre profil est en cours d\'examen.';
+
+  @override
+  String get accountVerificationRejected =>
+      'Votre profil a été refusé. Déposez un nouveau document.';
+
+  @override
+  String get accountVerificationVerified => 'Profil vérifié';
+
+  @override
+  String get accountDocumentsEmpty => 'Aucun document de vérification déposé.';
+
+  @override
+  String get accountDocumentType => 'Type de document';
+
+  @override
+  String get accountSelectDocument => 'Choisir un fichier';
+
+  @override
+  String get accountDocumentTooLarge =>
+      'Le document ne doit pas dépasser 8 Mo.';
+
+  @override
+  String get accountDocumentInvalid =>
+      'Choisissez un PDF ou une image JPEG, PNG ou WebP.';
+
+  @override
+  String get accountDocumentPendingLimit =>
+      'Vous avez déjà cinq documents en attente d\'examen.';
+
+  @override
+  String get accountUploadDocument => 'Déposer le document';
+
+  @override
+  String get accountFileName => 'Fichier sélectionné';
+
+  @override
+  String get accountPayoutTitle => 'Comptes de paiement';
+
+  @override
+  String get accountAddPayout => 'Ajouter un compte';
+
+  @override
+  String get accountPayoutMethod => 'Mode de paiement';
+
+  @override
+  String get accountProvider => 'Opérateur ou banque';
+
+  @override
+  String get accountAccountNumber => 'Numéro de compte';
+
+  @override
+  String get accountAccountName => 'Nom du titulaire';
+
+  @override
+  String get accountDefault => 'Compte par défaut';
+
+  @override
+  String get accountNoPayout => 'Aucun compte de paiement enregistré.';
+
+  @override
+  String get accountDeleteConfirm => 'Supprimer ce compte de paiement ?';
+
+  @override
+  String get accountReferralTitle => 'Parrainez vos proches';
+
+  @override
+  String get accountReferralCode => 'Votre code de parrainage';
+
+  @override
+  String get accountCopyCode => 'Copier le code';
+
+  @override
+  String get accountCopied => 'Code copié.';
+
+  @override
+  String get accountReferralNotVerified =>
+      'Les récompenses de parrainage seront disponibles après vérification de votre profil.';
+
+  @override
+  String get accountPending => 'En attente';
+
+  @override
+  String get accountEligible => 'Éligibles';
+
+  @override
+  String get accountPaid => 'Payées';
+
+  @override
+  String get accountNoReferrals => 'Aucun filleul pour le moment.';
+
+  @override
+  String get accountSessionsTitle => 'Sessions actives';
+
+  @override
+  String get accountCurrentSession => 'Cet appareil';
+
+  @override
+  String get accountCloseSession => 'Fermer la session';
+
+  @override
+  String get accountLogoutOthers => 'Déconnecter les autres appareils';
+
+  @override
+  String get accountLogoutOthersConfirm =>
+      'Les autres sessions seront fermées. Cet appareil restera connecté.';
+
+  @override
+  String get accountLogoutOthersDone => 'Les autres sessions ont été fermées.';
+
+  @override
+  String get accountSessionCreated => 'Connecté le';
+
+  @override
+  String get accountSessionLastActive => 'Dernière activité';
+
+  @override
+  String get accountSessionExpires => 'Expire le';
+
+  @override
+  String get accountSessionIp => 'Adresse IP';
+
+  @override
+  String get accountLanguageTitle => 'Langue de l\'application';
+
+  @override
+  String get verificationRequiredTitle => 'Profil non vérifié';
+
+  @override
+  String get verificationRequiredMessage =>
+      'Vérifiez votre profil pour accéder à cette fonctionnalité.';
+
+  @override
+  String get verificationOpenDocuments => 'Voir les documents';
+
+  @override
+  String get accountLoadError => 'Impossible de charger ces informations.';
+
+  @override
+  String get accountSearch => 'Rechercher';
+
+  @override
+  String get accountCategory => 'Catégorie';
+
+  @override
+  String get accountAllCategories => 'Toutes les catégories';
+
+  @override
+  String get accountNoResults => 'Aucun résultat.';
+
+  @override
+  String get accountDocumentsIntro =>
+      'Déposez les pièces demandées pour faire vérifier votre profil.';
+
+  @override
+  String get accountDocumentUploaded => 'Document déposé pour vérification.';
+
+  @override
+  String get accountDocumentId => 'Pièce d\'identité';
+
+  @override
+  String get accountDocumentBusiness => 'Registre du commerce';
+
+  @override
+  String get accountDocumentFarm => 'Justificatif agricole';
+
+  @override
+  String get accountDocumentOther => 'Autre document';
+
+  @override
+  String get accountRejected => 'Refusé';
+
+  @override
+  String get accountEditPayout => 'Modifier le compte';
+
+  @override
+  String get accountSaved => 'Modifications enregistrées.';
+
+  @override
+  String get accountDeleted => 'Compte supprimé.';
+
+  @override
+  String get accountDeleteTitle => 'Supprimer le compte';
+
+  @override
+  String get accountCurrentNumber => 'Numéro enregistré';
+
+  @override
+  String get accountNumberInvalid =>
+      'Saisissez un numéro de 4 à 64 caractères.';
+
+  @override
+  String get accountMobileMoney => 'Mobile Money';
+
+  @override
+  String get accountBankTransfer => 'Virement bancaire';
+
+  @override
+  String get accountCash => 'Espèces';
+
+  @override
+  String get accountEdit => 'Modifier';
+
+  @override
+  String get accountDelete => 'Supprimer';
+
+  @override
+  String get accountSessionClosed => 'Session fermée.';
+
+  @override
+  String get accountCloseSessionConfirm => 'Voulez-vous fermer cette session ?';
+
+  @override
+  String get accountUnknownDevice => 'Appareil inconnu';
+
+  @override
+  String get accountRetailer => 'Détaillant';
+
+  @override
+  String get accountFarmer => 'Agriculteur';
+
+  @override
+  String get accountWholesaler => 'Grossiste';
+
+  @override
+  String get accountOther => 'Autre';
+
+  @override
+  String get accountReferralBuyer => 'Acheteur';
+
+  @override
+  String get accountReferralSupplier => 'Fournisseur';
+
+  @override
+  String get accountStatusPending => 'En attente';
+
+  @override
+  String get accountStatusEligible => 'Éligible';
+
+  @override
+  String get accountStatusPaid => 'Payé';
+
+  @override
+  String get accountStatusRejected => 'Refusé';
 }

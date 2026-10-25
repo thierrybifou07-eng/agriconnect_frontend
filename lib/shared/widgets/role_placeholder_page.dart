@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:agri_connect/core/localization/generated/app_localizations.dart';
+import 'package:agri_connect/app/routes/app_routes.dart';
 import 'package:agri_connect/features/auth/domain/role_code.dart';
 import 'package:agri_connect/shared/widgets/role_shell.dart';
 
@@ -30,9 +31,10 @@ class RolePlaceholderPage extends StatelessWidget {
           page: (_) => _ComingSoon(message: localizations.roleComingSoon),
         ),
         ShellTab(
-          icon: Icons.more_horiz,
-          label: localizations.roleComingSoon,
+          icon: Icons.person_outline,
+          label: localizations.accountTab,
           page: (_) => _ComingSoon(message: localizations.roleComingSoon),
+          route: AppRoutes.profile,
         ),
       ],
     );

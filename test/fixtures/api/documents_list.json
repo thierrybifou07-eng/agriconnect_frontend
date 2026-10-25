@@ -1,0 +1,23 @@
+[
+  {
+    "id": 15,
+    "type": "ID_CARD",
+    "status": "PENDING",
+    "note": null,
+    "createdAt": "2026-10-25T08:30:00.000Z"
+  },
+  {
+    "id": 14,
+    "type": "FARM_PROOF",
+    "status": "REJECTED",
+    "note": "Le document est illisible.",
+    "createdAt": "2026-10-20T09:15:00.000Z"
+  },
+  {
+    "id": 12,
+    "type": "BUSINESS_REGISTRATION",
+    "status": "VERIFIED",
+    "note": null,
+    "createdAt": "2026-10-18T11:00:00.000Z"
+  }
+]

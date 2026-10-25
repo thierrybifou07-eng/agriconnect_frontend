@@ -4969,6 +4969,624 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Optional'**
   String get authOptional;
+
+  /// No description provided for @accountTab.
+  ///
+  /// In en, this message translates to:
+  /// **'Account'**
+  String get accountTab;
+
+  /// No description provided for @accountTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'My account'**
+  String get accountTitle;
+
+  /// No description provided for @accountProfile.
+  ///
+  /// In en, this message translates to:
+  /// **'Profile'**
+  String get accountProfile;
+
+  /// No description provided for @accountDocuments.
+  ///
+  /// In en, this message translates to:
+  /// **'Verification documents'**
+  String get accountDocuments;
+
+  /// No description provided for @accountPayoutAccounts.
+  ///
+  /// In en, this message translates to:
+  /// **'Payout accounts'**
+  String get accountPayoutAccounts;
+
+  /// No description provided for @accountReferral.
+  ///
+  /// In en, this message translates to:
+  /// **'Referrals'**
+  String get accountReferral;
+
+  /// No description provided for @accountSessions.
+  ///
+  /// In en, this message translates to:
+  /// **'Sessions and security'**
+  String get accountSessions;
+
+  /// No description provided for @accountLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'Language'**
+  String get accountLanguage;
+
+  /// No description provided for @accountEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Email address'**
+  String get accountEmail;
+
+  /// No description provided for @accountLocation.
+  ///
+  /// In en, this message translates to:
+  /// **'Location'**
+  String get accountLocation;
+
+  /// No description provided for @accountFirstName.
+  ///
+  /// In en, this message translates to:
+  /// **'First name'**
+  String get accountFirstName;
+
+  /// No description provided for @accountLastName.
+  ///
+  /// In en, this message translates to:
+  /// **'Last name'**
+  String get accountLastName;
+
+  /// No description provided for @accountFarmName.
+  ///
+  /// In en, this message translates to:
+  /// **'Farm name'**
+  String get accountFarmName;
+
+  /// No description provided for @accountDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Description'**
+  String get accountDescription;
+
+  /// No description provided for @accountBusinessName.
+  ///
+  /// In en, this message translates to:
+  /// **'Business name'**
+  String get accountBusinessName;
+
+  /// No description provided for @accountBuyerType.
+  ///
+  /// In en, this message translates to:
+  /// **'Buyer type'**
+  String get accountBuyerType;
+
+  /// No description provided for @accountZone.
+  ///
+  /// In en, this message translates to:
+  /// **'Zone'**
+  String get accountZone;
+
+  /// No description provided for @accountVehicleType.
+  ///
+  /// In en, this message translates to:
+  /// **'Vehicle type'**
+  String get accountVehicleType;
+
+  /// No description provided for @accountPlateNumber.
+  ///
+  /// In en, this message translates to:
+  /// **'License plate'**
+  String get accountPlateNumber;
+
+  /// No description provided for @accountAvatarChange.
+  ///
+  /// In en, this message translates to:
+  /// **'Change photo'**
+  String get accountAvatarChange;
+
+  /// No description provided for @accountSaveFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Could not save your changes.'**
+  String get accountSaveFailed;
+
+  /// No description provided for @accountAvatarInvalid.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose a JPEG, PNG, or WebP image no larger than 5 MB.'**
+  String get accountAvatarInvalid;
+
+  /// No description provided for @accountVerificationTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Profile verification'**
+  String get accountVerificationTitle;
+
+  /// No description provided for @accountVerificationUnverified.
+  ///
+  /// In en, this message translates to:
+  /// **'Verify your profile to get started.'**
+  String get accountVerificationUnverified;
+
+  /// No description provided for @accountVerificationPending.
+  ///
+  /// In en, this message translates to:
+  /// **'Your profile is being reviewed.'**
+  String get accountVerificationPending;
+
+  /// No description provided for @accountVerificationRejected.
+  ///
+  /// In en, this message translates to:
+  /// **'Your profile was rejected. Submit a new document.'**
+  String get accountVerificationRejected;
+
+  /// No description provided for @accountVerificationVerified.
+  ///
+  /// In en, this message translates to:
+  /// **'Profile verified'**
+  String get accountVerificationVerified;
+
+  /// No description provided for @accountDocumentsEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'No verification documents submitted.'**
+  String get accountDocumentsEmpty;
+
+  /// No description provided for @accountDocumentType.
+  ///
+  /// In en, this message translates to:
+  /// **'Document type'**
+  String get accountDocumentType;
+
+  /// No description provided for @accountSelectDocument.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose a file'**
+  String get accountSelectDocument;
+
+  /// No description provided for @accountDocumentTooLarge.
+  ///
+  /// In en, this message translates to:
+  /// **'The document must be no larger than 8 MB.'**
+  String get accountDocumentTooLarge;
+
+  /// No description provided for @accountDocumentInvalid.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose a PDF or a JPEG, PNG, or WebP image.'**
+  String get accountDocumentInvalid;
+
+  /// No description provided for @accountDocumentPendingLimit.
+  ///
+  /// In en, this message translates to:
+  /// **'You already have five documents awaiting review.'**
+  String get accountDocumentPendingLimit;
+
+  /// No description provided for @accountUploadDocument.
+  ///
+  /// In en, this message translates to:
+  /// **'Submit document'**
+  String get accountUploadDocument;
+
+  /// No description provided for @accountFileName.
+  ///
+  /// In en, this message translates to:
+  /// **'Selected file'**
+  String get accountFileName;
+
+  /// No description provided for @accountPayoutTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Payout accounts'**
+  String get accountPayoutTitle;
+
+  /// No description provided for @accountAddPayout.
+  ///
+  /// In en, this message translates to:
+  /// **'Add account'**
+  String get accountAddPayout;
+
+  /// No description provided for @accountPayoutMethod.
+  ///
+  /// In en, this message translates to:
+  /// **'Payment method'**
+  String get accountPayoutMethod;
+
+  /// No description provided for @accountProvider.
+  ///
+  /// In en, this message translates to:
+  /// **'Provider or bank'**
+  String get accountProvider;
+
+  /// No description provided for @accountAccountNumber.
+  ///
+  /// In en, this message translates to:
+  /// **'Account number'**
+  String get accountAccountNumber;
+
+  /// No description provided for @accountAccountName.
+  ///
+  /// In en, this message translates to:
+  /// **'Account holder name'**
+  String get accountAccountName;
+
+  /// No description provided for @accountDefault.
+  ///
+  /// In en, this message translates to:
+  /// **'Default account'**
+  String get accountDefault;
+
+  /// No description provided for @accountNoPayout.
+  ///
+  /// In en, this message translates to:
+  /// **'No payout accounts saved.'**
+  String get accountNoPayout;
+
+  /// No description provided for @accountDeleteConfirm.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete this payout account?'**
+  String get accountDeleteConfirm;
+
+  /// No description provided for @accountReferralTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Invite people you know'**
+  String get accountReferralTitle;
+
+  /// No description provided for @accountReferralCode.
+  ///
+  /// In en, this message translates to:
+  /// **'Your referral code'**
+  String get accountReferralCode;
+
+  /// No description provided for @accountCopyCode.
+  ///
+  /// In en, this message translates to:
+  /// **'Copy code'**
+  String get accountCopyCode;
+
+  /// No description provided for @accountCopied.
+  ///
+  /// In en, this message translates to:
+  /// **'Code copied.'**
+  String get accountCopied;
+
+  /// No description provided for @accountReferralNotVerified.
+  ///
+  /// In en, this message translates to:
+  /// **'Referral rewards are available after your profile is verified.'**
+  String get accountReferralNotVerified;
+
+  /// No description provided for @accountPending.
+  ///
+  /// In en, this message translates to:
+  /// **'Pending'**
+  String get accountPending;
+
+  /// No description provided for @accountEligible.
+  ///
+  /// In en, this message translates to:
+  /// **'Eligible'**
+  String get accountEligible;
+
+  /// No description provided for @accountPaid.
+  ///
+  /// In en, this message translates to:
+  /// **'Paid'**
+  String get accountPaid;
+
+  /// No description provided for @accountNoReferrals.
+  ///
+  /// In en, this message translates to:
+  /// **'No referrals yet.'**
+  String get accountNoReferrals;
+
+  /// No description provided for @accountSessionsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Active sessions'**
+  String get accountSessionsTitle;
+
+  /// No description provided for @accountCurrentSession.
+  ///
+  /// In en, this message translates to:
+  /// **'This device'**
+  String get accountCurrentSession;
+
+  /// No description provided for @accountCloseSession.
+  ///
+  /// In en, this message translates to:
+  /// **'Close session'**
+  String get accountCloseSession;
+
+  /// No description provided for @accountLogoutOthers.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign out other devices'**
+  String get accountLogoutOthers;
+
+  /// No description provided for @accountLogoutOthersConfirm.
+  ///
+  /// In en, this message translates to:
+  /// **'Other sessions will be closed. This device will stay signed in.'**
+  String get accountLogoutOthersConfirm;
+
+  /// No description provided for @accountLogoutOthersDone.
+  ///
+  /// In en, this message translates to:
+  /// **'Other sessions have been closed.'**
+  String get accountLogoutOthersDone;
+
+  /// No description provided for @accountSessionCreated.
+  ///
+  /// In en, this message translates to:
+  /// **'Signed in'**
+  String get accountSessionCreated;
+
+  /// No description provided for @accountSessionLastActive.
+  ///
+  /// In en, this message translates to:
+  /// **'Last active'**
+  String get accountSessionLastActive;
+
+  /// No description provided for @accountSessionExpires.
+  ///
+  /// In en, this message translates to:
+  /// **'Expires'**
+  String get accountSessionExpires;
+
+  /// No description provided for @accountSessionIp.
+  ///
+  /// In en, this message translates to:
+  /// **'IP address'**
+  String get accountSessionIp;
+
+  /// No description provided for @accountLanguageTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'App language'**
+  String get accountLanguageTitle;
+
+  /// No description provided for @verificationRequiredTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Profile not verified'**
+  String get verificationRequiredTitle;
+
+  /// No description provided for @verificationRequiredMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Verify your profile to use this feature.'**
+  String get verificationRequiredMessage;
+
+  /// No description provided for @verificationOpenDocuments.
+  ///
+  /// In en, this message translates to:
+  /// **'View documents'**
+  String get verificationOpenDocuments;
+
+  /// No description provided for @accountLoadError.
+  ///
+  /// In en, this message translates to:
+  /// **'Could not load this information.'**
+  String get accountLoadError;
+
+  /// No description provided for @accountSearch.
+  ///
+  /// In en, this message translates to:
+  /// **'Search'**
+  String get accountSearch;
+
+  /// No description provided for @accountCategory.
+  ///
+  /// In en, this message translates to:
+  /// **'Category'**
+  String get accountCategory;
+
+  /// No description provided for @accountAllCategories.
+  ///
+  /// In en, this message translates to:
+  /// **'All categories'**
+  String get accountAllCategories;
+
+  /// No description provided for @accountNoResults.
+  ///
+  /// In en, this message translates to:
+  /// **'No results.'**
+  String get accountNoResults;
+
+  /// No description provided for @accountDocumentsIntro.
+  ///
+  /// In en, this message translates to:
+  /// **'Submit the requested documents to verify your profile.'**
+  String get accountDocumentsIntro;
+
+  /// No description provided for @accountDocumentUploaded.
+  ///
+  /// In en, this message translates to:
+  /// **'Document submitted for verification.'**
+  String get accountDocumentUploaded;
+
+  /// No description provided for @accountDocumentId.
+  ///
+  /// In en, this message translates to:
+  /// **'Identity document'**
+  String get accountDocumentId;
+
+  /// No description provided for @accountDocumentBusiness.
+  ///
+  /// In en, this message translates to:
+  /// **'Business registration'**
+  String get accountDocumentBusiness;
+
+  /// No description provided for @accountDocumentFarm.
+  ///
+  /// In en, this message translates to:
+  /// **'Proof of farming'**
+  String get accountDocumentFarm;
+
+  /// No description provided for @accountDocumentOther.
+  ///
+  /// In en, this message translates to:
+  /// **'Other document'**
+  String get accountDocumentOther;
+
+  /// No description provided for @accountRejected.
+  ///
+  /// In en, this message translates to:
+  /// **'Rejected'**
+  String get accountRejected;
+
+  /// No description provided for @accountEditPayout.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit account'**
+  String get accountEditPayout;
+
+  /// No description provided for @accountSaved.
+  ///
+  /// In en, this message translates to:
+  /// **'Changes saved.'**
+  String get accountSaved;
+
+  /// No description provided for @accountDeleted.
+  ///
+  /// In en, this message translates to:
+  /// **'Account deleted.'**
+  String get accountDeleted;
+
+  /// No description provided for @accountDeleteTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete account'**
+  String get accountDeleteTitle;
+
+  /// No description provided for @accountCurrentNumber.
+  ///
+  /// In en, this message translates to:
+  /// **'Saved number'**
+  String get accountCurrentNumber;
+
+  /// No description provided for @accountNumberInvalid.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter a number between 4 and 64 characters.'**
+  String get accountNumberInvalid;
+
+  /// No description provided for @accountMobileMoney.
+  ///
+  /// In en, this message translates to:
+  /// **'Mobile Money'**
+  String get accountMobileMoney;
+
+  /// No description provided for @accountBankTransfer.
+  ///
+  /// In en, this message translates to:
+  /// **'Bank transfer'**
+  String get accountBankTransfer;
+
+  /// No description provided for @accountCash.
+  ///
+  /// In en, this message translates to:
+  /// **'Cash'**
+  String get accountCash;
+
+  /// No description provided for @accountEdit.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit'**
+  String get accountEdit;
+
+  /// No description provided for @accountDelete.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete'**
+  String get accountDelete;
+
+  /// No description provided for @accountSessionClosed.
+  ///
+  /// In en, this message translates to:
+  /// **'Session closed.'**
+  String get accountSessionClosed;
+
+  /// No description provided for @accountCloseSessionConfirm.
+  ///
+  /// In en, this message translates to:
+  /// **'Close this session?'**
+  String get accountCloseSessionConfirm;
+
+  /// No description provided for @accountUnknownDevice.
+  ///
+  /// In en, this message translates to:
+  /// **'Unknown device'**
+  String get accountUnknownDevice;
+
+  /// No description provided for @accountRetailer.
+  ///
+  /// In en, this message translates to:
+  /// **'Retailer'**
+  String get accountRetailer;
+
+  /// No description provided for @accountFarmer.
+  ///
+  /// In en, this message translates to:
+  /// **'Farmer'**
+  String get accountFarmer;
+
+  /// No description provided for @accountWholesaler.
+  ///
+  /// In en, this message translates to:
+  /// **'Wholesaler'**
+  String get accountWholesaler;
+
+  /// No description provided for @accountOther.
+  ///
+  /// In en, this message translates to:
+  /// **'Other'**
+  String get accountOther;
+
+  /// No description provided for @accountReferralBuyer.
+  ///
+  /// In en, this message translates to:
+  /// **'Buyer'**
+  String get accountReferralBuyer;
+
+  /// No description provided for @accountReferralSupplier.
+  ///
+  /// In en, this message translates to:
+  /// **'Supplier'**
+  String get accountReferralSupplier;
+
+  /// No description provided for @accountStatusPending.
+  ///
+  /// In en, this message translates to:
+  /// **'Pending'**
+  String get accountStatusPending;
+
+  /// No description provided for @accountStatusEligible.
+  ///
+  /// In en, this message translates to:
+  /// **'Eligible'**
+  String get accountStatusEligible;
+
+  /// No description provided for @accountStatusPaid.
+  ///
+  /// In en, this message translates to:
+  /// **'Paid'**
+  String get accountStatusPaid;
+
+  /// No description provided for @accountStatusRejected.
+  ///
+  /// In en, this message translates to:
+  /// **'Rejected'**
+  String get accountStatusRejected;
 }
 
 class _AppLocalizationsDelegate

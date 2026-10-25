@@ -2841,4 +2841,324 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get authOptional => 'Optional';
+
+  @override
+  String get accountTab => 'Account';
+
+  @override
+  String get accountTitle => 'My account';
+
+  @override
+  String get accountProfile => 'Profile';
+
+  @override
+  String get accountDocuments => 'Verification documents';
+
+  @override
+  String get accountPayoutAccounts => 'Payout accounts';
+
+  @override
+  String get accountReferral => 'Referrals';
+
+  @override
+  String get accountSessions => 'Sessions and security';
+
+  @override
+  String get accountLanguage => 'Language';
+
+  @override
+  String get accountEmail => 'Email address';
+
+  @override
+  String get accountLocation => 'Location';
+
+  @override
+  String get accountFirstName => 'First name';
+
+  @override
+  String get accountLastName => 'Last name';
+
+  @override
+  String get accountFarmName => 'Farm name';
+
+  @override
+  String get accountDescription => 'Description';
+
+  @override
+  String get accountBusinessName => 'Business name';
+
+  @override
+  String get accountBuyerType => 'Buyer type';
+
+  @override
+  String get accountZone => 'Zone';
+
+  @override
+  String get accountVehicleType => 'Vehicle type';
+
+  @override
+  String get accountPlateNumber => 'License plate';
+
+  @override
+  String get accountAvatarChange => 'Change photo';
+
+  @override
+  String get accountSaveFailed => 'Could not save your changes.';
+
+  @override
+  String get accountAvatarInvalid =>
+      'Choose a JPEG, PNG, or WebP image no larger than 5 MB.';
+
+  @override
+  String get accountVerificationTitle => 'Profile verification';
+
+  @override
+  String get accountVerificationUnverified =>
+      'Verify your profile to get started.';
+
+  @override
+  String get accountVerificationPending => 'Your profile is being reviewed.';
+
+  @override
+  String get accountVerificationRejected =>
+      'Your profile was rejected. Submit a new document.';
+
+  @override
+  String get accountVerificationVerified => 'Profile verified';
+
+  @override
+  String get accountDocumentsEmpty => 'No verification documents submitted.';
+
+  @override
+  String get accountDocumentType => 'Document type';
+
+  @override
+  String get accountSelectDocument => 'Choose a file';
+
+  @override
+  String get accountDocumentTooLarge =>
+      'The document must be no larger than 8 MB.';
+
+  @override
+  String get accountDocumentInvalid =>
+      'Choose a PDF or a JPEG, PNG, or WebP image.';
+
+  @override
+  String get accountDocumentPendingLimit =>
+      'You already have five documents awaiting review.';
+
+  @override
+  String get accountUploadDocument => 'Submit document';
+
+  @override
+  String get accountFileName => 'Selected file';
+
+  @override
+  String get accountPayoutTitle => 'Payout accounts';
+
+  @override
+  String get accountAddPayout => 'Add account';
+
+  @override
+  String get accountPayoutMethod => 'Payment method';
+
+  @override
+  String get accountProvider => 'Provider or bank';
+
+  @override
+  String get accountAccountNumber => 'Account number';
+
+  @override
+  String get accountAccountName => 'Account holder name';
+
+  @override
+  String get accountDefault => 'Default account';
+
+  @override
+  String get accountNoPayout => 'No payout accounts saved.';
+
+  @override
+  String get accountDeleteConfirm => 'Delete this payout account?';
+
+  @override
+  String get accountReferralTitle => 'Invite people you know';
+
+  @override
+  String get accountReferralCode => 'Your referral code';
+
+  @override
+  String get accountCopyCode => 'Copy code';
+
+  @override
+  String get accountCopied => 'Code copied.';
+
+  @override
+  String get accountReferralNotVerified =>
+      'Referral rewards are available after your profile is verified.';
+
+  @override
+  String get accountPending => 'Pending';
+
+  @override
+  String get accountEligible => 'Eligible';
+
+  @override
+  String get accountPaid => 'Paid';
+
+  @override
+  String get accountNoReferrals => 'No referrals yet.';
+
+  @override
+  String get accountSessionsTitle => 'Active sessions';
+
+  @override
+  String get accountCurrentSession => 'This device';
+
+  @override
+  String get accountCloseSession => 'Close session';
+
+  @override
+  String get accountLogoutOthers => 'Sign out other devices';
+
+  @override
+  String get accountLogoutOthersConfirm =>
+      'Other sessions will be closed. This device will stay signed in.';
+
+  @override
+  String get accountLogoutOthersDone => 'Other sessions have been closed.';
+
+  @override
+  String get accountSessionCreated => 'Signed in';
+
+  @override
+  String get accountSessionLastActive => 'Last active';
+
+  @override
+  String get accountSessionExpires => 'Expires';
+
+  @override
+  String get accountSessionIp => 'IP address';
+
+  @override
+  String get accountLanguageTitle => 'App language';
+
+  @override
+  String get verificationRequiredTitle => 'Profile not verified';
+
+  @override
+  String get verificationRequiredMessage =>
+      'Verify your profile to use this feature.';
+
+  @override
+  String get verificationOpenDocuments => 'View documents';
+
+  @override
+  String get accountLoadError => 'Could not load this information.';
+
+  @override
+  String get accountSearch => 'Search';
+
+  @override
+  String get accountCategory => 'Category';
+
+  @override
+  String get accountAllCategories => 'All categories';
+
+  @override
+  String get accountNoResults => 'No results.';
+
+  @override
+  String get accountDocumentsIntro =>
+      'Submit the requested documents to verify your profile.';
+
+  @override
+  String get accountDocumentUploaded => 'Document submitted for verification.';
+
+  @override
+  String get accountDocumentId => 'Identity document';
+
+  @override
+  String get accountDocumentBusiness => 'Business registration';
+
+  @override
+  String get accountDocumentFarm => 'Proof of farming';
+
+  @override
+  String get accountDocumentOther => 'Other document';
+
+  @override
+  String get accountRejected => 'Rejected';
+
+  @override
+  String get accountEditPayout => 'Edit account';
+
+  @override
+  String get accountSaved => 'Changes saved.';
+
+  @override
+  String get accountDeleted => 'Account deleted.';
+
+  @override
+  String get accountDeleteTitle => 'Delete account';
+
+  @override
+  String get accountCurrentNumber => 'Saved number';
+
+  @override
+  String get accountNumberInvalid =>
+      'Enter a number between 4 and 64 characters.';
+
+  @override
+  String get accountMobileMoney => 'Mobile Money';
+
+  @override
+  String get accountBankTransfer => 'Bank transfer';
+
+  @override
+  String get accountCash => 'Cash';
+
+  @override
+  String get accountEdit => 'Edit';
+
+  @override
+  String get accountDelete => 'Delete';
+
+  @override
+  String get accountSessionClosed => 'Session closed.';
+
+  @override
+  String get accountCloseSessionConfirm => 'Close this session?';
+
+  @override
+  String get accountUnknownDevice => 'Unknown device';
+
+  @override
+  String get accountRetailer => 'Retailer';
+
+  @override
+  String get accountFarmer => 'Farmer';
+
+  @override
+  String get accountWholesaler => 'Wholesaler';
+
+  @override
+  String get accountOther => 'Other';
+
+  @override
+  String get accountReferralBuyer => 'Buyer';
+
+  @override
+  String get accountReferralSupplier => 'Supplier';
+
+  @override
+  String get accountStatusPending => 'Pending';
+
+  @override
+  String get accountStatusEligible => 'Eligible';
+
+  @override
+  String get accountStatusPaid => 'Paid';
+
+  @override
+  String get accountStatusRejected => 'Rejected';
 }
