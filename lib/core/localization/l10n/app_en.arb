@@ -258,9 +258,7 @@
   "dashboardRefreshTooltip": "Refresh the dashboard",
   "dashboardQuickAddProduct": "Add a product",
   "dashboardQuickExplore": "Explore products",
-  "dashboardQuickCart": "My cart",
   "dashboardQuickMyOrders": "My orders",
-  "dashboardCartEmpty": "Empty cart",
   "buyerHeroSubtitle": "The finest produce from the farm, delivered to you.",
   "ordersPlacedStat": "Orders placed",
   "chatTitle": "Messages",
@@ -386,9 +384,9 @@
   "buyerOrdersOngoingTitle": "In progress",
   "buyerOrdersClosedTitle": "Finished",
   "buyerOrdersFilterBody": "The selected status no longer holds any order. Clear the filter to see them all again.",
-  "catalogEmptyTitle": "No products available",
-  "catalogEmptyBody": "The catalog will fill up soon.",
-  "searchCatalog": "Search for a product",
+  "catalogEmptyTitle": "No listings available",
+  "catalogEmptyBody": "Published listings will appear here.",
+  "searchCatalog": "Search listings",
   "filterCategory": "Category",
   "filterLocation": "Location",
   "filterAll": "All",
@@ -414,85 +412,19 @@
   "@quantityDecrease": {
     "description": "Action that decreases the quantity of a product."
   },
-  "addToCart": "Add to cart",
-  "addedToCart": "{name} added to cart.",
-  "@addedToCart": {
-    "description": "Confirmation that a product was added to the cart.",
-    "placeholders": {
-      "name": {"type": "String"}
-    }
-  },
-  "goToCart": "Order",
   "quantityLabel": "Quantity",
-  "cartTitle": "Cart",
-  "cartEmptyTitle": "Your cart is empty",
-  "cartEmptyBody": "Browse the catalog and add products.",
-  "viewCatalog": "View catalog",
-  "cartClear": "Clear",
   "itemsCount": "{count} item(s)",
   "@itemsCount": {
-    "description": "Number of items selected in a cart or an order.",
+    "description": "Number of items in a line or an order.",
     "placeholders": {
       "count": {"type": "int"}
     }
   },
-  "cartClearTitle": "Empty the cart?",
-  "cartClearBody": "The {count} selected item(s) will be removed from the cart.",
-  "@cartClearBody": {
-    "placeholders": {
-      "count": {"type": "int"}
-    }
-  },
-  "cartClearConfirm": "Empty the cart",
-  "cartContinueShopping": "Continue shopping",
-  "cartStockRemaining": "Available stock: {count}",
-  "@cartStockRemaining": {
-    "description": "Remaining stock when it caps the quantity of a cart line.",
-    "placeholders": {
-      "count": {"type": "int"}
-    }
-  },
-  "checkoutTitle": "Checkout",
-  "checkoutTitleAction": "Checkout",
-  "checkoutEditCart": "Edit the cart",
-  "checkoutSummary": "{count} item(s) · {total}",
-  "@checkoutSummary": {
-    "description": "Cart recap before the order is validated.",
-    "placeholders": {
-      "count": {"type": "int"},
-      "total": {"type": "String"}
-    }
-  },
-  "checkoutErrorTitle": "Order not placed",
-  "removeFromCart": "Remove from cart",
-  "checkoutDeliveryTitle": "Delivery address",
-  "checkoutAddressLabel": "Address",
-  "checkoutPhoneLabel": "Phone",
-  "checkoutNoteLabel": "Delivery note (optional)",
-  "checkoutItemsTitle": "Items",
-  "placeOrder": "Place the order",
-  "placingOrder": "Placing order…",
-  "confirmationTitle": "Order confirmed",
-  "confirmationHeadline": "Thank you, your order is registered.",
-  "confirmationBody": "The sellers received your request. You will be notified at every delivery step.",
-  "confirmationNextTitle": "What happens next?",
-  "confirmationStepSeller": "The seller prepares your products",
-  "confirmationStepDriver": "A driver is assigned to the delivery",
-  "confirmationStepDelivered": "You receive your products",
-  "confirmationTrackOrder": "Track my order",
-  "confirmationContinueShopping": "Continue shopping",
   "productPricePerUnit": "/ {unit}",
   "@productPricePerUnit": {
     "description": "Selling unit displayed next to a product price.",
     "placeholders": {
       "unit": {"type": "String"}
-    }
-  },
-  "productAlreadyInCart": "Already in the cart · {count}",
-  "@productAlreadyInCart": {
-    "description": "Quantity of the product already present in the cart.",
-    "placeholders": {
-      "count": {"type": "int"}
     }
   },
   "validationAddressRequired": "Please enter an address.",
@@ -664,7 +596,71 @@
   "catalogFiltersReset": "Reset filters",
   "catalogNoResultsTitle": "No matching product",
   "catalogNoResultsBody": "Try another keyword or reset the filters to browse the whole catalog.",
-  "catalogProductStock": "{count} {unit} in stock",
+  "catalogProductStock": "{count} {unit} available",
+  "buyerCatalogTab": "Catalog",
+  "buyerOrdersTab": "Orders",
+  "catalogSortLabel": "Sort",
+  "catalogSortPrice": "Price",
+  "catalogSortExpiry": "Expiry",
+  "catalogSortRecent": "Most recent",
+  "catalogQualityGrade": "Quality {grade}",
+  "@catalogQualityGrade": {
+    "placeholders": { "grade": { "type": "String" } }
+  },
+  "catalogExpiry": "Best before {date}",
+  "@catalogExpiry": {
+    "placeholders": { "date": { "type": "String" } }
+  },
+  "catalogListingDetail": "Listing details",
+  "catalogListingUnavailable": "This listing is no longer available.",
+  "catalogRequestQuote": "Request a quote",
+  "quoteQuantityHint": "Requested quantity",
+  "quoteMessageHint": "Additional message (optional)",
+  "quoteRequestMessage": "Hello, I would like {quantity} {unit} of “{title}” ({reference}).",
+  "@quoteRequestMessage": {
+    "placeholders": {
+      "quantity": { "type": "String" },
+      "unit": { "type": "String" },
+      "title": { "type": "String" },
+      "reference": { "type": "String" }
+    }
+  },
+  "quoteRequestInvalidQuantity": "Enter a quantity greater than zero.",
+  "buyerOrdersEmptyMessage": "Quotes from the team will appear here.",
+  "buyerOrderActionRequired": "Action required",
+  "buyerOrderQuoted": "Quote",
+  "buyerQuoteExpiresIn": "Expires in {time}",
+  "@buyerQuoteExpiresIn": {
+    "placeholders": { "time": { "type": "String" } }
+  },
+  "buyerQuoteExpired": "Quote expired",
+  "buyerConfirmQuote": "Confirm quote",
+  "buyerCancelQuote": "Cancel quote",
+  "buyerConfirmQuoteQuestion": "Confirm this quote?",
+  "buyerCancelQuoteQuestion": "Cancel this quote?",
+  "buyerCancellationReasonHint": "Reason (optional)",
+  "buyerStatusQuoted": "Quote sent",
+  "buyerStatusConfirmed": "Confirmed",
+  "buyerStatusPreparing": "Preparing",
+  "buyerStatusReadyForPickup": "Ready for pickup",
+  "buyerStatusOutForDelivery": "Out for delivery",
+  "buyerStatusCompleted": "Completed",
+  "buyerStatusCancelled": "Cancelled",
+  "buyerDeliveryModePickup": "Pickup at collection point",
+  "buyerDeliveryModeAgency": "Agency delivery",
+  "buyerPickupAddress": "Collection point address",
+  "buyerDeliveryAddress": "Delivery address",
+  "buyerQuoteTotals": "Amounts provided by the team",
+  "buyerOrderCancellationReason": "Cancellation reason: {reason}",
+  "@buyerOrderCancellationReason": {
+    "placeholders": { "reason": { "type": "String" } }
+  },
+  "buyerOrderItems": "Quoted listings",
+  "buyerOrderSubtotalLabel": "Subtotal",
+  "buyerOrderBuyerFeeLabel": "Buyer fee",
+  "buyerOrderDeliveryFeeLabel": "Delivery fee",
+  "buyerCancelOrder": "Cancel",
+  "buyerCancelOrderQuestion": "Cancel this order?",
 
   "adminConsoleLabel": "Administration console",
   "adminConsoleSubtitle": "Platform supervision",

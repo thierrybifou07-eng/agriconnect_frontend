@@ -17,6 +17,12 @@ abstract final class AppRoutes {
   static const conversations = '/messages';
   static const chatThread = '/messages/thread';
   static const notifications = '/notifications';
+  static const buyerListingDetail = '/buyer/listings/:listingId';
+  static const buyerOrderDetail = '/buyer/orders/:orderId';
+
+  static String buyerListing(int listingId) => '/buyer/listings/$listingId';
+
+  static String buyerOrder(int orderId) => '/buyer/orders/$orderId';
   static String legalDocument(String code) => '$legal/$code';
   static const supplier = '/supplier';
   static const buyer = '/buyer';

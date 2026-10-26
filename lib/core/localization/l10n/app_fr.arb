@@ -258,9 +258,7 @@
   "dashboardRefreshTooltip": "Rafraîchir le tableau de bord",
   "dashboardQuickAddProduct": "Ajouter un produit",
   "dashboardQuickExplore": "Explorer les produits",
-  "dashboardQuickCart": "Mon panier",
   "dashboardQuickMyOrders": "Mes commandes",
-  "dashboardCartEmpty": "Panier vide",
   "buyerHeroSubtitle": "Les meilleurs produits de la ferme, livrés chez vous.",
   "ordersPlacedStat": "Commandes pass\u00e9es",
   "chatTitle": "Messages",
@@ -386,9 +384,9 @@
   "buyerOrdersOngoingTitle": "En cours",
   "buyerOrdersClosedTitle": "Terminées",
   "buyerOrdersFilterBody": "Le statut sélectionné n'a plus aucune commande. Réinitialisez le filtre pour toutes les revoir.",
-  "catalogEmptyTitle": "Aucun produit disponible",
-  "catalogEmptyBody": "Le catalogue se remplira bientôt.",
-  "searchCatalog": "Rechercher un produit",
+  "catalogEmptyTitle": "Aucune annonce disponible",
+  "catalogEmptyBody": "Les annonces publiées apparaîtront ici.",
+  "searchCatalog": "Rechercher une annonce",
   "filterCategory": "Catégorie",
   "filterLocation": "Localisation",
   "filterAll": "Toutes",
@@ -414,85 +412,19 @@
   "@quantityDecrease": {
     "description": "Action de diminution de la quantité d'un produit."
   },
-  "addToCart": "Ajouter au panier",
-  "addedToCart": "{name} ajouté au panier.",
-  "@addedToCart": {
-    "description": "Confirmation d'ajout d'un produit au panier.",
-    "placeholders": {
-      "name": {"type": "String"}
-    }
-  },
-  "goToCart": "Commander",
   "quantityLabel": "Quantité",
-  "cartTitle": "Panier",
-  "cartEmptyTitle": "Panier vide",
-  "cartEmptyBody": "Parcourez le catalogue et ajoutez des produits.",
-  "viewCatalog": "Voir le catalogue",
-  "cartClear": "Vider",
   "itemsCount": "{count} article(s)",
   "@itemsCount": {
-    "description": "Nombre d'articles sélectionnés dans un panier ou une commande.",
+    "description": "Nombre d'articles dans une ligne ou une commande.",
     "placeholders": {
       "count": {"type": "int"}
     }
   },
-  "cartClearTitle": "Vider le panier ?",
-  "cartClearBody": "Les {count} article(s) sélectionnés seront retirés du panier.",
-  "@cartClearBody": {
-    "placeholders": {
-      "count": {"type": "int"}
-    }
-  },
-  "cartClearConfirm": "Vider le panier",
-  "cartContinueShopping": "Continuer mes achats",
-  "cartStockRemaining": "Stock disponible : {count}",
-  "@cartStockRemaining": {
-    "description": "Stock restant lorsqu'il limite la quantité d'une ligne du panier.",
-    "placeholders": {
-      "count": {"type": "int"}
-    }
-  },
-  "checkoutTitle": "Valider la commande",
-  "checkoutTitleAction": "Valider la commande",
-  "checkoutEditCart": "Modifier le panier",
-  "checkoutSummary": "{count} article(s) · {total}",
-  "@checkoutSummary": {
-    "description": "Récapitulatif du contenu du panier avant validation.",
-    "placeholders": {
-      "count": {"type": "int"},
-      "total": {"type": "String"}
-    }
-  },
-  "checkoutErrorTitle": "Commande non passée",
-  "removeFromCart": "Retirer du panier",
-  "checkoutDeliveryTitle": "Adresse de livraison",
-  "checkoutAddressLabel": "Adresse",
-  "checkoutPhoneLabel": "Téléphone",
-  "checkoutNoteLabel": "Note de livraison (optionnel)",
-  "checkoutItemsTitle": "Articles",
-  "placeOrder": "Passer la commande",
-  "placingOrder": "Commande en cours…",
-  "confirmationTitle": "Commande confirmée",
-  "confirmationHeadline": "Merci, votre commande est enregistrée.",
-  "confirmationBody": "Les vendeurs ont reçu votre demande. Vous serez notifié à chaque étape de la livraison.",
-  "confirmationNextTitle": "Et maintenant ?",
-  "confirmationStepSeller": "Le vendeur prépare vos produits",
-  "confirmationStepDriver": "Un livreur est assigné à la livraison",
-  "confirmationStepDelivered": "Vous recevez vos produits",
-  "confirmationTrackOrder": "Suivre ma commande",
-  "confirmationContinueShopping": "Continuer mes achats",
   "productPricePerUnit": "/ {unit}",
   "@productPricePerUnit": {
     "description": "Unité de vente affichée après un prix de produit.",
     "placeholders": {
       "unit": {"type": "String"}
-    }
-  },
-  "productAlreadyInCart": "Déjà dans le panier · {count}",
-  "@productAlreadyInCart": {
-    "description": "Quantité du produit déjà présente dans le panier.",
-    "placeholders": {
-      "count": {"type": "int"}
     }
   },
   "validationAddressRequired": "Veuillez saisir une adresse.",
@@ -664,7 +596,71 @@
   "catalogFiltersReset": "Réinitialiser les filtres",
   "catalogNoResultsTitle": "Aucun produit ne correspond",
   "catalogNoResultsBody": "Essayez un autre mot-clé ou réinitialisez les filtres pour revoir tout le catalogue.",
-  "catalogProductStock": "{count} {unit} en stock",
+  "catalogProductStock": "{count} {unit} disponible(s)",
+  "buyerCatalogTab": "Catalogue",
+  "buyerOrdersTab": "Commandes",
+  "catalogSortLabel": "Trier",
+  "catalogSortPrice": "Prix",
+  "catalogSortExpiry": "Péremption",
+  "catalogSortRecent": "Plus récents",
+  "catalogQualityGrade": "Qualité {grade}",
+  "@catalogQualityGrade": {
+    "placeholders": { "grade": { "type": "String" } }
+  },
+  "catalogExpiry": "À consommer avant le {date}",
+  "@catalogExpiry": {
+    "placeholders": { "date": { "type": "String" } }
+  },
+  "catalogListingDetail": "Détail de l'annonce",
+  "catalogListingUnavailable": "Cette annonce n'est plus disponible.",
+  "catalogRequestQuote": "Demander un devis",
+  "quoteQuantityHint": "Quantité souhaitée",
+  "quoteMessageHint": "Message complémentaire (facultatif)",
+  "quoteRequestMessage": "Bonjour, je souhaite {quantity} {unit} de « {title} » ({reference}).",
+  "@quoteRequestMessage": {
+    "placeholders": {
+      "quantity": { "type": "String" },
+      "unit": { "type": "String" },
+      "title": { "type": "String" },
+      "reference": { "type": "String" }
+    }
+  },
+  "quoteRequestInvalidQuantity": "Saisissez une quantité supérieure à zéro.",
+  "buyerOrdersEmptyMessage": "Les devis proposés par l'équipe apparaîtront ici.",
+  "buyerOrderActionRequired": "Action requise",
+  "buyerOrderQuoted": "Devis",
+  "buyerQuoteExpiresIn": "Expire dans {time}",
+  "@buyerQuoteExpiresIn": {
+    "placeholders": { "time": { "type": "String" } }
+  },
+  "buyerQuoteExpired": "Devis expiré",
+  "buyerConfirmQuote": "Confirmer le devis",
+  "buyerCancelQuote": "Annuler le devis",
+  "buyerConfirmQuoteQuestion": "Confirmer ce devis ?",
+  "buyerCancelQuoteQuestion": "Annuler ce devis ?",
+  "buyerCancellationReasonHint": "Motif (facultatif)",
+  "buyerStatusQuoted": "Devis proposé",
+  "buyerStatusConfirmed": "Confirmée",
+  "buyerStatusPreparing": "En préparation",
+  "buyerStatusReadyForPickup": "Prête au retrait",
+  "buyerStatusOutForDelivery": "En livraison",
+  "buyerStatusCompleted": "Terminée",
+  "buyerStatusCancelled": "Annulée",
+  "buyerDeliveryModePickup": "Retrait au point de collecte",
+  "buyerDeliveryModeAgency": "Livraison par agence",
+  "buyerPickupAddress": "Adresse du point de collecte",
+  "buyerDeliveryAddress": "Adresse de livraison",
+  "buyerQuoteTotals": "Montants indiqués par l'équipe",
+  "buyerOrderCancellationReason": "Motif d'annulation : {reason}",
+  "@buyerOrderCancellationReason": {
+    "placeholders": { "reason": { "type": "String" } }
+  },
+  "buyerOrderItems": "Annonces du devis",
+  "buyerOrderSubtotalLabel": "Sous-total",
+  "buyerOrderBuyerFeeLabel": "Frais acheteur",
+  "buyerOrderDeliveryFeeLabel": "Frais de livraison",
+  "buyerCancelOrder": "Annuler",
+  "buyerCancelOrderQuestion": "Annuler cette commande ?",
 
   "adminConsoleLabel": "Console d'administration",
   "adminConsoleSubtitle": "Supervision de la plateforme",

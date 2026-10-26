@@ -1,0 +1,31 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "reference": "ANN-DEMO-0001",
+      "title": "Riz local",
+      "description": "Riz récolté localement.",
+      "category": {
+        "code": "CEREALS",
+        "label": "Céréales"
+      },
+      "unit": {
+        "code": "KG",
+        "label": "kg"
+      },
+      "unitPrice": 1500,
+      "quantityAvailable": 100,
+      "expiresAt": "2026-12-31T00:00:00.000Z",
+      "zone": {
+        "id": 1,
+        "name": "Centre",
+        "city": "Yaoundé"
+      },
+      "images": [],
+      "qualityGrade": null
+    }
+  ],
+  "page": 1,
+  "limit": 20,
+  "total": 1
+}

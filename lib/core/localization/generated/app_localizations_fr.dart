@@ -705,13 +705,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get dashboardQuickExplore => 'Explorer les produits';
 
   @override
-  String get dashboardQuickCart => 'Mon panier';
-
-  @override
   String get dashboardQuickMyOrders => 'Mes commandes';
-
-  @override
-  String get dashboardCartEmpty => 'Panier vide';
 
   @override
   String get buyerHeroSubtitle =>
@@ -1051,13 +1045,13 @@ class AppLocalizationsFr extends AppLocalizations {
       'Le statut sélectionné n\'a plus aucune commande. Réinitialisez le filtre pour toutes les revoir.';
 
   @override
-  String get catalogEmptyTitle => 'Aucun produit disponible';
+  String get catalogEmptyTitle => 'Aucune annonce disponible';
 
   @override
-  String get catalogEmptyBody => 'Le catalogue se remplira bientôt.';
+  String get catalogEmptyBody => 'Les annonces publiées apparaîtront ici.';
 
   @override
-  String get searchCatalog => 'Rechercher un produit';
+  String get searchCatalog => 'Rechercher une annonce';
 
   @override
   String get filterCategory => 'Catégorie';
@@ -1085,33 +1079,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get quantityDecrease => 'Diminuer la quantité';
 
   @override
-  String get addToCart => 'Ajouter au panier';
-
-  @override
-  String addedToCart(String name) {
-    return '$name ajouté au panier.';
-  }
-
-  @override
-  String get goToCart => 'Commander';
-
-  @override
   String get quantityLabel => 'Quantité';
-
-  @override
-  String get cartTitle => 'Panier';
-
-  @override
-  String get cartEmptyTitle => 'Panier vide';
-
-  @override
-  String get cartEmptyBody => 'Parcourez le catalogue et ajoutez des produits.';
-
-  @override
-  String get viewCatalog => 'Voir le catalogue';
-
-  @override
-  String get cartClear => 'Vider';
 
   @override
   String itemsCount(int count) {
@@ -1119,101 +1087,8 @@ class AppLocalizationsFr extends AppLocalizations {
   }
 
   @override
-  String get cartClearTitle => 'Vider le panier ?';
-
-  @override
-  String cartClearBody(int count) {
-    return 'Les $count article(s) sélectionnés seront retirés du panier.';
-  }
-
-  @override
-  String get cartClearConfirm => 'Vider le panier';
-
-  @override
-  String get cartContinueShopping => 'Continuer mes achats';
-
-  @override
-  String cartStockRemaining(int count) {
-    return 'Stock disponible : $count';
-  }
-
-  @override
-  String get checkoutTitle => 'Valider la commande';
-
-  @override
-  String get checkoutTitleAction => 'Valider la commande';
-
-  @override
-  String get checkoutEditCart => 'Modifier le panier';
-
-  @override
-  String checkoutSummary(int count, String total) {
-    return '$count article(s) · $total';
-  }
-
-  @override
-  String get checkoutErrorTitle => 'Commande non passée';
-
-  @override
-  String get removeFromCart => 'Retirer du panier';
-
-  @override
-  String get checkoutDeliveryTitle => 'Adresse de livraison';
-
-  @override
-  String get checkoutAddressLabel => 'Adresse';
-
-  @override
-  String get checkoutPhoneLabel => 'Téléphone';
-
-  @override
-  String get checkoutNoteLabel => 'Note de livraison (optionnel)';
-
-  @override
-  String get checkoutItemsTitle => 'Articles';
-
-  @override
-  String get placeOrder => 'Passer la commande';
-
-  @override
-  String get placingOrder => 'Commande en cours…';
-
-  @override
-  String get confirmationTitle => 'Commande confirmée';
-
-  @override
-  String get confirmationHeadline => 'Merci, votre commande est enregistrée.';
-
-  @override
-  String get confirmationBody =>
-      'Les vendeurs ont reçu votre demande. Vous serez notifié à chaque étape de la livraison.';
-
-  @override
-  String get confirmationNextTitle => 'Et maintenant ?';
-
-  @override
-  String get confirmationStepSeller => 'Le vendeur prépare vos produits';
-
-  @override
-  String get confirmationStepDriver => 'Un livreur est assigné à la livraison';
-
-  @override
-  String get confirmationStepDelivered => 'Vous recevez vos produits';
-
-  @override
-  String get confirmationTrackOrder => 'Suivre ma commande';
-
-  @override
-  String get confirmationContinueShopping => 'Continuer mes achats';
-
-  @override
   String productPricePerUnit(String unit) {
     return '/ $unit';
-  }
-
-  @override
-  String productAlreadyInCart(int count) {
-    return 'Déjà dans le panier · $count';
   }
 
   @override
@@ -1626,8 +1501,158 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String catalogProductStock(Object count, Object unit) {
-    return '$count $unit en stock';
+    return '$count $unit disponible(s)';
   }
+
+  @override
+  String get buyerCatalogTab => 'Catalogue';
+
+  @override
+  String get buyerOrdersTab => 'Commandes';
+
+  @override
+  String get catalogSortLabel => 'Trier';
+
+  @override
+  String get catalogSortPrice => 'Prix';
+
+  @override
+  String get catalogSortExpiry => 'Péremption';
+
+  @override
+  String get catalogSortRecent => 'Plus récents';
+
+  @override
+  String catalogQualityGrade(String grade) {
+    return 'Qualité $grade';
+  }
+
+  @override
+  String catalogExpiry(String date) {
+    return 'À consommer avant le $date';
+  }
+
+  @override
+  String get catalogListingDetail => 'Détail de l\'annonce';
+
+  @override
+  String get catalogListingUnavailable =>
+      'Cette annonce n\'est plus disponible.';
+
+  @override
+  String get catalogRequestQuote => 'Demander un devis';
+
+  @override
+  String get quoteQuantityHint => 'Quantité souhaitée';
+
+  @override
+  String get quoteMessageHint => 'Message complémentaire (facultatif)';
+
+  @override
+  String quoteRequestMessage(
+    String quantity,
+    String unit,
+    String title,
+    String reference,
+  ) {
+    return 'Bonjour, je souhaite $quantity $unit de « $title » ($reference).';
+  }
+
+  @override
+  String get quoteRequestInvalidQuantity =>
+      'Saisissez une quantité supérieure à zéro.';
+
+  @override
+  String get buyerOrdersEmptyMessage =>
+      'Les devis proposés par l\'équipe apparaîtront ici.';
+
+  @override
+  String get buyerOrderActionRequired => 'Action requise';
+
+  @override
+  String get buyerOrderQuoted => 'Devis';
+
+  @override
+  String buyerQuoteExpiresIn(String time) {
+    return 'Expire dans $time';
+  }
+
+  @override
+  String get buyerQuoteExpired => 'Devis expiré';
+
+  @override
+  String get buyerConfirmQuote => 'Confirmer le devis';
+
+  @override
+  String get buyerCancelQuote => 'Annuler le devis';
+
+  @override
+  String get buyerConfirmQuoteQuestion => 'Confirmer ce devis ?';
+
+  @override
+  String get buyerCancelQuoteQuestion => 'Annuler ce devis ?';
+
+  @override
+  String get buyerCancellationReasonHint => 'Motif (facultatif)';
+
+  @override
+  String get buyerStatusQuoted => 'Devis proposé';
+
+  @override
+  String get buyerStatusConfirmed => 'Confirmée';
+
+  @override
+  String get buyerStatusPreparing => 'En préparation';
+
+  @override
+  String get buyerStatusReadyForPickup => 'Prête au retrait';
+
+  @override
+  String get buyerStatusOutForDelivery => 'En livraison';
+
+  @override
+  String get buyerStatusCompleted => 'Terminée';
+
+  @override
+  String get buyerStatusCancelled => 'Annulée';
+
+  @override
+  String get buyerDeliveryModePickup => 'Retrait au point de collecte';
+
+  @override
+  String get buyerDeliveryModeAgency => 'Livraison par agence';
+
+  @override
+  String get buyerPickupAddress => 'Adresse du point de collecte';
+
+  @override
+  String get buyerDeliveryAddress => 'Adresse de livraison';
+
+  @override
+  String get buyerQuoteTotals => 'Montants indiqués par l\'équipe';
+
+  @override
+  String buyerOrderCancellationReason(String reason) {
+    return 'Motif d\'annulation : $reason';
+  }
+
+  @override
+  String get buyerOrderItems => 'Annonces du devis';
+
+  @override
+  String get buyerOrderSubtotalLabel => 'Sous-total';
+
+  @override
+  String get buyerOrderBuyerFeeLabel => 'Frais acheteur';
+
+  @override
+  String get buyerOrderDeliveryFeeLabel => 'Frais de livraison';
+
+  @override
+  String get buyerCancelOrder => 'Annuler';
+
+  @override
+  String get buyerCancelOrderQuestion => 'Annuler cette commande ?';
 
   @override
   String get adminConsoleLabel => 'Console d\'administration';

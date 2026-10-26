@@ -1358,23 +1358,11 @@ abstract class AppLocalizations {
   /// **'Explore products'**
   String get dashboardQuickExplore;
 
-  /// No description provided for @dashboardQuickCart.
-  ///
-  /// In en, this message translates to:
-  /// **'My cart'**
-  String get dashboardQuickCart;
-
   /// No description provided for @dashboardQuickMyOrders.
   ///
   /// In en, this message translates to:
   /// **'My orders'**
   String get dashboardQuickMyOrders;
-
-  /// No description provided for @dashboardCartEmpty.
-  ///
-  /// In en, this message translates to:
-  /// **'Empty cart'**
-  String get dashboardCartEmpty;
 
   /// No description provided for @buyerHeroSubtitle.
   ///
@@ -1961,19 +1949,19 @@ abstract class AppLocalizations {
   /// No description provided for @catalogEmptyTitle.
   ///
   /// In en, this message translates to:
-  /// **'No products available'**
+  /// **'No listings available'**
   String get catalogEmptyTitle;
 
   /// No description provided for @catalogEmptyBody.
   ///
   /// In en, this message translates to:
-  /// **'The catalog will fill up soon.'**
+  /// **'Published listings will appear here.'**
   String get catalogEmptyBody;
 
   /// No description provided for @searchCatalog.
   ///
   /// In en, this message translates to:
-  /// **'Search for a product'**
+  /// **'Search listings'**
   String get searchCatalog;
 
   /// No description provided for @filterCategory.
@@ -2018,239 +2006,23 @@ abstract class AppLocalizations {
   /// **'Decrease quantity'**
   String get quantityDecrease;
 
-  /// No description provided for @addToCart.
-  ///
-  /// In en, this message translates to:
-  /// **'Add to cart'**
-  String get addToCart;
-
-  /// Confirmation that a product was added to the cart.
-  ///
-  /// In en, this message translates to:
-  /// **'{name} added to cart.'**
-  String addedToCart(String name);
-
-  /// No description provided for @goToCart.
-  ///
-  /// In en, this message translates to:
-  /// **'Order'**
-  String get goToCart;
-
   /// No description provided for @quantityLabel.
   ///
   /// In en, this message translates to:
   /// **'Quantity'**
   String get quantityLabel;
 
-  /// No description provided for @cartTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Cart'**
-  String get cartTitle;
-
-  /// No description provided for @cartEmptyTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Your cart is empty'**
-  String get cartEmptyTitle;
-
-  /// No description provided for @cartEmptyBody.
-  ///
-  /// In en, this message translates to:
-  /// **'Browse the catalog and add products.'**
-  String get cartEmptyBody;
-
-  /// No description provided for @viewCatalog.
-  ///
-  /// In en, this message translates to:
-  /// **'View catalog'**
-  String get viewCatalog;
-
-  /// No description provided for @cartClear.
-  ///
-  /// In en, this message translates to:
-  /// **'Clear'**
-  String get cartClear;
-
-  /// Number of items selected in a cart or an order.
+  /// Number of items in a line or an order.
   ///
   /// In en, this message translates to:
   /// **'{count} item(s)'**
   String itemsCount(int count);
-
-  /// No description provided for @cartClearTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Empty the cart?'**
-  String get cartClearTitle;
-
-  /// No description provided for @cartClearBody.
-  ///
-  /// In en, this message translates to:
-  /// **'The {count} selected item(s) will be removed from the cart.'**
-  String cartClearBody(int count);
-
-  /// No description provided for @cartClearConfirm.
-  ///
-  /// In en, this message translates to:
-  /// **'Empty the cart'**
-  String get cartClearConfirm;
-
-  /// No description provided for @cartContinueShopping.
-  ///
-  /// In en, this message translates to:
-  /// **'Continue shopping'**
-  String get cartContinueShopping;
-
-  /// Remaining stock when it caps the quantity of a cart line.
-  ///
-  /// In en, this message translates to:
-  /// **'Available stock: {count}'**
-  String cartStockRemaining(int count);
-
-  /// No description provided for @checkoutTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Checkout'**
-  String get checkoutTitle;
-
-  /// No description provided for @checkoutTitleAction.
-  ///
-  /// In en, this message translates to:
-  /// **'Checkout'**
-  String get checkoutTitleAction;
-
-  /// No description provided for @checkoutEditCart.
-  ///
-  /// In en, this message translates to:
-  /// **'Edit the cart'**
-  String get checkoutEditCart;
-
-  /// Cart recap before the order is validated.
-  ///
-  /// In en, this message translates to:
-  /// **'{count} item(s) · {total}'**
-  String checkoutSummary(int count, String total);
-
-  /// No description provided for @checkoutErrorTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Order not placed'**
-  String get checkoutErrorTitle;
-
-  /// No description provided for @removeFromCart.
-  ///
-  /// In en, this message translates to:
-  /// **'Remove from cart'**
-  String get removeFromCart;
-
-  /// No description provided for @checkoutDeliveryTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Delivery address'**
-  String get checkoutDeliveryTitle;
-
-  /// No description provided for @checkoutAddressLabel.
-  ///
-  /// In en, this message translates to:
-  /// **'Address'**
-  String get checkoutAddressLabel;
-
-  /// No description provided for @checkoutPhoneLabel.
-  ///
-  /// In en, this message translates to:
-  /// **'Phone'**
-  String get checkoutPhoneLabel;
-
-  /// No description provided for @checkoutNoteLabel.
-  ///
-  /// In en, this message translates to:
-  /// **'Delivery note (optional)'**
-  String get checkoutNoteLabel;
-
-  /// No description provided for @checkoutItemsTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Items'**
-  String get checkoutItemsTitle;
-
-  /// No description provided for @placeOrder.
-  ///
-  /// In en, this message translates to:
-  /// **'Place the order'**
-  String get placeOrder;
-
-  /// No description provided for @placingOrder.
-  ///
-  /// In en, this message translates to:
-  /// **'Placing order…'**
-  String get placingOrder;
-
-  /// No description provided for @confirmationTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Order confirmed'**
-  String get confirmationTitle;
-
-  /// No description provided for @confirmationHeadline.
-  ///
-  /// In en, this message translates to:
-  /// **'Thank you, your order is registered.'**
-  String get confirmationHeadline;
-
-  /// No description provided for @confirmationBody.
-  ///
-  /// In en, this message translates to:
-  /// **'The sellers received your request. You will be notified at every delivery step.'**
-  String get confirmationBody;
-
-  /// No description provided for @confirmationNextTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'What happens next?'**
-  String get confirmationNextTitle;
-
-  /// No description provided for @confirmationStepSeller.
-  ///
-  /// In en, this message translates to:
-  /// **'The seller prepares your products'**
-  String get confirmationStepSeller;
-
-  /// No description provided for @confirmationStepDriver.
-  ///
-  /// In en, this message translates to:
-  /// **'A driver is assigned to the delivery'**
-  String get confirmationStepDriver;
-
-  /// No description provided for @confirmationStepDelivered.
-  ///
-  /// In en, this message translates to:
-  /// **'You receive your products'**
-  String get confirmationStepDelivered;
-
-  /// No description provided for @confirmationTrackOrder.
-  ///
-  /// In en, this message translates to:
-  /// **'Track my order'**
-  String get confirmationTrackOrder;
-
-  /// No description provided for @confirmationContinueShopping.
-  ///
-  /// In en, this message translates to:
-  /// **'Continue shopping'**
-  String get confirmationContinueShopping;
 
   /// Selling unit displayed next to a product price.
   ///
   /// In en, this message translates to:
   /// **'/ {unit}'**
   String productPricePerUnit(String unit);
-
-  /// Quantity of the product already present in the cart.
-  ///
-  /// In en, this message translates to:
-  /// **'Already in the cart · {count}'**
-  String productAlreadyInCart(int count);
 
   /// No description provided for @validationAddressRequired.
   ///
@@ -2999,8 +2771,277 @@ abstract class AppLocalizations {
   /// No description provided for @catalogProductStock.
   ///
   /// In en, this message translates to:
-  /// **'{count} {unit} in stock'**
+  /// **'{count} {unit} available'**
   String catalogProductStock(Object count, Object unit);
+
+  /// No description provided for @buyerCatalogTab.
+  ///
+  /// In en, this message translates to:
+  /// **'Catalog'**
+  String get buyerCatalogTab;
+
+  /// No description provided for @buyerOrdersTab.
+  ///
+  /// In en, this message translates to:
+  /// **'Orders'**
+  String get buyerOrdersTab;
+
+  /// No description provided for @catalogSortLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Sort'**
+  String get catalogSortLabel;
+
+  /// No description provided for @catalogSortPrice.
+  ///
+  /// In en, this message translates to:
+  /// **'Price'**
+  String get catalogSortPrice;
+
+  /// No description provided for @catalogSortExpiry.
+  ///
+  /// In en, this message translates to:
+  /// **'Expiry'**
+  String get catalogSortExpiry;
+
+  /// No description provided for @catalogSortRecent.
+  ///
+  /// In en, this message translates to:
+  /// **'Most recent'**
+  String get catalogSortRecent;
+
+  /// No description provided for @catalogQualityGrade.
+  ///
+  /// In en, this message translates to:
+  /// **'Quality {grade}'**
+  String catalogQualityGrade(String grade);
+
+  /// No description provided for @catalogExpiry.
+  ///
+  /// In en, this message translates to:
+  /// **'Best before {date}'**
+  String catalogExpiry(String date);
+
+  /// No description provided for @catalogListingDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'Listing details'**
+  String get catalogListingDetail;
+
+  /// No description provided for @catalogListingUnavailable.
+  ///
+  /// In en, this message translates to:
+  /// **'This listing is no longer available.'**
+  String get catalogListingUnavailable;
+
+  /// No description provided for @catalogRequestQuote.
+  ///
+  /// In en, this message translates to:
+  /// **'Request a quote'**
+  String get catalogRequestQuote;
+
+  /// No description provided for @quoteQuantityHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Requested quantity'**
+  String get quoteQuantityHint;
+
+  /// No description provided for @quoteMessageHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Additional message (optional)'**
+  String get quoteMessageHint;
+
+  /// No description provided for @quoteRequestMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Hello, I would like {quantity} {unit} of “{title}” ({reference}).'**
+  String quoteRequestMessage(
+    String quantity,
+    String unit,
+    String title,
+    String reference,
+  );
+
+  /// No description provided for @quoteRequestInvalidQuantity.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter a quantity greater than zero.'**
+  String get quoteRequestInvalidQuantity;
+
+  /// No description provided for @buyerOrdersEmptyMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Quotes from the team will appear here.'**
+  String get buyerOrdersEmptyMessage;
+
+  /// No description provided for @buyerOrderActionRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Action required'**
+  String get buyerOrderActionRequired;
+
+  /// No description provided for @buyerOrderQuoted.
+  ///
+  /// In en, this message translates to:
+  /// **'Quote'**
+  String get buyerOrderQuoted;
+
+  /// No description provided for @buyerQuoteExpiresIn.
+  ///
+  /// In en, this message translates to:
+  /// **'Expires in {time}'**
+  String buyerQuoteExpiresIn(String time);
+
+  /// No description provided for @buyerQuoteExpired.
+  ///
+  /// In en, this message translates to:
+  /// **'Quote expired'**
+  String get buyerQuoteExpired;
+
+  /// No description provided for @buyerConfirmQuote.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm quote'**
+  String get buyerConfirmQuote;
+
+  /// No description provided for @buyerCancelQuote.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel quote'**
+  String get buyerCancelQuote;
+
+  /// No description provided for @buyerConfirmQuoteQuestion.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm this quote?'**
+  String get buyerConfirmQuoteQuestion;
+
+  /// No description provided for @buyerCancelQuoteQuestion.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel this quote?'**
+  String get buyerCancelQuoteQuestion;
+
+  /// No description provided for @buyerCancellationReasonHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Reason (optional)'**
+  String get buyerCancellationReasonHint;
+
+  /// No description provided for @buyerStatusQuoted.
+  ///
+  /// In en, this message translates to:
+  /// **'Quote sent'**
+  String get buyerStatusQuoted;
+
+  /// No description provided for @buyerStatusConfirmed.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirmed'**
+  String get buyerStatusConfirmed;
+
+  /// No description provided for @buyerStatusPreparing.
+  ///
+  /// In en, this message translates to:
+  /// **'Preparing'**
+  String get buyerStatusPreparing;
+
+  /// No description provided for @buyerStatusReadyForPickup.
+  ///
+  /// In en, this message translates to:
+  /// **'Ready for pickup'**
+  String get buyerStatusReadyForPickup;
+
+  /// No description provided for @buyerStatusOutForDelivery.
+  ///
+  /// In en, this message translates to:
+  /// **'Out for delivery'**
+  String get buyerStatusOutForDelivery;
+
+  /// No description provided for @buyerStatusCompleted.
+  ///
+  /// In en, this message translates to:
+  /// **'Completed'**
+  String get buyerStatusCompleted;
+
+  /// No description provided for @buyerStatusCancelled.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancelled'**
+  String get buyerStatusCancelled;
+
+  /// No description provided for @buyerDeliveryModePickup.
+  ///
+  /// In en, this message translates to:
+  /// **'Pickup at collection point'**
+  String get buyerDeliveryModePickup;
+
+  /// No description provided for @buyerDeliveryModeAgency.
+  ///
+  /// In en, this message translates to:
+  /// **'Agency delivery'**
+  String get buyerDeliveryModeAgency;
+
+  /// No description provided for @buyerPickupAddress.
+  ///
+  /// In en, this message translates to:
+  /// **'Collection point address'**
+  String get buyerPickupAddress;
+
+  /// No description provided for @buyerDeliveryAddress.
+  ///
+  /// In en, this message translates to:
+  /// **'Delivery address'**
+  String get buyerDeliveryAddress;
+
+  /// No description provided for @buyerQuoteTotals.
+  ///
+  /// In en, this message translates to:
+  /// **'Amounts provided by the team'**
+  String get buyerQuoteTotals;
+
+  /// No description provided for @buyerOrderCancellationReason.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancellation reason: {reason}'**
+  String buyerOrderCancellationReason(String reason);
+
+  /// No description provided for @buyerOrderItems.
+  ///
+  /// In en, this message translates to:
+  /// **'Quoted listings'**
+  String get buyerOrderItems;
+
+  /// No description provided for @buyerOrderSubtotalLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Subtotal'**
+  String get buyerOrderSubtotalLabel;
+
+  /// No description provided for @buyerOrderBuyerFeeLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Buyer fee'**
+  String get buyerOrderBuyerFeeLabel;
+
+  /// No description provided for @buyerOrderDeliveryFeeLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Delivery fee'**
+  String get buyerOrderDeliveryFeeLabel;
+
+  /// No description provided for @buyerCancelOrder.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get buyerCancelOrder;
+
+  /// No description provided for @buyerCancelOrderQuestion.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel this order?'**
+  String get buyerCancelOrderQuestion;
 
   /// No description provided for @adminConsoleLabel.
   ///

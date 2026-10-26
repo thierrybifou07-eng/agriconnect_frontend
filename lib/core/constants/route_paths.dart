@@ -28,12 +28,8 @@ abstract final class RoutePaths {
   static String supplierMessageThread(String conversationId) =>
       '/supplier/messages/$conversationId';
 
-  static const String buyerProductDetail = '/buyer/product/:productId';
-  static const String buyerCart = '/buyer/cart';
-  static const String buyerCheckout = '/buyer/checkout';
   static const String buyerOrderDetail = '/buyer/orders/:orderId';
-  static const String buyerOrderConfirmationDetail =
-      '/buyer/orders/:orderId/confirmation';
+  static const String buyerListingDetail = '/buyer/listings/:listingId';
 
   /// Dashboard of the buyer shell.
   static const String buyerHome = '/buyer/home';
@@ -46,10 +42,8 @@ abstract final class RoutePaths {
   static const String buyerMessages = '/buyer/messages';
   static const String buyerConversation = '/buyer/messages/:conversationId';
 
-  static String buyerProduct(String productId) => '/buyer/product/$productId';
   static String buyerOrder(String orderId) => '/buyer/orders/$orderId';
-  static String buyerOrderConfirmation(String orderId) =>
-      '/buyer/orders/$orderId/confirmation';
+  static String buyerListing(String listingId) => '/buyer/listings/$listingId';
   static String buyerMessageThread(String conversationId) =>
       '/buyer/messages/$conversationId';
 

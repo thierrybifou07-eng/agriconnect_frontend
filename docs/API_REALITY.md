@@ -131,6 +131,7 @@ un repli sur le statut HTTP + message.
 | `GET /admin/payouts`, `/admin/compensations`, `/admin/referrals` params | aucun | + **`status`** (+ `page`,`limit`) |
 | `GET /driver/deliveries/mine` params | aucun | + `status` |
 | `GET /staff/deliveries` params | `page`,`limit` | + `status`, `orderId` |
+| `GET /catalog/categories` | tableau de catégories | `{value:[Category], Count:<number>}` |
 | `User.agent` / capacités | absent | présent sur les réponses `login`, `register` et `GET /auth/me` pour AGENT (vérifié sur l'API locale redémarrée le 25/10/2026) |
 
 ## 5. ÉCARTS DU CONTRAT ET ÉTAT DE RÉSOLUTION
@@ -218,6 +219,7 @@ Vue **staff** : `{id, reference, title, description, unitPrice, status:'DRAFT'|'
 product:{id,name,category,unit}, zone:{id,name}, images:[{url,position,isPrimary}], lot:StaffLot|null,
 createdByUserId, createdByAgentId, createdAt, updatedAt}`.
 Création : `POST /staff/listings` multipart (`images` 1–5 **requis par la spec**), `lotIds` (UN seul au MVP), `title`(3–140), `unitPrice?`, `zoneId?`, `description?`.
+`GET /catalog/categories` renvoie l'objet `{value:[{id,code,label}], Count}` (et non le tableau décrit dans l'OpenAPI). Forme observée sur le backend local avec le compte BUYER de démonstration ; le frontend lit `value`.
 
 ### 6.4 Commande
 Vue acheteur (`orderToBuyerDto`) :

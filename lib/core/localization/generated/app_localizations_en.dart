@@ -690,13 +690,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get dashboardQuickExplore => 'Explore products';
 
   @override
-  String get dashboardQuickCart => 'My cart';
-
-  @override
   String get dashboardQuickMyOrders => 'My orders';
-
-  @override
-  String get dashboardCartEmpty => 'Empty cart';
 
   @override
   String get buyerHeroSubtitle =>
@@ -1032,13 +1026,13 @@ class AppLocalizationsEn extends AppLocalizations {
       'The selected status no longer holds any order. Clear the filter to see them all again.';
 
   @override
-  String get catalogEmptyTitle => 'No products available';
+  String get catalogEmptyTitle => 'No listings available';
 
   @override
-  String get catalogEmptyBody => 'The catalog will fill up soon.';
+  String get catalogEmptyBody => 'Published listings will appear here.';
 
   @override
-  String get searchCatalog => 'Search for a product';
+  String get searchCatalog => 'Search listings';
 
   @override
   String get filterCategory => 'Category';
@@ -1066,33 +1060,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get quantityDecrease => 'Decrease quantity';
 
   @override
-  String get addToCart => 'Add to cart';
-
-  @override
-  String addedToCart(String name) {
-    return '$name added to cart.';
-  }
-
-  @override
-  String get goToCart => 'Order';
-
-  @override
   String get quantityLabel => 'Quantity';
-
-  @override
-  String get cartTitle => 'Cart';
-
-  @override
-  String get cartEmptyTitle => 'Your cart is empty';
-
-  @override
-  String get cartEmptyBody => 'Browse the catalog and add products.';
-
-  @override
-  String get viewCatalog => 'View catalog';
-
-  @override
-  String get cartClear => 'Clear';
 
   @override
   String itemsCount(int count) {
@@ -1100,101 +1068,8 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-  String get cartClearTitle => 'Empty the cart?';
-
-  @override
-  String cartClearBody(int count) {
-    return 'The $count selected item(s) will be removed from the cart.';
-  }
-
-  @override
-  String get cartClearConfirm => 'Empty the cart';
-
-  @override
-  String get cartContinueShopping => 'Continue shopping';
-
-  @override
-  String cartStockRemaining(int count) {
-    return 'Available stock: $count';
-  }
-
-  @override
-  String get checkoutTitle => 'Checkout';
-
-  @override
-  String get checkoutTitleAction => 'Checkout';
-
-  @override
-  String get checkoutEditCart => 'Edit the cart';
-
-  @override
-  String checkoutSummary(int count, String total) {
-    return '$count item(s) · $total';
-  }
-
-  @override
-  String get checkoutErrorTitle => 'Order not placed';
-
-  @override
-  String get removeFromCart => 'Remove from cart';
-
-  @override
-  String get checkoutDeliveryTitle => 'Delivery address';
-
-  @override
-  String get checkoutAddressLabel => 'Address';
-
-  @override
-  String get checkoutPhoneLabel => 'Phone';
-
-  @override
-  String get checkoutNoteLabel => 'Delivery note (optional)';
-
-  @override
-  String get checkoutItemsTitle => 'Items';
-
-  @override
-  String get placeOrder => 'Place the order';
-
-  @override
-  String get placingOrder => 'Placing order…';
-
-  @override
-  String get confirmationTitle => 'Order confirmed';
-
-  @override
-  String get confirmationHeadline => 'Thank you, your order is registered.';
-
-  @override
-  String get confirmationBody =>
-      'The sellers received your request. You will be notified at every delivery step.';
-
-  @override
-  String get confirmationNextTitle => 'What happens next?';
-
-  @override
-  String get confirmationStepSeller => 'The seller prepares your products';
-
-  @override
-  String get confirmationStepDriver => 'A driver is assigned to the delivery';
-
-  @override
-  String get confirmationStepDelivered => 'You receive your products';
-
-  @override
-  String get confirmationTrackOrder => 'Track my order';
-
-  @override
-  String get confirmationContinueShopping => 'Continue shopping';
-
-  @override
   String productPricePerUnit(String unit) {
     return '/ $unit';
-  }
-
-  @override
-  String productAlreadyInCart(int count) {
-    return 'Already in the cart · $count';
   }
 
   @override
@@ -1606,8 +1481,158 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String catalogProductStock(Object count, Object unit) {
-    return '$count $unit in stock';
+    return '$count $unit available';
   }
+
+  @override
+  String get buyerCatalogTab => 'Catalog';
+
+  @override
+  String get buyerOrdersTab => 'Orders';
+
+  @override
+  String get catalogSortLabel => 'Sort';
+
+  @override
+  String get catalogSortPrice => 'Price';
+
+  @override
+  String get catalogSortExpiry => 'Expiry';
+
+  @override
+  String get catalogSortRecent => 'Most recent';
+
+  @override
+  String catalogQualityGrade(String grade) {
+    return 'Quality $grade';
+  }
+
+  @override
+  String catalogExpiry(String date) {
+    return 'Best before $date';
+  }
+
+  @override
+  String get catalogListingDetail => 'Listing details';
+
+  @override
+  String get catalogListingUnavailable =>
+      'This listing is no longer available.';
+
+  @override
+  String get catalogRequestQuote => 'Request a quote';
+
+  @override
+  String get quoteQuantityHint => 'Requested quantity';
+
+  @override
+  String get quoteMessageHint => 'Additional message (optional)';
+
+  @override
+  String quoteRequestMessage(
+    String quantity,
+    String unit,
+    String title,
+    String reference,
+  ) {
+    return 'Hello, I would like $quantity $unit of “$title” ($reference).';
+  }
+
+  @override
+  String get quoteRequestInvalidQuantity =>
+      'Enter a quantity greater than zero.';
+
+  @override
+  String get buyerOrdersEmptyMessage =>
+      'Quotes from the team will appear here.';
+
+  @override
+  String get buyerOrderActionRequired => 'Action required';
+
+  @override
+  String get buyerOrderQuoted => 'Quote';
+
+  @override
+  String buyerQuoteExpiresIn(String time) {
+    return 'Expires in $time';
+  }
+
+  @override
+  String get buyerQuoteExpired => 'Quote expired';
+
+  @override
+  String get buyerConfirmQuote => 'Confirm quote';
+
+  @override
+  String get buyerCancelQuote => 'Cancel quote';
+
+  @override
+  String get buyerConfirmQuoteQuestion => 'Confirm this quote?';
+
+  @override
+  String get buyerCancelQuoteQuestion => 'Cancel this quote?';
+
+  @override
+  String get buyerCancellationReasonHint => 'Reason (optional)';
+
+  @override
+  String get buyerStatusQuoted => 'Quote sent';
+
+  @override
+  String get buyerStatusConfirmed => 'Confirmed';
+
+  @override
+  String get buyerStatusPreparing => 'Preparing';
+
+  @override
+  String get buyerStatusReadyForPickup => 'Ready for pickup';
+
+  @override
+  String get buyerStatusOutForDelivery => 'Out for delivery';
+
+  @override
+  String get buyerStatusCompleted => 'Completed';
+
+  @override
+  String get buyerStatusCancelled => 'Cancelled';
+
+  @override
+  String get buyerDeliveryModePickup => 'Pickup at collection point';
+
+  @override
+  String get buyerDeliveryModeAgency => 'Agency delivery';
+
+  @override
+  String get buyerPickupAddress => 'Collection point address';
+
+  @override
+  String get buyerDeliveryAddress => 'Delivery address';
+
+  @override
+  String get buyerQuoteTotals => 'Amounts provided by the team';
+
+  @override
+  String buyerOrderCancellationReason(String reason) {
+    return 'Cancellation reason: $reason';
+  }
+
+  @override
+  String get buyerOrderItems => 'Quoted listings';
+
+  @override
+  String get buyerOrderSubtotalLabel => 'Subtotal';
+
+  @override
+  String get buyerOrderBuyerFeeLabel => 'Buyer fee';
+
+  @override
+  String get buyerOrderDeliveryFeeLabel => 'Delivery fee';
+
+  @override
+  String get buyerCancelOrder => 'Cancel';
+
+  @override
+  String get buyerCancelOrderQuestion => 'Cancel this order?';
 
   @override
   String get adminConsoleLabel => 'Administration console';

@@ -1,0 +1,35 @@
+{
+  "id": 42,
+  "orderNumber": "CMD-2026-00042",
+  "status": "QUOTED",
+  "deliveryMode": "HUB_PICKUP",
+  "items": [
+    {
+      "id": 71,
+      "listingId": 1,
+      "listingReference": "ANN-DEMO-0001",
+      "listingTitle": "Riz local",
+      "quantity": 10.5,
+      "unitPrice": 1500,
+      "lineTotal": 15750
+    }
+  ],
+  "subtotal": 15750,
+  "buyerFee": 500,
+  "deliveryFee": 0,
+  "total": 16250,
+  "delivery": null,
+  "pickup": {
+    "id": 3,
+    "name": "Point de collecte Centre",
+    "address": "1 avenue de la Gare",
+    "city": "Yaoundé"
+  },
+  "notes": null,
+  "reservedUntil": "2026-12-20T15:12:00.000Z",
+  "confirmedAt": null,
+  "completedAt": null,
+  "cancelledAt": null,
+  "cancellationReason": null,
+  "createdAt": "2026-12-20T10:00:00.000Z"
+}
