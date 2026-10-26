@@ -19,6 +19,10 @@ import 'package:agri_connect/features/chat/presentation/pages/chat_pages.dart';
 import 'package:agri_connect/features/notifications/presentation/pages/notifications_page.dart';
 import 'package:agri_connect/features/buyer/presentation/bindings/buyer_bindings.dart';
 import 'package:agri_connect/features/buyer/presentation/pages/buyer_pages.dart';
+import 'package:agri_connect/features/supplier/presentation/bindings/supplier_bindings.dart';
+import 'package:agri_connect/features/supplier/presentation/pages/lot_draft_page.dart';
+import 'package:agri_connect/features/supplier/presentation/pages/supplier_home_page.dart';
+import 'package:agri_connect/features/supplier/presentation/pages/supplier_lot_detail_page.dart';
 
 abstract final class AppPages {
   static final pages = <GetPage<dynamic>>[
@@ -144,7 +148,33 @@ abstract final class AppPages {
       page: () => const BuyerOrderDetailPage(),
       binding: BuyerOrderDetailBinding(),
     ),
-    _rolePage(AppRoutes.supplier, RoleCode.supplier),
+    GetPage(
+      name: AppRoutes.supplier,
+      middlewares: [
+        AuthMiddleware(),
+        RoleMiddleware({RoleCode.supplier}),
+      ],
+      page: () => const SupplierHomePage(),
+      binding: SupplierBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.supplierLotNew,
+      middlewares: [
+        AuthMiddleware(),
+        RoleMiddleware({RoleCode.supplier}),
+      ],
+      page: () => const LotDraftPage(),
+      binding: LotDraftBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.supplierLotDetailRoute,
+      middlewares: [
+        AuthMiddleware(),
+        RoleMiddleware({RoleCode.supplier}),
+      ],
+      page: () => const SupplierLotDetailPage(),
+      binding: SupplierLotDetailBinding(),
+    ),
     _rolePage(AppRoutes.buyer, RoleCode.buyer),
     _rolePage(AppRoutes.driver, RoleCode.driver),
     _rolePage(AppRoutes.staff, RoleCode.agent),

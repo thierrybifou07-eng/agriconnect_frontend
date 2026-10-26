@@ -6,25 +6,10 @@ abstract final class RoutePaths {
   static const String login = '/login';
   static const String register = '/register';
 
-  static const String supplierProductNew = '/supplier/product/new';
-  static const String supplierProductDetail = '/supplier/product/:productId';
-  static const String supplierProductEdit = '/supplier/product/:productId/edit';
-
-  /// Dashboard of the supplier shell.
-  static const String supplierHome = '/supplier/home';
-
-  /// Orders tab of the supplier shell.
-  static const String supplierOrders = '/supplier/orders';
-  static const String supplierOrderDetail = '/supplier/orders/:orderId';
   static const String supplierMessages = '/supplier/messages';
   static const String supplierConversation =
       '/supplier/messages/:conversationId';
 
-  static String supplierProduct(String productId) =>
-      '/supplier/product/$productId';
-  static String supplierProductEdition(String productId) =>
-      '/supplier/product/$productId/edit';
-  static String supplierOrder(String orderId) => '/supplier/orders/$orderId';
   static String supplierMessageThread(String conversationId) =>
       '/supplier/messages/$conversationId';
 

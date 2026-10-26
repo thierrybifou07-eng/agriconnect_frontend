@@ -23,8 +23,11 @@ abstract final class AppRoutes {
   static String buyerListing(int listingId) => '/buyer/listings/$listingId';
 
   static String buyerOrder(int orderId) => '/buyer/orders/$orderId';
+  static String supplierLotDetail(int lotId) => '/supplier/lots/$lotId';
   static String legalDocument(String code) => '$legal/$code';
   static const supplier = '/supplier';
+  static const supplierLotNew = '/supplier/lots/new';
+  static const supplierLotDetailRoute = '/supplier/lots/:lotId';
   static const buyer = '/buyer';
   static const driver = '/driver';
   static const staff = '/staff';

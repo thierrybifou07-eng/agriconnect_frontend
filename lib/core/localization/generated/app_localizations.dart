@@ -512,30 +512,6 @@ abstract class AppLocalizations {
   /// **'A sample delivery progress update is shown here.'**
   String get notificationBuyerDeliveryBody;
 
-  /// No description provided for @notificationSupplierOrderTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Example incoming order'**
-  String get notificationSupplierOrderTitle;
-
-  /// No description provided for @notificationSupplierOrderBody.
-  ///
-  /// In en, this message translates to:
-  /// **'A sample buyer order is listed in your orders.'**
-  String get notificationSupplierOrderBody;
-
-  /// No description provided for @notificationSupplierProductTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Example product action'**
-  String get notificationSupplierProductTitle;
-
-  /// No description provided for @notificationSupplierProductBody.
-  ///
-  /// In en, this message translates to:
-  /// **'A sample product may need attention in your catalog.'**
-  String get notificationSupplierProductBody;
-
   /// No description provided for @notificationDriverDeliveryTitle.
   ///
   /// In en, this message translates to:
@@ -1327,12 +1303,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Recent orders'**
   String get recentOrders;
-
-  /// No description provided for @supplierProductsOnSaleTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Products currently on sale'**
-  String get supplierProductsOnSaleTitle;
 
   /// No description provided for @dashboardManageProducts.
   ///
@@ -5742,6 +5712,564 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Rejected'**
   String get accountStatusRejected;
+
+  /// No description provided for @supplierLotsTab.
+  ///
+  /// In en, this message translates to:
+  /// **'My lots'**
+  String get supplierLotsTab;
+
+  /// No description provided for @supplierRevenueTab.
+  ///
+  /// In en, this message translates to:
+  /// **'Income'**
+  String get supplierRevenueTab;
+
+  /// No description provided for @supplierLotDashboard.
+  ///
+  /// In en, this message translates to:
+  /// **'Lot overview'**
+  String get supplierLotDashboard;
+
+  /// No description provided for @supplierDeclareLot.
+  ///
+  /// In en, this message translates to:
+  /// **'Declare a lot'**
+  String get supplierDeclareLot;
+
+  /// No description provided for @supplierLotPendingCount.
+  ///
+  /// In en, this message translates to:
+  /// **'Awaiting review'**
+  String get supplierLotPendingCount;
+
+  /// No description provided for @supplierLotAvailableCount.
+  ///
+  /// In en, this message translates to:
+  /// **'Available'**
+  String get supplierLotAvailableCount;
+
+  /// No description provided for @supplierLotReservedCount.
+  ///
+  /// In en, this message translates to:
+  /// **'Reserved'**
+  String get supplierLotReservedCount;
+
+  /// No description provided for @supplierLotSoldCount.
+  ///
+  /// In en, this message translates to:
+  /// **'Sold out'**
+  String get supplierLotSoldCount;
+
+  /// No description provided for @supplierAllStatuses.
+  ///
+  /// In en, this message translates to:
+  /// **'All statuses'**
+  String get supplierAllStatuses;
+
+  /// No description provided for @supplierLotStatusPending.
+  ///
+  /// In en, this message translates to:
+  /// **'Awaiting validation'**
+  String get supplierLotStatusPending;
+
+  /// No description provided for @supplierLotStatusAvailable.
+  ///
+  /// In en, this message translates to:
+  /// **'Available'**
+  String get supplierLotStatusAvailable;
+
+  /// No description provided for @supplierLotStatusReserved.
+  ///
+  /// In en, this message translates to:
+  /// **'Fully reserved'**
+  String get supplierLotStatusReserved;
+
+  /// No description provided for @supplierLotStatusSold.
+  ///
+  /// In en, this message translates to:
+  /// **'Sold out'**
+  String get supplierLotStatusSold;
+
+  /// No description provided for @supplierLotStatusExpired.
+  ///
+  /// In en, this message translates to:
+  /// **'Expired'**
+  String get supplierLotStatusExpired;
+
+  /// No description provided for @supplierLotStatusReturned.
+  ///
+  /// In en, this message translates to:
+  /// **'Returned'**
+  String get supplierLotStatusReturned;
+
+  /// No description provided for @supplierLotStatusRejected.
+  ///
+  /// In en, this message translates to:
+  /// **'Rejected'**
+  String get supplierLotStatusRejected;
+
+  /// No description provided for @supplierLotStatusWithdrawn.
+  ///
+  /// In en, this message translates to:
+  /// **'Withdrawn'**
+  String get supplierLotStatusWithdrawn;
+
+  /// No description provided for @supplierLotEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'No lots yet. Declare your first lot.'**
+  String get supplierLotEmpty;
+
+  /// No description provided for @supplierLotProductStep.
+  ///
+  /// In en, this message translates to:
+  /// **'Product'**
+  String get supplierLotProductStep;
+
+  /// No description provided for @supplierLotQuantityStep.
+  ///
+  /// In en, this message translates to:
+  /// **'Quantity and price'**
+  String get supplierLotQuantityStep;
+
+  /// No description provided for @supplierLotStorageStep.
+  ///
+  /// In en, this message translates to:
+  /// **'Storage and area'**
+  String get supplierLotStorageStep;
+
+  /// No description provided for @supplierLotPhotosStep.
+  ///
+  /// In en, this message translates to:
+  /// **'Photos and details'**
+  String get supplierLotPhotosStep;
+
+  /// No description provided for @supplierLotNewTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Declare a lot'**
+  String get supplierLotNewTitle;
+
+  /// No description provided for @supplierLotEditTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit lot'**
+  String get supplierLotEditTitle;
+
+  /// No description provided for @supplierLotProduct.
+  ///
+  /// In en, this message translates to:
+  /// **'Product'**
+  String get supplierLotProduct;
+
+  /// No description provided for @supplierLotQuantity.
+  ///
+  /// In en, this message translates to:
+  /// **'Quantity'**
+  String get supplierLotQuantity;
+
+  /// No description provided for @supplierLotAgreedPrice.
+  ///
+  /// In en, this message translates to:
+  /// **'Agreed unit price'**
+  String get supplierLotAgreedPrice;
+
+  /// No description provided for @supplierLotUnitHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Unit: {unit}'**
+  String supplierLotUnitHint(String unit);
+
+  /// No description provided for @supplierLotZone.
+  ///
+  /// In en, this message translates to:
+  /// **'Area'**
+  String get supplierLotZone;
+
+  /// No description provided for @supplierLotStorageType.
+  ///
+  /// In en, this message translates to:
+  /// **'Storage'**
+  String get supplierLotStorageType;
+
+  /// No description provided for @supplierLotHubStorage.
+  ///
+  /// In en, this message translates to:
+  /// **'At a collection hub'**
+  String get supplierLotHubStorage;
+
+  /// No description provided for @supplierLotSiteStorage.
+  ///
+  /// In en, this message translates to:
+  /// **'At my farm'**
+  String get supplierLotSiteStorage;
+
+  /// No description provided for @supplierLotHub.
+  ///
+  /// In en, this message translates to:
+  /// **'Collection hub'**
+  String get supplierLotHub;
+
+  /// No description provided for @supplierLotPickupAddress.
+  ///
+  /// In en, this message translates to:
+  /// **'Pickup address'**
+  String get supplierLotPickupAddress;
+
+  /// No description provided for @supplierLotLatitude.
+  ///
+  /// In en, this message translates to:
+  /// **'Latitude'**
+  String get supplierLotLatitude;
+
+  /// No description provided for @supplierLotLongitude.
+  ///
+  /// In en, this message translates to:
+  /// **'Longitude'**
+  String get supplierLotLongitude;
+
+  /// No description provided for @supplierUseLocation.
+  ///
+  /// In en, this message translates to:
+  /// **'Use my location'**
+  String get supplierUseLocation;
+
+  /// No description provided for @supplierLocationUnavailable.
+  ///
+  /// In en, this message translates to:
+  /// **'Location could not be obtained. Enter it manually.'**
+  String get supplierLocationUnavailable;
+
+  /// No description provided for @supplierLotChoosePhotos.
+  ///
+  /// In en, this message translates to:
+  /// **'Add photos'**
+  String get supplierLotChoosePhotos;
+
+  /// No description provided for @supplierLotPhotosRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Add between 1 and 5 photos.'**
+  String get supplierLotPhotosRequired;
+
+  /// No description provided for @supplierLotPhotoTooLarge.
+  ///
+  /// In en, this message translates to:
+  /// **'Each photo must be 5 MB or smaller.'**
+  String get supplierLotPhotoTooLarge;
+
+  /// No description provided for @supplierLotHarvestedAt.
+  ///
+  /// In en, this message translates to:
+  /// **'Harvest date (optional)'**
+  String get supplierLotHarvestedAt;
+
+  /// No description provided for @supplierLotExpiresAt.
+  ///
+  /// In en, this message translates to:
+  /// **'Expiry date'**
+  String get supplierLotExpiresAt;
+
+  /// No description provided for @supplierLotPackagingNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Packaging notes'**
+  String get supplierLotPackagingNote;
+
+  /// No description provided for @supplierLotQualityNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Quality notes'**
+  String get supplierLotQualityNote;
+
+  /// No description provided for @supplierLotNotesLimit.
+  ///
+  /// In en, this message translates to:
+  /// **'Maximum 500 characters.'**
+  String get supplierLotNotesLimit;
+
+  /// No description provided for @supplierLotNext.
+  ///
+  /// In en, this message translates to:
+  /// **'Next'**
+  String get supplierLotNext;
+
+  /// No description provided for @supplierLotPrevious.
+  ///
+  /// In en, this message translates to:
+  /// **'Back'**
+  String get supplierLotPrevious;
+
+  /// No description provided for @supplierLotSubmit.
+  ///
+  /// In en, this message translates to:
+  /// **'Submit lot'**
+  String get supplierLotSubmit;
+
+  /// No description provided for @supplierLotSubmitted.
+  ///
+  /// In en, this message translates to:
+  /// **'Lot submitted for validation.'**
+  String get supplierLotSubmitted;
+
+  /// No description provided for @supplierLotQuantityError.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter a quantity above zero with up to 3 decimal places.'**
+  String get supplierLotQuantityError;
+
+  /// No description provided for @supplierLotPriceError.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter an agreed price above zero with up to 2 decimal places.'**
+  String get supplierLotPriceError;
+
+  /// No description provided for @supplierLotSelectProduct.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose a product.'**
+  String get supplierLotSelectProduct;
+
+  /// No description provided for @supplierLotSelectZone.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose an area.'**
+  String get supplierLotSelectZone;
+
+  /// No description provided for @supplierLotSelectHub.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose a collection hub.'**
+  String get supplierLotSelectHub;
+
+  /// No description provided for @supplierLotPickupRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter the pickup address and valid coordinates.'**
+  String get supplierLotPickupRequired;
+
+  /// No description provided for @supplierLotExpiryRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'An expiry date is required for perishable products.'**
+  String get supplierLotExpiryRequired;
+
+  /// No description provided for @supplierLotNotesError.
+  ///
+  /// In en, this message translates to:
+  /// **'Notes must not exceed 500 characters.'**
+  String get supplierLotNotesError;
+
+  /// No description provided for @supplierLotInitial.
+  ///
+  /// In en, this message translates to:
+  /// **'Initial quantity'**
+  String get supplierLotInitial;
+
+  /// No description provided for @supplierLotAvailable.
+  ///
+  /// In en, this message translates to:
+  /// **'Available quantity'**
+  String get supplierLotAvailable;
+
+  /// No description provided for @supplierLotReserved.
+  ///
+  /// In en, this message translates to:
+  /// **'Reserved quantity'**
+  String get supplierLotReserved;
+
+  /// No description provided for @supplierLotSold.
+  ///
+  /// In en, this message translates to:
+  /// **'Sold quantity'**
+  String get supplierLotSold;
+
+  /// No description provided for @supplierLotLost.
+  ///
+  /// In en, this message translates to:
+  /// **'Lost quantity'**
+  String get supplierLotLost;
+
+  /// No description provided for @supplierLotRejectionReason.
+  ///
+  /// In en, this message translates to:
+  /// **'Reason for rejection'**
+  String get supplierLotRejectionReason;
+
+  /// No description provided for @supplierLotContactTeam.
+  ///
+  /// In en, this message translates to:
+  /// **'Contact the team'**
+  String get supplierLotContactTeam;
+
+  /// No description provided for @supplierLotChatPrefill.
+  ///
+  /// In en, this message translates to:
+  /// **'I have a question about lot {code}.'**
+  String supplierLotChatPrefill(String code);
+
+  /// No description provided for @supplierLotDelete.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete lot'**
+  String get supplierLotDelete;
+
+  /// No description provided for @supplierLotDeleteConfirm.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete this lot?'**
+  String get supplierLotDeleteConfirm;
+
+  /// No description provided for @supplierLotWithdraw.
+  ///
+  /// In en, this message translates to:
+  /// **'Withdraw lot'**
+  String get supplierLotWithdraw;
+
+  /// No description provided for @supplierLotWithdrawReason.
+  ///
+  /// In en, this message translates to:
+  /// **'Reason for withdrawal'**
+  String get supplierLotWithdrawReason;
+
+  /// No description provided for @supplierLotWithdrawError.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter a reason of up to 500 characters.'**
+  String get supplierLotWithdrawError;
+
+  /// No description provided for @supplierLotEdit.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit'**
+  String get supplierLotEdit;
+
+  /// No description provided for @supplierLotIncomePayouts.
+  ///
+  /// In en, this message translates to:
+  /// **'Payouts'**
+  String get supplierLotIncomePayouts;
+
+  /// No description provided for @supplierLotIncomeCompensations.
+  ///
+  /// In en, this message translates to:
+  /// **'Compensations'**
+  String get supplierLotIncomeCompensations;
+
+  /// No description provided for @supplierIncomeEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'No records yet.'**
+  String get supplierIncomeEmpty;
+
+  /// No description provided for @supplierPayoutGross.
+  ///
+  /// In en, this message translates to:
+  /// **'Gross amount'**
+  String get supplierPayoutGross;
+
+  /// No description provided for @supplierPayoutCommission.
+  ///
+  /// In en, this message translates to:
+  /// **'Commission'**
+  String get supplierPayoutCommission;
+
+  /// No description provided for @supplierPayoutNet.
+  ///
+  /// In en, this message translates to:
+  /// **'Net amount'**
+  String get supplierPayoutNet;
+
+  /// No description provided for @supplierPayoutStatusOnHold.
+  ///
+  /// In en, this message translates to:
+  /// **'On hold'**
+  String get supplierPayoutStatusOnHold;
+
+  /// No description provided for @supplierPayoutStatusReady.
+  ///
+  /// In en, this message translates to:
+  /// **'Ready'**
+  String get supplierPayoutStatusReady;
+
+  /// No description provided for @supplierPayoutStatusPaid.
+  ///
+  /// In en, this message translates to:
+  /// **'Paid'**
+  String get supplierPayoutStatusPaid;
+
+  /// No description provided for @supplierPayoutStatusCancelled.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancelled'**
+  String get supplierPayoutStatusCancelled;
+
+  /// No description provided for @supplierCompensationReason.
+  ///
+  /// In en, this message translates to:
+  /// **'Reason'**
+  String get supplierCompensationReason;
+
+  /// No description provided for @supplierCompensationQuantity.
+  ///
+  /// In en, this message translates to:
+  /// **'Quantity'**
+  String get supplierCompensationQuantity;
+
+  /// No description provided for @supplierCompensationAmount.
+  ///
+  /// In en, this message translates to:
+  /// **'Amount'**
+  String get supplierCompensationAmount;
+
+  /// No description provided for @supplierCompensationNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Note'**
+  String get supplierCompensationNote;
+
+  /// No description provided for @supplierCompensationStatusPending.
+  ///
+  /// In en, this message translates to:
+  /// **'Pending approval'**
+  String get supplierCompensationStatusPending;
+
+  /// No description provided for @supplierCompensationStatusApproved.
+  ///
+  /// In en, this message translates to:
+  /// **'Approved'**
+  String get supplierCompensationStatusApproved;
+
+  /// No description provided for @supplierCompensationStatusPaid.
+  ///
+  /// In en, this message translates to:
+  /// **'Paid'**
+  String get supplierCompensationStatusPaid;
+
+  /// No description provided for @supplierCompensationStatusRejected.
+  ///
+  /// In en, this message translates to:
+  /// **'Rejected'**
+  String get supplierCompensationStatusRejected;
+
+  /// No description provided for @supplierOptional.
+  ///
+  /// In en, this message translates to:
+  /// **'Optional'**
+  String get supplierOptional;
+
+  /// No description provided for @supplierClear.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear'**
+  String get supplierClear;
+
+  /// No description provided for @supplierSave.
+  ///
+  /// In en, this message translates to:
+  /// **'Save'**
+  String get supplierSave;
 }
 
 class _AppLocalizationsDelegate

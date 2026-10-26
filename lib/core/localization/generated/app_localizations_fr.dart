@@ -238,21 +238,6 @@ class AppLocalizationsFr extends AppLocalizations {
       'Un exemple de progression de livraison apparaît ici.';
 
   @override
-  String get notificationSupplierOrderTitle => 'Exemple de nouvelle commande';
-
-  @override
-  String get notificationSupplierOrderBody =>
-      'Une commande acheteur de démonstration figure dans vos commandes.';
-
-  @override
-  String get notificationSupplierProductTitle =>
-      'Exemple d\'action sur un produit';
-
-  @override
-  String get notificationSupplierProductBody =>
-      'Un produit de démonstration peut nécessiter votre attention dans le catalogue.';
-
-  @override
   String get notificationDriverDeliveryTitle =>
       'Exemple de livraison attribuée';
 
@@ -688,9 +673,6 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get recentOrders => 'Commandes récentes';
-
-  @override
-  String get supplierProductsOnSaleTitle => 'Produits actuellement en vente';
 
   @override
   String get dashboardManageProducts => 'Gérer mes produits';
@@ -3288,4 +3270,296 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get accountStatusRejected => 'Refusé';
+
+  @override
+  String get supplierLotsTab => 'Mes lots';
+
+  @override
+  String get supplierRevenueTab => 'Revenus';
+
+  @override
+  String get supplierLotDashboard => 'Vue d\'ensemble des lots';
+
+  @override
+  String get supplierDeclareLot => 'Déclarer un lot';
+
+  @override
+  String get supplierLotPendingCount => 'En attente d\'examen';
+
+  @override
+  String get supplierLotAvailableCount => 'Disponibles';
+
+  @override
+  String get supplierLotReservedCount => 'Réservés';
+
+  @override
+  String get supplierLotSoldCount => 'Épuisés';
+
+  @override
+  String get supplierAllStatuses => 'Tous les statuts';
+
+  @override
+  String get supplierLotStatusPending => 'En attente de validation';
+
+  @override
+  String get supplierLotStatusAvailable => 'Disponible';
+
+  @override
+  String get supplierLotStatusReserved => 'Entièrement réservé';
+
+  @override
+  String get supplierLotStatusSold => 'Épuisé';
+
+  @override
+  String get supplierLotStatusExpired => 'Expiré';
+
+  @override
+  String get supplierLotStatusReturned => 'Retourné';
+
+  @override
+  String get supplierLotStatusRejected => 'Refusé';
+
+  @override
+  String get supplierLotStatusWithdrawn => 'Retiré';
+
+  @override
+  String get supplierLotEmpty =>
+      'Aucun lot pour le moment. Déclarez votre premier lot.';
+
+  @override
+  String get supplierLotProductStep => 'Produit';
+
+  @override
+  String get supplierLotQuantityStep => 'Quantité et prix';
+
+  @override
+  String get supplierLotStorageStep => 'Stockage et zone';
+
+  @override
+  String get supplierLotPhotosStep => 'Photos et détails';
+
+  @override
+  String get supplierLotNewTitle => 'Déclarer un lot';
+
+  @override
+  String get supplierLotEditTitle => 'Modifier le lot';
+
+  @override
+  String get supplierLotProduct => 'Produit';
+
+  @override
+  String get supplierLotQuantity => 'Quantité';
+
+  @override
+  String get supplierLotAgreedPrice => 'Prix unitaire convenu';
+
+  @override
+  String supplierLotUnitHint(String unit) {
+    return 'Unité : $unit';
+  }
+
+  @override
+  String get supplierLotZone => 'Zone';
+
+  @override
+  String get supplierLotStorageType => 'Stockage';
+
+  @override
+  String get supplierLotHubStorage => 'Dans un point de collecte';
+
+  @override
+  String get supplierLotSiteStorage => 'Sur mon exploitation';
+
+  @override
+  String get supplierLotHub => 'Point de collecte';
+
+  @override
+  String get supplierLotPickupAddress => 'Adresse d\'enlèvement';
+
+  @override
+  String get supplierLotLatitude => 'Latitude';
+
+  @override
+  String get supplierLotLongitude => 'Longitude';
+
+  @override
+  String get supplierUseLocation => 'Utiliser ma position';
+
+  @override
+  String get supplierLocationUnavailable =>
+      'Position indisponible. Saisissez-la manuellement.';
+
+  @override
+  String get supplierLotChoosePhotos => 'Ajouter des photos';
+
+  @override
+  String get supplierLotPhotosRequired => 'Ajoutez entre 1 et 5 photos.';
+
+  @override
+  String get supplierLotPhotoTooLarge =>
+      'Chaque photo doit faire 5 Mo maximum.';
+
+  @override
+  String get supplierLotHarvestedAt => 'Date de récolte (facultatif)';
+
+  @override
+  String get supplierLotExpiresAt => 'Date de péremption';
+
+  @override
+  String get supplierLotPackagingNote => 'Notes sur l\'emballage';
+
+  @override
+  String get supplierLotQualityNote => 'Notes sur la qualité';
+
+  @override
+  String get supplierLotNotesLimit => '500 caractères maximum.';
+
+  @override
+  String get supplierLotNext => 'Suivant';
+
+  @override
+  String get supplierLotPrevious => 'Retour';
+
+  @override
+  String get supplierLotSubmit => 'Envoyer le lot';
+
+  @override
+  String get supplierLotSubmitted => 'Lot envoyé pour validation.';
+
+  @override
+  String get supplierLotQuantityError =>
+      'Saisissez une quantité supérieure à zéro, avec 3 décimales maximum.';
+
+  @override
+  String get supplierLotPriceError =>
+      'Saisissez un prix convenu supérieur à zéro, avec 2 décimales maximum.';
+
+  @override
+  String get supplierLotSelectProduct => 'Choisissez un produit.';
+
+  @override
+  String get supplierLotSelectZone => 'Choisissez une zone.';
+
+  @override
+  String get supplierLotSelectHub => 'Choisissez un point de collecte.';
+
+  @override
+  String get supplierLotPickupRequired =>
+      'Saisissez l\'adresse d\'enlèvement et des coordonnées valides.';
+
+  @override
+  String get supplierLotExpiryRequired =>
+      'La date de péremption est obligatoire pour les produits périssables.';
+
+  @override
+  String get supplierLotNotesError =>
+      'Les notes ne doivent pas dépasser 500 caractères.';
+
+  @override
+  String get supplierLotInitial => 'Quantité initiale';
+
+  @override
+  String get supplierLotAvailable => 'Quantité disponible';
+
+  @override
+  String get supplierLotReserved => 'Quantité réservée';
+
+  @override
+  String get supplierLotSold => 'Quantité vendue';
+
+  @override
+  String get supplierLotLost => 'Quantité perdue';
+
+  @override
+  String get supplierLotRejectionReason => 'Motif du refus';
+
+  @override
+  String get supplierLotContactTeam => 'Contacter l\'équipe';
+
+  @override
+  String supplierLotChatPrefill(String code) {
+    return 'J\'ai une question au sujet du lot $code.';
+  }
+
+  @override
+  String get supplierLotDelete => 'Supprimer le lot';
+
+  @override
+  String get supplierLotDeleteConfirm => 'Supprimer ce lot ?';
+
+  @override
+  String get supplierLotWithdraw => 'Retirer le lot';
+
+  @override
+  String get supplierLotWithdrawReason => 'Motif du retrait';
+
+  @override
+  String get supplierLotWithdrawError =>
+      'Saisissez un motif de 500 caractères maximum.';
+
+  @override
+  String get supplierLotEdit => 'Modifier';
+
+  @override
+  String get supplierLotIncomePayouts => 'Reversements';
+
+  @override
+  String get supplierLotIncomeCompensations => 'Indemnisations';
+
+  @override
+  String get supplierIncomeEmpty => 'Aucun versement pour le moment.';
+
+  @override
+  String get supplierPayoutGross => 'Montant brut';
+
+  @override
+  String get supplierPayoutCommission => 'Commission';
+
+  @override
+  String get supplierPayoutNet => 'Montant net';
+
+  @override
+  String get supplierPayoutStatusOnHold => 'En attente';
+
+  @override
+  String get supplierPayoutStatusReady => 'Prêt';
+
+  @override
+  String get supplierPayoutStatusPaid => 'Payé';
+
+  @override
+  String get supplierPayoutStatusCancelled => 'Annulé';
+
+  @override
+  String get supplierCompensationReason => 'Motif';
+
+  @override
+  String get supplierCompensationQuantity => 'Quantité';
+
+  @override
+  String get supplierCompensationAmount => 'Montant';
+
+  @override
+  String get supplierCompensationNote => 'Note';
+
+  @override
+  String get supplierCompensationStatusPending => 'En attente d\'approbation';
+
+  @override
+  String get supplierCompensationStatusApproved => 'Approuvée';
+
+  @override
+  String get supplierCompensationStatusPaid => 'Payée';
+
+  @override
+  String get supplierCompensationStatusRejected => 'Refusée';
+
+  @override
+  String get supplierOptional => 'Facultatif';
+
+  @override
+  String get supplierClear => 'Effacer';
+
+  @override
+  String get supplierSave => 'Enregistrer';
 }

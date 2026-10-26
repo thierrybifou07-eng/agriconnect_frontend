@@ -46,6 +46,7 @@ dependencies:
   url_launcher: ^6.3.3
   uuid: ^4.6.0
   file_picker: ^13.2.0
+  geolocator: ^14.0.1
 
 dev_dependencies:
   flutter_test:
