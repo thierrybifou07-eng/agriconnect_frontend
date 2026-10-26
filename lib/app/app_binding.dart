@@ -18,6 +18,10 @@ import 'package:agri_connect/features/account/domain/account_repository.dart';
 import 'package:agri_connect/features/reference/data/reference_api.dart';
 import 'package:agri_connect/features/reference/data/reference_repository_impl.dart';
 import 'package:agri_connect/features/reference/domain/reference_repository.dart';
+import 'package:agri_connect/features/chat/data/chat_api.dart';
+import 'package:agri_connect/features/chat/data/chat_repository_impl.dart';
+import 'package:agri_connect/features/chat/domain/chat_repository.dart';
+import 'package:agri_connect/features/notifications/presentation/controllers/notification_center.dart';
 
 class AppBinding extends Bindings {
   @override
@@ -61,7 +65,21 @@ class AppBinding extends Bindings {
       ),
       permanent: true,
     );
-    Get.put<SocketService>(SocketService(), permanent: true);
+    final socketService = SocketService(
+      authController: Get.find<AuthController>(),
+      apiClient: Get.find<ApiClient>(),
+      tokenStorage: tokenStorage,
+    );
+    Get.put<SocketService>(socketService, permanent: true);
+    final chatRepository = ChatRepositoryImpl(ChatApi(Get.find<ApiClient>()));
+    Get.put<ChatRepository>(chatRepository, permanent: true);
+    Get.put<NotificationCenter>(
+      NotificationCenter(
+        prefsStorage: prefsStorage,
+        socketService: socketService,
+      ),
+      permanent: true,
+    );
     Get.put<LocaleController>(LocaleController(prefsStorage), permanent: true);
   }
 }

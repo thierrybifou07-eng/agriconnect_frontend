@@ -6,6 +6,10 @@ import 'package:get/get.dart';
 import 'package:agri_connect/app/theme/app_colors.dart';
 import 'package:agri_connect/shared/widgets/email_verification_banner.dart';
 import 'package:agri_connect/shared/widgets/verification_banner.dart';
+import 'package:agri_connect/app/routes/app_routes.dart';
+import 'package:agri_connect/core/localization/generated/app_localizations.dart';
+import 'package:agri_connect/core/realtime/socket_service.dart';
+import 'package:agri_connect/features/notifications/presentation/controllers/notification_center.dart';
 
 class ShellTab {
   const ShellTab({
@@ -41,12 +45,48 @@ class RoleShell extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final notifications = Get.find<NotificationCenter>();
+    final socket = Get.find<SocketService>();
+    final labels = AppLocalizations.of(context);
     return Scaffold(
-      appBar: AppBar(title: Text(title ?? 'AgriConnect')),
+      appBar: AppBar(
+        title: Text(title ?? 'AgriConnect'),
+        actions: [
+          Obx(() {
+            final count = notifications.unreadCount.value;
+            return IconButton(
+              tooltip: labels.notificationsTitle,
+              onPressed: () => Get.toNamed(AppRoutes.notifications),
+              icon: Badge(
+                isLabelVisible: count > 0,
+                label: Text(count > 99 ? '99+' : '$count'),
+                child: const Icon(Icons.notifications_outlined),
+              ),
+            );
+          }),
+        ],
+      ),
       body: Column(
         children: [
           const EmailVerificationBanner(),
           const VerificationBanner(),
+          Obx(
+            () => socket.connected.value
+                ? const SizedBox.shrink()
+                : Container(
+                    width: double.infinity,
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 16,
+                      vertical: 6,
+                    ),
+                    color: theme.colorScheme.surfaceContainerHighest,
+                    child: Text(
+                      labels.socketReconnecting,
+                      textAlign: TextAlign.center,
+                      style: theme.textTheme.labelSmall,
+                    ),
+                  ),
+          ),
           Expanded(
             child: Obx(
               () => IndexedStack(

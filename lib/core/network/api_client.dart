@@ -24,19 +24,22 @@ class ApiClient {
                receiveTimeout: const Duration(seconds: 30),
              ),
            ) {
-    this.dio.options.baseUrl = _normalizeBaseUrl(this.dio.options.baseUrl);
-    this.dio.interceptors.add(
-      AuthInterceptor(
-        dio: this.dio,
-        tokenStorage: tokenStorage,
-        sessionEvents: sessionEvents,
-        refreshDioFactory: refreshDioFactory,
-      ),
+    _interceptor = AuthInterceptor(
+      dio: this.dio,
+      tokenStorage: tokenStorage,
+      sessionEvents: sessionEvents,
+      refreshDioFactory: refreshDioFactory,
+      onTokenRefreshed: (token) => onTokenRefreshed?.call(token),
     );
+    this.dio.options.baseUrl = _normalizeBaseUrl(this.dio.options.baseUrl);
+    this.dio.interceptors.add(_interceptor);
   }
 
   final Dio dio;
   final ApiFailureEvents? failureEvents;
+  late final AuthInterceptor _interceptor;
+  void Function(String token)? onTokenRefreshed;
+  Future<String?> ensureFreshToken() => _interceptor.ensureFreshToken();
 
   Future<dynamic> get(
     String path, {

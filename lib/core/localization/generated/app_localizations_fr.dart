@@ -145,6 +145,45 @@ class AppLocalizationsFr extends AppLocalizations {
   String get notificationsMarkRead => 'Marquer comme lu';
 
   @override
+  String get socketReconnecting => 'Reconnexion…';
+
+  @override
+  String get notificationMessageTitle => 'Nouveau message';
+
+  @override
+  String get notificationMessageBody =>
+      'Vous avez reçu une réponse dans une conversation.';
+
+  @override
+  String get notificationDeliveryAvailableTitle =>
+      'Nouvelle livraison disponible';
+
+  @override
+  String get notificationDeliveryAvailableBody =>
+      'Une livraison est disponible pour votre agence.';
+
+  @override
+  String get notificationDeliveryStatusTitle => 'Mise à jour de livraison';
+
+  @override
+  String get notificationDeliveryStatusBody =>
+      'Le statut de votre livraison a changé.';
+
+  @override
+  String get notificationExpiringTitle => 'Alerte de péremption';
+
+  @override
+  String get notificationExpiringBody =>
+      'Un lot approche de sa date de péremption.';
+
+  @override
+  String get notificationAiSuggestionTitle => 'Suggestion IA';
+
+  @override
+  String get notificationAiSuggestionBody =>
+      'Une suggestion est disponible dans la file de support.';
+
+  @override
   String get notificationsRead => 'Lu';
 
   @override
@@ -161,7 +200,7 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get notificationsEmptyBody =>
-      'Aucune notification de démonstration pour ce compte.';
+      'Les nouveaux messages et les événements importants apparaîtront ici.';
 
   @override
   String get notificationsLoadError =>
@@ -706,6 +745,31 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get chatSend => 'Envoyer';
+
+  @override
+  String get chatStartConversation => 'Écrire un message';
+
+  @override
+  String get chatConversationSubject => 'Conversation avec l’équipe';
+
+  @override
+  String get chatStatusOpen => 'En cours';
+
+  @override
+  String get chatStatusWaiting => 'En attente de votre réponse';
+
+  @override
+  String get chatStatusClosed => 'Terminée';
+
+  @override
+  String get chatClosedExplanation =>
+      'Cette conversation est terminée. Vous ne pouvez plus envoyer de message.';
+
+  @override
+  String get chatLoadOlder => 'Charger les messages précédents';
+
+  @override
+  String get chatAiBadge => 'IA';
 
   @override
   String productInStock(int quantity, String unit) {

@@ -14,6 +14,9 @@ import 'package:agri_connect/features/account/presentation/pages/account_pages.d
 import 'package:agri_connect/features/account/presentation/pages/profile_page.dart';
 import 'package:agri_connect/features/account/presentation/pages/verification_documents_page.dart';
 import 'package:agri_connect/shared/widgets/role_placeholder_page.dart';
+import 'package:agri_connect/features/chat/presentation/bindings/chat_bindings.dart';
+import 'package:agri_connect/features/chat/presentation/pages/chat_pages.dart';
+import 'package:agri_connect/features/notifications/presentation/pages/notifications_page.dart';
 
 abstract final class AppPages {
   static final pages = <GetPage<dynamic>>[
@@ -98,6 +101,29 @@ abstract final class AppPages {
       page: () => const AccountLanguagePage(),
       binding: AccountLanguageBinding(),
     ),
+    GetPage(
+      name: AppRoutes.conversations,
+      middlewares: [
+        AuthMiddleware(),
+        RoleMiddleware({RoleCode.buyer, RoleCode.supplier}),
+      ],
+      page: () => const ConversationsPage(),
+      binding: ConversationsBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.chatThread,
+      middlewares: [
+        AuthMiddleware(),
+        RoleMiddleware({RoleCode.buyer, RoleCode.supplier}),
+      ],
+      page: () => const ChatThreadPage(),
+      binding: ThreadBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.notifications,
+      middlewares: [AuthMiddleware()],
+      page: () => const NotificationsPage(),
+    ),
     _rolePage(AppRoutes.supplier, RoleCode.supplier),
     _rolePage(AppRoutes.buyer, RoleCode.buyer),
     _rolePage(AppRoutes.driver, RoleCode.driver),
@@ -122,6 +148,9 @@ abstract final class AppPages {
         RoleMiddleware({role, ?additionalRole}),
       ],
       page: () => RolePlaceholderPage(role: role),
+      binding: role == RoleCode.buyer || role == RoleCode.supplier
+          ? ConversationsBinding()
+          : null,
     );
   }
 }

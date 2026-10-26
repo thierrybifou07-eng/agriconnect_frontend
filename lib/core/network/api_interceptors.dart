@@ -10,12 +10,14 @@ class AuthInterceptor extends Interceptor {
     required this.tokenStorage,
     required this.sessionEvents,
     Dio Function(BaseOptions options)? refreshDioFactory,
+    this.onTokenRefreshed,
   }) : _refreshDioFactory = refreshDioFactory ?? _createRefreshDio;
 
   final Dio dio;
   final TokenStorage tokenStorage;
   final SessionEvents sessionEvents;
   final Dio Function(BaseOptions options) _refreshDioFactory;
+  final void Function(String token)? onTokenRefreshed;
   Future<String?>? _refreshInFlight;
 
   static Dio _createRefreshDio(BaseOptions options) => Dio(options);
@@ -92,6 +94,8 @@ class AuthInterceptor extends Interceptor {
     }
   }
 
+  Future<String?> ensureFreshToken() => _refreshSingleFlight();
+
   Future<String?> _refreshAccessToken() async {
     final tokens = await tokenStorage.read();
     if (tokens == null || tokens.refresh.isEmpty) {
@@ -123,6 +127,7 @@ class AuthInterceptor extends Interceptor {
       final access = payload['accessToken'] as String;
       final refresh = payload['refreshToken'] as String;
       await tokenStorage.save(access: access, refresh: refresh);
+      onTokenRefreshed?.call(access);
       return access;
     } on DioException catch (refreshError) {
       final refreshFailure = ApiFailure.fromDio(refreshError);

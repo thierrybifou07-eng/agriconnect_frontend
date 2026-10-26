@@ -14,6 +14,9 @@ abstract final class AppRoutes {
   static const referral = '/account/referral';
   static const sessions = '/account/sessions';
   static const language = '/account/language';
+  static const conversations = '/messages';
+  static const chatThread = '/messages/thread';
+  static const notifications = '/notifications';
   static String legalDocument(String code) => '$legal/$code';
   static const supplier = '/supplier';
   static const buyer = '/buyer';

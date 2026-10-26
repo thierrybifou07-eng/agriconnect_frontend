@@ -1,0 +1,27 @@
+{
+  "items": [
+    {
+      "id": 42,
+      "type": "BUYER_SUPPORT",
+      "status": "OPEN",
+      "subject": "Question sur une annonce",
+      "listingId": 17,
+      "escalatedAt": null,
+      "lastMessageAt": "2026-10-26T10:15:00.000Z",
+      "createdAt": "2026-10-26T09:50:00.000Z"
+    },
+    {
+      "id": 43,
+      "type": "SUPPLIER_SUPPORT",
+      "status": "WAITING_CUSTOMER",
+      "subject": null,
+      "listingId": null,
+      "escalatedAt": null,
+      "lastMessageAt": "2026-10-25T12:00:00.000Z",
+      "createdAt": "2026-10-25T11:30:00.000Z"
+    }
+  ],
+  "page": 1,
+  "limit": 20,
+  "total": 2
+}

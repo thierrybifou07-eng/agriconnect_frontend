@@ -160,6 +160,10 @@ class AuthController extends GetxController {
     user.value = null;
   }
 
+  void forceSignOut({SessionEndReason reason = SessionEndReason.revoked}) {
+    sessionEvents.emit(reason);
+  }
+
   void _onSessionEnded(SessionEnded event) {
     unawaited(_handleSessionEnded(event));
   }

@@ -356,6 +356,72 @@ abstract class AppLocalizations {
   /// **'Mark as read'**
   String get notificationsMarkRead;
 
+  /// No description provided for @socketReconnecting.
+  ///
+  /// In en, this message translates to:
+  /// **'Reconnecting…'**
+  String get socketReconnecting;
+
+  /// No description provided for @notificationMessageTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'New message'**
+  String get notificationMessageTitle;
+
+  /// No description provided for @notificationMessageBody.
+  ///
+  /// In en, this message translates to:
+  /// **'You received a reply in a conversation.'**
+  String get notificationMessageBody;
+
+  /// No description provided for @notificationDeliveryAvailableTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'New delivery available'**
+  String get notificationDeliveryAvailableTitle;
+
+  /// No description provided for @notificationDeliveryAvailableBody.
+  ///
+  /// In en, this message translates to:
+  /// **'A delivery is available for your agency.'**
+  String get notificationDeliveryAvailableBody;
+
+  /// No description provided for @notificationDeliveryStatusTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Delivery update'**
+  String get notificationDeliveryStatusTitle;
+
+  /// No description provided for @notificationDeliveryStatusBody.
+  ///
+  /// In en, this message translates to:
+  /// **'The status of your delivery has changed.'**
+  String get notificationDeliveryStatusBody;
+
+  /// No description provided for @notificationExpiringTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Expiry alert'**
+  String get notificationExpiringTitle;
+
+  /// No description provided for @notificationExpiringBody.
+  ///
+  /// In en, this message translates to:
+  /// **'A lot is approaching its expiry date.'**
+  String get notificationExpiringBody;
+
+  /// No description provided for @notificationAiSuggestionTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'AI suggestion'**
+  String get notificationAiSuggestionTitle;
+
+  /// No description provided for @notificationAiSuggestionBody.
+  ///
+  /// In en, this message translates to:
+  /// **'A suggestion is available in the support queue.'**
+  String get notificationAiSuggestionBody;
+
   /// No description provided for @notificationsRead.
   ///
   /// In en, this message translates to:
@@ -383,7 +449,7 @@ abstract class AppLocalizations {
   /// No description provided for @notificationsEmptyBody.
   ///
   /// In en, this message translates to:
-  /// **'There are no demonstration notifications for this account.'**
+  /// **'New messages and important events will appear here.'**
   String get notificationsEmptyBody;
 
   /// No description provided for @notificationsLoadError.
@@ -1369,6 +1435,54 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Send'**
   String get chatSend;
+
+  /// No description provided for @chatStartConversation.
+  ///
+  /// In en, this message translates to:
+  /// **'Write a message'**
+  String get chatStartConversation;
+
+  /// No description provided for @chatConversationSubject.
+  ///
+  /// In en, this message translates to:
+  /// **'Conversation with the team'**
+  String get chatConversationSubject;
+
+  /// No description provided for @chatStatusOpen.
+  ///
+  /// In en, this message translates to:
+  /// **'Open'**
+  String get chatStatusOpen;
+
+  /// No description provided for @chatStatusWaiting.
+  ///
+  /// In en, this message translates to:
+  /// **'Waiting for your reply'**
+  String get chatStatusWaiting;
+
+  /// No description provided for @chatStatusClosed.
+  ///
+  /// In en, this message translates to:
+  /// **'Closed'**
+  String get chatStatusClosed;
+
+  /// No description provided for @chatClosedExplanation.
+  ///
+  /// In en, this message translates to:
+  /// **'This conversation is closed. You can no longer send messages.'**
+  String get chatClosedExplanation;
+
+  /// No description provided for @chatLoadOlder.
+  ///
+  /// In en, this message translates to:
+  /// **'Load earlier messages'**
+  String get chatLoadOlder;
+
+  /// No description provided for @chatAiBadge.
+  ///
+  /// In en, this message translates to:
+  /// **'AI'**
+  String get chatAiBadge;
 
   /// No description provided for @productInStock.
   ///

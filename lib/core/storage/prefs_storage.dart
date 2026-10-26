@@ -38,4 +38,19 @@ class PrefsStorage {
         'last_read_message_$conversationId',
         messageId,
       );
+
+  Future<DateTime?> readLastSeenAt(int conversationId) async {
+    final timestamp = (await _preferences).getInt(
+      'last_seen_conversation_$conversationId',
+    );
+    return timestamp == null
+        ? null
+        : DateTime.fromMillisecondsSinceEpoch(timestamp, isUtc: true);
+  }
+
+  Future<void> saveLastSeenAt(int conversationId, DateTime value) async =>
+      (await _preferences).setInt(
+        'last_seen_conversation_$conversationId',
+        value.toUtc().millisecondsSinceEpoch,
+      );
 }

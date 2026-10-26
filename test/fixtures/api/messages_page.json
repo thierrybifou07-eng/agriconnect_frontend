@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "id": 301,
+      "content": "Bonjour, pouvez-vous préciser la disponibilité ?",
+      "senderLabel": "Vous",
+      "createdAt": "2026-10-26T10:00:00.000Z"
+    },
+    {
+      "id": 302,
+      "content": "Oui, le produit est disponible.",
+      "senderLabel": "Équipe AgriConnect",
+      "createdAt": "2026-10-26T10:05:00.000Z"
+    }
+  ],
+  "page": 1,
+  "limit": 50,
+  "total": 2
+}
