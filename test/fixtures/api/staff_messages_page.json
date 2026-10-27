@@ -1,0 +1,27 @@
+{
+  "items": [
+    {
+      "id": 301,
+      "conversationId": 42,
+      "senderType": "CUSTOMER",
+      "senderUserId": 88,
+      "senderAgentId": null,
+      "content": "Bonjour, pouvez-vous préciser la disponibilité ?",
+      "isInternal": false,
+      "createdAt": "2026-10-26T10:00:00.000Z"
+    },
+    {
+      "id": 302,
+      "conversationId": 42,
+      "senderType": "AGENT",
+      "senderUserId": null,
+      "senderAgentId": 7,
+      "content": "Vérifier le stock avant de répondre.",
+      "isInternal": true,
+      "createdAt": "2026-10-26T10:05:00.000Z"
+    }
+  ],
+  "page": 1,
+  "limit": 50,
+  "total": 2
+}

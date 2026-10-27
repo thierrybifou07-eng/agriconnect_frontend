@@ -1,0 +1,38 @@
+{
+  "id": 1,
+  "lotCode": "LOT-DEMO-AVAILABLE",
+  "product": {
+    "id": 1,
+    "name": "Tomate démo",
+    "isPerishable": true,
+    "category": {"code": "DEMO_LEGUMES", "label": "Légumes démo"},
+    "unit": {"code": "DEMO_CRATE", "label": "Caisse démo"}
+  },
+  "zone": {"id": 2, "name": "Yaoundé Centre"},
+  "storageType": "HUB",
+  "hub": {"id": 2, "name": "Hub Yaoundé Centre Démo", "city": "Yaoundé"},
+  "pickupAddress": null,
+  "pickupLatitude": null,
+  "pickupLongitude": null,
+  "agreedUnitPrice": 1000,
+  "quantityInitial": 100,
+  "quantityAvailable": 100,
+  "quantityReserved": 0,
+  "quantitySold": 0,
+  "quantityLost": 0,
+  "status": "AVAILABLE",
+  "rejectionReason": null,
+  "packagingNote": null,
+  "qualityNote": null,
+  "images": [],
+  "harvestedAt": null,
+  "expiresAt": "2026-10-29T11:42:50.453Z",
+  "supplier": {
+    "id": 19,
+    "farmName": "Ferme démo",
+    "profileVerificationStatus": "VERIFIED"
+  },
+  "qualityGrade": "A",
+  "validatedAt": "2026-10-25T10:00:00.000Z",
+  "validatedByAgentId": 7
+}

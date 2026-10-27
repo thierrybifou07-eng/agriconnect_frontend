@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:agri_connect/app/routes/app_routes.dart';
 import 'package:agri_connect/app/routes/middlewares/auth_middleware.dart';
 import 'package:agri_connect/app/routes/middlewares/role_middleware.dart';
+import 'package:agri_connect/app/routes/middlewares/capability_middleware.dart';
 import 'package:agri_connect/core/config/app_env.dart';
 import 'package:agri_connect/core/localization/generated/app_localizations.dart';
 import 'package:agri_connect/features/auth/domain/role_code.dart';
@@ -26,6 +27,9 @@ import 'package:agri_connect/features/supplier/presentation/pages/supplier_lot_d
 import 'package:agri_connect/features/driver/presentation/bindings/driver_binding.dart';
 import 'package:agri_connect/features/driver/presentation/pages/driver_delivery_detail_page.dart';
 import 'package:agri_connect/features/driver/presentation/pages/driver_page.dart';
+import 'package:agri_connect/features/auth/domain/agent_capability.dart';
+import 'package:agri_connect/features/staff/presentation/bindings/staff_bindings.dart';
+import 'package:agri_connect/features/staff/presentation/pages/staff_pages.dart';
 
 abstract final class AppPages {
   static final pages = <GetPage<dynamic>>[
@@ -196,8 +200,87 @@ abstract final class AppPages {
       page: () => const SupplierLotDetailPage(),
       binding: SupplierLotDetailBinding(),
     ),
+    GetPage(
+      name: AppRoutes.staff,
+      middlewares: [
+        AuthMiddleware(),
+        RoleMiddleware({RoleCode.agent}),
+      ],
+      page: () => const StaffShellPage(),
+      binding: StaffBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.staffConversations,
+      middlewares: [
+        AuthMiddleware(),
+        RoleMiddleware({RoleCode.agent}),
+        CapabilityMiddleware({
+          AgentCapability.buyerSupport,
+          AgentCapability.supplierSupport,
+        }),
+      ],
+      page: () => const StaffInboxPage(),
+      binding: StaffBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.staffConversationDetail,
+      middlewares: [
+        AuthMiddleware(),
+        RoleMiddleware({RoleCode.agent}),
+        CapabilityMiddleware({
+          AgentCapability.buyerSupport,
+          AgentCapability.supplierSupport,
+        }),
+      ],
+      page: () => const StaffInboxPage(),
+      binding: StaffBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.staffLots,
+      middlewares: [
+        AuthMiddleware(),
+        RoleMiddleware({RoleCode.agent}),
+        CapabilityMiddleware({AgentCapability.stockValidation}),
+      ],
+      page: () => const StaffLotsPage(),
+      binding: StaffBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.staffListings,
+      middlewares: [
+        AuthMiddleware(),
+        RoleMiddleware({RoleCode.agent}),
+        CapabilityMiddleware({AgentCapability.listingManagement}),
+      ],
+      page: () => const StaffListingsPage(),
+      binding: StaffBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.staffOrders,
+      middlewares: [
+        AuthMiddleware(),
+        RoleMiddleware({RoleCode.agent}),
+        CapabilityMiddleware({
+          AgentCapability.orderProcessing,
+          AgentCapability.paymentFollowup,
+          AgentCapability.dispatchCoordination,
+          AgentCapability.disputeHandling,
+        }),
+      ],
+      page: () => const StaffOrdersPage(),
+      binding: StaffBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.staffVerifications,
+      middlewares: [
+        AuthMiddleware(),
+        RoleMiddleware({RoleCode.agent}),
+        CapabilityMiddleware({AgentCapability.userVerification}),
+      ],
+      page: () => const StaffVerificationsPage(),
+      binding: StaffBinding(),
+    ),
     _rolePage(AppRoutes.buyer, RoleCode.buyer),
-    _rolePage(AppRoutes.staff, RoleCode.agent),
     _rolePage(AppRoutes.admin, RoleCode.admin, RoleCode.root),
   ];
 

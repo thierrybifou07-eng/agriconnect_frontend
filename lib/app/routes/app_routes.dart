@@ -34,6 +34,15 @@ abstract final class AppRoutes {
   static const buyer = '/buyer';
   static const driver = '/driver';
   static const staff = '/staff';
+  static const staffConversations = '/staff/conversations';
+  static const staffConversationDetail = '/staff/conversations/:conversationId';
+  static const staffLots = '/staff/lots';
+  static const staffListings = '/staff/listings';
+  static const staffOrders = '/staff/orders';
+  static const staffVerifications = '/staff/verifications';
+
+  static String staffConversation(int conversationId) =>
+      '/staff/conversations/$conversationId';
   static const admin = '/admin';
 
   static String homeFor(AuthUser user) => switch (user.role) {

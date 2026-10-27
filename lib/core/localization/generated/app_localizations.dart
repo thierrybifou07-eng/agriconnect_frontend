@@ -6420,6 +6420,414 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Save'**
   String get supplierSave;
+
+  /// No description provided for @staffNoCapabilities.
+  ///
+  /// In en, this message translates to:
+  /// **'No capabilities have been assigned. Contact an administrator.'**
+  String get staffNoCapabilities;
+
+  /// No description provided for @staffSupport.
+  ///
+  /// In en, this message translates to:
+  /// **'Support'**
+  String get staffSupport;
+
+  /// No description provided for @staffStock.
+  ///
+  /// In en, this message translates to:
+  /// **'Stock'**
+  String get staffStock;
+
+  /// No description provided for @staffListings.
+  ///
+  /// In en, this message translates to:
+  /// **'Listings'**
+  String get staffListings;
+
+  /// No description provided for @staffOrders.
+  ///
+  /// In en, this message translates to:
+  /// **'Orders'**
+  String get staffOrders;
+
+  /// No description provided for @staffVerifications.
+  ///
+  /// In en, this message translates to:
+  /// **'Verifications'**
+  String get staffVerifications;
+
+  /// No description provided for @staffAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Account'**
+  String get staffAccount;
+
+  /// No description provided for @staffHelpAdmin.
+  ///
+  /// In en, this message translates to:
+  /// **'Contact an administrator to request access.'**
+  String get staffHelpAdmin;
+
+  /// No description provided for @staffInboxAll.
+  ///
+  /// In en, this message translates to:
+  /// **'All'**
+  String get staffInboxAll;
+
+  /// No description provided for @staffInboxUnassigned.
+  ///
+  /// In en, this message translates to:
+  /// **'Unassigned'**
+  String get staffInboxUnassigned;
+
+  /// No description provided for @staffInboxMine.
+  ///
+  /// In en, this message translates to:
+  /// **'Mine'**
+  String get staffInboxMine;
+
+  /// No description provided for @staffInboxEscalated.
+  ///
+  /// In en, this message translates to:
+  /// **'Escalated'**
+  String get staffInboxEscalated;
+
+  /// No description provided for @staffStatusOpen.
+  ///
+  /// In en, this message translates to:
+  /// **'Open'**
+  String get staffStatusOpen;
+
+  /// No description provided for @staffStatusWaiting.
+  ///
+  /// In en, this message translates to:
+  /// **'Waiting for customer'**
+  String get staffStatusWaiting;
+
+  /// No description provided for @staffStatusClosed.
+  ///
+  /// In en, this message translates to:
+  /// **'Closed'**
+  String get staffStatusClosed;
+
+  /// No description provided for @staffLoadMore.
+  ///
+  /// In en, this message translates to:
+  /// **'Load more'**
+  String get staffLoadMore;
+
+  /// No description provided for @staffBuyerSupport.
+  ///
+  /// In en, this message translates to:
+  /// **'Buyer'**
+  String get staffBuyerSupport;
+
+  /// No description provided for @staffSupplierSupport.
+  ///
+  /// In en, this message translates to:
+  /// **'Supplier'**
+  String get staffSupplierSupport;
+
+  /// No description provided for @staffLotPending.
+  ///
+  /// In en, this message translates to:
+  /// **'Pending validation'**
+  String get staffLotPending;
+
+  /// No description provided for @staffLotAvailable.
+  ///
+  /// In en, this message translates to:
+  /// **'Available'**
+  String get staffLotAvailable;
+
+  /// No description provided for @staffLotReserved.
+  ///
+  /// In en, this message translates to:
+  /// **'Fully reserved'**
+  String get staffLotReserved;
+
+  /// No description provided for @staffLotSoldOut.
+  ///
+  /// In en, this message translates to:
+  /// **'Sold out'**
+  String get staffLotSoldOut;
+
+  /// No description provided for @staffLotExpired.
+  ///
+  /// In en, this message translates to:
+  /// **'Expired'**
+  String get staffLotExpired;
+
+  /// No description provided for @staffLotReturned.
+  ///
+  /// In en, this message translates to:
+  /// **'Returned'**
+  String get staffLotReturned;
+
+  /// No description provided for @staffLotRejected.
+  ///
+  /// In en, this message translates to:
+  /// **'Rejected'**
+  String get staffLotRejected;
+
+  /// No description provided for @staffLotWithdrawn.
+  ///
+  /// In en, this message translates to:
+  /// **'Withdrawn'**
+  String get staffLotWithdrawn;
+
+  /// No description provided for @staffListingDraft.
+  ///
+  /// In en, this message translates to:
+  /// **'Draft'**
+  String get staffListingDraft;
+
+  /// No description provided for @staffListingActive.
+  ///
+  /// In en, this message translates to:
+  /// **'Active'**
+  String get staffListingActive;
+
+  /// No description provided for @staffListingSold.
+  ///
+  /// In en, this message translates to:
+  /// **'Sold'**
+  String get staffListingSold;
+
+  /// No description provided for @staffListingInactive.
+  ///
+  /// In en, this message translates to:
+  /// **'Hidden'**
+  String get staffListingInactive;
+
+  /// No description provided for @staffSupportTypeDenied.
+  ///
+  /// In en, this message translates to:
+  /// **'You do not have access to handle this conversation type.'**
+  String get staffSupportTypeDenied;
+
+  /// No description provided for @staffConversationSubject.
+  ///
+  /// In en, this message translates to:
+  /// **'Conversation'**
+  String get staffConversationSubject;
+
+  /// No description provided for @staffAssign.
+  ///
+  /// In en, this message translates to:
+  /// **'Assign to me'**
+  String get staffAssign;
+
+  /// No description provided for @staffEscalate.
+  ///
+  /// In en, this message translates to:
+  /// **'Escalate'**
+  String get staffEscalate;
+
+  /// No description provided for @staffClose.
+  ///
+  /// In en, this message translates to:
+  /// **'Close'**
+  String get staffClose;
+
+  /// No description provided for @staffInternalNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Internal note (hidden from customer)'**
+  String get staffInternalNote;
+
+  /// No description provided for @staffMessageHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Write a message'**
+  String get staffMessageHint;
+
+  /// No description provided for @staffSend.
+  ///
+  /// In en, this message translates to:
+  /// **'Send'**
+  String get staffSend;
+
+  /// No description provided for @staffContext.
+  ///
+  /// In en, this message translates to:
+  /// **'Context'**
+  String get staffContext;
+
+  /// No description provided for @staffSuggestionReserved.
+  ///
+  /// In en, this message translates to:
+  /// **'AI suggestion — coming soon'**
+  String get staffSuggestionReserved;
+
+  /// No description provided for @staffValidate.
+  ///
+  /// In en, this message translates to:
+  /// **'Validate'**
+  String get staffValidate;
+
+  /// No description provided for @staffReject.
+  ///
+  /// In en, this message translates to:
+  /// **'Reject'**
+  String get staffReject;
+
+  /// No description provided for @staffReturn.
+  ///
+  /// In en, this message translates to:
+  /// **'Return'**
+  String get staffReturn;
+
+  /// No description provided for @staffQualityCheck.
+  ///
+  /// In en, this message translates to:
+  /// **'Quality check'**
+  String get staffQualityCheck;
+
+  /// No description provided for @staffSupplierNotVerified.
+  ///
+  /// In en, this message translates to:
+  /// **'The supplier is not verified.'**
+  String get staffSupplierNotVerified;
+
+  /// No description provided for @staffSupplierReview.
+  ///
+  /// In en, this message translates to:
+  /// **'Supplier review'**
+  String get staffSupplierReview;
+
+  /// No description provided for @staffReason.
+  ///
+  /// In en, this message translates to:
+  /// **'Reason'**
+  String get staffReason;
+
+  /// No description provided for @staffGrade.
+  ///
+  /// In en, this message translates to:
+  /// **'Grade'**
+  String get staffGrade;
+
+  /// No description provided for @staffNotes.
+  ///
+  /// In en, this message translates to:
+  /// **'Notes'**
+  String get staffNotes;
+
+  /// No description provided for @staffListingCreate.
+  ///
+  /// In en, this message translates to:
+  /// **'Create listing'**
+  String get staffListingCreate;
+
+  /// No description provided for @staffLotId.
+  ///
+  /// In en, this message translates to:
+  /// **'Validated lot ID'**
+  String get staffLotId;
+
+  /// No description provided for @staffTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Title'**
+  String get staffTitle;
+
+  /// No description provided for @staffDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Description'**
+  String get staffDescription;
+
+  /// No description provided for @staffPrice.
+  ///
+  /// In en, this message translates to:
+  /// **'Unit price'**
+  String get staffPrice;
+
+  /// No description provided for @staffPhotosRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Select 1 to 5 photos.'**
+  String get staffPhotosRequired;
+
+  /// No description provided for @staffPhotoInvalid.
+  ///
+  /// In en, this message translates to:
+  /// **'Unsupported photo format or file larger than 5 MB.'**
+  String get staffPhotoInvalid;
+
+  /// No description provided for @staffStatusFilter.
+  ///
+  /// In en, this message translates to:
+  /// **'Status'**
+  String get staffStatusFilter;
+
+  /// No description provided for @staffSupplierId.
+  ///
+  /// In en, this message translates to:
+  /// **'Supplier ID'**
+  String get staffSupplierId;
+
+  /// No description provided for @staffProductId.
+  ///
+  /// In en, this message translates to:
+  /// **'Product ID'**
+  String get staffProductId;
+
+  /// No description provided for @staffPublish.
+  ///
+  /// In en, this message translates to:
+  /// **'Publish'**
+  String get staffPublish;
+
+  /// No description provided for @staffUnpublish.
+  ///
+  /// In en, this message translates to:
+  /// **'Unpublish'**
+  String get staffUnpublish;
+
+  /// No description provided for @staffEdit.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit'**
+  String get staffEdit;
+
+  /// No description provided for @staffCreate.
+  ///
+  /// In en, this message translates to:
+  /// **'Create'**
+  String get staffCreate;
+
+  /// No description provided for @staffNoData.
+  ///
+  /// In en, this message translates to:
+  /// **'Nothing here yet.'**
+  String get staffNoData;
+
+  /// No description provided for @staffPriceBelowSupplier.
+  ///
+  /// In en, this message translates to:
+  /// **'The price cannot be below the agreed price.'**
+  String get staffPriceBelowSupplier;
+
+  /// No description provided for @staffLotAlreadyLinked.
+  ///
+  /// In en, this message translates to:
+  /// **'This lot is already linked to a listing.'**
+  String get staffLotAlreadyLinked;
+
+  /// No description provided for @staffLotNotAvailable.
+  ///
+  /// In en, this message translates to:
+  /// **'This lot is not available.'**
+  String get staffLotNotAvailable;
+
+  /// No description provided for @staffFileRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Add the required photos.'**
+  String get staffFileRequired;
 }
 
 class _AppLocalizationsDelegate

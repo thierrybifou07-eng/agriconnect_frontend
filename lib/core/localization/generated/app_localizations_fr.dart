@@ -3637,4 +3637,213 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get supplierSave => 'Enregistrer';
+
+  @override
+  String get staffNoCapabilities =>
+      'Aucune capacité attribuée, contactez un administrateur.';
+
+  @override
+  String get staffSupport => 'Support';
+
+  @override
+  String get staffStock => 'Stock';
+
+  @override
+  String get staffListings => 'Annonces';
+
+  @override
+  String get staffOrders => 'Commandes';
+
+  @override
+  String get staffVerifications => 'Vérifications';
+
+  @override
+  String get staffAccount => 'Compte';
+
+  @override
+  String get staffHelpAdmin =>
+      'Contactez un administrateur pour obtenir vos accès.';
+
+  @override
+  String get staffInboxAll => 'Toutes';
+
+  @override
+  String get staffInboxUnassigned => 'Non assignées';
+
+  @override
+  String get staffInboxMine => 'Les miennes';
+
+  @override
+  String get staffInboxEscalated => 'Escaladées';
+
+  @override
+  String get staffStatusOpen => 'Ouverte';
+
+  @override
+  String get staffStatusWaiting => 'En attente du client';
+
+  @override
+  String get staffStatusClosed => 'Fermée';
+
+  @override
+  String get staffLoadMore => 'Charger la suite';
+
+  @override
+  String get staffBuyerSupport => 'Acheteur';
+
+  @override
+  String get staffSupplierSupport => 'Fournisseur';
+
+  @override
+  String get staffLotPending => 'À valider';
+
+  @override
+  String get staffLotAvailable => 'Disponible';
+
+  @override
+  String get staffLotReserved => 'Entièrement réservé';
+
+  @override
+  String get staffLotSoldOut => 'Épuisé';
+
+  @override
+  String get staffLotExpired => 'Expiré';
+
+  @override
+  String get staffLotReturned => 'Retourné';
+
+  @override
+  String get staffLotRejected => 'Rejeté';
+
+  @override
+  String get staffLotWithdrawn => 'Retiré';
+
+  @override
+  String get staffListingDraft => 'Brouillon';
+
+  @override
+  String get staffListingActive => 'En ligne';
+
+  @override
+  String get staffListingSold => 'Vendu';
+
+  @override
+  String get staffListingInactive => 'Masqué';
+
+  @override
+  String get staffSupportTypeDenied =>
+      'Votre accès ne permet pas de traiter ce type de conversation.';
+
+  @override
+  String get staffConversationSubject => 'Conversation';
+
+  @override
+  String get staffAssign => 'S\'assigner';
+
+  @override
+  String get staffEscalate => 'Escalader';
+
+  @override
+  String get staffClose => 'Fermer';
+
+  @override
+  String get staffInternalNote => 'Note interne (invisible du client)';
+
+  @override
+  String get staffMessageHint => 'Écrire un message';
+
+  @override
+  String get staffSend => 'Envoyer';
+
+  @override
+  String get staffContext => 'Contexte';
+
+  @override
+  String get staffSuggestionReserved => 'Suggestion IA — bientôt disponible';
+
+  @override
+  String get staffValidate => 'Valider';
+
+  @override
+  String get staffReject => 'Rejeter';
+
+  @override
+  String get staffReturn => 'Retourner';
+
+  @override
+  String get staffQualityCheck => 'Contrôle qualité';
+
+  @override
+  String get staffSupplierNotVerified => 'Le fournisseur n\'est pas vérifié.';
+
+  @override
+  String get staffSupplierReview => 'Revue fournisseur';
+
+  @override
+  String get staffReason => 'Motif';
+
+  @override
+  String get staffGrade => 'Qualité';
+
+  @override
+  String get staffNotes => 'Notes';
+
+  @override
+  String get staffListingCreate => 'Créer une annonce';
+
+  @override
+  String get staffLotId => 'Identifiant du lot validé';
+
+  @override
+  String get staffTitle => 'Titre';
+
+  @override
+  String get staffDescription => 'Description';
+
+  @override
+  String get staffPrice => 'Prix unitaire';
+
+  @override
+  String get staffPhotosRequired => 'Sélectionnez entre 1 et 5 photos.';
+
+  @override
+  String get staffPhotoInvalid =>
+      'Format photo non pris en charge ou fichier supérieur à 5 Mo.';
+
+  @override
+  String get staffStatusFilter => 'Statut';
+
+  @override
+  String get staffSupplierId => 'ID fournisseur';
+
+  @override
+  String get staffProductId => 'ID produit';
+
+  @override
+  String get staffPublish => 'Publier';
+
+  @override
+  String get staffUnpublish => 'Masquer';
+
+  @override
+  String get staffEdit => 'Modifier';
+
+  @override
+  String get staffCreate => 'Créer';
+
+  @override
+  String get staffNoData => 'Aucun élément pour le moment.';
+
+  @override
+  String get staffPriceBelowSupplier =>
+      'Le prix ne peut pas être inférieur au prix convenu.';
+
+  @override
+  String get staffLotAlreadyLinked => 'Ce lot est déjà lié à une annonce.';
+
+  @override
+  String get staffLotNotAvailable => 'Ce lot n\'est pas disponible.';
+
+  @override
+  String get staffFileRequired => 'Ajoutez les photos requises.';
 }

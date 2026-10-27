@@ -3594,4 +3594,213 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get supplierSave => 'Save';
+
+  @override
+  String get staffNoCapabilities =>
+      'No capabilities have been assigned. Contact an administrator.';
+
+  @override
+  String get staffSupport => 'Support';
+
+  @override
+  String get staffStock => 'Stock';
+
+  @override
+  String get staffListings => 'Listings';
+
+  @override
+  String get staffOrders => 'Orders';
+
+  @override
+  String get staffVerifications => 'Verifications';
+
+  @override
+  String get staffAccount => 'Account';
+
+  @override
+  String get staffHelpAdmin => 'Contact an administrator to request access.';
+
+  @override
+  String get staffInboxAll => 'All';
+
+  @override
+  String get staffInboxUnassigned => 'Unassigned';
+
+  @override
+  String get staffInboxMine => 'Mine';
+
+  @override
+  String get staffInboxEscalated => 'Escalated';
+
+  @override
+  String get staffStatusOpen => 'Open';
+
+  @override
+  String get staffStatusWaiting => 'Waiting for customer';
+
+  @override
+  String get staffStatusClosed => 'Closed';
+
+  @override
+  String get staffLoadMore => 'Load more';
+
+  @override
+  String get staffBuyerSupport => 'Buyer';
+
+  @override
+  String get staffSupplierSupport => 'Supplier';
+
+  @override
+  String get staffLotPending => 'Pending validation';
+
+  @override
+  String get staffLotAvailable => 'Available';
+
+  @override
+  String get staffLotReserved => 'Fully reserved';
+
+  @override
+  String get staffLotSoldOut => 'Sold out';
+
+  @override
+  String get staffLotExpired => 'Expired';
+
+  @override
+  String get staffLotReturned => 'Returned';
+
+  @override
+  String get staffLotRejected => 'Rejected';
+
+  @override
+  String get staffLotWithdrawn => 'Withdrawn';
+
+  @override
+  String get staffListingDraft => 'Draft';
+
+  @override
+  String get staffListingActive => 'Active';
+
+  @override
+  String get staffListingSold => 'Sold';
+
+  @override
+  String get staffListingInactive => 'Hidden';
+
+  @override
+  String get staffSupportTypeDenied =>
+      'You do not have access to handle this conversation type.';
+
+  @override
+  String get staffConversationSubject => 'Conversation';
+
+  @override
+  String get staffAssign => 'Assign to me';
+
+  @override
+  String get staffEscalate => 'Escalate';
+
+  @override
+  String get staffClose => 'Close';
+
+  @override
+  String get staffInternalNote => 'Internal note (hidden from customer)';
+
+  @override
+  String get staffMessageHint => 'Write a message';
+
+  @override
+  String get staffSend => 'Send';
+
+  @override
+  String get staffContext => 'Context';
+
+  @override
+  String get staffSuggestionReserved => 'AI suggestion — coming soon';
+
+  @override
+  String get staffValidate => 'Validate';
+
+  @override
+  String get staffReject => 'Reject';
+
+  @override
+  String get staffReturn => 'Return';
+
+  @override
+  String get staffQualityCheck => 'Quality check';
+
+  @override
+  String get staffSupplierNotVerified => 'The supplier is not verified.';
+
+  @override
+  String get staffSupplierReview => 'Supplier review';
+
+  @override
+  String get staffReason => 'Reason';
+
+  @override
+  String get staffGrade => 'Grade';
+
+  @override
+  String get staffNotes => 'Notes';
+
+  @override
+  String get staffListingCreate => 'Create listing';
+
+  @override
+  String get staffLotId => 'Validated lot ID';
+
+  @override
+  String get staffTitle => 'Title';
+
+  @override
+  String get staffDescription => 'Description';
+
+  @override
+  String get staffPrice => 'Unit price';
+
+  @override
+  String get staffPhotosRequired => 'Select 1 to 5 photos.';
+
+  @override
+  String get staffPhotoInvalid =>
+      'Unsupported photo format or file larger than 5 MB.';
+
+  @override
+  String get staffStatusFilter => 'Status';
+
+  @override
+  String get staffSupplierId => 'Supplier ID';
+
+  @override
+  String get staffProductId => 'Product ID';
+
+  @override
+  String get staffPublish => 'Publish';
+
+  @override
+  String get staffUnpublish => 'Unpublish';
+
+  @override
+  String get staffEdit => 'Edit';
+
+  @override
+  String get staffCreate => 'Create';
+
+  @override
+  String get staffNoData => 'Nothing here yet.';
+
+  @override
+  String get staffPriceBelowSupplier =>
+      'The price cannot be below the agreed price.';
+
+  @override
+  String get staffLotAlreadyLinked =>
+      'This lot is already linked to a listing.';
+
+  @override
+  String get staffLotNotAvailable => 'This lot is not available.';
+
+  @override
+  String get staffFileRequired => 'Add the required photos.';
 }

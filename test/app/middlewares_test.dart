@@ -3,10 +3,12 @@ import 'package:get/get.dart';
 
 import 'package:agri_connect/app/routes/app_routes.dart';
 import 'package:agri_connect/app/routes/middlewares/auth_middleware.dart';
+import 'package:agri_connect/app/routes/middlewares/capability_middleware.dart';
 import 'package:agri_connect/app/routes/middlewares/role_middleware.dart';
 import 'package:agri_connect/core/network/session_events.dart';
 import 'package:agri_connect/core/storage/token_storage.dart';
 import 'package:agri_connect/features/auth/domain/auth_user.dart';
+import 'package:agri_connect/features/auth/domain/agent_capability.dart';
 import 'package:agri_connect/features/auth/domain/profile_verification_status.dart';
 import 'package:agri_connect/features/auth/domain/role_code.dart';
 import 'package:agri_connect/features/auth/presentation/controllers/auth_controller.dart';
@@ -39,6 +41,38 @@ void main() {
       AppRoutes.buyer,
     );
   });
+
+  test(
+    'capability middleware protects each staff operation with an OR set',
+    () {
+      final controller = AuthController(
+        tokenStorage: InMemoryTokenStorage(),
+        sessionEvents: SessionEvents(),
+        repository: FakeAuthRepository(),
+      );
+      Get.put<AuthController>(controller);
+      controller.setUser(
+        AuthUser(
+          role: RoleCode.agent,
+          agent: AgentInfo(capabilities: const [AgentCapability.buyerSupport]),
+        ),
+      );
+
+      expect(
+        CapabilityMiddleware({
+          AgentCapability.buyerSupport,
+          AgentCapability.supplierSupport,
+        }).redirect(AppRoutes.staffConversations),
+        isNull,
+      );
+      expect(
+        CapabilityMiddleware({
+          AgentCapability.stockValidation,
+        }).redirect(AppRoutes.staffLots)?.name,
+        AppRoutes.staff,
+      );
+    },
+  );
 }
 
 AuthUser _buyer() => const AuthUser(

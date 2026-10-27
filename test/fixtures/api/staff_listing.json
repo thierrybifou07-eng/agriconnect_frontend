@@ -1,0 +1,22 @@
+{
+  "id": 51,
+  "reference": "ANN-000051",
+  "title": "Tomates fraîches de Yaoundé",
+  "description": "Récolte récente.",
+  "unitPrice": 1200,
+  "status": "DRAFT",
+  "publishedAt": null,
+  "product": {
+    "id": 1,
+    "name": "Tomate démo",
+    "category": {"code": "DEMO_LEGUMES", "label": "Légumes démo"},
+    "unit": {"code": "DEMO_CRATE", "label": "Caisse démo"}
+  },
+  "zone": {"id": 2, "name": "Yaoundé Centre"},
+  "images": [{"url": "/uploads/tomate.jpg", "position": 0, "isPrimary": true}],
+  "lot": null,
+  "createdByUserId": 3,
+  "createdByAgentId": 7,
+  "createdAt": "2026-10-26T09:00:00.000Z",
+  "updatedAt": "2026-10-26T09:00:00.000Z"
+}

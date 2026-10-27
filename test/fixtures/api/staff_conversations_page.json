@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "id": 42,
+      "type": "BUYER_SUPPORT",
+      "status": "OPEN",
+      "subject": "Question sur une annonce",
+      "listingId": 17,
+      "lotId": null,
+      "customer": {"id": 88, "firstname": "Awa", "lastname": "Bello"},
+      "assignedAgentId": 7,
+      "assignedAgent": {"id": 7, "displayName": "Agent complet"},
+      "escalatedAt": null,
+      "escalationReason": null,
+      "lastMessageAt": "2026-10-26T10:15:00.000Z",
+      "createdAt": "2026-10-26T09:50:00.000Z"
+    }
+  ],
+  "page": 1,
+  "limit": 20,
+  "total": 1
+}
