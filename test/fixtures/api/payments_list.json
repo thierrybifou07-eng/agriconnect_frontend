@@ -1,0 +1,14 @@
+[
+  {
+    "id": 25,
+    "orderId": 73,
+    "amount": 1200,
+    "method": "MOBILE_MONEY",
+    "status": "CONFIRMED",
+    "reference": "MOMO-REF-01",
+    "idempotencyKey": "fba853c1-3a4b-4b54-a442-1b4a1fdbbd55",
+    "paidAt": "2026-10-27T09:30:00.000Z",
+    "recordedById": 7,
+    "createdAt": "2026-10-27T09:31:00.000Z"
+  }
+]

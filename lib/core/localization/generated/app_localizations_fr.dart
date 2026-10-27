@@ -3846,4 +3846,359 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get staffFileRequired => 'Ajoutez les photos requises.';
+
+  @override
+  String get staffCreateQuote => 'Créer un devis';
+
+  @override
+  String get staffNoOrders => 'Aucune commande à traiter.';
+
+  @override
+  String get staffOrderDetail => 'Détail de la commande';
+
+  @override
+  String get staffPaymentUnknown => 'Paiement inconnu';
+
+  @override
+  String get staffQuoteExpires => 'Devis valable jusqu\'au';
+
+  @override
+  String get staffSupplierUnitPrice => 'Prix fournisseur';
+
+  @override
+  String get staffCommission => 'Commission';
+
+  @override
+  String get staffSupplierNet => 'Net fournisseur';
+
+  @override
+  String get staffSubtotal => 'Sous-total';
+
+  @override
+  String get staffBuyerFee => 'Frais acheteur';
+
+  @override
+  String get staffDeliveryFee => 'Frais de livraison';
+
+  @override
+  String get staffOrderTotal => 'Total calculé par le serveur';
+
+  @override
+  String get staffConfirmQuote => 'Confirmer le devis';
+
+  @override
+  String get staffCancelOrder => 'Annuler la commande';
+
+  @override
+  String get staffPaymentRequired => 'Paiement requis avant la préparation.';
+
+  @override
+  String get staffPayments => 'Paiements';
+
+  @override
+  String get staffRecordPayment => 'Saisir un paiement';
+
+  @override
+  String get staffNoPayments => 'Aucun paiement enregistré.';
+
+  @override
+  String get staffAmount => 'Montant (XAF)';
+
+  @override
+  String get staffPaymentMethod => 'Mode de paiement';
+
+  @override
+  String get staffCash => 'Espèces';
+
+  @override
+  String get staffMobileMoney => 'Mobile Money';
+
+  @override
+  String get staffBankTransfer => 'Virement bancaire';
+
+  @override
+  String get staffReferenceOptional => 'Référence (facultative)';
+
+  @override
+  String get staffRefund => 'Rembourser';
+
+  @override
+  String get staffDeliveries => 'Livraisons';
+
+  @override
+  String get staffNoDeliveries => 'Aucune livraison créée.';
+
+  @override
+  String get staffAgency => 'Agence';
+
+  @override
+  String get staffPickup => 'Enlèvement';
+
+  @override
+  String get staffDropoff => 'Destination';
+
+  @override
+  String get staffAgencyCost => 'Coût agence';
+
+  @override
+  String get staffInsuredValue => 'Valeur assurée';
+
+  @override
+  String get staffReleaseDelivery => 'Libérer';
+
+  @override
+  String get staffRedispatchDelivery => 'Redispatcher';
+
+  @override
+  String get staffCancelDelivery => 'Annuler la livraison';
+
+  @override
+  String get staffReasonOptional => 'Motif (facultatif)';
+
+  @override
+  String get staffCreateDeliveries => 'Créer les livraisons';
+
+  @override
+  String get staffDeliveryUnknown => 'Statut de livraison inconnu';
+
+  @override
+  String get staffDeliveryAvailable => 'Livraison disponible';
+
+  @override
+  String get staffDeliveryUnavailable => 'Aucune livraison disponible';
+
+  @override
+  String get staffBuyer => 'Acheteur';
+
+  @override
+  String get staffActiveListing => 'Annonce active';
+
+  @override
+  String get staffQuantity => 'Quantité';
+
+  @override
+  String get staffUnitPriceOptional => 'Prix unitaire (facultatif)';
+
+  @override
+  String get staffRemoveLine => 'Retirer la ligne';
+
+  @override
+  String get staffAddLine => 'Ajouter une ligne';
+
+  @override
+  String get staffDeliveryMode => 'Mode de livraison';
+
+  @override
+  String get staffHubPickup => 'Retrait au point relais';
+
+  @override
+  String get staffAgencyDelivery => 'Livraison par agence';
+
+  @override
+  String get staffPickupHub => 'Point de retrait';
+
+  @override
+  String get staffDeliveryZone => 'Zone de livraison';
+
+  @override
+  String get staffAddress => 'Adresse de livraison';
+
+  @override
+  String get staffLatitude => 'Latitude';
+
+  @override
+  String get staffLongitude => 'Longitude';
+
+  @override
+  String get staffNotesOptional => 'Note (facultative)';
+
+  @override
+  String get staffServerCalculatesTotals =>
+      'Les frais, commissions et totaux seront calculés par le serveur.';
+
+  @override
+  String get staffQuoteCreated => 'Devis créé.';
+
+  @override
+  String get staffDeadlineNotProvided => 'échéance non communiquée';
+
+  @override
+  String staffQuoteCreatedMessage(String deadline) {
+    return 'Votre devis est prêt. Il est réservé jusqu\'au $deadline.';
+  }
+
+  @override
+  String get staffDocumentStatus => 'Statut du document';
+
+  @override
+  String get staffDocumentType => 'Type de document';
+
+  @override
+  String get staffAccountRole => 'Rôle du compte';
+
+  @override
+  String get staffUserId => 'ID utilisateur';
+
+  @override
+  String get staffNoVerifications => 'Aucun document à examiner.';
+
+  @override
+  String get staffVerificationRuleApprove =>
+      'Approuver vérifie le document. Le compte est vérifié s\'il a au moins un document vérifié et aucun document en attente.';
+
+  @override
+  String get staffVerificationRuleReject =>
+      'Un refus rejette le compte uniquement s\'il n\'a aucun autre document vérifié.';
+
+  @override
+  String get staffFileMissing =>
+      'Le fichier est introuvable. Actualisez le détail pour demander un nouveau lien.';
+
+  @override
+  String get staffUnsupportedDocument =>
+      'Format de document non pris en charge.';
+
+  @override
+  String get staffOpenPrivatePdf => 'Ouvrir le PDF privé';
+
+  @override
+  String get staffApprove => 'Approuver';
+
+  @override
+  String get staffRejectionNote => 'Motif du refus (obligatoire)';
+
+  @override
+  String get staffHumanActorRequired =>
+      'Cette action doit être effectuée par une personne.';
+
+  @override
+  String get staffInsufficientStock => 'Le stock disponible est insuffisant.';
+
+  @override
+  String get staffZoneNotCovered => 'La zone n\'est pas desservie.';
+
+  @override
+  String get staffInvalidHub => 'Le point de retrait n\'est pas valide.';
+
+  @override
+  String get staffCompensationRateZero =>
+      'Le taux d\'indemnisation n\'est pas défini (à régler par ROOT).';
+
+  @override
+  String get staffPrivateFileWrongReviewer =>
+      'Ce lien privé appartient à un autre compte relecteur ou a expiré. Actualisez le détail.';
+
+  @override
+  String get staffVerificationAlreadyReviewed =>
+      'Ce document a déjà été examiné. La file a été actualisée.';
+
+  @override
+  String get staffStatusQuoted => 'Devis';
+
+  @override
+  String get staffStatusConfirmed => 'Confirmée';
+
+  @override
+  String get staffStatusPreparing => 'En préparation';
+
+  @override
+  String get staffStatusReadyForPickup => 'Prête au retrait';
+
+  @override
+  String get staffStatusOutForDelivery => 'En livraison';
+
+  @override
+  String get staffStatusCompleted => 'Terminée';
+
+  @override
+  String get staffStatusCancelled => 'Annulée';
+
+  @override
+  String get staffPositiveAmount => 'Saisissez un montant supérieur à zéro.';
+
+  @override
+  String get staffCompensate => 'Demander une indemnisation';
+
+  @override
+  String get staffReasonExpiredUnsold => 'Invendu périmé';
+
+  @override
+  String get staffReasonLostDamaged => 'Perdu ou endommagé';
+
+  @override
+  String get staffReasonOther => 'Autre';
+
+  @override
+  String get staffCompensationQuantity => 'Quantité à indemniser';
+
+  @override
+  String get staffLotQuantity => 'Quantité du lot';
+
+  @override
+  String get staffDeliveryIdOptional => 'ID de livraison (facultatif)';
+
+  @override
+  String get staffCompensationSubmitted => 'Demande d\'indemnisation envoyée.';
+
+  @override
+  String get staffPaymentUnpaid => 'Non payé';
+
+  @override
+  String get staffPaymentPartiallyPaid => 'Partiellement payé';
+
+  @override
+  String get staffPaymentPaid => 'Payé';
+
+  @override
+  String get staffPaymentRefunded => 'Remboursé';
+
+  @override
+  String get staffDeliveryPending => 'En attente';
+
+  @override
+  String get staffDeliveryAccepted => 'Acceptée';
+
+  @override
+  String get staffDeliveryPickedUp => 'Enlevée';
+
+  @override
+  String get staffDeliveryInTransit => 'En transit';
+
+  @override
+  String get staffDeliveryDelivered => 'Livrée';
+
+  @override
+  String get staffDeliveryFailed => 'Échec';
+
+  @override
+  String get staffDeliveryCancelled => 'Annulée';
+
+  @override
+  String get staffDocumentPending => 'En attente';
+
+  @override
+  String get staffDocumentVerified => 'Vérifié';
+
+  @override
+  String get staffDocumentRejected => 'Rejeté';
+
+  @override
+  String get staffDocumentIdCard => 'Pièce d\'identité';
+
+  @override
+  String get staffDocumentBusinessRegistration =>
+      'Immatriculation de l\'entreprise';
+
+  @override
+  String get staffDocumentFarmProof => 'Justificatif d\'exploitation agricole';
+
+  @override
+  String get staffDocumentOther => 'Autre';
+
+  @override
+  String get staffInsurancePolicy => 'Police d\'assurance';
+
+  @override
+  String get staffPrivateDocumentOpenFailed =>
+      'Impossible d\'ouvrir le document privé.';
 }

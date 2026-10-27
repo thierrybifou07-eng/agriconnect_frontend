@@ -1,0 +1,35 @@
+{
+  "id": 73,
+  "reference": "CMD-000073",
+  "status": "QUOTED",
+  "deliveryMode": "HUB_PICKUP",
+  "items": [
+    {
+      "id": 91,
+      "listingId": 51,
+      "lotId": 18,
+      "listingReference": "ANN-000051",
+      "listingTitle": "Tomates fraîches",
+      "quantity": 2.5,
+      "unitPrice": 1400,
+      "lineTotal": 3500,
+      "supplierUnitPrice": 1000,
+      "commissionRate": 0.1,
+      "commissionAmount": 350,
+      "supplierNetAmount": 3150
+    }
+  ],
+  "buyer": {"id": 12, "firstname": "Awa", "lastname": "Nana"},
+  "subtotal": 3500,
+  "buyerFee": 100,
+  "deliveryFee": 0,
+  "total": 3600,
+  "commissionTotal": 350,
+  "origins": [{"lotId": 18, "quantity": 2.5}],
+  "paymentStatus": "UNPAID",
+  "conversationId": 44,
+  "handledByAgentId": 7,
+  "reservedUntil": "2026-10-28T10:00:00.000Z",
+  "deliveryStatus": "PENDING",
+  "deliveryAvailable": true
+}

@@ -10,18 +10,19 @@ import 'package:agri_connect/core/ui/state_views.dart';
 import 'package:agri_connect/core/ui/ui_state.dart';
 import 'package:agri_connect/features/auth/domain/agent_capability.dart';
 import 'package:agri_connect/features/auth/domain/auth_user.dart';
+import 'package:agri_connect/features/auth/domain/role_code.dart';
 import 'package:agri_connect/features/auth/presentation/controllers/auth_controller.dart';
 import 'package:agri_connect/features/staff/domain/staff_entities.dart';
 import 'package:agri_connect/features/staff/presentation/controllers/staff_controllers.dart';
+import 'package:agri_connect/features/staff/presentation/controllers/staff_workflow_controllers.dart';
+import 'package:agri_connect/features/staff/presentation/pages/staff_workflow_pages.dart';
 import 'package:agri_connect/features/supplier/domain/supplier_entities.dart';
 import 'package:agri_connect/shared/widgets/role_shell.dart';
 
 enum StaffSection { support, stock, listings, orders, verifications, account }
 
 List<StaffSection> visibleStaffSections(AuthUser? user) {
-  if (user?.agent == null || user!.agent!.capabilities.isEmpty) {
-    return const [StaffSection.account];
-  }
+  if (user == null) return const [StaffSection.account];
   final sections = <StaffSection>[];
   if (user.canAny({
     AgentCapability.buyerSupport,
@@ -81,12 +82,12 @@ class StaffShellPage extends StatelessWidget {
         StaffSection.orders => ShellTab(
           icon: Icons.shopping_bag_outlined,
           label: labels.staffOrders,
-          page: (_) => const _ComingSoonPanel(),
+          page: (_) => const StaffOrdersPanel(),
         ),
         StaffSection.verifications => ShellTab(
           icon: Icons.verified_user_outlined,
           label: labels.staffVerifications,
-          page: (_) => const _ComingSoonPanel(),
+          page: (_) => const StaffVerificationsPanel(),
         ),
         StaffSection.account => ShellTab(
           icon: Icons.person_outline,
@@ -105,7 +106,10 @@ class _StaffAccountPanel extends StatelessWidget {
   Widget build(BuildContext context) {
     final labels = AppLocalizations.of(context);
     final user = Get.find<AuthController>().currentUser;
-    final hasCapability = user?.agent?.capabilities.isNotEmpty == true;
+    final hasCapability =
+        user?.role == RoleCode.admin ||
+        user?.role == RoleCode.root ||
+        user?.agent?.capabilities.isNotEmpty == true;
     return Center(
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -137,13 +141,6 @@ class _StaffAccountPanel extends StatelessWidget {
   }
 }
 
-class _ComingSoonPanel extends StatelessWidget {
-  const _ComingSoonPanel();
-  @override
-  Widget build(BuildContext context) =>
-      Center(child: Text(AppLocalizations.of(context).staffNoData));
-}
-
 class StaffInboxPage extends StatelessWidget {
   const StaffInboxPage({super.key});
   @override
@@ -168,26 +165,6 @@ class StaffListingsPage extends StatelessWidget {
   Widget build(BuildContext context) => const Scaffold(
     appBar: _StaffAppBar(titleKey: _StaffTitle.listings),
     body: StaffListingsPanel(),
-  );
-}
-
-class StaffOrdersPage extends StatelessWidget {
-  const StaffOrdersPage({super.key});
-  @override
-  Widget build(BuildContext context) => Scaffold(
-    appBar: AppBar(title: Text(AppLocalizations.of(context).staffOrders)),
-    body: const _ComingSoonPanel(),
-  );
-}
-
-class StaffVerificationsPage extends StatelessWidget {
-  const StaffVerificationsPage({super.key});
-  @override
-  Widget build(BuildContext context) => Scaffold(
-    appBar: AppBar(
-      title: Text(AppLocalizations.of(context).staffVerifications),
-    ),
-    body: const _ComingSoonPanel(),
   );
 }
 
@@ -382,9 +359,33 @@ class _ConversationThread extends StatelessWidget {
               '${conversation.listingId == null ? '' : ' · ${labels.staffListings} #${conversation.listingId}'}'
               '${conversation.lotId == null ? '' : ' · ${labels.staffStock} #${conversation.lotId}'}',
             ),
-            trailing: conversation.status == StaffConversationStatus.closed
-                ? null
-                : PopupMenuButton<String>(
+            trailing: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                if (conversation.status != StaffConversationStatus.closed &&
+                    Get.find<AuthController>().currentUser?.can(
+                          AgentCapability.orderProcessing,
+                        ) ==
+                        true)
+                  IconButton(
+                    tooltip: labels.staffCreateQuote,
+                    onPressed: () {
+                      final buyerId = conversation.customer['id'];
+                      if (buyerId is! int) return;
+                      unawaited(
+                        Get.toNamed(
+                          AppRoutes.staffOrderCreate,
+                          parameters: {
+                            'buyerId': '$buyerId',
+                            'conversationId': '${conversation.id}',
+                          },
+                        ),
+                      );
+                    },
+                    icon: const Icon(Icons.request_quote_outlined),
+                  ),
+                if (conversation.status != StaffConversationStatus.closed)
+                  PopupMenuButton<String>(
                     onSelected: (action) async {
                       if (action == 'assign') {
                         await controller.assign();
@@ -407,16 +408,15 @@ class _ConversationThread extends StatelessWidget {
                         value: 'assign',
                         child: Text(labels.staffAssign),
                       ),
-                      PopupMenuItem(
-                        value: 'escalate',
-                        child: Text(labels.staffEscalate),
-                      ),
-                      PopupMenuItem(
-                        value: 'close',
-                        child: Text(labels.staffClose),
-                      ),
                     ],
                   ),
+                PopupMenuItem(
+                  value: 'escalate',
+                  child: Text(labels.staffEscalate),
+                ),
+                PopupMenuItem(value: 'close', child: Text(labels.staffClose)),
+              ],
+            ),
           ),
           Expanded(
             child: Obx(() {
@@ -763,6 +763,19 @@ class _LotActions extends StatelessWidget {
                   onPressed: () => _qualityDialog(context, controller),
                   child: Text(labels.staffQualityCheck),
                 ),
+                if (Get.find<AuthController>().currentUser?.can(
+                      AgentCapability.disputeHandling,
+                    ) ==
+                    true)
+                  OutlinedButton(
+                    onPressed: () => _compensationDialog(
+                      context,
+                      Get.find<StaffOrdersController>(),
+                      lot.id,
+                      lot.quantityInitial,
+                    ),
+                    child: Text(labels.staffCompensate),
+                  ),
               ],
             ),
             if (canValidate &&
@@ -774,7 +787,7 @@ class _LotActions extends StatelessWidget {
               TextButton(
                 onPressed: () => Get.toNamed(
                   AppRoutes.staffVerifications,
-                  parameters: {'supplierId': '${selected.supplier['id']}'},
+                  parameters: {'userId': '${selected.supplier['id']}'},
                 ),
                 child: Text(labels.staffSupplierReview),
               ),
@@ -1070,6 +1083,116 @@ Future<void> _qualityDialog(
   if (result != null) {
     final failure = await controller.qualityCheck(result.$1, result.$2);
     if (failure != null) AppNotifier.error(failure.message);
+  }
+}
+
+Future<void> _compensationDialog(
+  BuildContext context,
+  StaffOrdersController controller,
+  int lotId,
+  double lotQuantity,
+) async {
+  final labels = AppLocalizations.of(context);
+  final quantity = TextEditingController();
+  final deliveryId = TextEditingController();
+  final note = TextEditingController();
+  var reason = 'EXPIRED_UNSOLD';
+  final result = await Get.dialog<(String, double, int?, String?)>(
+    StatefulBuilder(
+      builder: (context, setState) => AlertDialog(
+        title: Text(labels.staffCompensate),
+        content: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              DropdownButton<String>(
+                value: reason,
+                items: [
+                  DropdownMenuItem(
+                    value: 'EXPIRED_UNSOLD',
+                    child: Text(labels.staffReasonExpiredUnsold),
+                  ),
+                  DropdownMenuItem(
+                    value: 'LOST_OR_DAMAGED',
+                    child: Text(labels.staffReasonLostDamaged),
+                  ),
+                  DropdownMenuItem(
+                    value: 'OTHER',
+                    child: Text(labels.staffReasonOther),
+                  ),
+                ],
+                onChanged: (value) => setState(() => reason = value!),
+              ),
+              TextField(
+                controller: quantity,
+                keyboardType: const TextInputType.numberWithOptions(
+                  decimal: true,
+                ),
+                decoration: InputDecoration(
+                  labelText: labels.staffCompensationQuantity,
+                  helperText: '${labels.staffLotQuantity}: $lotQuantity',
+                ),
+              ),
+              TextField(
+                controller: deliveryId,
+                keyboardType: TextInputType.number,
+                decoration: InputDecoration(
+                  labelText: labels.staffDeliveryIdOptional,
+                ),
+              ),
+              TextField(
+                controller: note,
+                maxLength: 2000,
+                maxLines: 3,
+                decoration: InputDecoration(
+                  labelText: labels.staffNotesOptional,
+                ),
+              ),
+            ],
+          ),
+        ),
+        actions: [
+          TextButton(onPressed: Get.back, child: Text(labels.cancel)),
+          FilledButton(
+            onPressed: () {
+              final parsedQuantity = double.tryParse(quantity.text);
+              if (parsedQuantity == null ||
+                  parsedQuantity <= 0 ||
+                  parsedQuantity > lotQuantity) {
+                return;
+              }
+              Get.back(
+                result: (
+                  reason,
+                  parsedQuantity,
+                  int.tryParse(deliveryId.text),
+                  note.text.trim().isEmpty ? null : note.text.trim(),
+                ),
+              );
+            },
+            child: Text(labels.confirm),
+          ),
+        ],
+      ),
+    ),
+  );
+  quantity.dispose();
+  deliveryId.dispose();
+  note.dispose();
+  if (result == null) return;
+  final failure = await controller.compensate(
+    lotId: lotId,
+    reason: result.$1,
+    quantity: result.$2,
+    deliveryId: result.$3,
+    note: result.$4,
+  );
+  if (failure?.code == 'COMPENSATION_RATE_ZERO') {
+    AppNotifier.error(labels.staffCompensationRateZero);
+  } else if (failure != null) {
+    AppNotifier.error(failure.message);
+  } else {
+    AppNotifier.success(labels.staffCompensationSubmitted);
   }
 }
 

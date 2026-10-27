@@ -6828,6 +6828,690 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Add the required photos.'**
   String get staffFileRequired;
+
+  /// No description provided for @staffCreateQuote.
+  ///
+  /// In en, this message translates to:
+  /// **'Create a quote'**
+  String get staffCreateQuote;
+
+  /// No description provided for @staffNoOrders.
+  ///
+  /// In en, this message translates to:
+  /// **'There are no orders to process.'**
+  String get staffNoOrders;
+
+  /// No description provided for @staffOrderDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'Order details'**
+  String get staffOrderDetail;
+
+  /// No description provided for @staffPaymentUnknown.
+  ///
+  /// In en, this message translates to:
+  /// **'Payment status unknown'**
+  String get staffPaymentUnknown;
+
+  /// No description provided for @staffQuoteExpires.
+  ///
+  /// In en, this message translates to:
+  /// **'Quote reserved until'**
+  String get staffQuoteExpires;
+
+  /// No description provided for @staffSupplierUnitPrice.
+  ///
+  /// In en, this message translates to:
+  /// **'Supplier price'**
+  String get staffSupplierUnitPrice;
+
+  /// No description provided for @staffCommission.
+  ///
+  /// In en, this message translates to:
+  /// **'Commission'**
+  String get staffCommission;
+
+  /// No description provided for @staffSupplierNet.
+  ///
+  /// In en, this message translates to:
+  /// **'Supplier net'**
+  String get staffSupplierNet;
+
+  /// No description provided for @staffSubtotal.
+  ///
+  /// In en, this message translates to:
+  /// **'Subtotal'**
+  String get staffSubtotal;
+
+  /// No description provided for @staffBuyerFee.
+  ///
+  /// In en, this message translates to:
+  /// **'Buyer fee'**
+  String get staffBuyerFee;
+
+  /// No description provided for @staffDeliveryFee.
+  ///
+  /// In en, this message translates to:
+  /// **'Delivery fee'**
+  String get staffDeliveryFee;
+
+  /// No description provided for @staffOrderTotal.
+  ///
+  /// In en, this message translates to:
+  /// **'Total calculated by the server'**
+  String get staffOrderTotal;
+
+  /// No description provided for @staffConfirmQuote.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm quote'**
+  String get staffConfirmQuote;
+
+  /// No description provided for @staffCancelOrder.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel order'**
+  String get staffCancelOrder;
+
+  /// No description provided for @staffPaymentRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Payment is required before preparation.'**
+  String get staffPaymentRequired;
+
+  /// No description provided for @staffPayments.
+  ///
+  /// In en, this message translates to:
+  /// **'Payments'**
+  String get staffPayments;
+
+  /// No description provided for @staffRecordPayment.
+  ///
+  /// In en, this message translates to:
+  /// **'Record payment'**
+  String get staffRecordPayment;
+
+  /// No description provided for @staffNoPayments.
+  ///
+  /// In en, this message translates to:
+  /// **'No payments recorded.'**
+  String get staffNoPayments;
+
+  /// No description provided for @staffAmount.
+  ///
+  /// In en, this message translates to:
+  /// **'Amount (XAF)'**
+  String get staffAmount;
+
+  /// No description provided for @staffPaymentMethod.
+  ///
+  /// In en, this message translates to:
+  /// **'Payment method'**
+  String get staffPaymentMethod;
+
+  /// No description provided for @staffCash.
+  ///
+  /// In en, this message translates to:
+  /// **'Cash'**
+  String get staffCash;
+
+  /// No description provided for @staffMobileMoney.
+  ///
+  /// In en, this message translates to:
+  /// **'Mobile Money'**
+  String get staffMobileMoney;
+
+  /// No description provided for @staffBankTransfer.
+  ///
+  /// In en, this message translates to:
+  /// **'Bank transfer'**
+  String get staffBankTransfer;
+
+  /// No description provided for @staffReferenceOptional.
+  ///
+  /// In en, this message translates to:
+  /// **'Reference (optional)'**
+  String get staffReferenceOptional;
+
+  /// No description provided for @staffRefund.
+  ///
+  /// In en, this message translates to:
+  /// **'Refund'**
+  String get staffRefund;
+
+  /// No description provided for @staffDeliveries.
+  ///
+  /// In en, this message translates to:
+  /// **'Deliveries'**
+  String get staffDeliveries;
+
+  /// No description provided for @staffNoDeliveries.
+  ///
+  /// In en, this message translates to:
+  /// **'No deliveries created.'**
+  String get staffNoDeliveries;
+
+  /// No description provided for @staffAgency.
+  ///
+  /// In en, this message translates to:
+  /// **'Agency'**
+  String get staffAgency;
+
+  /// No description provided for @staffPickup.
+  ///
+  /// In en, this message translates to:
+  /// **'Pickup'**
+  String get staffPickup;
+
+  /// No description provided for @staffDropoff.
+  ///
+  /// In en, this message translates to:
+  /// **'Destination'**
+  String get staffDropoff;
+
+  /// No description provided for @staffAgencyCost.
+  ///
+  /// In en, this message translates to:
+  /// **'Agency cost'**
+  String get staffAgencyCost;
+
+  /// No description provided for @staffInsuredValue.
+  ///
+  /// In en, this message translates to:
+  /// **'Insured value'**
+  String get staffInsuredValue;
+
+  /// No description provided for @staffReleaseDelivery.
+  ///
+  /// In en, this message translates to:
+  /// **'Release'**
+  String get staffReleaseDelivery;
+
+  /// No description provided for @staffRedispatchDelivery.
+  ///
+  /// In en, this message translates to:
+  /// **'Redispatch'**
+  String get staffRedispatchDelivery;
+
+  /// No description provided for @staffCancelDelivery.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel delivery'**
+  String get staffCancelDelivery;
+
+  /// No description provided for @staffReasonOptional.
+  ///
+  /// In en, this message translates to:
+  /// **'Reason (optional)'**
+  String get staffReasonOptional;
+
+  /// No description provided for @staffCreateDeliveries.
+  ///
+  /// In en, this message translates to:
+  /// **'Create deliveries'**
+  String get staffCreateDeliveries;
+
+  /// No description provided for @staffDeliveryUnknown.
+  ///
+  /// In en, this message translates to:
+  /// **'Delivery status unknown'**
+  String get staffDeliveryUnknown;
+
+  /// No description provided for @staffDeliveryAvailable.
+  ///
+  /// In en, this message translates to:
+  /// **'Delivery available'**
+  String get staffDeliveryAvailable;
+
+  /// No description provided for @staffDeliveryUnavailable.
+  ///
+  /// In en, this message translates to:
+  /// **'No delivery available'**
+  String get staffDeliveryUnavailable;
+
+  /// No description provided for @staffBuyer.
+  ///
+  /// In en, this message translates to:
+  /// **'Buyer'**
+  String get staffBuyer;
+
+  /// No description provided for @staffActiveListing.
+  ///
+  /// In en, this message translates to:
+  /// **'Active listing'**
+  String get staffActiveListing;
+
+  /// No description provided for @staffQuantity.
+  ///
+  /// In en, this message translates to:
+  /// **'Quantity'**
+  String get staffQuantity;
+
+  /// No description provided for @staffUnitPriceOptional.
+  ///
+  /// In en, this message translates to:
+  /// **'Unit price (optional)'**
+  String get staffUnitPriceOptional;
+
+  /// No description provided for @staffRemoveLine.
+  ///
+  /// In en, this message translates to:
+  /// **'Remove line'**
+  String get staffRemoveLine;
+
+  /// No description provided for @staffAddLine.
+  ///
+  /// In en, this message translates to:
+  /// **'Add line'**
+  String get staffAddLine;
+
+  /// No description provided for @staffDeliveryMode.
+  ///
+  /// In en, this message translates to:
+  /// **'Delivery mode'**
+  String get staffDeliveryMode;
+
+  /// No description provided for @staffHubPickup.
+  ///
+  /// In en, this message translates to:
+  /// **'Pickup at a hub'**
+  String get staffHubPickup;
+
+  /// No description provided for @staffAgencyDelivery.
+  ///
+  /// In en, this message translates to:
+  /// **'Agency delivery'**
+  String get staffAgencyDelivery;
+
+  /// No description provided for @staffPickupHub.
+  ///
+  /// In en, this message translates to:
+  /// **'Pickup hub'**
+  String get staffPickupHub;
+
+  /// No description provided for @staffDeliveryZone.
+  ///
+  /// In en, this message translates to:
+  /// **'Delivery zone'**
+  String get staffDeliveryZone;
+
+  /// No description provided for @staffAddress.
+  ///
+  /// In en, this message translates to:
+  /// **'Delivery address'**
+  String get staffAddress;
+
+  /// No description provided for @staffLatitude.
+  ///
+  /// In en, this message translates to:
+  /// **'Latitude'**
+  String get staffLatitude;
+
+  /// No description provided for @staffLongitude.
+  ///
+  /// In en, this message translates to:
+  /// **'Longitude'**
+  String get staffLongitude;
+
+  /// No description provided for @staffNotesOptional.
+  ///
+  /// In en, this message translates to:
+  /// **'Note (optional)'**
+  String get staffNotesOptional;
+
+  /// No description provided for @staffServerCalculatesTotals.
+  ///
+  /// In en, this message translates to:
+  /// **'Fees, commissions, and totals are calculated by the server.'**
+  String get staffServerCalculatesTotals;
+
+  /// No description provided for @staffQuoteCreated.
+  ///
+  /// In en, this message translates to:
+  /// **'Quote created.'**
+  String get staffQuoteCreated;
+
+  /// No description provided for @staffDeadlineNotProvided.
+  ///
+  /// In en, this message translates to:
+  /// **'an unspecified date'**
+  String get staffDeadlineNotProvided;
+
+  /// No description provided for @staffQuoteCreatedMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Your quote is ready. It is reserved until {deadline}.'**
+  String staffQuoteCreatedMessage(String deadline);
+
+  /// No description provided for @staffDocumentStatus.
+  ///
+  /// In en, this message translates to:
+  /// **'Document status'**
+  String get staffDocumentStatus;
+
+  /// No description provided for @staffDocumentType.
+  ///
+  /// In en, this message translates to:
+  /// **'Document type'**
+  String get staffDocumentType;
+
+  /// No description provided for @staffAccountRole.
+  ///
+  /// In en, this message translates to:
+  /// **'Account role'**
+  String get staffAccountRole;
+
+  /// No description provided for @staffUserId.
+  ///
+  /// In en, this message translates to:
+  /// **'User ID'**
+  String get staffUserId;
+
+  /// No description provided for @staffNoVerifications.
+  ///
+  /// In en, this message translates to:
+  /// **'There are no documents to review.'**
+  String get staffNoVerifications;
+
+  /// No description provided for @staffVerificationRuleApprove.
+  ///
+  /// In en, this message translates to:
+  /// **'Approval verifies the document. The account is verified when it has at least one verified document and none pending.'**
+  String get staffVerificationRuleApprove;
+
+  /// No description provided for @staffVerificationRuleReject.
+  ///
+  /// In en, this message translates to:
+  /// **'A rejection marks the account rejected only if it has no other verified document.'**
+  String get staffVerificationRuleReject;
+
+  /// No description provided for @staffFileMissing.
+  ///
+  /// In en, this message translates to:
+  /// **'The file is missing. Refresh the detail to request a new link.'**
+  String get staffFileMissing;
+
+  /// No description provided for @staffUnsupportedDocument.
+  ///
+  /// In en, this message translates to:
+  /// **'This document format is not supported.'**
+  String get staffUnsupportedDocument;
+
+  /// No description provided for @staffOpenPrivatePdf.
+  ///
+  /// In en, this message translates to:
+  /// **'Open private PDF'**
+  String get staffOpenPrivatePdf;
+
+  /// No description provided for @staffApprove.
+  ///
+  /// In en, this message translates to:
+  /// **'Approve'**
+  String get staffApprove;
+
+  /// No description provided for @staffRejectionNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Reason for rejection (required)'**
+  String get staffRejectionNote;
+
+  /// No description provided for @staffHumanActorRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'This action must be performed by a human.'**
+  String get staffHumanActorRequired;
+
+  /// No description provided for @staffInsufficientStock.
+  ///
+  /// In en, this message translates to:
+  /// **'There is not enough stock available.'**
+  String get staffInsufficientStock;
+
+  /// No description provided for @staffZoneNotCovered.
+  ///
+  /// In en, this message translates to:
+  /// **'This zone is not covered.'**
+  String get staffZoneNotCovered;
+
+  /// No description provided for @staffInvalidHub.
+  ///
+  /// In en, this message translates to:
+  /// **'The pickup hub is not valid.'**
+  String get staffInvalidHub;
+
+  /// No description provided for @staffCompensationRateZero.
+  ///
+  /// In en, this message translates to:
+  /// **'The compensation rate is not set (configure it as ROOT).'**
+  String get staffCompensationRateZero;
+
+  /// No description provided for @staffPrivateFileWrongReviewer.
+  ///
+  /// In en, this message translates to:
+  /// **'This private link belongs to another reviewer account or has expired. Refresh the detail.'**
+  String get staffPrivateFileWrongReviewer;
+
+  /// No description provided for @staffVerificationAlreadyReviewed.
+  ///
+  /// In en, this message translates to:
+  /// **'This document was already reviewed. The queue has been refreshed.'**
+  String get staffVerificationAlreadyReviewed;
+
+  /// No description provided for @staffStatusQuoted.
+  ///
+  /// In en, this message translates to:
+  /// **'Quoted'**
+  String get staffStatusQuoted;
+
+  /// No description provided for @staffStatusConfirmed.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirmed'**
+  String get staffStatusConfirmed;
+
+  /// No description provided for @staffStatusPreparing.
+  ///
+  /// In en, this message translates to:
+  /// **'Preparing'**
+  String get staffStatusPreparing;
+
+  /// No description provided for @staffStatusReadyForPickup.
+  ///
+  /// In en, this message translates to:
+  /// **'Ready for pickup'**
+  String get staffStatusReadyForPickup;
+
+  /// No description provided for @staffStatusOutForDelivery.
+  ///
+  /// In en, this message translates to:
+  /// **'Out for delivery'**
+  String get staffStatusOutForDelivery;
+
+  /// No description provided for @staffStatusCompleted.
+  ///
+  /// In en, this message translates to:
+  /// **'Completed'**
+  String get staffStatusCompleted;
+
+  /// No description provided for @staffStatusCancelled.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancelled'**
+  String get staffStatusCancelled;
+
+  /// No description provided for @staffPositiveAmount.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter an amount greater than zero.'**
+  String get staffPositiveAmount;
+
+  /// No description provided for @staffCompensate.
+  ///
+  /// In en, this message translates to:
+  /// **'Request compensation'**
+  String get staffCompensate;
+
+  /// No description provided for @staffReasonExpiredUnsold.
+  ///
+  /// In en, this message translates to:
+  /// **'Expired and unsold'**
+  String get staffReasonExpiredUnsold;
+
+  /// No description provided for @staffReasonLostDamaged.
+  ///
+  /// In en, this message translates to:
+  /// **'Lost or damaged'**
+  String get staffReasonLostDamaged;
+
+  /// No description provided for @staffReasonOther.
+  ///
+  /// In en, this message translates to:
+  /// **'Other'**
+  String get staffReasonOther;
+
+  /// No description provided for @staffCompensationQuantity.
+  ///
+  /// In en, this message translates to:
+  /// **'Quantity for compensation'**
+  String get staffCompensationQuantity;
+
+  /// No description provided for @staffLotQuantity.
+  ///
+  /// In en, this message translates to:
+  /// **'Lot quantity'**
+  String get staffLotQuantity;
+
+  /// No description provided for @staffDeliveryIdOptional.
+  ///
+  /// In en, this message translates to:
+  /// **'Delivery ID (optional)'**
+  String get staffDeliveryIdOptional;
+
+  /// No description provided for @staffCompensationSubmitted.
+  ///
+  /// In en, this message translates to:
+  /// **'Compensation request submitted.'**
+  String get staffCompensationSubmitted;
+
+  /// No description provided for @staffPaymentUnpaid.
+  ///
+  /// In en, this message translates to:
+  /// **'Unpaid'**
+  String get staffPaymentUnpaid;
+
+  /// No description provided for @staffPaymentPartiallyPaid.
+  ///
+  /// In en, this message translates to:
+  /// **'Partially paid'**
+  String get staffPaymentPartiallyPaid;
+
+  /// No description provided for @staffPaymentPaid.
+  ///
+  /// In en, this message translates to:
+  /// **'Paid'**
+  String get staffPaymentPaid;
+
+  /// No description provided for @staffPaymentRefunded.
+  ///
+  /// In en, this message translates to:
+  /// **'Refunded'**
+  String get staffPaymentRefunded;
+
+  /// No description provided for @staffDeliveryPending.
+  ///
+  /// In en, this message translates to:
+  /// **'Pending'**
+  String get staffDeliveryPending;
+
+  /// No description provided for @staffDeliveryAccepted.
+  ///
+  /// In en, this message translates to:
+  /// **'Accepted'**
+  String get staffDeliveryAccepted;
+
+  /// No description provided for @staffDeliveryPickedUp.
+  ///
+  /// In en, this message translates to:
+  /// **'Picked up'**
+  String get staffDeliveryPickedUp;
+
+  /// No description provided for @staffDeliveryInTransit.
+  ///
+  /// In en, this message translates to:
+  /// **'In transit'**
+  String get staffDeliveryInTransit;
+
+  /// No description provided for @staffDeliveryDelivered.
+  ///
+  /// In en, this message translates to:
+  /// **'Delivered'**
+  String get staffDeliveryDelivered;
+
+  /// No description provided for @staffDeliveryFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed'**
+  String get staffDeliveryFailed;
+
+  /// No description provided for @staffDeliveryCancelled.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancelled'**
+  String get staffDeliveryCancelled;
+
+  /// No description provided for @staffDocumentPending.
+  ///
+  /// In en, this message translates to:
+  /// **'Pending'**
+  String get staffDocumentPending;
+
+  /// No description provided for @staffDocumentVerified.
+  ///
+  /// In en, this message translates to:
+  /// **'Verified'**
+  String get staffDocumentVerified;
+
+  /// No description provided for @staffDocumentRejected.
+  ///
+  /// In en, this message translates to:
+  /// **'Rejected'**
+  String get staffDocumentRejected;
+
+  /// No description provided for @staffDocumentIdCard.
+  ///
+  /// In en, this message translates to:
+  /// **'Identity card'**
+  String get staffDocumentIdCard;
+
+  /// No description provided for @staffDocumentBusinessRegistration.
+  ///
+  /// In en, this message translates to:
+  /// **'Business registration'**
+  String get staffDocumentBusinessRegistration;
+
+  /// No description provided for @staffDocumentFarmProof.
+  ///
+  /// In en, this message translates to:
+  /// **'Farm proof'**
+  String get staffDocumentFarmProof;
+
+  /// No description provided for @staffDocumentOther.
+  ///
+  /// In en, this message translates to:
+  /// **'Other'**
+  String get staffDocumentOther;
+
+  /// No description provided for @staffInsurancePolicy.
+  ///
+  /// In en, this message translates to:
+  /// **'Insurance policy'**
+  String get staffInsurancePolicy;
+
+  /// No description provided for @staffPrivateDocumentOpenFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'The private document could not be opened.'**
+  String get staffPrivateDocumentOpenFailed;
 }
 
 class _AppLocalizationsDelegate

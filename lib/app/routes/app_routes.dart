@@ -39,8 +39,11 @@ abstract final class AppRoutes {
   static const staffLots = '/staff/lots';
   static const staffListings = '/staff/listings';
   static const staffOrders = '/staff/orders';
+  static const staffOrderDetail = '/staff/orders/:orderId';
+  static const staffOrderCreate = '/staff/orders/new';
   static const staffVerifications = '/staff/verifications';
 
+  static String staffOrder(int orderId) => '/staff/orders/$orderId';
   static String staffConversation(int conversationId) =>
       '/staff/conversations/$conversationId';
   static const admin = '/admin';

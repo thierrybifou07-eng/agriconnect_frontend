@@ -49,12 +49,16 @@ class HubPicker extends StatelessWidget {
     required this.value,
     required this.label,
     this.zoneId,
+    this.acceptsPickup,
+    this.acceptsDropoff,
   });
 
   final ReferenceRepository repository;
   final Rxn<RefHub> value;
   final String label;
   final int? zoneId;
+  final bool? acceptsPickup;
+  final bool? acceptsDropoff;
 
   @override
   Widget build(BuildContext context) => Obx(
@@ -66,7 +70,15 @@ class HubPicker extends StatelessWidget {
         isScrollControlled: true,
         builder: (_) => _ReferenceListSheet<RefHub>(
           title: label,
-          load: (_) => repository.hubs(zoneId: zoneId),
+          load: (_) async => (await repository.hubs(zoneId: zoneId))
+              .where(
+                (hub) =>
+                    (acceptsPickup == null ||
+                        hub.acceptsPickup == acceptsPickup) &&
+                    (acceptsDropoff == null ||
+                        hub.acceptsDropoff == acceptsDropoff),
+              )
+              .toList(),
           label: (hub) => [hub.name, hub.city].whereType<String>().join(', '),
           onSelected: (hub) => value.value = hub,
         ),

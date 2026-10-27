@@ -1,0 +1,27 @@
+{
+  "items": [
+    {
+      "id": 61,
+      "orderId": 73,
+      "agencyId": 3,
+      "agencyName": "Transport Centre",
+      "status": "PENDING",
+      "pickupHubId": 8,
+      "pickupAddress": "Hub Centre",
+      "pickupLatitude": 3.86,
+      "pickupLongitude": 11.52,
+      "dropoffAddress": "Marché central",
+      "dropoffLatitude": 3.87,
+      "dropoffLongitude": 11.53,
+      "distanceKm": 4.2,
+      "agencyCost": 900,
+      "deliveryFee": 1100,
+      "insuredValue": 3500,
+      "insurancePolicyNumber": "POL-01",
+      "createdAt": "2026-10-27T09:00:00.000Z"
+    }
+  ],
+  "page": 1,
+  "limit": 20,
+  "total": 1
+}

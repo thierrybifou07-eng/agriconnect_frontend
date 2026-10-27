@@ -3803,4 +3803,358 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get staffFileRequired => 'Add the required photos.';
+
+  @override
+  String get staffCreateQuote => 'Create a quote';
+
+  @override
+  String get staffNoOrders => 'There are no orders to process.';
+
+  @override
+  String get staffOrderDetail => 'Order details';
+
+  @override
+  String get staffPaymentUnknown => 'Payment status unknown';
+
+  @override
+  String get staffQuoteExpires => 'Quote reserved until';
+
+  @override
+  String get staffSupplierUnitPrice => 'Supplier price';
+
+  @override
+  String get staffCommission => 'Commission';
+
+  @override
+  String get staffSupplierNet => 'Supplier net';
+
+  @override
+  String get staffSubtotal => 'Subtotal';
+
+  @override
+  String get staffBuyerFee => 'Buyer fee';
+
+  @override
+  String get staffDeliveryFee => 'Delivery fee';
+
+  @override
+  String get staffOrderTotal => 'Total calculated by the server';
+
+  @override
+  String get staffConfirmQuote => 'Confirm quote';
+
+  @override
+  String get staffCancelOrder => 'Cancel order';
+
+  @override
+  String get staffPaymentRequired => 'Payment is required before preparation.';
+
+  @override
+  String get staffPayments => 'Payments';
+
+  @override
+  String get staffRecordPayment => 'Record payment';
+
+  @override
+  String get staffNoPayments => 'No payments recorded.';
+
+  @override
+  String get staffAmount => 'Amount (XAF)';
+
+  @override
+  String get staffPaymentMethod => 'Payment method';
+
+  @override
+  String get staffCash => 'Cash';
+
+  @override
+  String get staffMobileMoney => 'Mobile Money';
+
+  @override
+  String get staffBankTransfer => 'Bank transfer';
+
+  @override
+  String get staffReferenceOptional => 'Reference (optional)';
+
+  @override
+  String get staffRefund => 'Refund';
+
+  @override
+  String get staffDeliveries => 'Deliveries';
+
+  @override
+  String get staffNoDeliveries => 'No deliveries created.';
+
+  @override
+  String get staffAgency => 'Agency';
+
+  @override
+  String get staffPickup => 'Pickup';
+
+  @override
+  String get staffDropoff => 'Destination';
+
+  @override
+  String get staffAgencyCost => 'Agency cost';
+
+  @override
+  String get staffInsuredValue => 'Insured value';
+
+  @override
+  String get staffReleaseDelivery => 'Release';
+
+  @override
+  String get staffRedispatchDelivery => 'Redispatch';
+
+  @override
+  String get staffCancelDelivery => 'Cancel delivery';
+
+  @override
+  String get staffReasonOptional => 'Reason (optional)';
+
+  @override
+  String get staffCreateDeliveries => 'Create deliveries';
+
+  @override
+  String get staffDeliveryUnknown => 'Delivery status unknown';
+
+  @override
+  String get staffDeliveryAvailable => 'Delivery available';
+
+  @override
+  String get staffDeliveryUnavailable => 'No delivery available';
+
+  @override
+  String get staffBuyer => 'Buyer';
+
+  @override
+  String get staffActiveListing => 'Active listing';
+
+  @override
+  String get staffQuantity => 'Quantity';
+
+  @override
+  String get staffUnitPriceOptional => 'Unit price (optional)';
+
+  @override
+  String get staffRemoveLine => 'Remove line';
+
+  @override
+  String get staffAddLine => 'Add line';
+
+  @override
+  String get staffDeliveryMode => 'Delivery mode';
+
+  @override
+  String get staffHubPickup => 'Pickup at a hub';
+
+  @override
+  String get staffAgencyDelivery => 'Agency delivery';
+
+  @override
+  String get staffPickupHub => 'Pickup hub';
+
+  @override
+  String get staffDeliveryZone => 'Delivery zone';
+
+  @override
+  String get staffAddress => 'Delivery address';
+
+  @override
+  String get staffLatitude => 'Latitude';
+
+  @override
+  String get staffLongitude => 'Longitude';
+
+  @override
+  String get staffNotesOptional => 'Note (optional)';
+
+  @override
+  String get staffServerCalculatesTotals =>
+      'Fees, commissions, and totals are calculated by the server.';
+
+  @override
+  String get staffQuoteCreated => 'Quote created.';
+
+  @override
+  String get staffDeadlineNotProvided => 'an unspecified date';
+
+  @override
+  String staffQuoteCreatedMessage(String deadline) {
+    return 'Your quote is ready. It is reserved until $deadline.';
+  }
+
+  @override
+  String get staffDocumentStatus => 'Document status';
+
+  @override
+  String get staffDocumentType => 'Document type';
+
+  @override
+  String get staffAccountRole => 'Account role';
+
+  @override
+  String get staffUserId => 'User ID';
+
+  @override
+  String get staffNoVerifications => 'There are no documents to review.';
+
+  @override
+  String get staffVerificationRuleApprove =>
+      'Approval verifies the document. The account is verified when it has at least one verified document and none pending.';
+
+  @override
+  String get staffVerificationRuleReject =>
+      'A rejection marks the account rejected only if it has no other verified document.';
+
+  @override
+  String get staffFileMissing =>
+      'The file is missing. Refresh the detail to request a new link.';
+
+  @override
+  String get staffUnsupportedDocument =>
+      'This document format is not supported.';
+
+  @override
+  String get staffOpenPrivatePdf => 'Open private PDF';
+
+  @override
+  String get staffApprove => 'Approve';
+
+  @override
+  String get staffRejectionNote => 'Reason for rejection (required)';
+
+  @override
+  String get staffHumanActorRequired =>
+      'This action must be performed by a human.';
+
+  @override
+  String get staffInsufficientStock => 'There is not enough stock available.';
+
+  @override
+  String get staffZoneNotCovered => 'This zone is not covered.';
+
+  @override
+  String get staffInvalidHub => 'The pickup hub is not valid.';
+
+  @override
+  String get staffCompensationRateZero =>
+      'The compensation rate is not set (configure it as ROOT).';
+
+  @override
+  String get staffPrivateFileWrongReviewer =>
+      'This private link belongs to another reviewer account or has expired. Refresh the detail.';
+
+  @override
+  String get staffVerificationAlreadyReviewed =>
+      'This document was already reviewed. The queue has been refreshed.';
+
+  @override
+  String get staffStatusQuoted => 'Quoted';
+
+  @override
+  String get staffStatusConfirmed => 'Confirmed';
+
+  @override
+  String get staffStatusPreparing => 'Preparing';
+
+  @override
+  String get staffStatusReadyForPickup => 'Ready for pickup';
+
+  @override
+  String get staffStatusOutForDelivery => 'Out for delivery';
+
+  @override
+  String get staffStatusCompleted => 'Completed';
+
+  @override
+  String get staffStatusCancelled => 'Cancelled';
+
+  @override
+  String get staffPositiveAmount => 'Enter an amount greater than zero.';
+
+  @override
+  String get staffCompensate => 'Request compensation';
+
+  @override
+  String get staffReasonExpiredUnsold => 'Expired and unsold';
+
+  @override
+  String get staffReasonLostDamaged => 'Lost or damaged';
+
+  @override
+  String get staffReasonOther => 'Other';
+
+  @override
+  String get staffCompensationQuantity => 'Quantity for compensation';
+
+  @override
+  String get staffLotQuantity => 'Lot quantity';
+
+  @override
+  String get staffDeliveryIdOptional => 'Delivery ID (optional)';
+
+  @override
+  String get staffCompensationSubmitted => 'Compensation request submitted.';
+
+  @override
+  String get staffPaymentUnpaid => 'Unpaid';
+
+  @override
+  String get staffPaymentPartiallyPaid => 'Partially paid';
+
+  @override
+  String get staffPaymentPaid => 'Paid';
+
+  @override
+  String get staffPaymentRefunded => 'Refunded';
+
+  @override
+  String get staffDeliveryPending => 'Pending';
+
+  @override
+  String get staffDeliveryAccepted => 'Accepted';
+
+  @override
+  String get staffDeliveryPickedUp => 'Picked up';
+
+  @override
+  String get staffDeliveryInTransit => 'In transit';
+
+  @override
+  String get staffDeliveryDelivered => 'Delivered';
+
+  @override
+  String get staffDeliveryFailed => 'Failed';
+
+  @override
+  String get staffDeliveryCancelled => 'Cancelled';
+
+  @override
+  String get staffDocumentPending => 'Pending';
+
+  @override
+  String get staffDocumentVerified => 'Verified';
+
+  @override
+  String get staffDocumentRejected => 'Rejected';
+
+  @override
+  String get staffDocumentIdCard => 'Identity card';
+
+  @override
+  String get staffDocumentBusinessRegistration => 'Business registration';
+
+  @override
+  String get staffDocumentFarmProof => 'Farm proof';
+
+  @override
+  String get staffDocumentOther => 'Other';
+
+  @override
+  String get staffInsurancePolicy => 'Insurance policy';
+
+  @override
+  String get staffPrivateDocumentOpenFailed =>
+      'The private document could not be opened.';
 }

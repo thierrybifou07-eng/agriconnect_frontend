@@ -1,0 +1,15 @@
+{
+  "id": 5,
+  "type": "ID_CARD",
+  "status": "PENDING",
+  "note": null,
+  "user": {
+    "id": 12,
+    "firstname": "Awa",
+    "lastname": "Nana",
+    "role": "BUYER",
+    "profileVerificationStatus": "PENDING"
+  },
+  "media": {"mimeType": "image/jpeg", "fileSize": 245120},
+  "signedUrl": "/api/v2/admin/files/temporary-signed-token"
+}

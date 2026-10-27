@@ -11,6 +11,9 @@ abstract final class Dates {
   static String short(DateTime date) =>
       DateFormat.yMMMd().format(date.toLocal());
 
+  static String shortDateTime(DateTime date) =>
+      DateFormat.yMMMd().add_Hm().format(date.toLocal());
+
   static String long(DateTime date) =>
       DateFormat.yMMMMEEEEd().format(date.toLocal());
 

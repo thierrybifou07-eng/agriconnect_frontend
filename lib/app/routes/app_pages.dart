@@ -29,7 +29,9 @@ import 'package:agri_connect/features/driver/presentation/pages/driver_delivery_
 import 'package:agri_connect/features/driver/presentation/pages/driver_page.dart';
 import 'package:agri_connect/features/auth/domain/agent_capability.dart';
 import 'package:agri_connect/features/staff/presentation/bindings/staff_bindings.dart';
+import 'package:agri_connect/features/staff/presentation/bindings/staff_quote_binding.dart';
 import 'package:agri_connect/features/staff/presentation/pages/staff_pages.dart';
+import 'package:agri_connect/features/staff/presentation/pages/staff_workflow_pages.dart';
 
 abstract final class AppPages {
   static final pages = <GetPage<dynamic>>[
@@ -213,7 +215,7 @@ abstract final class AppPages {
       name: AppRoutes.staffConversations,
       middlewares: [
         AuthMiddleware(),
-        RoleMiddleware({RoleCode.agent}),
+        RoleMiddleware({RoleCode.agent, RoleCode.admin, RoleCode.root}),
         CapabilityMiddleware({
           AgentCapability.buyerSupport,
           AgentCapability.supplierSupport,
@@ -226,7 +228,7 @@ abstract final class AppPages {
       name: AppRoutes.staffConversationDetail,
       middlewares: [
         AuthMiddleware(),
-        RoleMiddleware({RoleCode.agent}),
+        RoleMiddleware({RoleCode.agent, RoleCode.admin, RoleCode.root}),
         CapabilityMiddleware({
           AgentCapability.buyerSupport,
           AgentCapability.supplierSupport,
@@ -239,7 +241,7 @@ abstract final class AppPages {
       name: AppRoutes.staffLots,
       middlewares: [
         AuthMiddleware(),
-        RoleMiddleware({RoleCode.agent}),
+        RoleMiddleware({RoleCode.agent, RoleCode.admin, RoleCode.root}),
         CapabilityMiddleware({AgentCapability.stockValidation}),
       ],
       page: () => const StaffLotsPage(),
@@ -249,7 +251,7 @@ abstract final class AppPages {
       name: AppRoutes.staffListings,
       middlewares: [
         AuthMiddleware(),
-        RoleMiddleware({RoleCode.agent}),
+        RoleMiddleware({RoleCode.agent, RoleCode.admin, RoleCode.root}),
         CapabilityMiddleware({AgentCapability.listingManagement}),
       ],
       page: () => const StaffListingsPage(),
@@ -259,7 +261,7 @@ abstract final class AppPages {
       name: AppRoutes.staffOrders,
       middlewares: [
         AuthMiddleware(),
-        RoleMiddleware({RoleCode.agent}),
+        RoleMiddleware({RoleCode.agent, RoleCode.admin, RoleCode.root}),
         CapabilityMiddleware({
           AgentCapability.orderProcessing,
           AgentCapability.paymentFollowup,
@@ -271,17 +273,50 @@ abstract final class AppPages {
       binding: StaffBinding(),
     ),
     GetPage(
+      name: AppRoutes.staffOrderCreate,
+      middlewares: [
+        AuthMiddleware(),
+        RoleMiddleware({RoleCode.agent, RoleCode.admin, RoleCode.root}),
+        CapabilityMiddleware({AgentCapability.orderProcessing}),
+      ],
+      page: () => const StaffQuotePage(),
+      binding: StaffQuoteBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.staffOrderDetail,
+      middlewares: [
+        AuthMiddleware(),
+        RoleMiddleware({RoleCode.agent, RoleCode.admin, RoleCode.root}),
+        CapabilityMiddleware({
+          AgentCapability.orderProcessing,
+          AgentCapability.paymentFollowup,
+          AgentCapability.dispatchCoordination,
+          AgentCapability.disputeHandling,
+        }),
+      ],
+      page: () => const StaffOrderDetailPage(),
+      binding: StaffBinding(),
+    ),
+    GetPage(
       name: AppRoutes.staffVerifications,
       middlewares: [
         AuthMiddleware(),
-        RoleMiddleware({RoleCode.agent}),
+        RoleMiddleware({RoleCode.agent, RoleCode.admin, RoleCode.root}),
         CapabilityMiddleware({AgentCapability.userVerification}),
       ],
       page: () => const StaffVerificationsPage(),
       binding: StaffBinding(),
     ),
     _rolePage(AppRoutes.buyer, RoleCode.buyer),
-    _rolePage(AppRoutes.admin, RoleCode.admin, RoleCode.root),
+    GetPage(
+      name: AppRoutes.admin,
+      middlewares: [
+        AuthMiddleware(),
+        RoleMiddleware({RoleCode.admin, RoleCode.root}),
+      ],
+      page: () => const StaffShellPage(),
+      binding: StaffBinding(),
+    ),
   ];
 
   static final unknownRoute = GetPage<dynamic>(
