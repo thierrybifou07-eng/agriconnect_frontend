@@ -19,6 +19,17 @@ const adminCapabilities = <String>[
   'DISPUTE_HANDLING',
 ];
 
+const aiAgentCapabilities = <String>[
+  'BUYER_SUPPORT',
+  'SUPPLIER_SUPPORT',
+  'LISTING_MANAGEMENT',
+  'ORDER_PROCESSING',
+  'STOCK_VALIDATION',
+  'DISPATCH_COORDINATION',
+  'USER_VERIFICATION',
+  'DISPUTE_HANDLING',
+];
+
 bool canEditPlatformSettings(RoleCode role) => role == RoleCode.root;
 
 Map<String, Object?> platformSettingsPatch({
@@ -200,11 +211,25 @@ class AdminAgentsController extends GetxController {
     required bool isActive,
     required Iterable<String> capabilities,
     required String? autonomy,
+    bool autonomousEnabled = false,
   }) async {
+    if (agent.isAi && autonomy == 'AUTONOMOUS' && !autonomousEnabled) {
+      actionState.value = Failure<void>(
+        const ApiFailure(
+          status: 400,
+          code: 'AUTONOMOUS_DISABLED',
+          message: 'Autonomous mode is disabled',
+          fieldErrors: {},
+          kind: ApiFailureKind.client,
+        ),
+      );
+      return false;
+    }
     actionState.value = const Loading<void>();
     final completeCapabilities = <String>[];
     for (final capability in capabilities) {
-      if (adminCapabilities.contains(capability) &&
+      final allowed = agent.isAi ? aiAgentCapabilities : adminCapabilities;
+      if (allowed.contains(capability) &&
           !completeCapabilities.contains(capability)) {
         completeCapabilities.add(capability);
       }
@@ -221,6 +246,44 @@ class AdminAgentsController extends GetxController {
       return true;
     } on ApiFailure catch (failure) {
       actionState.value = Failure(failure);
+      return false;
+    }
+  }
+
+  Future<bool> createAiAgent({
+    required String displayName,
+    required String aiProvider,
+    required String aiModel,
+    required String autonomy,
+    bool autonomousEnabled = false,
+    Map<String, Object?>? aiConfig,
+  }) async {
+    if (autonomy == 'AUTONOMOUS' && !autonomousEnabled) {
+      actionState.value = Failure<void>(
+        const ApiFailure(
+          status: 400,
+          code: 'AUTONOMOUS_DISABLED',
+          message: 'Autonomous mode is disabled',
+          fieldErrors: {},
+          kind: ApiFailureKind.client,
+        ),
+      );
+      return false;
+    }
+    actionState.value = const Loading<void>();
+    try {
+      await repository.createAiAgent({
+        'displayName': displayName.trim(),
+        'aiProvider': aiProvider,
+        'aiModel': aiModel.trim(),
+        if (aiConfig != null && aiConfig.isNotEmpty) 'aiConfig': aiConfig,
+        'autonomy': autonomy,
+      });
+      actionState.value = const Success<void>(null);
+      await load();
+      return true;
+    } on ApiFailure catch (failure) {
+      actionState.value = Failure<void>(failure);
       return false;
     }
   }

@@ -42,6 +42,10 @@ class AdminRepositoryImpl implements AdminRepository {
   Future<List<AdminAgent>> agents() => _guard(_api.agents);
 
   @override
+  Future<AdminAgent> createAiAgent(Map<String, Object?> body) =>
+      _guard(() => _api.createAiAgent(body));
+
+  @override
   Future<AdminAgent> updateAgent(int id, Map<String, Object?> body) =>
       _guard(() => _api.updateAgent(id, body));
 

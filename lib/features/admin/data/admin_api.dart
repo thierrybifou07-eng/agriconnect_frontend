@@ -59,6 +59,9 @@ class AdminApi {
     return List.unmodifiable(response.map(AdminAgent.fromJson));
   }
 
+  Future<AdminAgent> createAiAgent(Map<String, Object?> body) async =>
+      AdminAgent.fromJson(await _client.post('admin/agents/ai', data: body));
+
   Future<AdminAgent> updateAgent(int id, Map<String, Object?> body) async =>
       AdminAgent.fromJson(await _client.patch('admin/agents/$id', data: body));
 

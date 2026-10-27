@@ -1,0 +1,17 @@
+{
+  "enabled": false,
+  "provider": "ollama",
+  "baseUrl": "http://127.0.0.1:11434",
+  "model": "",
+  "reachable": false,
+  "modelInstalled": false,
+  "authenticated": null,
+  "capabilities": [],
+  "lastLatencyMs": 70,
+  "queue": {
+    "pending": 0,
+    "running": 0
+  },
+  "autonomousEnabled": false,
+  "quota": null
+}

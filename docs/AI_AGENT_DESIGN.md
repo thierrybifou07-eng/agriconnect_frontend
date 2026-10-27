@@ -1,7 +1,8 @@
 # AgriConnect — Agent IA local (Ollama / Granite) : conception
 
-> État réel : le backend n'a **aucun runtime IA** (voir `02_API_REALITY.md` §5-B4). Tout ce qui suit est
-> **à construire**, côté backend d'abord ; le frontend n'en consomme que l'API (jamais Ollama).
+> P02 a ajouté le runtime et les routes IA côté backend. Le statut et l'enveloppe de file ont été vérifiés
+> sur l'instance locale (voir `API_REALITY.md` §5-B4) ; le moteur y était désactivé lors du contrôle.
+> Le frontend ne consomme que l'API AgriConnect (jamais Ollama).
 
 ## 1. Décisions d'architecture (et pourquoi)
 

@@ -1,6 +1,7 @@
 // ignore_for_file: cancel_subscriptions
 
 import 'dart:async';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:agri_connect/core/network/api_failure.dart';
 import 'package:agri_connect/core/realtime/socket_service.dart';
@@ -20,6 +21,8 @@ class StaffInboxController extends GetxController {
   final RxString filter = 'all'.obs;
   final RxString statusFilter = ''.obs;
   final RxBool internalNote = false.obs;
+  final RxBool showAiQueue = false.obs;
+  final TextEditingController messageText = TextEditingController();
   final RxBool hasOlderMessages = false.obs;
   final RxBool loadingOlder = false.obs;
   final RxBool hasMoreConversations = false.obs;
@@ -225,6 +228,7 @@ class StaffInboxController extends GetxController {
     if (_messages != null) unawaited(_messages!.cancel());
     if (_assigned != null) unawaited(_assigned!.cancel());
     if (_escalated != null) unawaited(_escalated!.cancel());
+    messageText.dispose();
     super.onClose();
   }
 }

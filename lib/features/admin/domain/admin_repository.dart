@@ -13,6 +13,7 @@ abstract interface class AdminRepository {
   Future<void> suspendUser(int id);
   Future<void> reactivateUser(int id);
   Future<List<AdminAgent>> agents();
+  Future<AdminAgent> createAiAgent(Map<String, Object?> body);
   Future<AdminAgent> updateAgent(int id, Map<String, Object?> body);
   Future<PlatformSettings> settings();
   Future<PlatformSettings> updateSettings(Map<String, Object?> fields);

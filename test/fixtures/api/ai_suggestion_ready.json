@@ -1,0 +1,26 @@
+{
+  "id": 31,
+  "kind": "REPLY",
+  "status": "PENDING",
+  "conversationId": 18,
+  "lotId": null,
+  "agent": {
+    "id": 3,
+    "displayName": "Assistant IA (local)",
+    "autonomy": "ACT_WITH_APPROVAL"
+  },
+  "model": "granite",
+  "latencyMs": 8240,
+  "payload": {
+    "intent": "PRICE_QUOTE_REQUEST",
+    "language": "fr",
+    "confidence": 0.87,
+    "reply": "Bonjour, votre demande de devis est bien reçue.",
+    "needsHuman": true,
+    "reasons": ["UNVERIFIED_NUMBER"]
+  },
+  "error": null,
+  "decidedAt": null,
+  "executedAt": null,
+  "createdAt": "2026-10-27T14:30:00.000Z"
+}

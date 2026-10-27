@@ -1,0 +1,19 @@
+{
+  "id": 31,
+  "kind": "REPLY",
+  "status": "PENDING",
+  "conversationId": 18,
+  "lotId": null,
+  "agent": {
+    "id": 3,
+    "displayName": "Assistant IA (local)",
+    "autonomy": "SUGGEST_ONLY"
+  },
+  "model": "granite",
+  "latencyMs": null,
+  "payload": null,
+  "error": null,
+  "decidedAt": null,
+  "executedAt": null,
+  "createdAt": "2026-10-27T14:30:00.000Z"
+}

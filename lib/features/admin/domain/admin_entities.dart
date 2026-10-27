@@ -123,6 +123,8 @@ class AdminAgent {
     required this.capabilities,
     this.autonomy,
     this.userName,
+    this.aiProvider,
+    this.aiModel,
   });
 
   final int id;
@@ -132,6 +134,8 @@ class AdminAgent {
   final List<String> capabilities;
   final String? autonomy;
   final String? userName;
+  final String? aiProvider;
+  final String? aiModel;
 
   bool get isAi => kind.toUpperCase() == 'AI';
 
@@ -156,6 +160,8 @@ class AdminAgent {
       isActive: map['isActive'] != false,
       capabilities: List.unmodifiable(capabilities),
       autonomy: _optionalString(map['autonomy']),
+      aiProvider: _optionalString(map['aiProvider']),
+      aiModel: _optionalString(map['aiModel']),
       userName: user == null
           ? null
           : [

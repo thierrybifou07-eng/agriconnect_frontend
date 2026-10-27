@@ -14,7 +14,7 @@
 | P12 | ☑ |
 | P13 | ☑ |
 | P14 | ☑ |
-| P15 | ☐ |
+| P15 | ☑ |
 | P16 | ☐ |
 
 Le code legacy est supprimé module par module, après le portage et la

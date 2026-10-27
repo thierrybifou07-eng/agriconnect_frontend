@@ -12,6 +12,7 @@ import 'package:agri_connect/features/admin/presentation/pages/admin_agents_page
 import 'package:agri_connect/features/admin/presentation/pages/admin_platform_page.dart';
 import 'package:agri_connect/features/admin/presentation/pages/admin_users_page.dart';
 import 'package:agri_connect/features/admin/presentation/widgets/admin_widgets.dart';
+import 'package:agri_connect/features/ai/presentation/widgets/ai_engine_card.dart';
 import 'package:agri_connect/features/auth/domain/role_code.dart';
 import 'package:agri_connect/features/auth/presentation/controllers/auth_controller.dart';
 import 'package:agri_connect/shared/widgets/role_shell.dart';
@@ -88,6 +89,7 @@ class AdminDashboardPanel extends GetView<AdminDashboardController> {
               '${labels.adminFrom} ${adminShortDate(context, controller.from.value)} · '
               '${labels.adminTo} ${adminShortDate(context, controller.to.value)}',
             ),
+            const AiEngineCard(),
             const SizedBox(height: 12),
             if (state is Loading<AdminStats> || state is Idle<AdminStats>)
               const Center(

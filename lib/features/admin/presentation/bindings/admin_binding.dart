@@ -1,6 +1,10 @@
 import 'package:get/get.dart';
 
 import 'package:agri_connect/core/network/api_client.dart';
+import 'package:agri_connect/features/ai/data/ai_api.dart';
+import 'package:agri_connect/features/ai/data/ai_repository_impl.dart';
+import 'package:agri_connect/features/ai/domain/ai_repository.dart';
+import 'package:agri_connect/features/ai/presentation/controllers/ai_controllers.dart';
 import 'package:agri_connect/features/admin/data/admin_api.dart';
 import 'package:agri_connect/features/admin/data/admin_repository_impl.dart';
 import 'package:agri_connect/features/admin/data/admin_operations_api.dart';
@@ -14,6 +18,14 @@ import 'package:agri_connect/features/reference/domain/reference_repository.dart
 class AdminBinding extends Bindings {
   @override
   void dependencies() {
+    if (!Get.isRegistered<AiRepository>()) {
+      Get.lazyPut<AiRepository>(
+        () => AiRepositoryImpl(AiApi(Get.find<ApiClient>())),
+      );
+    }
+    Get.lazyPut<AiEngineController>(
+      () => AiEngineController(repository: Get.find<AiRepository>()),
+    );
     Get.lazyPut<AdminRepository>(
       () => AdminRepositoryImpl(AdminApi(Get.find<ApiClient>())),
     );

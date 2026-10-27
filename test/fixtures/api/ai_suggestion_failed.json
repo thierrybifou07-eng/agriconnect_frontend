@@ -1,0 +1,19 @@
+{
+  "id": 32,
+  "kind": "TRIAGE",
+  "status": "FAILED",
+  "conversationId": 18,
+  "lotId": null,
+  "agent": {
+    "id": 3,
+    "displayName": "Assistant IA (local)",
+    "autonomy": "SUGGEST_ONLY"
+  },
+  "model": "granite",
+  "latencyMs": 90000,
+  "payload": null,
+  "error": "AI_INVALID_OUTPUT",
+  "decidedAt": null,
+  "executedAt": null,
+  "createdAt": "2026-10-27T14:30:00.000Z"
+}

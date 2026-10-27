@@ -1,9 +1,9 @@
 # AgriConnect — API_REALITY (vérité terrain du backend)
 
-> Source : lecture du code de `agriconnect-backend` branche `feature/local` (commit `404a4bf`),
-> comparée à `docs/openapi.yaml`. **Quand la spec et ce document divergent, ce document fait foi**
-> (il vient du code qui s'exécute). Non exécuté : aucun appel réseau réel n'a été fait ; à
-> re-vérifier par un appel `curl` avant de figer un modèle Dart si un doute subsiste.
+> Source historique : lecture du code de `agriconnect-backend` branche `feature/local` (commit `404a4bf`),
+> comparée à `docs/openapi.yaml`. Les routes IA ont depuis été ajoutées par P02 ; leur statut et
+> l'enveloppe de file ont été vérifiés par `curl` le 27/10/2026 sur le backend local.
+> **Quand la spec et ce document divergent, ce document fait foi.**
 >
 > À copier dans le dépôt frontend : `docs/API_REALITY.md`.
 
@@ -17,7 +17,7 @@
 | Routes du code (`src/routes/*.routes.js`, montées dans `router.js`) vs spec | **133 / 133 identiques** (méthode + chemin). Aucune route fantôme, aucune route non documentée |
 | Schémas de **requête** (corps, chemins, validation Joi) | Fiables : la spec est générée depuis les schémas Joi (notes « Conditionnel — si … ») |
 | Schémas de **réponse** | **Non fiables** : la spec laisse souvent `type: object` / `Paginated.items: object`, et plusieurs formes, enums et paramètres de requête diffèrent du code (§4) |
-| Agent IA | Le backend ne contient **que** la fiche `Agent` (CRUD + garde-fous). **Aucun runtime IA, aucun client Ollama/LLM** (§5, B4) |
+| Agent IA | P02 expose le statut du moteur et la file de suggestions ; voir le retour réel et les limites de vérification en §5-B4 |
 
 **Conclusion** : la spec est exacte sur *quelles routes existent* et sur *ce qu'on peut envoyer* ; elle est
 inexacte sur *ce qui revient* et sur certains filtres. Pour tout modèle Dart, ce document (§4, §6) prime.
@@ -150,17 +150,22 @@ un repli sur le statut HTTP + message.
 3. **B3 — Régénérer `docs/openapi.yaml`** une fois les dérives du §4 corrigées (source : fragments
    `openapi/*.openapi.js`, commande `npm run docs:openapi`).
 
-4. **B4 — Agent IA : aucun runtime (nouveau, vérifié).** `Agent.kind='AI'` existe (champs `aiProvider`, `aiModel`,
-   `aiConfig`, `autonomy`) et `POST /admin/agents/ai` crée la fiche, mais :
-   - aucun code n'appelle un LLM (pas de client Ollama, pas de déclencheur, pas de file de travail) ;
-   - un agent IA n'a **pas de compte** (`userId = null`) → il ne peut pas s'authentifier : `requireCapability`
-     retrouve l'agent par `userId`, donc la branche `req.agent.kind === 'AI'` de `requireHumanActor` n'est
-     **jamais atteinte via HTTP aujourd'hui** ;
-   - aucune entité « suggestion / action en attente d'approbation » : `SUGGEST_ONLY` et `ACT_WITH_APPROVAL`
-     n'ont aujourd'hui aucun effet ;
+4. **B4 — Agent IA : état historique et vérification P02.** Le commit `404a4bf` ne contenait que la fiche
+   `Agent` et aucun runtime. Depuis P02, les routes IA répondent. Vérification authentifiée par `curl`
+   le 27/10/2026 sur `http://localhost:4000/api/v2` :
+
+   - `GET /admin/ai/status` → `200` :
+     ```json
+     {"enabled":false,"provider":"ollama","baseUrl":"http://127.0.0.1:11434","model":"","reachable":false,"modelInstalled":false,"authenticated":null,"capabilities":[],"lastLatencyMs":70,"queue":{"pending":0,"running":0},"autonomousEnabled":false,"quota":null}
+     ```
+   - `GET /staff/ai/suggestions?page=1&limit=1` → `200 {"items":[],"page":1,"limit":1,"total":0}`.
+   - L'instance observée avait `AI_ENABLED=false` et aucune suggestion ; le DTO détaillé d'une suggestion
+     (payload prêt/échec) n'a donc pas été observé en réponse réelle. Pour ces variantes, conserver le
+     contrat P02/OpenAPI et les fixtures de test plutôt que de présenter un échantillon comme une capture.
+   - `Agent.kind='AI'` reste sans compte utilisateur (`userId=null`). Le runtime doit donc agir **côté
+     backend, par appels de services internes**, jamais en simulant un utilisateur HTTP.
    - `Message.readAt` existe en base mais n'est exposé nulle part (pas de « non lu » serveur).
-   → L'IA doit agir **côté backend, par appels de services internes**, jamais en simulant un utilisateur
-   HTTP. Conception : `03_AI_AGENT_DESIGN.md`.
+   → Le mobile appelle uniquement l'API AgriConnect ; il n'appelle jamais Ollama.
 
 Autres manques **assumés par la conception** (ne pas les « corriger » côté client) :
 - Aucun endpoint de commandes côté fournisseur (le fournisseur ne voit jamais l'acheteur).

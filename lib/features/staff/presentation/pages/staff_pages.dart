@@ -12,6 +12,10 @@ import 'package:agri_connect/features/auth/domain/agent_capability.dart';
 import 'package:agri_connect/features/auth/domain/auth_user.dart';
 import 'package:agri_connect/features/auth/domain/role_code.dart';
 import 'package:agri_connect/features/auth/presentation/controllers/auth_controller.dart';
+import 'package:agri_connect/features/ai/domain/ai_entities.dart';
+import 'package:agri_connect/features/ai/presentation/controllers/ai_controllers.dart';
+import 'package:agri_connect/features/ai/presentation/widgets/ai_engine_card.dart';
+import 'package:agri_connect/features/ai/presentation/widgets/ai_suggestion_widgets.dart';
 import 'package:agri_connect/features/staff/domain/staff_entities.dart';
 import 'package:agri_connect/features/staff/presentation/controllers/staff_controllers.dart';
 import 'package:agri_connect/features/staff/presentation/controllers/staff_workflow_controllers.dart';
@@ -64,6 +68,7 @@ class StaffShellPage extends StatelessWidget {
         StaffSection.support => ShellTab(
           icon: Icons.support_agent,
           label: labels.staffSupport,
+          badge: Get.find<AiSuggestionController>().readyCount,
           page: (_) => const StaffInboxPanel(),
           route: AppRoutes.staffConversations,
         ),
@@ -221,8 +226,54 @@ class StaffInboxPanel extends GetView<StaffInboxController> {
       final items = current is Success<List<StaffConversation>>
           ? current.data
           : const <StaffConversation>[];
+      if (controller.showAiQueue.value) {
+        return Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+              child: Row(
+                children: [
+                  IconButton(
+                    tooltip: labels.staffSupport,
+                    onPressed: () => controller.showAiQueue.value = false,
+                    icon: const Icon(Icons.arrow_back),
+                  ),
+                  Text(
+                    labels.aiQueueTitle,
+                    style: Theme.of(context).textTheme.titleMedium,
+                  ),
+                ],
+              ),
+            ),
+            const Expanded(child: AiSuggestionQueuePanel()),
+          ],
+        );
+      }
       return Column(
         children: [
+          Align(
+            alignment: Alignment.centerRight,
+            child: Padding(
+              padding: const EdgeInsets.only(right: 12, top: 4),
+              child: TextButton.icon(
+                onPressed: () {
+                  controller.showAiQueue.value = true;
+                  unawaited(Get.find<AiSuggestionController>().loadQueue());
+                },
+                icon: Obx(
+                  () => Badge(
+                    isLabelVisible:
+                        Get.find<AiSuggestionController>().readyCount.value > 0,
+                    label: Text(
+                      '${Get.find<AiSuggestionController>().readyCount.value}',
+                    ),
+                    child: const Icon(Icons.auto_awesome_outlined),
+                  ),
+                ),
+                label: Text(labels.aiQueueTitle),
+              ),
+            ),
+          ),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             padding: const EdgeInsets.all(8),
@@ -418,6 +469,12 @@ class _ConversationThread extends StatelessWidget {
               ],
             ),
           ),
+          AiSuggestionPanel(
+            conversationId: conversation.id,
+            messageText: controller.messageText,
+            closed: conversation.status == StaffConversationStatus.closed,
+            onEscalate: () => controller.escalate(labels.aiHumanNeeded),
+          ),
           Expanded(
             child: Obx(() {
               final state = controller.messagesState.value;
@@ -470,7 +527,19 @@ class _ConversationThread extends StatelessWidget {
                             : null,
                         child: Padding(
                           padding: const EdgeInsets.all(12),
-                          child: Text(message.content),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              if (message.senderAgentId != null &&
+                                  Get.find<AiSuggestionController>().aiAgentIds
+                                      .contains(message.senderAgentId))
+                                Chip(
+                                  label: Text(labels.chatAiBadge),
+                                  visualDensity: VisualDensity.compact,
+                                ),
+                              Text(message.content),
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -481,10 +550,6 @@ class _ConversationThread extends StatelessWidget {
           const Divider(height: 1),
           if (conversation.status != StaffConversationStatus.closed)
             _MessageComposer(controller: controller),
-          Padding(
-            padding: const EdgeInsets.only(bottom: 8),
-            child: Text(labels.staffSuggestionReserved),
-          ),
         ],
       ),
     );
@@ -499,13 +564,6 @@ class _MessageComposer extends StatefulWidget {
 }
 
 class _MessageComposerState extends State<_MessageComposer> {
-  final text = TextEditingController();
-  @override
-  void dispose() {
-    text.dispose();
-    super.dispose();
-  }
-
   @override
   Widget build(BuildContext context) {
     final labels = AppLocalizations.of(context);
@@ -526,7 +584,7 @@ class _MessageComposerState extends State<_MessageComposer> {
             children: [
               Expanded(
                 child: TextField(
-                  controller: text,
+                  controller: widget.controller.messageText,
                   decoration: InputDecoration(
                     hintText: labels.staffMessageHint,
                   ),
@@ -535,7 +593,11 @@ class _MessageComposerState extends State<_MessageComposer> {
               IconButton(
                 tooltip: labels.staffSend,
                 onPressed: () async {
-                  if (await widget.controller.send(text.text)) text.clear();
+                  if (await widget.controller.send(
+                    widget.controller.messageText.text,
+                  )) {
+                    widget.controller.messageText.clear();
+                  }
                 },
                 icon: const Icon(Icons.send),
               ),
@@ -763,6 +825,33 @@ class _LotActions extends StatelessWidget {
                   onPressed: () => _qualityDialog(context, controller),
                   child: Text(labels.staffQualityCheck),
                 ),
+                if (Get.find<AuthController>().currentUser?.can(
+                      AgentCapability.listingManagement,
+                    ) ==
+                    true)
+                  OutlinedButton.icon(
+                    onPressed: () async {
+                      final ai = Get.find<AiSuggestionController>();
+                      final suggestion = await ai.suggestListingDraft(lot.id);
+                      if (!context.mounted) return;
+                      if (suggestion == null) {
+                        final state = ai.actionState.value;
+                        if (state is Failure<void>) {
+                          AppNotifier.error(
+                            aiFailureMessage(labels, state.failure),
+                          );
+                        }
+                        return;
+                      }
+                      await _createListingDialog(
+                        context,
+                        Get.find<StaffListingsController>(),
+                        initialLotId: lot.id,
+                      );
+                    },
+                    icon: const Icon(Icons.auto_awesome_outlined),
+                    label: Text(labels.aiListingDraft),
+                  ),
                 if (Get.find<AuthController>().currentUser?.can(
                       AgentCapability.disputeHandling,
                     ) ==
@@ -1198,89 +1287,191 @@ Future<void> _compensationDialog(
 
 Future<void> _createListingDialog(
   BuildContext context,
-  StaffListingsController controller,
-) async {
-  final lot = TextEditingController();
-  final title = TextEditingController();
-  final description = TextEditingController();
+  StaffListingsController controller, {
+  int? initialLotId,
+}) async {
+  final ai = Get.find<AiSuggestionController>();
+  final lot = TextEditingController(
+    text: initialLotId == null ? '' : '$initialLotId',
+  );
+  final existingDraft = ai.current.value;
+  final initialListing =
+      existingDraft?.kind == AiSuggestionKind.listingDraft &&
+          existingDraft?.lotId == initialLotId
+      ? existingDraft?.payload?.listing
+      : null;
+  final title = TextEditingController(text: initialListing?.title ?? '');
+  final description = TextEditingController(
+    text: initialListing?.description ?? '',
+  );
   final picker = ImagePicker();
   final photos = <XFile>[];
   final labels = AppLocalizations.of(context);
+  int? draftSuggestionId =
+      existingDraft?.kind == AiSuggestionKind.listingDraft &&
+          existingDraft?.lotId == initialLotId
+      ? existingDraft?.id
+      : null;
+  var draftGenerating =
+      existingDraft?.kind == AiSuggestionKind.listingDraft &&
+      existingDraft?.lotId == initialLotId &&
+      existingDraft?.isGenerating == true;
+  void Function(void Function())? updateDialog;
+  final draftWorker = ever<AiSuggestion?>(ai.current, (suggestion) {
+    if (suggestion?.kind != AiSuggestionKind.listingDraft ||
+        suggestion?.lotId != int.tryParse(lot.text.trim())) {
+      return;
+    }
+    updateDialog?.call(() {
+      draftSuggestionId = suggestion!.id;
+      draftGenerating = suggestion.isGenerating;
+      if (suggestion.isReady && suggestion.payload?.listing != null) {
+        title.text = suggestion.payload!.listing!.title;
+        description.text = suggestion.payload!.listing!.description;
+      } else if (suggestion.status == AiSuggestionStatus.failed ||
+          suggestion.status == AiSuggestionStatus.expired) {
+        draftSuggestionId = null;
+      }
+    });
+  });
   final result = await Get.dialog<(int, String, String?, List<String>)>(
     StatefulBuilder(
-      builder: (context, setState) => AlertDialog(
-        title: Text(labels.staffListingCreate),
-        content: SingleChildScrollView(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              TextField(
-                controller: lot,
-                keyboardType: TextInputType.number,
-                decoration: InputDecoration(labelText: labels.staffLotId),
-              ),
-              TextField(
-                controller: title,
-                maxLength: 140,
-                decoration: InputDecoration(labelText: labels.staffTitle),
-              ),
-              TextField(
-                controller: description,
-                maxLength: 2000,
-                decoration: InputDecoration(labelText: labels.staffDescription),
-              ),
-              OutlinedButton(
-                onPressed: () async {
-                  final selected = await picker.pickMultiImage();
-                  if (selected.isEmpty || selected.length > 5) {
-                    AppNotifier.error(labels.staffPhotosRequired);
-                    return;
-                  }
-                  for (final image in selected) {
-                    final extension = image.path.split('.').last.toLowerCase();
-                    if (!{'jpg', 'jpeg', 'png', 'webp'}.contains(extension) ||
-                        await image.length() > 5 * 1024 * 1024) {
-                      AppNotifier.error(labels.staffPhotoInvalid);
+      builder: (context, setState) {
+        updateDialog = setState;
+        return AlertDialog(
+          title: Text(labels.staffListingCreate),
+          content: SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                TextField(
+                  controller: lot,
+                  keyboardType: TextInputType.number,
+                  decoration: InputDecoration(labelText: labels.staffLotId),
+                  onChanged: (_) => setState(() {}),
+                ),
+                TextField(
+                  controller: title,
+                  maxLength: 140,
+                  decoration: InputDecoration(labelText: labels.staffTitle),
+                ),
+                TextField(
+                  controller: description,
+                  maxLength: 2000,
+                  decoration: InputDecoration(
+                    labelText: labels.staffDescription,
+                  ),
+                ),
+                OutlinedButton.icon(
+                  onPressed: draftGenerating
+                      ? null
+                      : () async {
+                          final id = int.tryParse(lot.text.trim());
+                          if (id == null) {
+                            AppNotifier.error(labels.staffLotId);
+                            return;
+                          }
+                          setState(() => draftGenerating = true);
+                          final suggestion = await ai.suggestListingDraft(id);
+                          if (!context.mounted) return;
+                          if (suggestion == null) {
+                            setState(() => draftGenerating = false);
+                            final action = ai.actionState.value;
+                            if (action is Failure<void>) {
+                              AppNotifier.error(
+                                aiFailureMessage(labels, action.failure),
+                              );
+                            }
+                            return;
+                          }
+                          setState(() {
+                            draftSuggestionId = suggestion.id;
+                            draftGenerating = suggestion.isGenerating;
+                            final listing = suggestion.payload?.listing;
+                            if (listing != null) {
+                              title.text = listing.title;
+                              description.text = listing.description;
+                            }
+                          });
+                        },
+                  icon: draftGenerating
+                      ? const SizedBox(
+                          width: 18,
+                          height: 18,
+                          child: CircularProgressIndicator(strokeWidth: 2),
+                        )
+                      : const Icon(Icons.auto_awesome_outlined),
+                  label: Text(
+                    draftGenerating
+                        ? labels.aiDraftGenerating
+                        : labels.aiListingDraft,
+                  ),
+                ),
+                if (draftGenerating) Text(labels.aiGenerationExplanation),
+                OutlinedButton(
+                  onPressed: () async {
+                    final selected = await picker.pickMultiImage();
+                    if (selected.isEmpty || selected.length > 5) {
+                      AppNotifier.error(labels.staffPhotosRequired);
                       return;
                     }
-                  }
-                  setState(() {
-                    photos
-                      ..clear()
-                      ..addAll(selected);
-                  });
-                },
-                child: Text('${labels.staffPhotosRequired} (${photos.length})'),
-              ),
-            ],
-          ),
-        ),
-        actions: [
-          TextButton(onPressed: Get.back, child: Text(labels.cancel)),
-          FilledButton(
-            onPressed: () {
-              final id = int.tryParse(lot.text.trim());
-              if (id == null ||
-                  title.text.trim().length < 3 ||
-                  photos.isEmpty) {
-                AppNotifier.error(labels.staffPhotosRequired);
-                return;
-              }
-              Get.back(
-                result: (
-                  id,
-                  title.text,
-                  description.text,
-                  photos.map((file) => file.path).toList(),
+                    for (final image in selected) {
+                      final extension = image.path
+                          .split('.')
+                          .last
+                          .toLowerCase();
+                      if (!{'jpg', 'jpeg', 'png', 'webp'}.contains(extension) ||
+                          await image.length() > 5 * 1024 * 1024) {
+                        AppNotifier.error(labels.staffPhotoInvalid);
+                        return;
+                      }
+                    }
+                    setState(() {
+                      photos
+                        ..clear()
+                        ..addAll(selected);
+                    });
+                  },
+                  child: Text(
+                    '${labels.staffPhotosRequired} (${photos.length})',
+                  ),
                 ),
-              );
-            },
-            child: Text(labels.staffCreate),
+              ],
+            ),
           ),
-        ],
-      ),
+          actions: [
+            TextButton(onPressed: Get.back, child: Text(labels.cancel)),
+            FilledButton(
+              onPressed: () {
+                final id = int.tryParse(lot.text.trim());
+                if (draftGenerating) {
+                  AppNotifier.info(labels.aiDraftGenerating);
+                  return;
+                }
+                if (id == null ||
+                    title.text.trim().length < 3 ||
+                    photos.isEmpty) {
+                  AppNotifier.error(labels.staffPhotosRequired);
+                  return;
+                }
+                Get.back(
+                  result: (
+                    id,
+                    title.text,
+                    description.text,
+                    photos.map((file) => file.path).toList(),
+                  ),
+                );
+              },
+              child: Text(labels.staffCreate),
+            ),
+          ],
+        );
+      },
     ),
   );
+  updateDialog = null;
+  draftWorker.dispose();
   lot.dispose();
   title.dispose();
   description.dispose();
@@ -1291,7 +1482,18 @@ Future<void> _createListingDialog(
       result.$3,
       result.$4,
     );
-    if (failure != null) AppNotifier.error(_listingFailure(labels, failure));
+    if (failure != null) {
+      AppNotifier.error(_listingFailure(labels, failure));
+    } else if (draftSuggestionId != null) {
+      if (await ai.approveSuggestion(draftSuggestionId!)) {
+        AppNotifier.success(labels.aiListingCreated);
+      } else {
+        final action = ai.actionState.value;
+        if (action is Failure<void>) {
+          AppNotifier.error(aiFailureMessage(labels, action.failure));
+        }
+      }
+    }
   }
 }
 

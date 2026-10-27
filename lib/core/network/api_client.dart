@@ -54,6 +54,7 @@ class ApiClient {
     Object? data,
     bool auth = true,
     Map<String, dynamic>? headers,
+    Duration? receiveTimeout,
   }) => _send(
     'POST',
     path,
@@ -61,6 +62,7 @@ class ApiClient {
     data: data,
     auth: auth,
     headers: headers,
+    receiveTimeout: receiveTimeout,
   );
 
   Future<dynamic> patch(
@@ -149,6 +151,7 @@ class ApiClient {
     Map<String, dynamic>? headers,
     ResponseType? responseType,
     Duration? sendTimeout,
+    Duration? receiveTimeout,
   }) async {
     try {
       final response = await dio.request<dynamic>(
@@ -161,6 +164,7 @@ class ApiClient {
           extra: {'auth': auth},
           responseType: responseType,
           sendTimeout: sendTimeout,
+          receiveTimeout: receiveTimeout,
         ),
       );
       return response.data;

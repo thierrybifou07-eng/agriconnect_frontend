@@ -142,6 +142,15 @@ class NotificationCenter extends GetxService {
     required Map<String, dynamic> args,
     bool priority = false,
   }) {
+    if (kind == AppNotificationKind.aiSuggestion &&
+        notifications.any(
+          (existing) =>
+              existing.kind == kind &&
+              existing.args?['id'] == args['id'] &&
+              args['id'] != null,
+        )) {
+      return;
+    }
     final now = DateTime.now().toUtc();
     final notification = AppNotification(
       id: '${now.microsecondsSinceEpoch}',

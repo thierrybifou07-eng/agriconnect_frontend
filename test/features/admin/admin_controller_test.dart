@@ -54,6 +54,12 @@ class _AdminRepository implements AdminRepository {
       (fixture('admin_agents.json') as List).map(AdminAgent.fromJson).toList();
 
   @override
+  Future<AdminAgent> createAiAgent(Map<String, Object?> body) async {
+    agentBodies.add(body);
+    return AdminAgent.fromJson((fixture('admin_agents.json') as List).last);
+  }
+
+  @override
   Future<AdminAgent> updateAgent(int id, Map<String, Object?> body) async {
     agentBodies.add(body);
     return AdminAgent.fromJson((fixture('admin_agents.json') as List).first);
@@ -136,6 +142,43 @@ void main() {
       );
       expect(repository.agentBodies.single['capabilities'], adminCapabilities);
       expect(repository.agentBodies.single['autonomy'], isNull);
+    },
+  );
+
+  test('AI edits never send payment follow-up capability', () async {
+    final controller = AdminAgentsController(repository: repository);
+    final agent = AdminAgent.fromJson(
+      (fixture('admin_agents.json') as List).last,
+    );
+    await controller.updateAgent(
+      agent,
+      displayName: 'Assistant IA',
+      isActive: true,
+      capabilities: adminCapabilities,
+      autonomy: 'SUGGEST_ONLY',
+    );
+    expect(repository.agentBodies.single['capabilities'], aiAgentCapabilities);
+    expect(
+      repository.agentBodies.single['capabilities'] as List,
+      isNot(contains('PAYMENT_FOLLOWUP')),
+    );
+  });
+
+  test(
+    'autonomous AI creation is blocked while the server flag is disabled',
+    () async {
+      final controller = AdminAgentsController(repository: repository);
+      expect(
+        await controller.createAiAgent(
+          displayName: 'Assistant',
+          aiProvider: 'ollama',
+          aiModel: 'granite',
+          autonomy: 'AUTONOMOUS',
+        ),
+        isFalse,
+      );
+      expect(repository.agentBodies, isEmpty);
+      expect(controller.actionState.value, isA<Failure<void>>());
     },
   );
 
