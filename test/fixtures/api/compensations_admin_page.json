@@ -1,0 +1,29 @@
+{
+  "items": [
+    {
+      "id": 64,
+      "supplierId": 15,
+      "lotId": 92,
+      "deliveryId": 12,
+      "reason": "Lot perdu pendant le transport",
+      "quantity": 10.5,
+      "unitPrice": 1500,
+      "rate": 0.8,
+      "amount": 12600,
+      "status": "APPROVED",
+      "note": null,
+      "reference": null,
+      "createdAt": "2026-10-25T10:30:00.000Z",
+      "supplier": {
+        "farmName": "Ferme Exemple",
+        "payoutAccount": {
+          "provider": "Mobile Money",
+          "accountNumber": "690123456"
+        }
+      }
+    }
+  ],
+  "page": 1,
+  "limit": 20,
+  "total": 1
+}

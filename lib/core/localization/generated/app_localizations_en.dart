@@ -2025,6 +2025,224 @@ class AppLocalizationsEn extends AppLocalizations {
   String get adminChooseAgency => 'Choose an agency';
 
   @override
+  String get adminOpsTab => 'Operations';
+
+  @override
+  String get adminReferentials => 'Catalog & locations';
+
+  @override
+  String get adminAgencies => 'Agencies';
+
+  @override
+  String get adminPayouts => 'Supplier payouts';
+
+  @override
+  String get adminReferrals => 'Referrals';
+
+  @override
+  String get adminCompensations => 'Compensations';
+
+  @override
+  String get adminLegalVersions => 'Terms';
+
+  @override
+  String get adminCategories => 'Categories';
+
+  @override
+  String get adminUnits => 'Units';
+
+  @override
+  String get adminProducts => 'Products';
+
+  @override
+  String get adminZones => 'Zones';
+
+  @override
+  String get adminHubs => 'Drop-off points';
+
+  @override
+  String get adminCode => 'Code';
+
+  @override
+  String get adminLabel => 'Label';
+
+  @override
+  String get adminName => 'Name';
+
+  @override
+  String get adminDescription => 'Description';
+
+  @override
+  String get adminImageUrl => 'Image URL';
+
+  @override
+  String get adminCategoryId => 'Category ID';
+
+  @override
+  String get adminUnitId => 'Unit ID';
+
+  @override
+  String get adminZoneId => 'Zone ID';
+
+  @override
+  String get adminAddress => 'Address';
+
+  @override
+  String get adminCity => 'City';
+
+  @override
+  String get adminRegion => 'Region';
+
+  @override
+  String get adminLatitude => 'Latitude';
+
+  @override
+  String get adminLongitude => 'Longitude';
+
+  @override
+  String get adminActiveFilter => 'Filter by activity';
+
+  @override
+  String get adminInactive => 'Inactive';
+
+  @override
+  String get adminCreate => 'Create';
+
+  @override
+  String get adminEdit => 'Edit';
+
+  @override
+  String get adminSaveChanges => 'Save';
+
+  @override
+  String get adminLoadMore => 'Load more';
+
+  @override
+  String get adminIsActive => 'Active';
+
+  @override
+  String get adminIsPerishable => 'Perishable product';
+
+  @override
+  String get adminAcceptsDropoff => 'Accepts drop-off';
+
+  @override
+  String get adminAcceptsPickup => 'Accepts pickup';
+
+  @override
+  String get adminNoRecords => 'No items.';
+
+  @override
+  String get adminContactName => 'Contact name';
+
+  @override
+  String get adminInsuranceProvider => 'Insurance provider';
+
+  @override
+  String get adminInsurancePolicy => 'Policy number';
+
+  @override
+  String get adminInsuranceExpiresAt => 'Insurance expiry (YYYY-MM-DD)';
+
+  @override
+  String get adminInsuranceExpiring =>
+      'Warning: insurance expires in less than 30 days.';
+
+  @override
+  String get adminCoverage => 'Zone coverage';
+
+  @override
+  String get adminBaseFee => 'Base fee';
+
+  @override
+  String get adminPerKmFee => 'Per-km fee';
+
+  @override
+  String get adminSaveCoverage => 'Save coverage';
+
+  @override
+  String get adminRemoveCoverage => 'Remove coverage';
+
+  @override
+  String get adminDrivers => 'Drivers';
+
+  @override
+  String get adminPaymentReference => 'Payment reference';
+
+  @override
+  String get adminPayoutAccountId => 'Payout account ID (optional)';
+
+  @override
+  String get adminDefaultPayoutAccount => 'Default payout account';
+
+  @override
+  String get adminConfirmMoneyAction => 'Confirm sending this payment?';
+
+  @override
+  String get adminHumanActorRequired =>
+      'This financial action must be performed by a person.';
+
+  @override
+  String get adminRejectReason => 'Rejection reason';
+
+  @override
+  String get adminApprove => 'Approve';
+
+  @override
+  String get adminPay => 'Mark as paid';
+
+  @override
+  String get adminReject => 'Reject';
+
+  @override
+  String get adminShowAccount => 'Show';
+
+  @override
+  String get adminHideAccount => 'Hide';
+
+  @override
+  String get adminLegalCode => 'Legal document';
+
+  @override
+  String get adminVersion => 'Version';
+
+  @override
+  String get adminFrenchTitle => 'French title';
+
+  @override
+  String get adminFrenchContent => 'French content';
+
+  @override
+  String get adminEnglishTitle => 'English title (optional)';
+
+  @override
+  String get adminEnglishContent => 'English content (optional)';
+
+  @override
+  String get adminPreview => 'Preview';
+
+  @override
+  String get adminCreateDraft => 'Create draft';
+
+  @override
+  String get adminPublish => 'Publish';
+
+  @override
+  String get adminDraft => 'Draft';
+
+  @override
+  String get adminPublished => 'Published';
+
+  @override
+  String get adminReferenceInvalid => 'A valid payment reference is required.';
+
+  @override
+  String get adminOperationSaved => 'Changes saved.';
+
+  @override
+  String get adminOperationFailed => 'The operation could not be completed.';
+
+  @override
   String get adminVehicleType => 'Vehicle type (optional)';
 
   @override

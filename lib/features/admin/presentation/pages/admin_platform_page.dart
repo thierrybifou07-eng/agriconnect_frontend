@@ -10,6 +10,7 @@ import 'package:agri_connect/core/ui/app_notifier.dart';
 import 'package:agri_connect/core/ui/ui_state.dart';
 import 'package:agri_connect/features/admin/domain/admin_entities.dart';
 import 'package:agri_connect/features/admin/presentation/controllers/admin_controllers.dart';
+import 'package:agri_connect/features/admin/presentation/pages/admin_operations_page.dart';
 import 'package:agri_connect/features/admin/presentation/widgets/admin_widgets.dart';
 import 'package:agri_connect/features/auth/domain/role_code.dart';
 import 'package:agri_connect/features/auth/presentation/controllers/auth_controller.dart';
@@ -21,7 +22,7 @@ class AdminPlatformPanel extends StatelessWidget {
   Widget build(BuildContext context) {
     final labels = AppLocalizations.of(context);
     return DefaultTabController(
-      length: 2,
+      length: 3,
       child: Column(
         children: [
           Padding(
@@ -38,11 +39,16 @@ class AdminPlatformPanel extends StatelessWidget {
             tabs: [
               Tab(text: labels.adminSettingsTitle),
               Tab(text: labels.adminAuditTitle),
+              Tab(text: labels.adminOpsTab),
             ],
           ),
           const Expanded(
             child: TabBarView(
-              children: [_PlatformSettingsPanel(), _AuditLogPanel()],
+              children: [
+                _PlatformSettingsPanel(),
+                _AuditLogPanel(),
+                AdminOperationsPage(),
+              ],
             ),
           ),
         ],

@@ -1,0 +1,11 @@
+{
+  "id": 18,
+  "name": "Transport Centre",
+  "contactName": "Awa Ndiaye",
+  "phone": "+237600000000",
+  "email": "contact@example.test",
+  "insuranceProvider": "AssurDemo",
+  "insurancePolicyNumber": "POL-18",
+  "insuranceExpiresAt": "2026-11-15T00:00:00.000Z",
+  "isActive": true
+}

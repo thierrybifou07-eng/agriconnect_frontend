@@ -3691,6 +3691,438 @@ abstract class AppLocalizations {
   /// **'Choose an agency'**
   String get adminChooseAgency;
 
+  /// No description provided for @adminOpsTab.
+  ///
+  /// In en, this message translates to:
+  /// **'Operations'**
+  String get adminOpsTab;
+
+  /// No description provided for @adminReferentials.
+  ///
+  /// In en, this message translates to:
+  /// **'Catalog & locations'**
+  String get adminReferentials;
+
+  /// No description provided for @adminAgencies.
+  ///
+  /// In en, this message translates to:
+  /// **'Agencies'**
+  String get adminAgencies;
+
+  /// No description provided for @adminPayouts.
+  ///
+  /// In en, this message translates to:
+  /// **'Supplier payouts'**
+  String get adminPayouts;
+
+  /// No description provided for @adminReferrals.
+  ///
+  /// In en, this message translates to:
+  /// **'Referrals'**
+  String get adminReferrals;
+
+  /// No description provided for @adminCompensations.
+  ///
+  /// In en, this message translates to:
+  /// **'Compensations'**
+  String get adminCompensations;
+
+  /// No description provided for @adminLegalVersions.
+  ///
+  /// In en, this message translates to:
+  /// **'Terms'**
+  String get adminLegalVersions;
+
+  /// No description provided for @adminCategories.
+  ///
+  /// In en, this message translates to:
+  /// **'Categories'**
+  String get adminCategories;
+
+  /// No description provided for @adminUnits.
+  ///
+  /// In en, this message translates to:
+  /// **'Units'**
+  String get adminUnits;
+
+  /// No description provided for @adminProducts.
+  ///
+  /// In en, this message translates to:
+  /// **'Products'**
+  String get adminProducts;
+
+  /// No description provided for @adminZones.
+  ///
+  /// In en, this message translates to:
+  /// **'Zones'**
+  String get adminZones;
+
+  /// No description provided for @adminHubs.
+  ///
+  /// In en, this message translates to:
+  /// **'Drop-off points'**
+  String get adminHubs;
+
+  /// No description provided for @adminCode.
+  ///
+  /// In en, this message translates to:
+  /// **'Code'**
+  String get adminCode;
+
+  /// No description provided for @adminLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Label'**
+  String get adminLabel;
+
+  /// No description provided for @adminName.
+  ///
+  /// In en, this message translates to:
+  /// **'Name'**
+  String get adminName;
+
+  /// No description provided for @adminDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Description'**
+  String get adminDescription;
+
+  /// No description provided for @adminImageUrl.
+  ///
+  /// In en, this message translates to:
+  /// **'Image URL'**
+  String get adminImageUrl;
+
+  /// No description provided for @adminCategoryId.
+  ///
+  /// In en, this message translates to:
+  /// **'Category ID'**
+  String get adminCategoryId;
+
+  /// No description provided for @adminUnitId.
+  ///
+  /// In en, this message translates to:
+  /// **'Unit ID'**
+  String get adminUnitId;
+
+  /// No description provided for @adminZoneId.
+  ///
+  /// In en, this message translates to:
+  /// **'Zone ID'**
+  String get adminZoneId;
+
+  /// No description provided for @adminAddress.
+  ///
+  /// In en, this message translates to:
+  /// **'Address'**
+  String get adminAddress;
+
+  /// No description provided for @adminCity.
+  ///
+  /// In en, this message translates to:
+  /// **'City'**
+  String get adminCity;
+
+  /// No description provided for @adminRegion.
+  ///
+  /// In en, this message translates to:
+  /// **'Region'**
+  String get adminRegion;
+
+  /// No description provided for @adminLatitude.
+  ///
+  /// In en, this message translates to:
+  /// **'Latitude'**
+  String get adminLatitude;
+
+  /// No description provided for @adminLongitude.
+  ///
+  /// In en, this message translates to:
+  /// **'Longitude'**
+  String get adminLongitude;
+
+  /// No description provided for @adminActiveFilter.
+  ///
+  /// In en, this message translates to:
+  /// **'Filter by activity'**
+  String get adminActiveFilter;
+
+  /// No description provided for @adminInactive.
+  ///
+  /// In en, this message translates to:
+  /// **'Inactive'**
+  String get adminInactive;
+
+  /// No description provided for @adminCreate.
+  ///
+  /// In en, this message translates to:
+  /// **'Create'**
+  String get adminCreate;
+
+  /// No description provided for @adminEdit.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit'**
+  String get adminEdit;
+
+  /// No description provided for @adminSaveChanges.
+  ///
+  /// In en, this message translates to:
+  /// **'Save'**
+  String get adminSaveChanges;
+
+  /// No description provided for @adminLoadMore.
+  ///
+  /// In en, this message translates to:
+  /// **'Load more'**
+  String get adminLoadMore;
+
+  /// No description provided for @adminIsActive.
+  ///
+  /// In en, this message translates to:
+  /// **'Active'**
+  String get adminIsActive;
+
+  /// No description provided for @adminIsPerishable.
+  ///
+  /// In en, this message translates to:
+  /// **'Perishable product'**
+  String get adminIsPerishable;
+
+  /// No description provided for @adminAcceptsDropoff.
+  ///
+  /// In en, this message translates to:
+  /// **'Accepts drop-off'**
+  String get adminAcceptsDropoff;
+
+  /// No description provided for @adminAcceptsPickup.
+  ///
+  /// In en, this message translates to:
+  /// **'Accepts pickup'**
+  String get adminAcceptsPickup;
+
+  /// No description provided for @adminNoRecords.
+  ///
+  /// In en, this message translates to:
+  /// **'No items.'**
+  String get adminNoRecords;
+
+  /// No description provided for @adminContactName.
+  ///
+  /// In en, this message translates to:
+  /// **'Contact name'**
+  String get adminContactName;
+
+  /// No description provided for @adminInsuranceProvider.
+  ///
+  /// In en, this message translates to:
+  /// **'Insurance provider'**
+  String get adminInsuranceProvider;
+
+  /// No description provided for @adminInsurancePolicy.
+  ///
+  /// In en, this message translates to:
+  /// **'Policy number'**
+  String get adminInsurancePolicy;
+
+  /// No description provided for @adminInsuranceExpiresAt.
+  ///
+  /// In en, this message translates to:
+  /// **'Insurance expiry (YYYY-MM-DD)'**
+  String get adminInsuranceExpiresAt;
+
+  /// No description provided for @adminInsuranceExpiring.
+  ///
+  /// In en, this message translates to:
+  /// **'Warning: insurance expires in less than 30 days.'**
+  String get adminInsuranceExpiring;
+
+  /// No description provided for @adminCoverage.
+  ///
+  /// In en, this message translates to:
+  /// **'Zone coverage'**
+  String get adminCoverage;
+
+  /// No description provided for @adminBaseFee.
+  ///
+  /// In en, this message translates to:
+  /// **'Base fee'**
+  String get adminBaseFee;
+
+  /// No description provided for @adminPerKmFee.
+  ///
+  /// In en, this message translates to:
+  /// **'Per-km fee'**
+  String get adminPerKmFee;
+
+  /// No description provided for @adminSaveCoverage.
+  ///
+  /// In en, this message translates to:
+  /// **'Save coverage'**
+  String get adminSaveCoverage;
+
+  /// No description provided for @adminRemoveCoverage.
+  ///
+  /// In en, this message translates to:
+  /// **'Remove coverage'**
+  String get adminRemoveCoverage;
+
+  /// No description provided for @adminDrivers.
+  ///
+  /// In en, this message translates to:
+  /// **'Drivers'**
+  String get adminDrivers;
+
+  /// No description provided for @adminPaymentReference.
+  ///
+  /// In en, this message translates to:
+  /// **'Payment reference'**
+  String get adminPaymentReference;
+
+  /// No description provided for @adminPayoutAccountId.
+  ///
+  /// In en, this message translates to:
+  /// **'Payout account ID (optional)'**
+  String get adminPayoutAccountId;
+
+  /// No description provided for @adminDefaultPayoutAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Default payout account'**
+  String get adminDefaultPayoutAccount;
+
+  /// No description provided for @adminConfirmMoneyAction.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm sending this payment?'**
+  String get adminConfirmMoneyAction;
+
+  /// No description provided for @adminHumanActorRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'This financial action must be performed by a person.'**
+  String get adminHumanActorRequired;
+
+  /// No description provided for @adminRejectReason.
+  ///
+  /// In en, this message translates to:
+  /// **'Rejection reason'**
+  String get adminRejectReason;
+
+  /// No description provided for @adminApprove.
+  ///
+  /// In en, this message translates to:
+  /// **'Approve'**
+  String get adminApprove;
+
+  /// No description provided for @adminPay.
+  ///
+  /// In en, this message translates to:
+  /// **'Mark as paid'**
+  String get adminPay;
+
+  /// No description provided for @adminReject.
+  ///
+  /// In en, this message translates to:
+  /// **'Reject'**
+  String get adminReject;
+
+  /// No description provided for @adminShowAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Show'**
+  String get adminShowAccount;
+
+  /// No description provided for @adminHideAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Hide'**
+  String get adminHideAccount;
+
+  /// No description provided for @adminLegalCode.
+  ///
+  /// In en, this message translates to:
+  /// **'Legal document'**
+  String get adminLegalCode;
+
+  /// No description provided for @adminVersion.
+  ///
+  /// In en, this message translates to:
+  /// **'Version'**
+  String get adminVersion;
+
+  /// No description provided for @adminFrenchTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'French title'**
+  String get adminFrenchTitle;
+
+  /// No description provided for @adminFrenchContent.
+  ///
+  /// In en, this message translates to:
+  /// **'French content'**
+  String get adminFrenchContent;
+
+  /// No description provided for @adminEnglishTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'English title (optional)'**
+  String get adminEnglishTitle;
+
+  /// No description provided for @adminEnglishContent.
+  ///
+  /// In en, this message translates to:
+  /// **'English content (optional)'**
+  String get adminEnglishContent;
+
+  /// No description provided for @adminPreview.
+  ///
+  /// In en, this message translates to:
+  /// **'Preview'**
+  String get adminPreview;
+
+  /// No description provided for @adminCreateDraft.
+  ///
+  /// In en, this message translates to:
+  /// **'Create draft'**
+  String get adminCreateDraft;
+
+  /// No description provided for @adminPublish.
+  ///
+  /// In en, this message translates to:
+  /// **'Publish'**
+  String get adminPublish;
+
+  /// No description provided for @adminDraft.
+  ///
+  /// In en, this message translates to:
+  /// **'Draft'**
+  String get adminDraft;
+
+  /// No description provided for @adminPublished.
+  ///
+  /// In en, this message translates to:
+  /// **'Published'**
+  String get adminPublished;
+
+  /// No description provided for @adminReferenceInvalid.
+  ///
+  /// In en, this message translates to:
+  /// **'A valid payment reference is required.'**
+  String get adminReferenceInvalid;
+
+  /// No description provided for @adminOperationSaved.
+  ///
+  /// In en, this message translates to:
+  /// **'Changes saved.'**
+  String get adminOperationSaved;
+
+  /// No description provided for @adminOperationFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'The operation could not be completed.'**
+  String get adminOperationFailed;
+
   /// No description provided for @adminVehicleType.
   ///
   /// In en, this message translates to:

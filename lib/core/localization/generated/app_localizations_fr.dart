@@ -2049,6 +2049,225 @@ class AppLocalizationsFr extends AppLocalizations {
   String get adminChooseAgency => 'Choisir une agence';
 
   @override
+  String get adminOpsTab => 'Gestion';
+
+  @override
+  String get adminReferentials => 'Catalogue & lieux';
+
+  @override
+  String get adminAgencies => 'Agences';
+
+  @override
+  String get adminPayouts => 'Reversements';
+
+  @override
+  String get adminReferrals => 'Parrainages';
+
+  @override
+  String get adminCompensations => 'Indemnisations';
+
+  @override
+  String get adminLegalVersions => 'CGU';
+
+  @override
+  String get adminCategories => 'Catégories';
+
+  @override
+  String get adminUnits => 'Unités';
+
+  @override
+  String get adminProducts => 'Produits';
+
+  @override
+  String get adminZones => 'Zones';
+
+  @override
+  String get adminHubs => 'Points de dépôt';
+
+  @override
+  String get adminCode => 'Code';
+
+  @override
+  String get adminLabel => 'Libellé';
+
+  @override
+  String get adminName => 'Nom';
+
+  @override
+  String get adminDescription => 'Description';
+
+  @override
+  String get adminImageUrl => 'URL de l’image';
+
+  @override
+  String get adminCategoryId => 'ID de catégorie';
+
+  @override
+  String get adminUnitId => 'ID d’unité';
+
+  @override
+  String get adminZoneId => 'ID de zone';
+
+  @override
+  String get adminAddress => 'Adresse';
+
+  @override
+  String get adminCity => 'Ville';
+
+  @override
+  String get adminRegion => 'Région';
+
+  @override
+  String get adminLatitude => 'Latitude';
+
+  @override
+  String get adminLongitude => 'Longitude';
+
+  @override
+  String get adminActiveFilter => 'Filtrer par activité';
+
+  @override
+  String get adminInactive => 'Inactif';
+
+  @override
+  String get adminCreate => 'Créer';
+
+  @override
+  String get adminEdit => 'Modifier';
+
+  @override
+  String get adminSaveChanges => 'Enregistrer';
+
+  @override
+  String get adminLoadMore => 'Charger la suite';
+
+  @override
+  String get adminIsActive => 'Actif';
+
+  @override
+  String get adminIsPerishable => 'Produit périssable';
+
+  @override
+  String get adminAcceptsDropoff => 'Accepte les dépôts';
+
+  @override
+  String get adminAcceptsPickup => 'Accepte les retraits';
+
+  @override
+  String get adminNoRecords => 'Aucun élément.';
+
+  @override
+  String get adminContactName => 'Nom du contact';
+
+  @override
+  String get adminInsuranceProvider => 'Assureur';
+
+  @override
+  String get adminInsurancePolicy => 'Numéro de police';
+
+  @override
+  String get adminInsuranceExpiresAt => 'Fin d’assurance (AAAA-MM-JJ)';
+
+  @override
+  String get adminInsuranceExpiring =>
+      'Attention : l’assurance expire dans moins de 30 jours.';
+
+  @override
+  String get adminCoverage => 'Couverture de zone';
+
+  @override
+  String get adminBaseFee => 'Tarif de base';
+
+  @override
+  String get adminPerKmFee => 'Tarif par km';
+
+  @override
+  String get adminSaveCoverage => 'Enregistrer la couverture';
+
+  @override
+  String get adminRemoveCoverage => 'Retirer la couverture';
+
+  @override
+  String get adminDrivers => 'Livreurs';
+
+  @override
+  String get adminPaymentReference => 'Référence de paiement';
+
+  @override
+  String get adminPayoutAccountId => 'ID du compte de paiement (facultatif)';
+
+  @override
+  String get adminDefaultPayoutAccount => 'Compte de paiement par défaut';
+
+  @override
+  String get adminConfirmMoneyAction => 'Confirmer l’envoi de ce paiement ?';
+
+  @override
+  String get adminHumanActorRequired =>
+      'Cette action financière doit être effectuée par une personne.';
+
+  @override
+  String get adminRejectReason => 'Motif du refus';
+
+  @override
+  String get adminApprove => 'Approuver';
+
+  @override
+  String get adminPay => 'Marquer comme payé';
+
+  @override
+  String get adminReject => 'Refuser';
+
+  @override
+  String get adminShowAccount => 'Afficher';
+
+  @override
+  String get adminHideAccount => 'Masquer';
+
+  @override
+  String get adminLegalCode => 'Document légal';
+
+  @override
+  String get adminVersion => 'Version';
+
+  @override
+  String get adminFrenchTitle => 'Titre français';
+
+  @override
+  String get adminFrenchContent => 'Contenu français';
+
+  @override
+  String get adminEnglishTitle => 'Titre anglais (facultatif)';
+
+  @override
+  String get adminEnglishContent => 'Contenu anglais (facultatif)';
+
+  @override
+  String get adminPreview => 'Aperçu';
+
+  @override
+  String get adminCreateDraft => 'Créer le brouillon';
+
+  @override
+  String get adminPublish => 'Publier';
+
+  @override
+  String get adminDraft => 'Brouillon';
+
+  @override
+  String get adminPublished => 'Publié';
+
+  @override
+  String get adminReferenceInvalid =>
+      'Une référence de paiement valide est obligatoire.';
+
+  @override
+  String get adminOperationSaved => 'Modification enregistrée.';
+
+  @override
+  String get adminOperationFailed => 'L’opération n’a pas abouti.';
+
+  @override
   String get adminVehicleType => 'Type de véhicule (facultatif)';
 
   @override

@@ -1,0 +1,13 @@
+{
+  "items": [
+    {
+      "id": 31,
+      "code": "FRUITS",
+      "label": "Fruits",
+      "isActive": true
+    }
+  ],
+  "page": 1,
+  "limit": 20,
+  "total": 1
+}
