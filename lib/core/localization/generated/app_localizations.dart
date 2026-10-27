@@ -2702,36 +2702,6 @@ abstract class AppLocalizations {
   /// **'All'**
   String get adminFilterAll;
 
-  /// No description provided for @adminModerationPending.
-  ///
-  /// In en, this message translates to:
-  /// **'Pending'**
-  String get adminModerationPending;
-
-  /// No description provided for @adminModerationValidated.
-  ///
-  /// In en, this message translates to:
-  /// **'Live'**
-  String get adminModerationValidated;
-
-  /// No description provided for @adminModerationSuspended.
-  ///
-  /// In en, this message translates to:
-  /// **'Suspended'**
-  String get adminModerationSuspended;
-
-  /// No description provided for @adminModerationRejected.
-  ///
-  /// In en, this message translates to:
-  /// **'Rejected'**
-  String get adminModerationRejected;
-
-  /// No description provided for @adminModerationArchived.
-  ///
-  /// In en, this message translates to:
-  /// **'Archived'**
-  String get adminModerationArchived;
-
   /// No description provided for @adminUsersSearchHint.
   ///
   /// In en, this message translates to:
@@ -2773,60 +2743,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'{orders, plural, =0{No orders} =1{1 order} other{{orders} orders}} · {products, plural, =0{No products} =1{1 product} other{{products} products}}'**
   String adminUserActivityCaption(int orders, int products);
-
-  /// No description provided for @adminProductsTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Product management'**
-  String get adminProductsTitle;
-
-  /// No description provided for @adminProductsSearchHint.
-  ///
-  /// In en, this message translates to:
-  /// **'Search a product…'**
-  String get adminProductsSearchHint;
-
-  /// No description provided for @adminProductsEmpty.
-  ///
-  /// In en, this message translates to:
-  /// **'No product matches'**
-  String get adminProductsEmpty;
-
-  /// No description provided for @adminProductsUpdated.
-  ///
-  /// In en, this message translates to:
-  /// **'Product updated.'**
-  String get adminProductsUpdated;
-
-  /// No description provided for @adminProductsRejectTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Reject product'**
-  String get adminProductsRejectTitle;
-
-  /// No description provided for @adminProductsRejectReasonHint.
-  ///
-  /// In en, this message translates to:
-  /// **'Reason for rejection…'**
-  String get adminProductsRejectReasonHint;
-
-  /// No description provided for @adminProductsRejectAction.
-  ///
-  /// In en, this message translates to:
-  /// **'Reject'**
-  String get adminProductsRejectAction;
-
-  /// No description provided for @adminProductApprove.
-  ///
-  /// In en, this message translates to:
-  /// **'Approve'**
-  String get adminProductApprove;
-
-  /// No description provided for @adminProductArchive.
-  ///
-  /// In en, this message translates to:
-  /// **'Archive'**
-  String get adminProductArchive;
 
   /// No description provided for @categoryCereals.
   ///
@@ -3211,12 +3127,6 @@ abstract class AppLocalizations {
   /// **'Users'**
   String get adminStatUsers;
 
-  /// No description provided for @adminStatProducts.
-  ///
-  /// In en, this message translates to:
-  /// **'Products'**
-  String get adminStatProducts;
-
   /// No description provided for @adminStatOrders.
   ///
   /// In en, this message translates to:
@@ -3234,12 +3144,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'{count, plural, =0{No account to validate} =1{1 account to validate} other{{count} accounts to validate}}'**
   String adminStatUsersCaption(int count);
-
-  /// No description provided for @adminStatProductsCaption.
-  ///
-  /// In en, this message translates to:
-  /// **'{count, plural, =0{No product to moderate} =1{1 product to moderate} other{{count} products to moderate}}'**
-  String adminStatProductsCaption(int count);
 
   /// No description provided for @adminStatOrdersCaption.
   ///
@@ -3264,12 +3168,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'{count, plural, =1{Account awaiting validation} other{{count} accounts awaiting validation}}'**
   String adminAttentionUsers(int count);
-
-  /// No description provided for @adminAttentionProducts.
-  ///
-  /// In en, this message translates to:
-  /// **'{count, plural, =1{Product to moderate} other{{count} products to moderate}}'**
-  String adminAttentionProducts(int count);
 
   /// No description provided for @adminAttentionOrders.
   ///
@@ -3306,12 +3204,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Shortcuts'**
   String get adminQuickActionsTitle;
-
-  /// No description provided for @adminQuickActionProducts.
-  ///
-  /// In en, this message translates to:
-  /// **'Products'**
-  String get adminQuickActionProducts;
 
   /// No description provided for @adminQuickActionUsers.
   ///
@@ -3355,12 +3247,6 @@ abstract class AppLocalizations {
   /// **'Users by role'**
   String get adminDistributionUsers;
 
-  /// No description provided for @adminDistributionProducts.
-  ///
-  /// In en, this message translates to:
-  /// **'Products by status'**
-  String get adminDistributionProducts;
-
   /// No description provided for @adminAnalyticsTitle.
   ///
   /// In en, this message translates to:
@@ -3385,12 +3271,6 @@ abstract class AppLocalizations {
   /// **'Tracking indicators'**
   String get adminAnalyticsIndicatorsTitle;
 
-  /// No description provided for @adminAnalyticsPublished.
-  ///
-  /// In en, this message translates to:
-  /// **'Published products'**
-  String get adminAnalyticsPublished;
-
   /// No description provided for @adminAnalyticsActiveOrders.
   ///
   /// In en, this message translates to:
@@ -3414,18 +3294,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'History and time series are not available: the administration console does not record history yet.'**
   String get adminAnalyticsNoHistory;
-
-  /// No description provided for @adminModerationTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Products to moderate'**
-  String get adminModerationTitle;
-
-  /// No description provided for @adminModerationEmpty.
-  ///
-  /// In en, this message translates to:
-  /// **'No product is waiting for a decision'**
-  String get adminModerationEmpty;
 
   /// No description provided for @adminRecentOrdersTitle.
   ///
@@ -3553,6 +3421,768 @@ abstract class AppLocalizations {
   /// **'The order status transition workflow is not defined yet. Order consultation remains available.'**
   String get adminOrderStatusLockedBody;
 
+  /// No description provided for @adminTabDashboard.
+  ///
+  /// In en, this message translates to:
+  /// **'Dashboard'**
+  String get adminTabDashboard;
+
+  /// No description provided for @adminTabUsers.
+  ///
+  /// In en, this message translates to:
+  /// **'Users'**
+  String get adminTabUsers;
+
+  /// No description provided for @adminTabAgents.
+  ///
+  /// In en, this message translates to:
+  /// **'Team'**
+  String get adminTabAgents;
+
+  /// No description provided for @adminTabPlatform.
+  ///
+  /// In en, this message translates to:
+  /// **'Platform'**
+  String get adminTabPlatform;
+
+  /// No description provided for @adminTabAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Account'**
+  String get adminTabAccount;
+
+  /// No description provided for @adminTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Administration'**
+  String get adminTitle;
+
+  /// No description provided for @adminPeriod.
+  ///
+  /// In en, this message translates to:
+  /// **'Period'**
+  String get adminPeriod;
+
+  /// No description provided for @adminFrom.
+  ///
+  /// In en, this message translates to:
+  /// **'From'**
+  String get adminFrom;
+
+  /// No description provided for @adminTo.
+  ///
+  /// In en, this message translates to:
+  /// **'To'**
+  String get adminTo;
+
+  /// No description provided for @adminRefresh.
+  ///
+  /// In en, this message translates to:
+  /// **'Refresh'**
+  String get adminRefresh;
+
+  /// No description provided for @adminKpiUsers.
+  ///
+  /// In en, this message translates to:
+  /// **'Users'**
+  String get adminKpiUsers;
+
+  /// No description provided for @adminKpiReceivables.
+  ///
+  /// In en, this message translates to:
+  /// **'Receivables'**
+  String get adminKpiReceivables;
+
+  /// No description provided for @adminKpiPendingPayouts.
+  ///
+  /// In en, this message translates to:
+  /// **'Pending payouts'**
+  String get adminKpiPendingPayouts;
+
+  /// No description provided for @adminKpiGrossRevenue.
+  ///
+  /// In en, this message translates to:
+  /// **'Gross revenue'**
+  String get adminKpiGrossRevenue;
+
+  /// No description provided for @adminKpiPendingCompensations.
+  ///
+  /// In en, this message translates to:
+  /// **'Pending compensations'**
+  String get adminKpiPendingCompensations;
+
+  /// No description provided for @adminKpiEligibleReferrals.
+  ///
+  /// In en, this message translates to:
+  /// **'Eligible referrals'**
+  String get adminKpiEligibleReferrals;
+
+  /// No description provided for @adminKpiStock.
+  ///
+  /// In en, this message translates to:
+  /// **'Stock'**
+  String get adminKpiStock;
+
+  /// No description provided for @adminByRole.
+  ///
+  /// In en, this message translates to:
+  /// **'Users by role'**
+  String get adminByRole;
+
+  /// No description provided for @adminLotsByStatus.
+  ///
+  /// In en, this message translates to:
+  /// **'Lots by status'**
+  String get adminLotsByStatus;
+
+  /// No description provided for @adminOrdersByStatus.
+  ///
+  /// In en, this message translates to:
+  /// **'Orders by status'**
+  String get adminOrdersByStatus;
+
+  /// No description provided for @adminDeliveriesByStatus.
+  ///
+  /// In en, this message translates to:
+  /// **'Deliveries by status'**
+  String get adminDeliveriesByStatus;
+
+  /// No description provided for @adminUsersSearch.
+  ///
+  /// In en, this message translates to:
+  /// **'Name, email or phone'**
+  String get adminUsersSearch;
+
+  /// No description provided for @adminRoleFilter.
+  ///
+  /// In en, this message translates to:
+  /// **'Role'**
+  String get adminRoleFilter;
+
+  /// No description provided for @adminStatusFilter.
+  ///
+  /// In en, this message translates to:
+  /// **'Account status'**
+  String get adminStatusFilter;
+
+  /// No description provided for @adminVerificationFilter.
+  ///
+  /// In en, this message translates to:
+  /// **'Profile verification'**
+  String get adminVerificationFilter;
+
+  /// No description provided for @adminAll.
+  ///
+  /// In en, this message translates to:
+  /// **'All'**
+  String get adminAll;
+
+  /// No description provided for @adminActive.
+  ///
+  /// In en, this message translates to:
+  /// **'Active'**
+  String get adminActive;
+
+  /// No description provided for @adminSuspended.
+  ///
+  /// In en, this message translates to:
+  /// **'Suspended'**
+  String get adminSuspended;
+
+  /// No description provided for @adminVerified.
+  ///
+  /// In en, this message translates to:
+  /// **'Verified'**
+  String get adminVerified;
+
+  /// No description provided for @adminUnverified.
+  ///
+  /// In en, this message translates to:
+  /// **'Unverified'**
+  String get adminUnverified;
+
+  /// No description provided for @adminPending.
+  ///
+  /// In en, this message translates to:
+  /// **'Pending'**
+  String get adminPending;
+
+  /// No description provided for @adminRejected.
+  ///
+  /// In en, this message translates to:
+  /// **'Rejected'**
+  String get adminRejected;
+
+  /// No description provided for @adminNoUsers.
+  ///
+  /// In en, this message translates to:
+  /// **'No users match these filters.'**
+  String get adminNoUsers;
+
+  /// No description provided for @adminCreateStaff.
+  ///
+  /// In en, this message translates to:
+  /// **'Create staff account'**
+  String get adminCreateStaff;
+
+  /// No description provided for @adminCreateAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Create account'**
+  String get adminCreateAccount;
+
+  /// No description provided for @adminFirstName.
+  ///
+  /// In en, this message translates to:
+  /// **'First name'**
+  String get adminFirstName;
+
+  /// No description provided for @adminLastName.
+  ///
+  /// In en, this message translates to:
+  /// **'Last name'**
+  String get adminLastName;
+
+  /// No description provided for @adminEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Email'**
+  String get adminEmail;
+
+  /// No description provided for @adminPhone.
+  ///
+  /// In en, this message translates to:
+  /// **'Phone'**
+  String get adminPhone;
+
+  /// No description provided for @adminPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Password'**
+  String get adminPassword;
+
+  /// No description provided for @adminStaffRole.
+  ///
+  /// In en, this message translates to:
+  /// **'Staff role'**
+  String get adminStaffRole;
+
+  /// No description provided for @adminAgentName.
+  ///
+  /// In en, this message translates to:
+  /// **'Agent display name'**
+  String get adminAgentName;
+
+  /// No description provided for @adminCapabilities.
+  ///
+  /// In en, this message translates to:
+  /// **'Capabilities'**
+  String get adminCapabilities;
+
+  /// No description provided for @adminAgency.
+  ///
+  /// In en, this message translates to:
+  /// **'Transport agency'**
+  String get adminAgency;
+
+  /// No description provided for @adminChooseAgency.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose an agency'**
+  String get adminChooseAgency;
+
+  /// No description provided for @adminVehicleType.
+  ///
+  /// In en, this message translates to:
+  /// **'Vehicle type (optional)'**
+  String get adminVehicleType;
+
+  /// No description provided for @adminPlateNumber.
+  ///
+  /// In en, this message translates to:
+  /// **'Plate number (optional)'**
+  String get adminPlateNumber;
+
+  /// No description provided for @adminRootOnly.
+  ///
+  /// In en, this message translates to:
+  /// **'Reserved for the ROOT account'**
+  String get adminRootOnly;
+
+  /// No description provided for @adminEmailVerified.
+  ///
+  /// In en, this message translates to:
+  /// **'Email verified'**
+  String get adminEmailVerified;
+
+  /// No description provided for @adminProfileVerification.
+  ///
+  /// In en, this message translates to:
+  /// **'Profile verification'**
+  String get adminProfileVerification;
+
+  /// No description provided for @adminCreatedAt.
+  ///
+  /// In en, this message translates to:
+  /// **'Created'**
+  String get adminCreatedAt;
+
+  /// No description provided for @adminViewDocuments.
+  ///
+  /// In en, this message translates to:
+  /// **'View documents'**
+  String get adminViewDocuments;
+
+  /// No description provided for @adminSuspend.
+  ///
+  /// In en, this message translates to:
+  /// **'Suspend'**
+  String get adminSuspend;
+
+  /// No description provided for @adminReactivate.
+  ///
+  /// In en, this message translates to:
+  /// **'Reactivate'**
+  String get adminReactivate;
+
+  /// No description provided for @adminConfirmSuspendTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Suspend this account?'**
+  String get adminConfirmSuspendTitle;
+
+  /// No description provided for @adminConfirmSuspendBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Its sessions will be closed and its devices disconnected.'**
+  String get adminConfirmSuspendBody;
+
+  /// No description provided for @adminConfirmReactivateTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Reactivate this account?'**
+  String get adminConfirmReactivateTitle;
+
+  /// No description provided for @adminConfirmReactivateBody.
+  ///
+  /// In en, this message translates to:
+  /// **'This account will be able to sign in again.'**
+  String get adminConfirmReactivateBody;
+
+  /// No description provided for @adminConfirmDeactivateTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Deactivate this agent?'**
+  String get adminConfirmDeactivateTitle;
+
+  /// No description provided for @adminConfirmDeactivateBody.
+  ///
+  /// In en, this message translates to:
+  /// **'The agent will no longer be able to access the platform.'**
+  String get adminConfirmDeactivateBody;
+
+  /// No description provided for @adminCancel.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get adminCancel;
+
+  /// No description provided for @adminConfirm.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm'**
+  String get adminConfirm;
+
+  /// No description provided for @adminStaffCreated.
+  ///
+  /// In en, this message translates to:
+  /// **'Staff account created.'**
+  String get adminStaffCreated;
+
+  /// No description provided for @adminAccountUpdated.
+  ///
+  /// In en, this message translates to:
+  /// **'Account updated.'**
+  String get adminAccountUpdated;
+
+  /// No description provided for @adminNoAgents.
+  ///
+  /// In en, this message translates to:
+  /// **'No agents.'**
+  String get adminNoAgents;
+
+  /// No description provided for @adminAiBadge.
+  ///
+  /// In en, this message translates to:
+  /// **'AI'**
+  String get adminAiBadge;
+
+  /// No description provided for @adminReadOnlyAi.
+  ///
+  /// In en, this message translates to:
+  /// **'AI records are read-only here and managed in the AI module.'**
+  String get adminReadOnlyAi;
+
+  /// No description provided for @adminEditAgent.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit agent'**
+  String get adminEditAgent;
+
+  /// No description provided for @adminDisplayName.
+  ///
+  /// In en, this message translates to:
+  /// **'Display name'**
+  String get adminDisplayName;
+
+  /// No description provided for @adminAgentActive.
+  ///
+  /// In en, this message translates to:
+  /// **'Active agent'**
+  String get adminAgentActive;
+
+  /// No description provided for @adminAutonomy.
+  ///
+  /// In en, this message translates to:
+  /// **'Autonomy'**
+  String get adminAutonomy;
+
+  /// No description provided for @adminAutonomyNone.
+  ///
+  /// In en, this message translates to:
+  /// **'Not set'**
+  String get adminAutonomyNone;
+
+  /// No description provided for @adminAutonomySuggest.
+  ///
+  /// In en, this message translates to:
+  /// **'Suggestions only'**
+  String get adminAutonomySuggest;
+
+  /// No description provided for @adminAutonomyApproval.
+  ///
+  /// In en, this message translates to:
+  /// **'Action with approval'**
+  String get adminAutonomyApproval;
+
+  /// No description provided for @adminAutonomyFull.
+  ///
+  /// In en, this message translates to:
+  /// **'Autonomous'**
+  String get adminAutonomyFull;
+
+  /// No description provided for @adminSave.
+  ///
+  /// In en, this message translates to:
+  /// **'Save'**
+  String get adminSave;
+
+  /// No description provided for @adminSettingsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Platform settings'**
+  String get adminSettingsTitle;
+
+  /// No description provided for @adminCommission.
+  ///
+  /// In en, this message translates to:
+  /// **'Supplier commission (%)'**
+  String get adminCommission;
+
+  /// No description provided for @adminBuyerFeeType.
+  ///
+  /// In en, this message translates to:
+  /// **'Buyer fee'**
+  String get adminBuyerFeeType;
+
+  /// No description provided for @adminFeeNone.
+  ///
+  /// In en, this message translates to:
+  /// **'None'**
+  String get adminFeeNone;
+
+  /// No description provided for @adminFeeFixed.
+  ///
+  /// In en, this message translates to:
+  /// **'Fixed amount'**
+  String get adminFeeFixed;
+
+  /// No description provided for @adminFeePercent.
+  ///
+  /// In en, this message translates to:
+  /// **'Percentage'**
+  String get adminFeePercent;
+
+  /// No description provided for @adminBuyerFeeValue.
+  ///
+  /// In en, this message translates to:
+  /// **'Buyer fee value'**
+  String get adminBuyerFeeValue;
+
+  /// No description provided for @adminTransportMarkup.
+  ///
+  /// In en, this message translates to:
+  /// **'Transport markup (%)'**
+  String get adminTransportMarkup;
+
+  /// No description provided for @adminBuyerReward.
+  ///
+  /// In en, this message translates to:
+  /// **'Buyer referral reward'**
+  String get adminBuyerReward;
+
+  /// No description provided for @adminSupplierReward.
+  ///
+  /// In en, this message translates to:
+  /// **'Supplier referral reward'**
+  String get adminSupplierReward;
+
+  /// No description provided for @adminReservationHours.
+  ///
+  /// In en, this message translates to:
+  /// **'Reservation duration (hours)'**
+  String get adminReservationHours;
+
+  /// No description provided for @adminExpiryCompensation.
+  ///
+  /// In en, this message translates to:
+  /// **'Expiry compensation (%)'**
+  String get adminExpiryCompensation;
+
+  /// No description provided for @adminCurrency.
+  ///
+  /// In en, this message translates to:
+  /// **'Currency'**
+  String get adminCurrency;
+
+  /// No description provided for @adminCommissionWarning.
+  ///
+  /// In en, this message translates to:
+  /// **'Supplier commission is not set.'**
+  String get adminCommissionWarning;
+
+  /// No description provided for @adminSettingsSaved.
+  ///
+  /// In en, this message translates to:
+  /// **'Settings saved.'**
+  String get adminSettingsSaved;
+
+  /// No description provided for @adminAuditTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Audit log'**
+  String get adminAuditTitle;
+
+  /// No description provided for @adminAuditEntityType.
+  ///
+  /// In en, this message translates to:
+  /// **'Entity type'**
+  String get adminAuditEntityType;
+
+  /// No description provided for @adminAuditEntityId.
+  ///
+  /// In en, this message translates to:
+  /// **'Entity ID'**
+  String get adminAuditEntityId;
+
+  /// No description provided for @adminAuditActorUserId.
+  ///
+  /// In en, this message translates to:
+  /// **'Actor user ID'**
+  String get adminAuditActorUserId;
+
+  /// No description provided for @adminAuditActorAgentId.
+  ///
+  /// In en, this message translates to:
+  /// **'Actor agent ID'**
+  String get adminAuditActorAgentId;
+
+  /// No description provided for @adminAuditAction.
+  ///
+  /// In en, this message translates to:
+  /// **'Action'**
+  String get adminAuditAction;
+
+  /// No description provided for @adminAuditEntity.
+  ///
+  /// In en, this message translates to:
+  /// **'Entity'**
+  String get adminAuditEntity;
+
+  /// No description provided for @adminAuditActor.
+  ///
+  /// In en, this message translates to:
+  /// **'Actor'**
+  String get adminAuditActor;
+
+  /// No description provided for @adminAuditDate.
+  ///
+  /// In en, this message translates to:
+  /// **'Date'**
+  String get adminAuditDate;
+
+  /// No description provided for @adminAuditMetadata.
+  ///
+  /// In en, this message translates to:
+  /// **'Metadata'**
+  String get adminAuditMetadata;
+
+  /// No description provided for @adminAuditEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'No audit entries.'**
+  String get adminAuditEmpty;
+
+  /// No description provided for @adminPrevious.
+  ///
+  /// In en, this message translates to:
+  /// **'Previous'**
+  String get adminPrevious;
+
+  /// No description provided for @adminNext.
+  ///
+  /// In en, this message translates to:
+  /// **'Next'**
+  String get adminNext;
+
+  /// No description provided for @adminCapabilityBuyerSupport.
+  ///
+  /// In en, this message translates to:
+  /// **'Buyer support'**
+  String get adminCapabilityBuyerSupport;
+
+  /// No description provided for @adminCapabilitySupplierSupport.
+  ///
+  /// In en, this message translates to:
+  /// **'Supplier support'**
+  String get adminCapabilitySupplierSupport;
+
+  /// No description provided for @adminCapabilityListingManagement.
+  ///
+  /// In en, this message translates to:
+  /// **'Listing management'**
+  String get adminCapabilityListingManagement;
+
+  /// No description provided for @adminCapabilityOrderProcessing.
+  ///
+  /// In en, this message translates to:
+  /// **'Order processing'**
+  String get adminCapabilityOrderProcessing;
+
+  /// No description provided for @adminCapabilityStockValidation.
+  ///
+  /// In en, this message translates to:
+  /// **'Stock validation'**
+  String get adminCapabilityStockValidation;
+
+  /// No description provided for @adminCapabilityPaymentFollowup.
+  ///
+  /// In en, this message translates to:
+  /// **'Payment follow-up'**
+  String get adminCapabilityPaymentFollowup;
+
+  /// No description provided for @adminCapabilityDispatchCoordination.
+  ///
+  /// In en, this message translates to:
+  /// **'Delivery coordination'**
+  String get adminCapabilityDispatchCoordination;
+
+  /// No description provided for @adminCapabilityUserVerification.
+  ///
+  /// In en, this message translates to:
+  /// **'User verification'**
+  String get adminCapabilityUserVerification;
+
+  /// No description provided for @adminCapabilityDisputeHandling.
+  ///
+  /// In en, this message translates to:
+  /// **'Dispute handling'**
+  String get adminCapabilityDisputeHandling;
+
+  /// No description provided for @adminErrorLoading.
+  ///
+  /// In en, this message translates to:
+  /// **'Could not load the data.'**
+  String get adminErrorLoading;
+
+  /// No description provided for @adminRetry.
+  ///
+  /// In en, this message translates to:
+  /// **'Try again'**
+  String get adminRetry;
+
+  /// No description provided for @adminNoData.
+  ///
+  /// In en, this message translates to:
+  /// **'No data'**
+  String get adminNoData;
+
+  /// No description provided for @adminLoadAgenciesError.
+  ///
+  /// In en, this message translates to:
+  /// **'Could not load agencies.'**
+  String get adminLoadAgenciesError;
+
+  /// No description provided for @adminStaffPasswordHelp.
+  ///
+  /// In en, this message translates to:
+  /// **'At least 8 characters with lowercase, uppercase, a number and a special character (@\$!%*?&).'**
+  String get adminStaffPasswordHelp;
+
+  /// No description provided for @adminUserDetails.
+  ///
+  /// In en, this message translates to:
+  /// **'User profile'**
+  String get adminUserDetails;
+
+  /// No description provided for @adminHumanAgent.
+  ///
+  /// In en, this message translates to:
+  /// **'Human agent'**
+  String get adminHumanAgent;
+
+  /// No description provided for @adminSettingsLocked.
+  ///
+  /// In en, this message translates to:
+  /// **'Only the ROOT account can change platform settings.'**
+  String get adminSettingsLocked;
+
+  /// No description provided for @adminDateRangeInvalid.
+  ///
+  /// In en, this message translates to:
+  /// **'The start date must be before the end date.'**
+  String get adminDateRangeInvalid;
+
+  /// No description provided for @adminInvalidEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter a valid email address.'**
+  String get adminInvalidEmail;
+
+  /// No description provided for @adminInvalidPhone.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter a valid phone number.'**
+  String get adminInvalidPhone;
+
+  /// No description provided for @adminInvalidPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'The password does not meet the requirements.'**
+  String get adminInvalidPassword;
+
+  /// No description provided for @adminInvalidSettings.
+  ///
+  /// In en, this message translates to:
+  /// **'Check the settings values.'**
+  String get adminInvalidSettings;
+
+  /// No description provided for @adminInvalidApiResponse.
+  ///
+  /// In en, this message translates to:
+  /// **'The server returned an invalid response.'**
+  String get adminInvalidApiResponse;
+
   /// No description provided for @navMore.
   ///
   /// In en, this message translates to:
@@ -3564,666 +4194,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Home'**
   String get navHome;
-
-  /// No description provided for @superAdminConsoleSubtitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Platform-wide oversight of AgriConnect.'**
-  String get superAdminConsoleSubtitle;
-
-  /// No description provided for @superAdminRefreshTooltip.
-  ///
-  /// In en, this message translates to:
-  /// **'Refresh the console'**
-  String get superAdminRefreshTooltip;
-
-  /// No description provided for @superAdminConsoleLabel.
-  ///
-  /// In en, this message translates to:
-  /// **'Platform console'**
-  String get superAdminConsoleLabel;
-
-  /// No description provided for @superAdminTodayLabel.
-  ///
-  /// In en, this message translates to:
-  /// **'Today'**
-  String get superAdminTodayLabel;
-
-  /// No description provided for @superAdminOverviewTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Overview'**
-  String get superAdminOverviewTitle;
-
-  /// No description provided for @superAdminStatUsers.
-  ///
-  /// In en, this message translates to:
-  /// **'Users'**
-  String get superAdminStatUsers;
-
-  /// No description provided for @superAdminStatUsersCaption.
-  ///
-  /// In en, this message translates to:
-  /// **'{count} awaiting verification'**
-  String superAdminStatUsersCaption(int count);
-
-  /// No description provided for @superAdminStatStaff.
-  ///
-  /// In en, this message translates to:
-  /// **'Staff'**
-  String get superAdminStatStaff;
-
-  /// No description provided for @superAdminStatStaffCaption.
-  ///
-  /// In en, this message translates to:
-  /// **'accounts active on the platform'**
-  String get superAdminStatStaffCaption;
-
-  /// No description provided for @superAdminStatProducts.
-  ///
-  /// In en, this message translates to:
-  /// **'Products'**
-  String get superAdminStatProducts;
-
-  /// No description provided for @superAdminStatProductsCaption.
-  ///
-  /// In en, this message translates to:
-  /// **'{count} products published'**
-  String superAdminStatProductsCaption(int count);
-
-  /// No description provided for @superAdminStatDeliveries.
-  ///
-  /// In en, this message translates to:
-  /// **'Deliveries'**
-  String get superAdminStatDeliveries;
-
-  /// No description provided for @superAdminStatDeliveriesCaption.
-  ///
-  /// In en, this message translates to:
-  /// **'{count} currently in progress'**
-  String superAdminStatDeliveriesCaption(int count);
-
-  /// No description provided for @superAdminStatGmv.
-  ///
-  /// In en, this message translates to:
-  /// **'Gross merchandise value'**
-  String get superAdminStatGmv;
-
-  /// No description provided for @superAdminStatGmvCaption.
-  ///
-  /// In en, this message translates to:
-  /// **'Total value of every recorded order'**
-  String get superAdminStatGmvCaption;
-
-  /// No description provided for @superAdminAttentionTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Needs supervision'**
-  String get superAdminAttentionTitle;
-
-  /// No description provided for @superAdminAttentionModeration.
-  ///
-  /// In en, this message translates to:
-  /// **'Products to moderate'**
-  String get superAdminAttentionModeration;
-
-  /// No description provided for @superAdminAttentionUsers.
-  ///
-  /// In en, this message translates to:
-  /// **'Accounts to verify'**
-  String get superAdminAttentionUsers;
-
-  /// No description provided for @superAdminAttentionDeliveries.
-  ///
-  /// In en, this message translates to:
-  /// **'Deliveries in progress'**
-  String get superAdminAttentionDeliveries;
-
-  /// No description provided for @superAdminAttentionClearTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'The platform asks for nothing'**
-  String get superAdminAttentionClearTitle;
-
-  /// No description provided for @superAdminAttentionClearBody.
-  ///
-  /// In en, this message translates to:
-  /// **'No product, account or delivery is waiting for a decision.'**
-  String get superAdminAttentionClearBody;
-
-  /// No description provided for @superAdminQuickActionsTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Quick access'**
-  String get superAdminQuickActionsTitle;
-
-  /// No description provided for @superAdminQuickActionStaff.
-  ///
-  /// In en, this message translates to:
-  /// **'Staff'**
-  String get superAdminQuickActionStaff;
-
-  /// No description provided for @superAdminQuickActionPlatform.
-  ///
-  /// In en, this message translates to:
-  /// **'Platform'**
-  String get superAdminQuickActionPlatform;
-
-  /// No description provided for @superAdminQuickActionAnalytics.
-  ///
-  /// In en, this message translates to:
-  /// **'Analytics'**
-  String get superAdminQuickActionAnalytics;
-
-  /// No description provided for @superAdminDistributionTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Distribution'**
-  String get superAdminDistributionTitle;
-
-  /// No description provided for @superAdminDistributionStaff.
-  ///
-  /// In en, this message translates to:
-  /// **'Staff by access level'**
-  String get superAdminDistributionStaff;
-
-  /// No description provided for @superAdminActivityTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Recent activity'**
-  String get superAdminActivityTitle;
-
-  /// No description provided for @superAdminActivityEmpty.
-  ///
-  /// In en, this message translates to:
-  /// **'No activity recorded yet'**
-  String get superAdminActivityEmpty;
-
-  /// No description provided for @superAdminActivityActor.
-  ///
-  /// In en, this message translates to:
-  /// **'{actor} — {action}'**
-  String superAdminActivityActor(String actor, String action);
-
-  /// No description provided for @superAdminSectionLoadError.
-  ///
-  /// In en, this message translates to:
-  /// **'This section could not be loaded'**
-  String get superAdminSectionLoadError;
-
-  /// No description provided for @superAdminSectionLoadErrorDetail.
-  ///
-  /// In en, this message translates to:
-  /// **'{message}'**
-  String superAdminSectionLoadErrorDetail(String message);
-
-  /// No description provided for @superAdminStaffTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Staff management'**
-  String get superAdminStaffTitle;
-
-  /// No description provided for @superAdminStaffSubtitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Staff accounts and the rights granted to them'**
-  String get superAdminStaffSubtitle;
-
-  /// No description provided for @superAdminStaffSearchHint.
-  ///
-  /// In en, this message translates to:
-  /// **'Search a staff member'**
-  String get superAdminStaffSearchHint;
-
-  /// No description provided for @superAdminStaffSearchLabel.
-  ///
-  /// In en, this message translates to:
-  /// **'Search the staff directory'**
-  String get superAdminStaffSearchLabel;
-
-  /// No description provided for @superAdminStaffEmpty.
-  ///
-  /// In en, this message translates to:
-  /// **'No staff member matches this search'**
-  String get superAdminStaffEmpty;
-
-  /// No description provided for @superAdminStaffFilterRole.
-  ///
-  /// In en, this message translates to:
-  /// **'Role'**
-  String get superAdminStaffFilterRole;
-
-  /// No description provided for @superAdminStaffFilterStatus.
-  ///
-  /// In en, this message translates to:
-  /// **'Status'**
-  String get superAdminStaffFilterStatus;
-
-  /// No description provided for @superAdminStaffStatusActive.
-  ///
-  /// In en, this message translates to:
-  /// **'Active'**
-  String get superAdminStaffStatusActive;
-
-  /// No description provided for @superAdminStaffStatusSuspended.
-  ///
-  /// In en, this message translates to:
-  /// **'Suspended'**
-  String get superAdminStaffStatusSuspended;
-
-  /// No description provided for @superAdminStaffReset.
-  ///
-  /// In en, this message translates to:
-  /// **'Reset'**
-  String get superAdminStaffReset;
-
-  /// No description provided for @superAdminStaffCount.
-  ///
-  /// In en, this message translates to:
-  /// **'{count, plural, =0{No staff member} =1{1 staff member} other{{count} staff members}}'**
-  String superAdminStaffCount(int count);
-
-  /// No description provided for @superAdminStaffLastActive.
-  ///
-  /// In en, this message translates to:
-  /// **'Active {date}'**
-  String superAdminStaffLastActive(String date);
-
-  /// No description provided for @superAdminStaffPermissionCount.
-  ///
-  /// In en, this message translates to:
-  /// **'{count, plural, =0{No rights} =1{1 right} other{{count} rights}}'**
-  String superAdminStaffPermissionCount(int count);
-
-  /// No description provided for @superAdminStaffProtectedNotice.
-  ///
-  /// In en, this message translates to:
-  /// **'This account cannot be modified from the console.'**
-  String get superAdminStaffProtectedNotice;
-
-  /// No description provided for @superAdminStaffAccessReadOnly.
-  ///
-  /// In en, this message translates to:
-  /// **'Read only'**
-  String get superAdminStaffAccessReadOnly;
-
-  /// No description provided for @superAdminStaffAccessFull.
-  ///
-  /// In en, this message translates to:
-  /// **'Full access'**
-  String get superAdminStaffAccessFull;
-
-  /// No description provided for @superAdminStaffAccessSuspended.
-  ///
-  /// In en, this message translates to:
-  /// **'Suspended'**
-  String get superAdminStaffAccessSuspended;
-
-  /// No description provided for @superAdminStaffSuspend.
-  ///
-  /// In en, this message translates to:
-  /// **'Suspend the account'**
-  String get superAdminStaffSuspend;
-
-  /// No description provided for @superAdminStaffRestore.
-  ///
-  /// In en, this message translates to:
-  /// **'Restore as read only'**
-  String get superAdminStaffRestore;
-
-  /// No description provided for @superAdminStaffPermissionsTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Rights of {name}'**
-  String superAdminStaffPermissionsTitle(String name);
-
-  /// No description provided for @superAdminStaffPermissionsSubtitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Settings rights stay reserved to the Root.'**
-  String get superAdminStaffPermissionsSubtitle;
-
-  /// No description provided for @superAdminStaffPermissionsSave.
-  ///
-  /// In en, this message translates to:
-  /// **'Save rights'**
-  String get superAdminStaffPermissionsSave;
-
-  /// No description provided for @superAdminStaffPermissionsSaved.
-  ///
-  /// In en, this message translates to:
-  /// **'Rights updated'**
-  String get superAdminStaffPermissionsSaved;
-
-  /// No description provided for @superAdminStaffSuspended.
-  ///
-  /// In en, this message translates to:
-  /// **'Account suspended'**
-  String get superAdminStaffSuspended;
-
-  /// No description provided for @superAdminStaffRestored.
-  ///
-  /// In en, this message translates to:
-  /// **'Account restored as read only'**
-  String get superAdminStaffRestored;
-
-  /// No description provided for @superAdminPermissionMarketplace.
-  ///
-  /// In en, this message translates to:
-  /// **'Marketplace'**
-  String get superAdminPermissionMarketplace;
-
-  /// No description provided for @superAdminPermissionPeople.
-  ///
-  /// In en, this message translates to:
-  /// **'Users'**
-  String get superAdminPermissionPeople;
-
-  /// No description provided for @superAdminPermissionPlatform.
-  ///
-  /// In en, this message translates to:
-  /// **'Platform'**
-  String get superAdminPermissionPlatform;
-
-  /// No description provided for @superAdminPermissionModerateProducts.
-  ///
-  /// In en, this message translates to:
-  /// **'Moderate products'**
-  String get superAdminPermissionModerateProducts;
-
-  /// No description provided for @superAdminPermissionModerateProductsBody.
-  ///
-  /// In en, this message translates to:
-  /// **'Approve, reject and archive products.'**
-  String get superAdminPermissionModerateProductsBody;
-
-  /// No description provided for @superAdminPermissionManageUsers.
-  ///
-  /// In en, this message translates to:
-  /// **'Manage users'**
-  String get superAdminPermissionManageUsers;
-
-  /// No description provided for @superAdminPermissionManageUsersBody.
-  ///
-  /// In en, this message translates to:
-  /// **'Verify accounts and apply sanctions.'**
-  String get superAdminPermissionManageUsersBody;
-
-  /// No description provided for @superAdminPermissionSuperviseDeliveries.
-  ///
-  /// In en, this message translates to:
-  /// **'Supervise deliveries'**
-  String get superAdminPermissionSuperviseDeliveries;
-
-  /// No description provided for @superAdminPermissionSuperviseDeliveriesBody.
-  ///
-  /// In en, this message translates to:
-  /// **'Follow routes and assign drivers.'**
-  String get superAdminPermissionSuperviseDeliveriesBody;
-
-  /// No description provided for @superAdminPermissionManageOrders.
-  ///
-  /// In en, this message translates to:
-  /// **'Process orders'**
-  String get superAdminPermissionManageOrders;
-
-  /// No description provided for @superAdminPermissionManageOrdersBody.
-  ///
-  /// In en, this message translates to:
-  /// **'Move orders to the right state.'**
-  String get superAdminPermissionManageOrdersBody;
-
-  /// No description provided for @superAdminPermissionViewAnalytics.
-  ///
-  /// In en, this message translates to:
-  /// **'View analytics'**
-  String get superAdminPermissionViewAnalytics;
-
-  /// No description provided for @superAdminPermissionViewAnalyticsBody.
-  ///
-  /// In en, this message translates to:
-  /// **'Read the platform indicators.'**
-  String get superAdminPermissionViewAnalyticsBody;
-
-  /// No description provided for @superAdminPermissionManageSettings.
-  ///
-  /// In en, this message translates to:
-  /// **'Manage settings'**
-  String get superAdminPermissionManageSettings;
-
-  /// No description provided for @superAdminPermissionManageSettingsBody.
-  ///
-  /// In en, this message translates to:
-  /// **'Change the platform configuration.'**
-  String get superAdminPermissionManageSettingsBody;
-
-  /// No description provided for @superAdminPermissionLocked.
-  ///
-  /// In en, this message translates to:
-  /// **'Reserved to the Root'**
-  String get superAdminPermissionLocked;
-
-  /// No description provided for @superAdminActionSuspended.
-  ///
-  /// In en, this message translates to:
-  /// **'suspended'**
-  String get superAdminActionSuspended;
-
-  /// No description provided for @superAdminActionRestored.
-  ///
-  /// In en, this message translates to:
-  /// **'restored'**
-  String get superAdminActionRestored;
-
-  /// No description provided for @superAdminActionUpdatedPermissions.
-  ///
-  /// In en, this message translates to:
-  /// **'changed the rights of'**
-  String get superAdminActionUpdatedPermissions;
-
-  /// No description provided for @superAdminActionUpdatedSettings.
-  ///
-  /// In en, this message translates to:
-  /// **'updated'**
-  String get superAdminActionUpdatedSettings;
-
-  /// No description provided for @superAdminActionModeratedProduct.
-  ///
-  /// In en, this message translates to:
-  /// **'moderated the product'**
-  String get superAdminActionModeratedProduct;
-
-  /// No description provided for @superAdminPlatformTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'System settings'**
-  String get superAdminPlatformTitle;
-
-  /// No description provided for @superAdminPlatformSubtitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Configuration applied to the whole platform'**
-  String get superAdminPlatformSubtitle;
-
-  /// No description provided for @superAdminSettingRegistrations.
-  ///
-  /// In en, this message translates to:
-  /// **'Open registrations'**
-  String get superAdminSettingRegistrations;
-
-  /// No description provided for @superAdminSettingRegistrationsBody.
-  ///
-  /// In en, this message translates to:
-  /// **'Allows or blocks the creation of new accounts.'**
-  String get superAdminSettingRegistrationsBody;
-
-  /// No description provided for @superAdminSettingAutoModeration.
-  ///
-  /// In en, this message translates to:
-  /// **'Automatic moderation'**
-  String get superAdminSettingAutoModeration;
-
-  /// No description provided for @superAdminSettingAutoModerationBody.
-  ///
-  /// In en, this message translates to:
-  /// **'Publishes products without a human review.'**
-  String get superAdminSettingAutoModerationBody;
-
-  /// No description provided for @superAdminSettingAutoModerationWarning.
-  ///
-  /// In en, this message translates to:
-  /// **'Products will be visible without review.'**
-  String get superAdminSettingAutoModerationWarning;
-
-  /// No description provided for @superAdminSettingMaintenance.
-  ///
-  /// In en, this message translates to:
-  /// **'Maintenance mode'**
-  String get superAdminSettingMaintenance;
-
-  /// No description provided for @superAdminSettingMaintenanceBody.
-  ///
-  /// In en, this message translates to:
-  /// **'Hides the marketplace from users.'**
-  String get superAdminSettingMaintenanceBody;
-
-  /// No description provided for @superAdminSettingMaintenanceWarning.
-  ///
-  /// In en, this message translates to:
-  /// **'The marketplace will be unreachable.'**
-  String get superAdminSettingMaintenanceWarning;
-
-  /// No description provided for @superAdminSettingSupportEmail.
-  ///
-  /// In en, this message translates to:
-  /// **'Support email'**
-  String get superAdminSettingSupportEmail;
-
-  /// No description provided for @superAdminSettingSupportEmailBody.
-  ///
-  /// In en, this message translates to:
-  /// **'Address shown to users when they need help.'**
-  String get superAdminSettingSupportEmailBody;
-
-  /// No description provided for @superAdminSettingSupportEmailInvalid.
-  ///
-  /// In en, this message translates to:
-  /// **'Invalid email address.'**
-  String get superAdminSettingSupportEmailInvalid;
-
-  /// No description provided for @superAdminSettingMaxUpload.
-  ///
-  /// In en, this message translates to:
-  /// **'Maximum photo size'**
-  String get superAdminSettingMaxUpload;
-
-  /// No description provided for @superAdminSettingMaxUploadBody.
-  ///
-  /// In en, this message translates to:
-  /// **'In megabytes, applied to products.'**
-  String get superAdminSettingMaxUploadBody;
-
-  /// No description provided for @superAdminSettingMaxUploadInvalid.
-  ///
-  /// In en, this message translates to:
-  /// **'The value must be between 1 and 20 MB.'**
-  String get superAdminSettingMaxUploadInvalid;
-
-  /// No description provided for @superAdminSettingUpdatedAt.
-  ///
-  /// In en, this message translates to:
-  /// **'Last updated: {date}'**
-  String superAdminSettingUpdatedAt(String date);
-
-  /// No description provided for @superAdminSettingsSaved.
-  ///
-  /// In en, this message translates to:
-  /// **'Settings saved'**
-  String get superAdminSettingsSaved;
-
-  /// No description provided for @superAdminSettingsUnsaved.
-  ///
-  /// In en, this message translates to:
-  /// **'Unsaved changes. They take effect when you save.'**
-  String get superAdminSettingsUnsaved;
-
-  /// No description provided for @superAdminSettingsSave.
-  ///
-  /// In en, this message translates to:
-  /// **'Save settings'**
-  String get superAdminSettingsSave;
-
-  /// No description provided for @superAdminSettingsSaveError.
-  ///
-  /// In en, this message translates to:
-  /// **'The settings could not be saved.'**
-  String get superAdminSettingsSaveError;
-
-  /// No description provided for @superAdminAnalyticsTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Platform analytics'**
-  String get superAdminAnalyticsTitle;
-
-  /// No description provided for @superAdminAnalyticsSubtitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Figures computed across the whole marketplace'**
-  String get superAdminAnalyticsSubtitle;
-
-  /// No description provided for @superAdminAnalyticsAudience.
-  ///
-  /// In en, this message translates to:
-  /// **'Accounts by role'**
-  String get superAdminAnalyticsAudience;
-
-  /// No description provided for @superAdminAnalyticsOrdersCaption.
-  ///
-  /// In en, this message translates to:
-  /// **'{count} orders in total'**
-  String superAdminAnalyticsOrdersCaption(int count);
-
-  /// No description provided for @superAdminAnalyticsOpenOrdersCaption.
-  ///
-  /// In en, this message translates to:
-  /// **'{count} orders still open'**
-  String superAdminAnalyticsOpenOrdersCaption(int count);
-
-  /// No description provided for @superAdminAnalyticsPublishedCaption.
-  ///
-  /// In en, this message translates to:
-  /// **'{count} products live'**
-  String superAdminAnalyticsPublishedCaption(int count);
-
-  /// No description provided for @superAdminAnalyticsNoTrend.
-  ///
-  /// In en, this message translates to:
-  /// **'History is not available on this demo build yet.'**
-  String get superAdminAnalyticsNoTrend;
-
-  /// No description provided for @superAdminAnalyticsStaffCaption.
-  ///
-  /// In en, this message translates to:
-  /// **'Staff accounts'**
-  String get superAdminAnalyticsStaffCaption;
-
-  /// No description provided for @superAdminStatOrders.
-  ///
-  /// In en, this message translates to:
-  /// **'Orders'**
-  String get superAdminStatOrders;
-
-  /// No description provided for @superAdminAnalyticsOpenOrders.
-  ///
-  /// In en, this message translates to:
-  /// **'Open orders'**
-  String get superAdminAnalyticsOpenOrders;
-
-  /// No description provided for @superAdminAnalyticsStaffShare.
-  ///
-  /// In en, this message translates to:
-  /// **'Rights granted to staff'**
-  String get superAdminAnalyticsStaffShare;
 
   /// No description provided for @sectionBuyerSupport.
   ///

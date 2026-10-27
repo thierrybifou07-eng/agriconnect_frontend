@@ -1,0 +1,12 @@
+{
+  "id": 1,
+  "supplierCommissionRate": 0.15,
+  "buyerFeeType": "PERCENT",
+  "buyerFeeValue": 0.025,
+  "transportMarkupRate": 0.1,
+  "referralBuyerReward": 500,
+  "referralSupplierReward": 700,
+  "reservationHours": 24,
+  "expiryCompensationRate": 0.2,
+  "currency": "XAF"
+}

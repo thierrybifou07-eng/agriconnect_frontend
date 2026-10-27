@@ -32,6 +32,8 @@ import 'package:agri_connect/features/staff/presentation/bindings/staff_bindings
 import 'package:agri_connect/features/staff/presentation/bindings/staff_quote_binding.dart';
 import 'package:agri_connect/features/staff/presentation/pages/staff_pages.dart';
 import 'package:agri_connect/features/staff/presentation/pages/staff_workflow_pages.dart';
+import 'package:agri_connect/features/admin/presentation/bindings/admin_binding.dart';
+import 'package:agri_connect/features/admin/presentation/pages/admin_pages.dart';
 
 abstract final class AppPages {
   static final pages = <GetPage<dynamic>>[
@@ -314,8 +316,8 @@ abstract final class AppPages {
         AuthMiddleware(),
         RoleMiddleware({RoleCode.admin, RoleCode.root}),
       ],
-      page: () => const StaffShellPage(),
-      binding: StaffBinding(),
+      page: () => const AdminShellPage(),
+      binding: AdminBinding(),
     ),
   ];
 

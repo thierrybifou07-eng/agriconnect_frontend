@@ -1,0 +1,23 @@
+[
+  {
+    "id": 5,
+    "kind": "HUMAN",
+    "displayName": "Équipe support",
+    "autonomy": null,
+    "isActive": true,
+    "capabilities": [
+      {"capability": {"code": "BUYER_SUPPORT", "label": "Buyer support"}},
+      {"capability": {"code": "ORDER_PROCESSING", "label": "Order processing"}}
+    ],
+    "user": {"id": 18, "firstname": "Awa", "lastname": "Ndiaye"}
+  },
+  {
+    "id": 9,
+    "kind": "AI",
+    "displayName": "Assistant IA",
+    "autonomy": "SUGGEST_ONLY",
+    "isActive": true,
+    "capabilities": ["BUYER_SUPPORT"],
+    "user": null
+  }
+]

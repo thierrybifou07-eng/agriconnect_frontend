@@ -29,7 +29,7 @@ class SectionErrorCard extends StatelessWidget {
     this.retryLabel,
   });
 
-  /// Namespace of the owning console, e.g. `admin` or `superAdmin`.
+  /// Namespace of the owning console, such as `admin`.
   final String keyPrefix;
 
   /// Stable identifier of the section, used to build the widget keys.

@@ -1,0 +1,13 @@
+{
+  "usersByRole": {"BUYER": 12, "SUPPLIER": 7, "ADMIN": 1},
+  "lotsByStatus": {"AVAILABLE": 4, "PENDING_VALIDATION": 2},
+  "ordersByStatus": {"QUOTED": 3, "COMPLETED": 6},
+  "deliveriesByStatus": {"PENDING": 2, "DELIVERED": 5},
+  "stock": {"available": 120.5, "reserved": 10, "sold": 30, "lost": 1},
+  "receivables": 45000,
+  "receivablesCount": 4,
+  "pendingPayouts": 8000,
+  "pendingCompensations": {"count": 2, "amount": 1400},
+  "eligibleReferrals": {"count": 3, "amount": 2100},
+  "grossRevenue": 250000
+}

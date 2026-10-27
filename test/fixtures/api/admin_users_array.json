@@ -1,0 +1,14 @@
+[
+  {
+    "id": 41,
+    "firstname": "Awa",
+    "lastname": "Ndiaye",
+    "phone": "+237690000001",
+    "email": "awa@example.test",
+    "role": {"code": "BUYER", "label": "Acheteur"},
+    "userStatus": {"code": "ACTIVE", "label": "Actif"},
+    "profileVerificationStatus": "VERIFIED",
+    "emailVerified": true,
+    "createdAt": "2026-10-25T10:30:00.000Z"
+  }
+]

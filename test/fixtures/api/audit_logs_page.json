@@ -1,0 +1,27 @@
+{
+  "items": [
+    {
+      "id": 7,
+      "action": "USER_SUSPENDED",
+      "entityType": "User",
+      "entityId": 41,
+      "actorUser": {"id": 2, "firstname": "Root", "lastname": "Admin"},
+      "actorAgent": null,
+      "metadata": {"reason": "policy"},
+      "createdAt": "2026-10-26T14:00:00.000Z"
+    },
+    {
+      "id": 8,
+      "action": "AGENT_UPDATED",
+      "entityType": "Agent",
+      "entityId": 13,
+      "actorUser": null,
+      "actorAgent": {"id": 5, "displayName": "Assistant IA"},
+      "metadata": {"capabilities": ["ORDER_PROCESSING"]},
+      "createdAt": "2026-10-26T15:00:00.000Z"
+    }
+  ],
+  "page": 1,
+  "limit": 20,
+  "total": 2
+}

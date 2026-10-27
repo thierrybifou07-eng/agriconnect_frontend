@@ -1425,21 +1425,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get adminFilterAll => 'All';
 
   @override
-  String get adminModerationPending => 'Pending';
-
-  @override
-  String get adminModerationValidated => 'Live';
-
-  @override
-  String get adminModerationSuspended => 'Suspended';
-
-  @override
-  String get adminModerationRejected => 'Rejected';
-
-  @override
-  String get adminModerationArchived => 'Archived';
-
-  @override
   String get adminUsersSearchHint => 'Search an account…';
 
   @override
@@ -1475,33 +1460,6 @@ class AppLocalizationsEn extends AppLocalizations {
     );
     return '$_temp0 · $_temp1';
   }
-
-  @override
-  String get adminProductsTitle => 'Product management';
-
-  @override
-  String get adminProductsSearchHint => 'Search a product…';
-
-  @override
-  String get adminProductsEmpty => 'No product matches';
-
-  @override
-  String get adminProductsUpdated => 'Product updated.';
-
-  @override
-  String get adminProductsRejectTitle => 'Reject product';
-
-  @override
-  String get adminProductsRejectReasonHint => 'Reason for rejection…';
-
-  @override
-  String get adminProductsRejectAction => 'Reject';
-
-  @override
-  String get adminProductApprove => 'Approve';
-
-  @override
-  String get adminProductArchive => 'Archive';
 
   @override
   String get categoryCereals => 'Cereals';
@@ -1715,9 +1673,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get adminStatUsers => 'Users';
 
   @override
-  String get adminStatProducts => 'Products';
-
-  @override
   String get adminStatOrders => 'Orders';
 
   @override
@@ -1731,18 +1686,6 @@ class AppLocalizationsEn extends AppLocalizations {
       other: '$count accounts to validate',
       one: '1 account to validate',
       zero: 'No account to validate',
-    );
-    return '$_temp0';
-  }
-
-  @override
-  String adminStatProductsCaption(int count) {
-    String _temp0 = intl.Intl.pluralLogic(
-      count,
-      locale: localeName,
-      other: '$count products to moderate',
-      one: '1 product to moderate',
-      zero: 'No product to moderate',
     );
     return '$_temp0';
   }
@@ -1786,17 +1729,6 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-  String adminAttentionProducts(int count) {
-    String _temp0 = intl.Intl.pluralLogic(
-      count,
-      locale: localeName,
-      other: '$count products to moderate',
-      one: 'Product to moderate',
-    );
-    return '$_temp0';
-  }
-
-  @override
   String adminAttentionOrders(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
@@ -1832,9 +1764,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get adminQuickActionsTitle => 'Shortcuts';
 
   @override
-  String get adminQuickActionProducts => 'Products';
-
-  @override
   String get adminQuickActionUsers => 'Users';
 
   @override
@@ -1856,9 +1785,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get adminDistributionUsers => 'Users by role';
 
   @override
-  String get adminDistributionProducts => 'Products by status';
-
-  @override
   String get adminAnalyticsTitle => 'Platform analytics';
 
   @override
@@ -1872,9 +1798,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get adminAnalyticsIndicatorsTitle => 'Tracking indicators';
 
   @override
-  String get adminAnalyticsPublished => 'Published products';
-
-  @override
   String get adminAnalyticsActiveOrders => 'Active orders';
 
   @override
@@ -1886,12 +1809,6 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get adminAnalyticsNoHistory =>
       'History and time series are not available: the administration console does not record history yet.';
-
-  @override
-  String get adminModerationTitle => 'Products to moderate';
-
-  @override
-  String get adminModerationEmpty => 'No product is waiting for a decision';
 
   @override
   String get adminRecentOrdersTitle => 'Latest orders';
@@ -1973,403 +1890,400 @@ class AppLocalizationsEn extends AppLocalizations {
       'The order status transition workflow is not defined yet. Order consultation remains available.';
 
   @override
+  String get adminTabDashboard => 'Dashboard';
+
+  @override
+  String get adminTabUsers => 'Users';
+
+  @override
+  String get adminTabAgents => 'Team';
+
+  @override
+  String get adminTabPlatform => 'Platform';
+
+  @override
+  String get adminTabAccount => 'Account';
+
+  @override
+  String get adminTitle => 'Administration';
+
+  @override
+  String get adminPeriod => 'Period';
+
+  @override
+  String get adminFrom => 'From';
+
+  @override
+  String get adminTo => 'To';
+
+  @override
+  String get adminRefresh => 'Refresh';
+
+  @override
+  String get adminKpiUsers => 'Users';
+
+  @override
+  String get adminKpiReceivables => 'Receivables';
+
+  @override
+  String get adminKpiPendingPayouts => 'Pending payouts';
+
+  @override
+  String get adminKpiGrossRevenue => 'Gross revenue';
+
+  @override
+  String get adminKpiPendingCompensations => 'Pending compensations';
+
+  @override
+  String get adminKpiEligibleReferrals => 'Eligible referrals';
+
+  @override
+  String get adminKpiStock => 'Stock';
+
+  @override
+  String get adminByRole => 'Users by role';
+
+  @override
+  String get adminLotsByStatus => 'Lots by status';
+
+  @override
+  String get adminOrdersByStatus => 'Orders by status';
+
+  @override
+  String get adminDeliveriesByStatus => 'Deliveries by status';
+
+  @override
+  String get adminUsersSearch => 'Name, email or phone';
+
+  @override
+  String get adminRoleFilter => 'Role';
+
+  @override
+  String get adminStatusFilter => 'Account status';
+
+  @override
+  String get adminVerificationFilter => 'Profile verification';
+
+  @override
+  String get adminAll => 'All';
+
+  @override
+  String get adminActive => 'Active';
+
+  @override
+  String get adminSuspended => 'Suspended';
+
+  @override
+  String get adminVerified => 'Verified';
+
+  @override
+  String get adminUnverified => 'Unverified';
+
+  @override
+  String get adminPending => 'Pending';
+
+  @override
+  String get adminRejected => 'Rejected';
+
+  @override
+  String get adminNoUsers => 'No users match these filters.';
+
+  @override
+  String get adminCreateStaff => 'Create staff account';
+
+  @override
+  String get adminCreateAccount => 'Create account';
+
+  @override
+  String get adminFirstName => 'First name';
+
+  @override
+  String get adminLastName => 'Last name';
+
+  @override
+  String get adminEmail => 'Email';
+
+  @override
+  String get adminPhone => 'Phone';
+
+  @override
+  String get adminPassword => 'Password';
+
+  @override
+  String get adminStaffRole => 'Staff role';
+
+  @override
+  String get adminAgentName => 'Agent display name';
+
+  @override
+  String get adminCapabilities => 'Capabilities';
+
+  @override
+  String get adminAgency => 'Transport agency';
+
+  @override
+  String get adminChooseAgency => 'Choose an agency';
+
+  @override
+  String get adminVehicleType => 'Vehicle type (optional)';
+
+  @override
+  String get adminPlateNumber => 'Plate number (optional)';
+
+  @override
+  String get adminRootOnly => 'Reserved for the ROOT account';
+
+  @override
+  String get adminEmailVerified => 'Email verified';
+
+  @override
+  String get adminProfileVerification => 'Profile verification';
+
+  @override
+  String get adminCreatedAt => 'Created';
+
+  @override
+  String get adminViewDocuments => 'View documents';
+
+  @override
+  String get adminSuspend => 'Suspend';
+
+  @override
+  String get adminReactivate => 'Reactivate';
+
+  @override
+  String get adminConfirmSuspendTitle => 'Suspend this account?';
+
+  @override
+  String get adminConfirmSuspendBody =>
+      'Its sessions will be closed and its devices disconnected.';
+
+  @override
+  String get adminConfirmReactivateTitle => 'Reactivate this account?';
+
+  @override
+  String get adminConfirmReactivateBody =>
+      'This account will be able to sign in again.';
+
+  @override
+  String get adminConfirmDeactivateTitle => 'Deactivate this agent?';
+
+  @override
+  String get adminConfirmDeactivateBody =>
+      'The agent will no longer be able to access the platform.';
+
+  @override
+  String get adminCancel => 'Cancel';
+
+  @override
+  String get adminConfirm => 'Confirm';
+
+  @override
+  String get adminStaffCreated => 'Staff account created.';
+
+  @override
+  String get adminAccountUpdated => 'Account updated.';
+
+  @override
+  String get adminNoAgents => 'No agents.';
+
+  @override
+  String get adminAiBadge => 'AI';
+
+  @override
+  String get adminReadOnlyAi =>
+      'AI records are read-only here and managed in the AI module.';
+
+  @override
+  String get adminEditAgent => 'Edit agent';
+
+  @override
+  String get adminDisplayName => 'Display name';
+
+  @override
+  String get adminAgentActive => 'Active agent';
+
+  @override
+  String get adminAutonomy => 'Autonomy';
+
+  @override
+  String get adminAutonomyNone => 'Not set';
+
+  @override
+  String get adminAutonomySuggest => 'Suggestions only';
+
+  @override
+  String get adminAutonomyApproval => 'Action with approval';
+
+  @override
+  String get adminAutonomyFull => 'Autonomous';
+
+  @override
+  String get adminSave => 'Save';
+
+  @override
+  String get adminSettingsTitle => 'Platform settings';
+
+  @override
+  String get adminCommission => 'Supplier commission (%)';
+
+  @override
+  String get adminBuyerFeeType => 'Buyer fee';
+
+  @override
+  String get adminFeeNone => 'None';
+
+  @override
+  String get adminFeeFixed => 'Fixed amount';
+
+  @override
+  String get adminFeePercent => 'Percentage';
+
+  @override
+  String get adminBuyerFeeValue => 'Buyer fee value';
+
+  @override
+  String get adminTransportMarkup => 'Transport markup (%)';
+
+  @override
+  String get adminBuyerReward => 'Buyer referral reward';
+
+  @override
+  String get adminSupplierReward => 'Supplier referral reward';
+
+  @override
+  String get adminReservationHours => 'Reservation duration (hours)';
+
+  @override
+  String get adminExpiryCompensation => 'Expiry compensation (%)';
+
+  @override
+  String get adminCurrency => 'Currency';
+
+  @override
+  String get adminCommissionWarning => 'Supplier commission is not set.';
+
+  @override
+  String get adminSettingsSaved => 'Settings saved.';
+
+  @override
+  String get adminAuditTitle => 'Audit log';
+
+  @override
+  String get adminAuditEntityType => 'Entity type';
+
+  @override
+  String get adminAuditEntityId => 'Entity ID';
+
+  @override
+  String get adminAuditActorUserId => 'Actor user ID';
+
+  @override
+  String get adminAuditActorAgentId => 'Actor agent ID';
+
+  @override
+  String get adminAuditAction => 'Action';
+
+  @override
+  String get adminAuditEntity => 'Entity';
+
+  @override
+  String get adminAuditActor => 'Actor';
+
+  @override
+  String get adminAuditDate => 'Date';
+
+  @override
+  String get adminAuditMetadata => 'Metadata';
+
+  @override
+  String get adminAuditEmpty => 'No audit entries.';
+
+  @override
+  String get adminPrevious => 'Previous';
+
+  @override
+  String get adminNext => 'Next';
+
+  @override
+  String get adminCapabilityBuyerSupport => 'Buyer support';
+
+  @override
+  String get adminCapabilitySupplierSupport => 'Supplier support';
+
+  @override
+  String get adminCapabilityListingManagement => 'Listing management';
+
+  @override
+  String get adminCapabilityOrderProcessing => 'Order processing';
+
+  @override
+  String get adminCapabilityStockValidation => 'Stock validation';
+
+  @override
+  String get adminCapabilityPaymentFollowup => 'Payment follow-up';
+
+  @override
+  String get adminCapabilityDispatchCoordination => 'Delivery coordination';
+
+  @override
+  String get adminCapabilityUserVerification => 'User verification';
+
+  @override
+  String get adminCapabilityDisputeHandling => 'Dispute handling';
+
+  @override
+  String get adminErrorLoading => 'Could not load the data.';
+
+  @override
+  String get adminRetry => 'Try again';
+
+  @override
+  String get adminNoData => 'No data';
+
+  @override
+  String get adminLoadAgenciesError => 'Could not load agencies.';
+
+  @override
+  String get adminStaffPasswordHelp =>
+      'At least 8 characters with lowercase, uppercase, a number and a special character (@\$!%*?&).';
+
+  @override
+  String get adminUserDetails => 'User profile';
+
+  @override
+  String get adminHumanAgent => 'Human agent';
+
+  @override
+  String get adminSettingsLocked =>
+      'Only the ROOT account can change platform settings.';
+
+  @override
+  String get adminDateRangeInvalid =>
+      'The start date must be before the end date.';
+
+  @override
+  String get adminInvalidEmail => 'Enter a valid email address.';
+
+  @override
+  String get adminInvalidPhone => 'Enter a valid phone number.';
+
+  @override
+  String get adminInvalidPassword =>
+      'The password does not meet the requirements.';
+
+  @override
+  String get adminInvalidSettings => 'Check the settings values.';
+
+  @override
+  String get adminInvalidApiResponse =>
+      'The server returned an invalid response.';
+
+  @override
   String get navMore => 'More';
 
   @override
   String get navHome => 'Home';
-
-  @override
-  String get superAdminConsoleSubtitle =>
-      'Platform-wide oversight of AgriConnect.';
-
-  @override
-  String get superAdminRefreshTooltip => 'Refresh the console';
-
-  @override
-  String get superAdminConsoleLabel => 'Platform console';
-
-  @override
-  String get superAdminTodayLabel => 'Today';
-
-  @override
-  String get superAdminOverviewTitle => 'Overview';
-
-  @override
-  String get superAdminStatUsers => 'Users';
-
-  @override
-  String superAdminStatUsersCaption(int count) {
-    return '$count awaiting verification';
-  }
-
-  @override
-  String get superAdminStatStaff => 'Staff';
-
-  @override
-  String get superAdminStatStaffCaption => 'accounts active on the platform';
-
-  @override
-  String get superAdminStatProducts => 'Products';
-
-  @override
-  String superAdminStatProductsCaption(int count) {
-    return '$count products published';
-  }
-
-  @override
-  String get superAdminStatDeliveries => 'Deliveries';
-
-  @override
-  String superAdminStatDeliveriesCaption(int count) {
-    return '$count currently in progress';
-  }
-
-  @override
-  String get superAdminStatGmv => 'Gross merchandise value';
-
-  @override
-  String get superAdminStatGmvCaption => 'Total value of every recorded order';
-
-  @override
-  String get superAdminAttentionTitle => 'Needs supervision';
-
-  @override
-  String get superAdminAttentionModeration => 'Products to moderate';
-
-  @override
-  String get superAdminAttentionUsers => 'Accounts to verify';
-
-  @override
-  String get superAdminAttentionDeliveries => 'Deliveries in progress';
-
-  @override
-  String get superAdminAttentionClearTitle => 'The platform asks for nothing';
-
-  @override
-  String get superAdminAttentionClearBody =>
-      'No product, account or delivery is waiting for a decision.';
-
-  @override
-  String get superAdminQuickActionsTitle => 'Quick access';
-
-  @override
-  String get superAdminQuickActionStaff => 'Staff';
-
-  @override
-  String get superAdminQuickActionPlatform => 'Platform';
-
-  @override
-  String get superAdminQuickActionAnalytics => 'Analytics';
-
-  @override
-  String get superAdminDistributionTitle => 'Distribution';
-
-  @override
-  String get superAdminDistributionStaff => 'Staff by access level';
-
-  @override
-  String get superAdminActivityTitle => 'Recent activity';
-
-  @override
-  String get superAdminActivityEmpty => 'No activity recorded yet';
-
-  @override
-  String superAdminActivityActor(String actor, String action) {
-    return '$actor — $action';
-  }
-
-  @override
-  String get superAdminSectionLoadError => 'This section could not be loaded';
-
-  @override
-  String superAdminSectionLoadErrorDetail(String message) {
-    return '$message';
-  }
-
-  @override
-  String get superAdminStaffTitle => 'Staff management';
-
-  @override
-  String get superAdminStaffSubtitle =>
-      'Staff accounts and the rights granted to them';
-
-  @override
-  String get superAdminStaffSearchHint => 'Search a staff member';
-
-  @override
-  String get superAdminStaffSearchLabel => 'Search the staff directory';
-
-  @override
-  String get superAdminStaffEmpty => 'No staff member matches this search';
-
-  @override
-  String get superAdminStaffFilterRole => 'Role';
-
-  @override
-  String get superAdminStaffFilterStatus => 'Status';
-
-  @override
-  String get superAdminStaffStatusActive => 'Active';
-
-  @override
-  String get superAdminStaffStatusSuspended => 'Suspended';
-
-  @override
-  String get superAdminStaffReset => 'Reset';
-
-  @override
-  String superAdminStaffCount(int count) {
-    String _temp0 = intl.Intl.pluralLogic(
-      count,
-      locale: localeName,
-      other: '$count staff members',
-      one: '1 staff member',
-      zero: 'No staff member',
-    );
-    return '$_temp0';
-  }
-
-  @override
-  String superAdminStaffLastActive(String date) {
-    return 'Active $date';
-  }
-
-  @override
-  String superAdminStaffPermissionCount(int count) {
-    String _temp0 = intl.Intl.pluralLogic(
-      count,
-      locale: localeName,
-      other: '$count rights',
-      one: '1 right',
-      zero: 'No rights',
-    );
-    return '$_temp0';
-  }
-
-  @override
-  String get superAdminStaffProtectedNotice =>
-      'This account cannot be modified from the console.';
-
-  @override
-  String get superAdminStaffAccessReadOnly => 'Read only';
-
-  @override
-  String get superAdminStaffAccessFull => 'Full access';
-
-  @override
-  String get superAdminStaffAccessSuspended => 'Suspended';
-
-  @override
-  String get superAdminStaffSuspend => 'Suspend the account';
-
-  @override
-  String get superAdminStaffRestore => 'Restore as read only';
-
-  @override
-  String superAdminStaffPermissionsTitle(String name) {
-    return 'Rights of $name';
-  }
-
-  @override
-  String get superAdminStaffPermissionsSubtitle =>
-      'Settings rights stay reserved to the Root.';
-
-  @override
-  String get superAdminStaffPermissionsSave => 'Save rights';
-
-  @override
-  String get superAdminStaffPermissionsSaved => 'Rights updated';
-
-  @override
-  String get superAdminStaffSuspended => 'Account suspended';
-
-  @override
-  String get superAdminStaffRestored => 'Account restored as read only';
-
-  @override
-  String get superAdminPermissionMarketplace => 'Marketplace';
-
-  @override
-  String get superAdminPermissionPeople => 'Users';
-
-  @override
-  String get superAdminPermissionPlatform => 'Platform';
-
-  @override
-  String get superAdminPermissionModerateProducts => 'Moderate products';
-
-  @override
-  String get superAdminPermissionModerateProductsBody =>
-      'Approve, reject and archive products.';
-
-  @override
-  String get superAdminPermissionManageUsers => 'Manage users';
-
-  @override
-  String get superAdminPermissionManageUsersBody =>
-      'Verify accounts and apply sanctions.';
-
-  @override
-  String get superAdminPermissionSuperviseDeliveries => 'Supervise deliveries';
-
-  @override
-  String get superAdminPermissionSuperviseDeliveriesBody =>
-      'Follow routes and assign drivers.';
-
-  @override
-  String get superAdminPermissionManageOrders => 'Process orders';
-
-  @override
-  String get superAdminPermissionManageOrdersBody =>
-      'Move orders to the right state.';
-
-  @override
-  String get superAdminPermissionViewAnalytics => 'View analytics';
-
-  @override
-  String get superAdminPermissionViewAnalyticsBody =>
-      'Read the platform indicators.';
-
-  @override
-  String get superAdminPermissionManageSettings => 'Manage settings';
-
-  @override
-  String get superAdminPermissionManageSettingsBody =>
-      'Change the platform configuration.';
-
-  @override
-  String get superAdminPermissionLocked => 'Reserved to the Root';
-
-  @override
-  String get superAdminActionSuspended => 'suspended';
-
-  @override
-  String get superAdminActionRestored => 'restored';
-
-  @override
-  String get superAdminActionUpdatedPermissions => 'changed the rights of';
-
-  @override
-  String get superAdminActionUpdatedSettings => 'updated';
-
-  @override
-  String get superAdminActionModeratedProduct => 'moderated the product';
-
-  @override
-  String get superAdminPlatformTitle => 'System settings';
-
-  @override
-  String get superAdminPlatformSubtitle =>
-      'Configuration applied to the whole platform';
-
-  @override
-  String get superAdminSettingRegistrations => 'Open registrations';
-
-  @override
-  String get superAdminSettingRegistrationsBody =>
-      'Allows or blocks the creation of new accounts.';
-
-  @override
-  String get superAdminSettingAutoModeration => 'Automatic moderation';
-
-  @override
-  String get superAdminSettingAutoModerationBody =>
-      'Publishes products without a human review.';
-
-  @override
-  String get superAdminSettingAutoModerationWarning =>
-      'Products will be visible without review.';
-
-  @override
-  String get superAdminSettingMaintenance => 'Maintenance mode';
-
-  @override
-  String get superAdminSettingMaintenanceBody =>
-      'Hides the marketplace from users.';
-
-  @override
-  String get superAdminSettingMaintenanceWarning =>
-      'The marketplace will be unreachable.';
-
-  @override
-  String get superAdminSettingSupportEmail => 'Support email';
-
-  @override
-  String get superAdminSettingSupportEmailBody =>
-      'Address shown to users when they need help.';
-
-  @override
-  String get superAdminSettingSupportEmailInvalid => 'Invalid email address.';
-
-  @override
-  String get superAdminSettingMaxUpload => 'Maximum photo size';
-
-  @override
-  String get superAdminSettingMaxUploadBody =>
-      'In megabytes, applied to products.';
-
-  @override
-  String get superAdminSettingMaxUploadInvalid =>
-      'The value must be between 1 and 20 MB.';
-
-  @override
-  String superAdminSettingUpdatedAt(String date) {
-    return 'Last updated: $date';
-  }
-
-  @override
-  String get superAdminSettingsSaved => 'Settings saved';
-
-  @override
-  String get superAdminSettingsUnsaved =>
-      'Unsaved changes. They take effect when you save.';
-
-  @override
-  String get superAdminSettingsSave => 'Save settings';
-
-  @override
-  String get superAdminSettingsSaveError => 'The settings could not be saved.';
-
-  @override
-  String get superAdminAnalyticsTitle => 'Platform analytics';
-
-  @override
-  String get superAdminAnalyticsSubtitle =>
-      'Figures computed across the whole marketplace';
-
-  @override
-  String get superAdminAnalyticsAudience => 'Accounts by role';
-
-  @override
-  String superAdminAnalyticsOrdersCaption(int count) {
-    return '$count orders in total';
-  }
-
-  @override
-  String superAdminAnalyticsOpenOrdersCaption(int count) {
-    return '$count orders still open';
-  }
-
-  @override
-  String superAdminAnalyticsPublishedCaption(int count) {
-    return '$count products live';
-  }
-
-  @override
-  String get superAdminAnalyticsNoTrend =>
-      'History is not available on this demo build yet.';
-
-  @override
-  String get superAdminAnalyticsStaffCaption => 'Staff accounts';
-
-  @override
-  String get superAdminStatOrders => 'Orders';
-
-  @override
-  String get superAdminAnalyticsOpenOrders => 'Open orders';
-
-  @override
-  String get superAdminAnalyticsStaffShare => 'Rights granted to staff';
 
   @override
   String get sectionBuyerSupport => 'Buyer support';
