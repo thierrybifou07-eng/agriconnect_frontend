@@ -19,10 +19,13 @@ abstract final class AppRoutes {
   static const notifications = '/notifications';
   static const buyerListingDetail = '/buyer/listings/:listingId';
   static const buyerOrderDetail = '/buyer/orders/:orderId';
+  static const driverDeliveryDetail = '/driver/deliveries/:deliveryId';
 
   static String buyerListing(int listingId) => '/buyer/listings/$listingId';
 
   static String buyerOrder(int orderId) => '/buyer/orders/$orderId';
+  static String driverDelivery(int deliveryId) =>
+      '/driver/deliveries/$deliveryId';
   static String supplierLotDetail(int lotId) => '/supplier/lots/$lotId';
   static String legalDocument(String code) => '$legal/$code';
   static const supplier = '/supplier';

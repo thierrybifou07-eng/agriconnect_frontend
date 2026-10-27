@@ -23,6 +23,9 @@ import 'package:agri_connect/features/supplier/presentation/bindings/supplier_bi
 import 'package:agri_connect/features/supplier/presentation/pages/lot_draft_page.dart';
 import 'package:agri_connect/features/supplier/presentation/pages/supplier_home_page.dart';
 import 'package:agri_connect/features/supplier/presentation/pages/supplier_lot_detail_page.dart';
+import 'package:agri_connect/features/driver/presentation/bindings/driver_binding.dart';
+import 'package:agri_connect/features/driver/presentation/pages/driver_delivery_detail_page.dart';
+import 'package:agri_connect/features/driver/presentation/pages/driver_page.dart';
 
 abstract final class AppPages {
   static final pages = <GetPage<dynamic>>[
@@ -149,6 +152,24 @@ abstract final class AppPages {
       binding: BuyerOrderDetailBinding(),
     ),
     GetPage(
+      name: AppRoutes.driver,
+      middlewares: [
+        AuthMiddleware(),
+        RoleMiddleware({RoleCode.driver}),
+      ],
+      page: () => const DriverPage(),
+      binding: DriverBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.driverDeliveryDetail,
+      middlewares: [
+        AuthMiddleware(),
+        RoleMiddleware({RoleCode.driver}),
+      ],
+      page: () => const DriverDeliveryDetailPage(),
+      binding: DriverDeliveryDetailBinding(),
+    ),
+    GetPage(
       name: AppRoutes.supplier,
       middlewares: [
         AuthMiddleware(),
@@ -176,7 +197,6 @@ abstract final class AppPages {
       binding: SupplierLotDetailBinding(),
     ),
     _rolePage(AppRoutes.buyer, RoleCode.buyer),
-    _rolePage(AppRoutes.driver, RoleCode.driver),
     _rolePage(AppRoutes.staff, RoleCode.agent),
     _rolePage(AppRoutes.admin, RoleCode.admin, RoleCode.root),
   ];

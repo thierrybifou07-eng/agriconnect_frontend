@@ -314,12 +314,6 @@ abstract class AppLocalizations {
   /// **'Deliveries'**
   String get sectionDeliveries;
 
-  /// No description provided for @sectionTrips.
-  ///
-  /// In en, this message translates to:
-  /// **'Trips'**
-  String get sectionTrips;
-
   /// No description provided for @sectionUsers.
   ///
   /// In en, this message translates to:
@@ -523,18 +517,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'A sample delivery is available in your delivery list.'**
   String get notificationDriverDeliveryBody;
-
-  /// No description provided for @notificationDriverTripTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Example trip update'**
-  String get notificationDriverTripTitle;
-
-  /// No description provided for @notificationDriverTripBody.
-  ///
-  /// In en, this message translates to:
-  /// **'A sample route update is available in your trips.'**
-  String get notificationDriverTripBody;
 
   /// No description provided for @notificationAgentSupportTitle.
   ///
@@ -2192,30 +2174,6 @@ abstract class AppLocalizations {
   /// **'Recent deliveries'**
   String get driverRecentDeliveries;
 
-  /// No description provided for @driverUpcomingTrips.
-  ///
-  /// In en, this message translates to:
-  /// **'Upcoming trips'**
-  String get driverUpcomingTrips;
-
-  /// No description provided for @tripStatusUpcoming.
-  ///
-  /// In en, this message translates to:
-  /// **'Upcoming'**
-  String get tripStatusUpcoming;
-
-  /// No description provided for @tripStatusActive.
-  ///
-  /// In en, this message translates to:
-  /// **'In progress'**
-  String get tripStatusActive;
-
-  /// No description provided for @tripStatusCompleted.
-  ///
-  /// In en, this message translates to:
-  /// **'Completed'**
-  String get tripStatusCompleted;
-
   /// No description provided for @driverStartDelivery.
   ///
   /// In en, this message translates to:
@@ -2312,30 +2270,6 @@ abstract class AppLocalizations {
   /// **'Your deliveries will appear here.'**
   String get driverDeliveriesEmptyBody;
 
-  /// No description provided for @driverTripsEmptyTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'No trips'**
-  String get driverTripsEmptyTitle;
-
-  /// No description provided for @driverTripsEmptyBody.
-  ///
-  /// In en, this message translates to:
-  /// **'Your trips will appear here.'**
-  String get driverTripsEmptyBody;
-
-  /// No description provided for @driverNoUpcomingTripTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'No upcoming trip'**
-  String get driverNoUpcomingTripTitle;
-
-  /// No description provided for @driverNoUpcomingTripBody.
-  ///
-  /// In en, this message translates to:
-  /// **'Completed routes stay in your history.'**
-  String get driverNoUpcomingTripBody;
-
   /// No description provided for @driverDeliveryNotFound.
   ///
   /// In en, this message translates to:
@@ -2345,7 +2279,7 @@ abstract class AppLocalizations {
   /// No description provided for @driverHeroSubtitle.
   ///
   /// In en, this message translates to:
-  /// **'Your routes and deliveries, all in one place.'**
+  /// **'Available jobs and your deliveries, all in one place.'**
   String get driverHeroSubtitle;
 
   /// No description provided for @driverQuickDeliveries.
@@ -2384,11 +2318,227 @@ abstract class AppLocalizations {
   /// **'Loading your deliveries…'**
   String get driverLoadingDeliveries;
 
-  /// Progress of a trip: delivered stops over total stops.
+  /// No description provided for @driverAvailableTab.
   ///
   /// In en, this message translates to:
-  /// **'{completed} / {total} stops delivered'**
-  String tripStopsProgress(int completed, int total);
+  /// **'Available'**
+  String get driverAvailableTab;
+
+  /// No description provided for @driverMineTab.
+  ///
+  /// In en, this message translates to:
+  /// **'My deliveries'**
+  String get driverMineTab;
+
+  /// No description provided for @driverAccountTab.
+  ///
+  /// In en, this message translates to:
+  /// **'Account'**
+  String get driverAccountTab;
+
+  /// No description provided for @driverActiveCourse.
+  ///
+  /// In en, this message translates to:
+  /// **'Active delivery'**
+  String get driverActiveCourse;
+
+  /// No description provided for @driverAvailableEmptyTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'No available deliveries'**
+  String get driverAvailableEmptyTitle;
+
+  /// No description provided for @driverAvailableEmptyBody.
+  ///
+  /// In en, this message translates to:
+  /// **'New deliveries for your agency will appear here.'**
+  String get driverAvailableEmptyBody;
+
+  /// No description provided for @driverMineEmptyTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'No deliveries'**
+  String get driverMineEmptyTitle;
+
+  /// No description provided for @driverMineEmptyBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Your accepted and completed deliveries will appear here.'**
+  String get driverMineEmptyBody;
+
+  /// No description provided for @driverFilterStatus.
+  ///
+  /// In en, this message translates to:
+  /// **'Filter by status'**
+  String get driverFilterStatus;
+
+  /// No description provided for @allStatuses.
+  ///
+  /// In en, this message translates to:
+  /// **'All statuses'**
+  String get allStatuses;
+
+  /// No description provided for @loadMore.
+  ///
+  /// In en, this message translates to:
+  /// **'Load more'**
+  String get loadMore;
+
+  /// No description provided for @driverAccept.
+  ///
+  /// In en, this message translates to:
+  /// **'Accept'**
+  String get driverAccept;
+
+  /// No description provided for @driverAccepting.
+  ///
+  /// In en, this message translates to:
+  /// **'Accepting…'**
+  String get driverAccepting;
+
+  /// No description provided for @driverUpdating.
+  ///
+  /// In en, this message translates to:
+  /// **'Updating…'**
+  String get driverUpdating;
+
+  /// No description provided for @driverAlreadyActive.
+  ///
+  /// In en, this message translates to:
+  /// **'Finish your active delivery first.'**
+  String get driverAlreadyActive;
+
+  /// No description provided for @driverAlreadyTaken.
+  ///
+  /// In en, this message translates to:
+  /// **'This delivery has just been taken.'**
+  String get driverAlreadyTaken;
+
+  /// No description provided for @driverPickupAddress.
+  ///
+  /// In en, this message translates to:
+  /// **'Pickup address'**
+  String get driverPickupAddress;
+
+  /// No description provided for @driverDropoffAddress.
+  ///
+  /// In en, this message translates to:
+  /// **'Delivery address'**
+  String get driverDropoffAddress;
+
+  /// No description provided for @driverDistance.
+  ///
+  /// In en, this message translates to:
+  /// **'Distance'**
+  String get driverDistance;
+
+  /// No description provided for @driverItems.
+  ///
+  /// In en, this message translates to:
+  /// **'Items'**
+  String get driverItems;
+
+  /// No description provided for @driverOpenMap.
+  ///
+  /// In en, this message translates to:
+  /// **'Open directions'**
+  String get driverOpenMap;
+
+  /// No description provided for @driverCallBuyer.
+  ///
+  /// In en, this message translates to:
+  /// **'Call buyer'**
+  String get driverCallBuyer;
+
+  /// No description provided for @driverBuyerUnavailable.
+  ///
+  /// In en, this message translates to:
+  /// **'Buyer contact details are unavailable.'**
+  String get driverBuyerUnavailable;
+
+  /// No description provided for @driverFailureAction.
+  ///
+  /// In en, this message translates to:
+  /// **'Report delivery failure'**
+  String get driverFailureAction;
+
+  /// No description provided for @driverFailureReason.
+  ///
+  /// In en, this message translates to:
+  /// **'Reason'**
+  String get driverFailureReason;
+
+  /// No description provided for @driverFailureReasonHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Explain why the delivery failed.'**
+  String get driverFailureReasonHint;
+
+  /// No description provided for @driverFailureReasonRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'A reason is required.'**
+  String get driverFailureReasonRequired;
+
+  /// No description provided for @driverLaunchError.
+  ///
+  /// In en, this message translates to:
+  /// **'Unable to open this app.'**
+  String get driverLaunchError;
+
+  /// No description provided for @driverMarkPickedUp.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm pickup'**
+  String get driverMarkPickedUp;
+
+  /// No description provided for @driverStartTransit.
+  ///
+  /// In en, this message translates to:
+  /// **'Start transit'**
+  String get driverStartTransit;
+
+  /// No description provided for @deliveryStatusPending.
+  ///
+  /// In en, this message translates to:
+  /// **'Pending'**
+  String get deliveryStatusPending;
+
+  /// No description provided for @deliveryStatusAccepted.
+  ///
+  /// In en, this message translates to:
+  /// **'Accepted'**
+  String get deliveryStatusAccepted;
+
+  /// No description provided for @deliveryStatusPickedUp.
+  ///
+  /// In en, this message translates to:
+  /// **'Picked up'**
+  String get deliveryStatusPickedUp;
+
+  /// No description provided for @deliveryStatusInTransit.
+  ///
+  /// In en, this message translates to:
+  /// **'In transit'**
+  String get deliveryStatusInTransit;
+
+  /// No description provided for @deliveryStatusDelivered.
+  ///
+  /// In en, this message translates to:
+  /// **'Delivered'**
+  String get deliveryStatusDelivered;
+
+  /// No description provided for @deliveryStatusFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed'**
+  String get deliveryStatusFailed;
+
+  /// No description provided for @deliveryStatusCancelled.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancelled'**
+  String get deliveryStatusCancelled;
 
   /// No description provided for @adminStatusPickUp.
   ///

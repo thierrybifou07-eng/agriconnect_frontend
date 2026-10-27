@@ -38,9 +38,6 @@ abstract final class RoutePaths {
   /// Deliveries tab of the driver shell.
   static const String driverDeliveries = '/driver/deliveries';
 
-  /// Trips tab of the driver shell.
-  static const String driverTrips = '/driver/trips';
-
   static const String driverMessages = '/driver/messages';
   static const String driverConversation = '/driver/messages/:conversationId';
 

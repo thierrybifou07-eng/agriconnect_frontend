@@ -15,7 +15,6 @@ import 'package:agri_connect/features/auth/domain/auth_user.dart';
 import 'package:agri_connect/features/auth/domain/capability.dart';
 import 'package:agri_connect/features/auth/domain/user_role.dart';
 import 'package:agri_connect/features/buyer/application/buyer_providers.dart';
-import 'package:agri_connect/features/driver/application/driver_providers.dart';
 import 'package:agri_connect/features/onboarding/application/welcome_state.dart';
 import 'package:agri_connect/features/supplier/application/supplier_providers.dart';
 import 'package:agri_connect/features/super_admin/application/super_admin_providers.dart';
@@ -260,7 +259,6 @@ void main() {
               FakeSupplierRepository(),
             ),
             buyerRepositoryProvider.overrideWithValue(FakeBuyerRepository()),
-            driverRepositoryProvider.overrideWithValue(FakeDriverRepository()),
             superAdminRepositoryProvider.overrideWithValue(
               FakeSuperAdminRepository(),
             ),

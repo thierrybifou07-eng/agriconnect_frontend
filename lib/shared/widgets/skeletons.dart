@@ -169,8 +169,8 @@ class _TileSkeleton extends StatelessWidget {
 /// Passing [tileWidth] and [imageHeight] reproduces the exact geometry of the
 /// real tiles, so the strip does not jump when the data lands. Without them
 /// the tiles simply share the available width.
-class StripSkeleton extends StatelessWidget {
-  const StripSkeleton({
+class ProductRowSkeleton extends StatelessWidget {
+  const ProductRowSkeleton({
     super.key,
     this.itemCount = 3,
     this.tileWidth,

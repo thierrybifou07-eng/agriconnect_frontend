@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "id": 37,
+      "status": "PENDING",
+      "pickupAddress": "Marché central, Yaoundé",
+      "pickupLatitude": 3.8667,
+      "pickupLongitude": 11.5167,
+      "dropoffAddress": "Quartier Bastos, Yaoundé",
+      "dropoffLatitude": 3.8892,
+      "dropoffLongitude": 11.5174,
+      "distanceKm": 4.8,
+      "buyer": {
+        "firstname": "Amina",
+        "lastname": "N.",
+        "phone": "+237600000000"
+      },
+      "items": [
+        {
+          "productName": "Riz local",
+          "categoryName": "Céréales",
+          "quantity": 12.5
+        }
+      ],
+      "acceptedAt": null,
+      "pickedUpAt": null,
+      "deliveredAt": null,
+      "failureReason": null
+    }
+  ],
+  "page": 1,
+  "limit": 20,
+  "total": 1
+}

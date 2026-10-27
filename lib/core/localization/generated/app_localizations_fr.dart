@@ -124,9 +124,6 @@ class AppLocalizationsFr extends AppLocalizations {
   String get sectionDeliveries => 'Livraisons';
 
   @override
-  String get sectionTrips => 'Trajets';
-
-  @override
   String get sectionUsers => 'Utilisateurs';
 
   @override
@@ -244,13 +241,6 @@ class AppLocalizationsFr extends AppLocalizations {
   @override
   String get notificationDriverDeliveryBody =>
       'Une livraison de démonstration est disponible dans votre liste.';
-
-  @override
-  String get notificationDriverTripTitle => 'Exemple de mise à jour de trajet';
-
-  @override
-  String get notificationDriverTripBody =>
-      'Une mise à jour de trajet de démonstration est disponible.';
 
   @override
   String get notificationAgentSupportTitle => 'Exemple de demande de support';
@@ -1181,18 +1171,6 @@ class AppLocalizationsFr extends AppLocalizations {
   String get driverRecentDeliveries => 'Livraisons récentes';
 
   @override
-  String get driverUpcomingTrips => 'Trajets à venir';
-
-  @override
-  String get tripStatusUpcoming => 'À venir';
-
-  @override
-  String get tripStatusActive => 'En cours';
-
-  @override
-  String get tripStatusCompleted => 'Terminé';
-
-  @override
   String get driverStartDelivery => 'Démarrer la livraison';
 
   @override
@@ -1242,24 +1220,11 @@ class AppLocalizationsFr extends AppLocalizations {
   String get driverDeliveriesEmptyBody => 'Vos livraisons apparaîtront ici.';
 
   @override
-  String get driverTripsEmptyTitle => 'Aucun trajet';
-
-  @override
-  String get driverTripsEmptyBody => 'Vos trajets apparaîtront ici.';
-
-  @override
-  String get driverNoUpcomingTripTitle => 'Aucun trajet à venir';
-
-  @override
-  String get driverNoUpcomingTripBody =>
-      'Vos tournées terminées restent dans l\'historique.';
-
-  @override
   String get driverDeliveryNotFound => 'Livraison introuvable.';
 
   @override
   String get driverHeroSubtitle =>
-      'Vos tournées et vos livraisons, au même endroit.';
+      'Vos courses disponibles et vos livraisons, au même endroit.';
 
   @override
   String get driverQuickDeliveries => 'Mes livraisons';
@@ -1282,9 +1247,119 @@ class AppLocalizationsFr extends AppLocalizations {
   String get driverLoadingDeliveries => 'Chargement de vos livraisons…';
 
   @override
-  String tripStopsProgress(int completed, int total) {
-    return '$completed / $total arrêts livrés';
-  }
+  String get driverAvailableTab => 'Disponibles';
+
+  @override
+  String get driverMineTab => 'Mes courses';
+
+  @override
+  String get driverAccountTab => 'Compte';
+
+  @override
+  String get driverActiveCourse => 'Course en cours';
+
+  @override
+  String get driverAvailableEmptyTitle => 'Aucune course disponible';
+
+  @override
+  String get driverAvailableEmptyBody =>
+      'Les nouvelles courses de votre agence apparaîtront ici.';
+
+  @override
+  String get driverMineEmptyTitle => 'Aucune course';
+
+  @override
+  String get driverMineEmptyBody =>
+      'Vos courses acceptées et terminées apparaîtront ici.';
+
+  @override
+  String get driverFilterStatus => 'Filtrer par statut';
+
+  @override
+  String get allStatuses => 'Tous les statuts';
+
+  @override
+  String get loadMore => 'Charger la suite';
+
+  @override
+  String get driverAccept => 'Accepter';
+
+  @override
+  String get driverAccepting => 'Acceptation…';
+
+  @override
+  String get driverUpdating => 'Mise à jour…';
+
+  @override
+  String get driverAlreadyActive => 'Terminez d\'abord votre course en cours.';
+
+  @override
+  String get driverAlreadyTaken => 'Cette course vient d\'être prise.';
+
+  @override
+  String get driverPickupAddress => 'Adresse de retrait';
+
+  @override
+  String get driverDropoffAddress => 'Adresse de livraison';
+
+  @override
+  String get driverDistance => 'Distance';
+
+  @override
+  String get driverItems => 'Articles';
+
+  @override
+  String get driverOpenMap => 'Ouvrir l\'itinéraire';
+
+  @override
+  String get driverCallBuyer => 'Appeler l\'acheteur';
+
+  @override
+  String get driverBuyerUnavailable =>
+      'Les coordonnées de l\'acheteur ne sont pas disponibles.';
+
+  @override
+  String get driverFailureAction => 'Échec de livraison';
+
+  @override
+  String get driverFailureReason => 'Motif';
+
+  @override
+  String get driverFailureReasonHint =>
+      'Expliquez pourquoi la livraison a échoué.';
+
+  @override
+  String get driverFailureReasonRequired => 'Saisissez un motif obligatoire.';
+
+  @override
+  String get driverLaunchError => 'Impossible d\'ouvrir cette application.';
+
+  @override
+  String get driverMarkPickedUp => 'Confirmer le retrait';
+
+  @override
+  String get driverStartTransit => 'Démarrer le trajet';
+
+  @override
+  String get deliveryStatusPending => 'En attente';
+
+  @override
+  String get deliveryStatusAccepted => 'Acceptée';
+
+  @override
+  String get deliveryStatusPickedUp => 'Retirée';
+
+  @override
+  String get deliveryStatusInTransit => 'En transit';
+
+  @override
+  String get deliveryStatusDelivered => 'Livrée';
+
+  @override
+  String get deliveryStatusFailed => 'Échec';
+
+  @override
+  String get deliveryStatusCancelled => 'Annulée';
 
   @override
   String get adminStatusPickUp => 'À récupérer';

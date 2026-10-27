@@ -120,9 +120,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get sectionDeliveries => 'Deliveries';
 
   @override
-  String get sectionTrips => 'Trips';
-
-  @override
   String get sectionUsers => 'Users';
 
   @override
@@ -235,13 +232,6 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get notificationDriverDeliveryBody =>
       'A sample delivery is available in your delivery list.';
-
-  @override
-  String get notificationDriverTripTitle => 'Example trip update';
-
-  @override
-  String get notificationDriverTripBody =>
-      'A sample route update is available in your trips.';
 
   @override
   String get notificationAgentSupportTitle => 'Example support request';
@@ -1162,18 +1152,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get driverRecentDeliveries => 'Recent deliveries';
 
   @override
-  String get driverUpcomingTrips => 'Upcoming trips';
-
-  @override
-  String get tripStatusUpcoming => 'Upcoming';
-
-  @override
-  String get tripStatusActive => 'In progress';
-
-  @override
-  String get tripStatusCompleted => 'Completed';
-
-  @override
   String get driverStartDelivery => 'Start delivery';
 
   @override
@@ -1223,24 +1201,11 @@ class AppLocalizationsEn extends AppLocalizations {
   String get driverDeliveriesEmptyBody => 'Your deliveries will appear here.';
 
   @override
-  String get driverTripsEmptyTitle => 'No trips';
-
-  @override
-  String get driverTripsEmptyBody => 'Your trips will appear here.';
-
-  @override
-  String get driverNoUpcomingTripTitle => 'No upcoming trip';
-
-  @override
-  String get driverNoUpcomingTripBody =>
-      'Completed routes stay in your history.';
-
-  @override
   String get driverDeliveryNotFound => 'Delivery not found.';
 
   @override
   String get driverHeroSubtitle =>
-      'Your routes and deliveries, all in one place.';
+      'Available jobs and your deliveries, all in one place.';
 
   @override
   String get driverQuickDeliveries => 'My deliveries';
@@ -1263,9 +1228,117 @@ class AppLocalizationsEn extends AppLocalizations {
   String get driverLoadingDeliveries => 'Loading your deliveries…';
 
   @override
-  String tripStopsProgress(int completed, int total) {
-    return '$completed / $total stops delivered';
-  }
+  String get driverAvailableTab => 'Available';
+
+  @override
+  String get driverMineTab => 'My deliveries';
+
+  @override
+  String get driverAccountTab => 'Account';
+
+  @override
+  String get driverActiveCourse => 'Active delivery';
+
+  @override
+  String get driverAvailableEmptyTitle => 'No available deliveries';
+
+  @override
+  String get driverAvailableEmptyBody =>
+      'New deliveries for your agency will appear here.';
+
+  @override
+  String get driverMineEmptyTitle => 'No deliveries';
+
+  @override
+  String get driverMineEmptyBody =>
+      'Your accepted and completed deliveries will appear here.';
+
+  @override
+  String get driverFilterStatus => 'Filter by status';
+
+  @override
+  String get allStatuses => 'All statuses';
+
+  @override
+  String get loadMore => 'Load more';
+
+  @override
+  String get driverAccept => 'Accept';
+
+  @override
+  String get driverAccepting => 'Accepting…';
+
+  @override
+  String get driverUpdating => 'Updating…';
+
+  @override
+  String get driverAlreadyActive => 'Finish your active delivery first.';
+
+  @override
+  String get driverAlreadyTaken => 'This delivery has just been taken.';
+
+  @override
+  String get driverPickupAddress => 'Pickup address';
+
+  @override
+  String get driverDropoffAddress => 'Delivery address';
+
+  @override
+  String get driverDistance => 'Distance';
+
+  @override
+  String get driverItems => 'Items';
+
+  @override
+  String get driverOpenMap => 'Open directions';
+
+  @override
+  String get driverCallBuyer => 'Call buyer';
+
+  @override
+  String get driverBuyerUnavailable => 'Buyer contact details are unavailable.';
+
+  @override
+  String get driverFailureAction => 'Report delivery failure';
+
+  @override
+  String get driverFailureReason => 'Reason';
+
+  @override
+  String get driverFailureReasonHint => 'Explain why the delivery failed.';
+
+  @override
+  String get driverFailureReasonRequired => 'A reason is required.';
+
+  @override
+  String get driverLaunchError => 'Unable to open this app.';
+
+  @override
+  String get driverMarkPickedUp => 'Confirm pickup';
+
+  @override
+  String get driverStartTransit => 'Start transit';
+
+  @override
+  String get deliveryStatusPending => 'Pending';
+
+  @override
+  String get deliveryStatusAccepted => 'Accepted';
+
+  @override
+  String get deliveryStatusPickedUp => 'Picked up';
+
+  @override
+  String get deliveryStatusInTransit => 'In transit';
+
+  @override
+  String get deliveryStatusDelivered => 'Delivered';
+
+  @override
+  String get deliveryStatusFailed => 'Failed';
+
+  @override
+  String get deliveryStatusCancelled => 'Cancelled';
 
   @override
   String get adminStatusPickUp => 'To collect';
