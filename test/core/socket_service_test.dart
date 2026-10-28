@@ -10,6 +10,7 @@ import 'package:agri_connect/core/network/session_events.dart';
 import 'package:agri_connect/core/realtime/socket_service.dart';
 import 'package:agri_connect/core/storage/token_storage.dart';
 import 'package:agri_connect/features/auth/presentation/controllers/auth_controller.dart';
+
 import '../features/auth/fake_auth_repository.dart';
 import '../support/fake_http_adapter.dart';
 import '../support/fake_realtime_transport.dart';
@@ -32,28 +33,25 @@ void main() {
     expect(setup.socket.connected.value, isFalse);
   });
 
-  test(
-    'refreshes an expired handshake token once and reconnects with the new token',
-    () async {
-      final refreshAdapter = FakeHttpAdapter()
-        ..enqueue(
-          'auth/refresh',
-          const FakeHttpResponse(
-            statusCode: 200,
-            data: {'accessToken': 'access-new', 'refreshToken': 'refresh-new'},
-          ),
-        );
-      final setup = await _createSocket(refreshAdapter: refreshAdapter);
-      setup.auth.setUser(FakeAuthRepository().user);
-      await _until(() => setup.transport.tokens.length == 1);
+  test('refreshes an expired handshake token once and reconnects with the new token', () async {
+    final refreshAdapter = FakeHttpAdapter()
+      ..enqueue(
+        'auth/refresh',
+        const FakeHttpResponse(
+          statusCode: 200,
+          data: {'accessToken': 'access-new', 'refreshToken': 'refresh-new'},
+        ),
+      );
+    final setup = await _createSocket(refreshAdapter: refreshAdapter);
+    setup.auth.setUser(FakeAuthRepository().user);
+    await _until(() => setup.transport.tokens.length == 1);
 
-      setup.transport.fire('connect_error', 'expired');
-      await _until(() => setup.transport.tokens.contains('access-new'));
+    setup.transport.fire('connect_error', 'expired');
+    await _until(() => setup.transport.tokens.contains('access-new'));
 
-      expect(refreshAdapter.callCounts['auth/refresh'], 1);
-      expect((await setup.storage.read())?.access, 'access-new');
-    },
-  );
+    expect(refreshAdapter.callCounts['auth/refresh'], 1);
+    expect((await setup.storage.read())?.access, 'access-new');
+  });
 
   test('rejoins active conversation rooms after reconnect', () async {
     final setup = await _createSocket();

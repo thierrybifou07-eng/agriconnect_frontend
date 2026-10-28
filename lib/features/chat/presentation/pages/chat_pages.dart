@@ -209,9 +209,9 @@ class ChatThreadPage extends GetView<ThreadController> {
                 ? Container(
                     width: double.infinity,
                     padding: const EdgeInsets.all(12),
-                    color: Theme.of(
-                      context,
-                    ).colorScheme.surfaceContainerHighest,
+                    color: Theme.of(context)
+                        .colorScheme
+                        .surfaceContainerHighest,
                     child: Text(labels.chatClosedExplanation),
                   )
                 : const SizedBox.shrink(),
@@ -275,9 +275,9 @@ class ChatThreadPage extends GetView<ThreadController> {
                         decoration: BoxDecoration(
                           color: message.isMine
                               ? Theme.of(context).colorScheme.primaryContainer
-                              : Theme.of(
-                                  context,
-                                ).colorScheme.surfaceContainerHighest,
+                              : Theme.of(context)
+                                    .colorScheme
+                                    .surfaceContainerHighest,
                           borderRadius: BorderRadius.circular(14),
                         ),
                         child: Column(

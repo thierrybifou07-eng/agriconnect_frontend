@@ -367,9 +367,8 @@ class _AuditLogPanel extends GetView<AdminPlatformController> {
 
   void _showMetadata(BuildContext context, AdminAuditLog entry) {
     final labels = AppLocalizations.of(context);
-    final formatted = const JsonEncoder.withIndent(
-      '  ',
-    ).convert(entry.metadata);
+    final formatted = const JsonEncoder.withIndent('  ')
+        .convert(entry.metadata);
     showDialog<void>(
       context: context,
       builder: (context) => AlertDialog(

@@ -413,8 +413,494 @@ abstract class AppLocalizations {
   /// No description provided for @notificationAiSuggestionBody.
   ///
   /// In en, this message translates to:
-  /// **'A suggestion is available in the support queue.'**
+  /// **'Suggested reply from the assistant.'**
   String get notificationAiSuggestionBody;
+
+  /// No description provided for @aiEngineTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'AI engine'**
+  String get aiEngineTitle;
+
+  /// No description provided for @aiEngineLoadFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Could not load the AI engine status.'**
+  String get aiEngineLoadFailed;
+
+  /// No description provided for @aiEnabled.
+  ///
+  /// In en, this message translates to:
+  /// **'Enabled'**
+  String get aiEnabled;
+
+  /// No description provided for @aiReachable.
+  ///
+  /// In en, this message translates to:
+  /// **'Reachable'**
+  String get aiReachable;
+
+  /// No description provided for @aiModelInstalled.
+  ///
+  /// In en, this message translates to:
+  /// **'Model installed'**
+  String get aiModelInstalled;
+
+  /// No description provided for @aiProvider.
+  ///
+  /// In en, this message translates to:
+  /// **'Provider'**
+  String get aiProvider;
+
+  /// No description provided for @aiModel.
+  ///
+  /// In en, this message translates to:
+  /// **'Model'**
+  String get aiModel;
+
+  /// No description provided for @aiBaseUrl.
+  ///
+  /// In en, this message translates to:
+  /// **'Service address'**
+  String get aiBaseUrl;
+
+  /// No description provided for @aiLatency.
+  ///
+  /// In en, this message translates to:
+  /// **'Last latency'**
+  String get aiLatency;
+
+  /// No description provided for @aiQueue.
+  ///
+  /// In en, this message translates to:
+  /// **'Queue (pending / running)'**
+  String get aiQueue;
+
+  /// No description provided for @aiDailyQuota.
+  ///
+  /// In en, this message translates to:
+  /// **'Daily quota'**
+  String get aiDailyQuota;
+
+  /// No description provided for @aiOllamaUnreachable.
+  ///
+  /// In en, this message translates to:
+  /// **'Ollama is not responding. Run `ollama serve` on the backend PC.'**
+  String get aiOllamaUnreachable;
+
+  /// No description provided for @aiGeminiUnreachable.
+  ///
+  /// In en, this message translates to:
+  /// **'The AI service is not reachable.'**
+  String get aiGeminiUnreachable;
+
+  /// No description provided for @aiInvalidKey.
+  ///
+  /// In en, this message translates to:
+  /// **'The assistant API key is invalid.'**
+  String get aiInvalidKey;
+
+  /// No description provided for @aiModelNotFound.
+  ///
+  /// In en, this message translates to:
+  /// **'Model not found.'**
+  String get aiModelNotFound;
+
+  /// No description provided for @aiTest.
+  ///
+  /// In en, this message translates to:
+  /// **'Test'**
+  String get aiTest;
+
+  /// No description provided for @aiTestLatency.
+  ///
+  /// In en, this message translates to:
+  /// **'Test latency'**
+  String get aiTestLatency;
+
+  /// No description provided for @aiDisabledMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'The AI assistant is disabled.'**
+  String get aiDisabledMessage;
+
+  /// No description provided for @aiBusyMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'A suggestion is already in progress.'**
+  String get aiBusyMessage;
+
+  /// No description provided for @aiNoAgentMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'No active AI agent for this conversation type.'**
+  String get aiNoAgentMessage;
+
+  /// No description provided for @aiRateLimited.
+  ///
+  /// In en, this message translates to:
+  /// **'The assistant quota has been reached. Please try again later.'**
+  String get aiRateLimited;
+
+  /// No description provided for @aiInvalidOutput.
+  ///
+  /// In en, this message translates to:
+  /// **'The assistant response could not be validated.'**
+  String get aiInvalidOutput;
+
+  /// No description provided for @aiClosedApproval.
+  ///
+  /// In en, this message translates to:
+  /// **'This conversation is closed. The suggestion cannot be sent.'**
+  String get aiClosedApproval;
+
+  /// No description provided for @aiSuggestReply.
+  ///
+  /// In en, this message translates to:
+  /// **'Suggest a reply'**
+  String get aiSuggestReply;
+
+  /// No description provided for @aiSuggestionReady.
+  ///
+  /// In en, this message translates to:
+  /// **'Ready suggestion'**
+  String get aiSuggestionReady;
+
+  /// No description provided for @aiGenerating.
+  ///
+  /// In en, this message translates to:
+  /// **'The assistant is writing…'**
+  String get aiGenerating;
+
+  /// No description provided for @aiGenerationExplanation.
+  ///
+  /// In en, this message translates to:
+  /// **'This may take up to 1–2 minutes.'**
+  String get aiGenerationExplanation;
+
+  /// No description provided for @aiUse.
+  ///
+  /// In en, this message translates to:
+  /// **'Use'**
+  String get aiUse;
+
+  /// No description provided for @aiSend.
+  ///
+  /// In en, this message translates to:
+  /// **'Send'**
+  String get aiSend;
+
+  /// No description provided for @aiReject.
+  ///
+  /// In en, this message translates to:
+  /// **'Reject'**
+  String get aiReject;
+
+  /// No description provided for @aiRejectReason.
+  ///
+  /// In en, this message translates to:
+  /// **'Reason (optional)'**
+  String get aiRejectReason;
+
+  /// No description provided for @aiIntent.
+  ///
+  /// In en, this message translates to:
+  /// **'Intent'**
+  String get aiIntent;
+
+  /// No description provided for @aiConfidence.
+  ///
+  /// In en, this message translates to:
+  /// **'Confidence'**
+  String get aiConfidence;
+
+  /// No description provided for @aiLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'Language'**
+  String get aiLanguage;
+
+  /// No description provided for @aiHumanNeeded.
+  ///
+  /// In en, this message translates to:
+  /// **'Needs human review'**
+  String get aiHumanNeeded;
+
+  /// No description provided for @aiVerifyNumbers.
+  ///
+  /// In en, this message translates to:
+  /// **'Verify numbers'**
+  String get aiVerifyNumbers;
+
+  /// No description provided for @aiSuggestOnlyExplanation.
+  ///
+  /// In en, this message translates to:
+  /// **'Will be sent under your name.'**
+  String get aiSuggestOnlyExplanation;
+
+  /// No description provided for @aiApprovalExplanation.
+  ///
+  /// In en, this message translates to:
+  /// **'Will be sent as Assistant AgriConnect (AI).'**
+  String get aiApprovalExplanation;
+
+  /// No description provided for @aiRetry.
+  ///
+  /// In en, this message translates to:
+  /// **'Try again'**
+  String get aiRetry;
+
+  /// No description provided for @aiQueueTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'AI suggestions'**
+  String get aiQueueTitle;
+
+  /// No description provided for @aiQueueOpen.
+  ///
+  /// In en, this message translates to:
+  /// **'Open conversation'**
+  String get aiQueueOpen;
+
+  /// No description provided for @aiStatusFilter.
+  ///
+  /// In en, this message translates to:
+  /// **'Status'**
+  String get aiStatusFilter;
+
+  /// No description provided for @aiKindFilter.
+  ///
+  /// In en, this message translates to:
+  /// **'Type'**
+  String get aiKindFilter;
+
+  /// No description provided for @aiNoSuggestions.
+  ///
+  /// In en, this message translates to:
+  /// **'No suggestions yet.'**
+  String get aiNoSuggestions;
+
+  /// No description provided for @aiStatusGenerating.
+  ///
+  /// In en, this message translates to:
+  /// **'Generating'**
+  String get aiStatusGenerating;
+
+  /// No description provided for @aiStatusReady.
+  ///
+  /// In en, this message translates to:
+  /// **'Ready'**
+  String get aiStatusReady;
+
+  /// No description provided for @aiStatusFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed'**
+  String get aiStatusFailed;
+
+  /// No description provided for @aiStatusExpired.
+  ///
+  /// In en, this message translates to:
+  /// **'Expired'**
+  String get aiStatusExpired;
+
+  /// No description provided for @aiStatusPending.
+  ///
+  /// In en, this message translates to:
+  /// **'Pending'**
+  String get aiStatusPending;
+
+  /// No description provided for @aiEscalate.
+  ///
+  /// In en, this message translates to:
+  /// **'Escalate'**
+  String get aiEscalate;
+
+  /// No description provided for @aiKindReply.
+  ///
+  /// In en, this message translates to:
+  /// **'Reply'**
+  String get aiKindReply;
+
+  /// No description provided for @aiKindTriage.
+  ///
+  /// In en, this message translates to:
+  /// **'Triage'**
+  String get aiKindTriage;
+
+  /// No description provided for @aiKindListingDraft.
+  ///
+  /// In en, this message translates to:
+  /// **'Listing draft'**
+  String get aiKindListingDraft;
+
+  /// No description provided for @aiIntentProductQuestion.
+  ///
+  /// In en, this message translates to:
+  /// **'Product question'**
+  String get aiIntentProductQuestion;
+
+  /// No description provided for @aiIntentPriceQuote.
+  ///
+  /// In en, this message translates to:
+  /// **'Quote request'**
+  String get aiIntentPriceQuote;
+
+  /// No description provided for @aiIntentDeliveryQuestion.
+  ///
+  /// In en, this message translates to:
+  /// **'Delivery question'**
+  String get aiIntentDeliveryQuestion;
+
+  /// No description provided for @aiIntentVerification.
+  ///
+  /// In en, this message translates to:
+  /// **'Profile verification'**
+  String get aiIntentVerification;
+
+  /// No description provided for @aiIntentComplaint.
+  ///
+  /// In en, this message translates to:
+  /// **'Complaint'**
+  String get aiIntentComplaint;
+
+  /// No description provided for @aiIntentOther.
+  ///
+  /// In en, this message translates to:
+  /// **'Other request'**
+  String get aiIntentOther;
+
+  /// No description provided for @aiUrgencyLow.
+  ///
+  /// In en, this message translates to:
+  /// **'Low'**
+  String get aiUrgencyLow;
+
+  /// No description provided for @aiUrgencyMedium.
+  ///
+  /// In en, this message translates to:
+  /// **'Normal'**
+  String get aiUrgencyMedium;
+
+  /// No description provided for @aiUrgencyHigh.
+  ///
+  /// In en, this message translates to:
+  /// **'High'**
+  String get aiUrgencyHigh;
+
+  /// No description provided for @aiUrgencyUrgent.
+  ///
+  /// In en, this message translates to:
+  /// **'Urgent'**
+  String get aiUrgencyUrgent;
+
+  /// No description provided for @aiListingDraft.
+  ///
+  /// In en, this message translates to:
+  /// **'AI draft'**
+  String get aiListingDraft;
+
+  /// No description provided for @aiDraftGenerating.
+  ///
+  /// In en, this message translates to:
+  /// **'The assistant is preparing a draft…'**
+  String get aiDraftGenerating;
+
+  /// No description provided for @aiDraftTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Suggested title'**
+  String get aiDraftTitle;
+
+  /// No description provided for @aiDraftDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Suggested description'**
+  String get aiDraftDescription;
+
+  /// No description provided for @aiAgentCreate.
+  ///
+  /// In en, this message translates to:
+  /// **'Create AI agent'**
+  String get aiAgentCreate;
+
+  /// No description provided for @aiAgentCreated.
+  ///
+  /// In en, this message translates to:
+  /// **'AI agent created.'**
+  String get aiAgentCreated;
+
+  /// No description provided for @aiListingCreated.
+  ///
+  /// In en, this message translates to:
+  /// **'Listing created from the draft.'**
+  String get aiListingCreated;
+
+  /// No description provided for @aiProviderOllama.
+  ///
+  /// In en, this message translates to:
+  /// **'Ollama (local)'**
+  String get aiProviderOllama;
+
+  /// No description provided for @aiProviderGemini.
+  ///
+  /// In en, this message translates to:
+  /// **'Gemini (cloud)'**
+  String get aiProviderGemini;
+
+  /// No description provided for @aiAutonomySuggest.
+  ///
+  /// In en, this message translates to:
+  /// **'Suggest only'**
+  String get aiAutonomySuggest;
+
+  /// No description provided for @aiAutonomyApproval.
+  ///
+  /// In en, this message translates to:
+  /// **'Act after approval'**
+  String get aiAutonomyApproval;
+
+  /// No description provided for @aiAutonomyAutonomous.
+  ///
+  /// In en, this message translates to:
+  /// **'Autonomous'**
+  String get aiAutonomyAutonomous;
+
+  /// No description provided for @aiAutonomousDisabled.
+  ///
+  /// In en, this message translates to:
+  /// **'Autonomous mode is disabled by server configuration.'**
+  String get aiAutonomousDisabled;
+
+  /// No description provided for @aiAutonomousWarning.
+  ///
+  /// In en, this message translates to:
+  /// **'The local model can be wrong: reserve this for simple questions.'**
+  String get aiAutonomousWarning;
+
+  /// No description provided for @aiNoMoney.
+  ///
+  /// In en, this message translates to:
+  /// **'AI never handles money.'**
+  String get aiNoMoney;
+
+  /// No description provided for @aiModelMismatch.
+  ///
+  /// In en, this message translates to:
+  /// **'This agent model differs from the currently configured model.'**
+  String get aiModelMismatch;
+
+  /// No description provided for @aiStatusYes.
+  ///
+  /// In en, this message translates to:
+  /// **'Yes'**
+  String get aiStatusYes;
+
+  /// No description provided for @aiStatusNo.
+  ///
+  /// In en, this message translates to:
+  /// **'No'**
+  String get aiStatusNo;
 
   /// No description provided for @notificationsRead.
   ///
@@ -7060,7 +7546,7 @@ abstract class AppLocalizations {
   /// No description provided for @staffSuggestionReserved.
   ///
   /// In en, this message translates to:
-  /// **'AI suggestion — coming soon'**
+  /// **'AI suggestions'**
   String get staffSuggestionReserved;
 
   /// No description provided for @staffValidate.

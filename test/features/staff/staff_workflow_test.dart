@@ -200,9 +200,8 @@ void main() {
             Dio(options)..httpClientAdapter = adapter,
       );
 
-      await StaffWorkflowApi(
-        client,
-      ).verificationBytes('admin/files/private-token');
+      await StaffWorkflowApi(client)
+          .verificationBytes('admin/files/private-token');
 
       expect(adapter.requests.single.headers['Authorization'], isNotNull);
       expect(adapter.requests.single.path, 'admin/files/private-token');

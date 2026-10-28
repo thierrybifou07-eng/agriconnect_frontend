@@ -45,10 +45,8 @@ class StaffQuoteController extends GetxController {
   final Rxn<ApiFailure> validationFailure = Rxn<ApiFailure>();
   final RxInt formVersion = 0.obs;
 
-  double priceFloor(StaffListing listing) => math.max(
-    listing.unitPrice,
-    listing.lot?.lot.agreedUnitPrice ?? 0.0,
-  );
+  double priceFloor(StaffListing listing) =>
+      math.max(listing.unitPrice, listing.lot?.lot.agreedUnitPrice ?? 0.0);
 
   bool get isValid {
     if (lines.isEmpty) return false;
@@ -60,8 +58,7 @@ class StaffQuoteController extends GetxController {
         return false;
       }
       if (priceValue != null &&
-          (priceValue <= 0 ||
-              priceValue < priceFloor(listing))) {
+          (priceValue <= 0 || priceValue < priceFloor(listing))) {
         return false;
       }
     }

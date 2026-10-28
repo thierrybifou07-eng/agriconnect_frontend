@@ -15,7 +15,8 @@
 | P13 | ☑ |
 | P14 | ☑ |
 | P15 | ☑ |
-| P16 | ☐ |
+| P16 | ☑ |
 
-Le code legacy est supprimé module par module, après le portage et la
-validation du module correspondant ; il ne doit pas être supprimé en bloc.
+Les dossiers legacy `lib_legacy`, `test_legacy` et `assets_legacy` ont été supprimés.
+Les garde-fous d'architecture, la documentation finale et la préparation release Android
+sont intégrées dans le dépôt courant. La branche reste conforme au périmètre P16.

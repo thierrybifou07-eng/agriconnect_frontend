@@ -208,9 +208,9 @@ class _AiSuggestionPanelState extends State<AiSuggestionPanel> {
                     Chip(label: Text(labels.aiHumanNeeded)),
                   if (hasNumberWarning)
                     Chip(
-                      backgroundColor: Theme.of(
-                        context,
-                      ).colorScheme.errorContainer,
+                      backgroundColor: Theme.of(context)
+                          .colorScheme
+                          .errorContainer,
                       label: Text(labels.aiVerifyNumbers),
                     ),
                 ],

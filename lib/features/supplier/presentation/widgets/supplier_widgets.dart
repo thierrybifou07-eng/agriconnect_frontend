@@ -38,10 +38,8 @@ class SupplierLotStatusBadge extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
         child: Text(
           lotStatusLabel(status, AppLocalizations.of(context)),
-          style: Theme.of(context).textTheme.labelMedium?.copyWith(
-            color: color,
-            fontWeight: FontWeight.w600,
-          ),
+          style: Theme.of(context).textTheme.labelMedium
+              ?.copyWith(color: color, fontWeight: FontWeight.w600),
         ),
       ),
     );

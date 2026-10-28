@@ -178,7 +178,261 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get notificationAiSuggestionBody =>
-      'Une suggestion est disponible dans la file de support.';
+      'Réponse proposée par l\'assistant.';
+
+  @override
+  String get aiEngineTitle => 'Moteur IA';
+
+  @override
+  String get aiEngineLoadFailed =>
+      'Impossible de charger l\'état du moteur IA.';
+
+  @override
+  String get aiEnabled => 'Activé';
+
+  @override
+  String get aiReachable => 'Joignable';
+
+  @override
+  String get aiModelInstalled => 'Modèle installé';
+
+  @override
+  String get aiProvider => 'Fournisseur';
+
+  @override
+  String get aiModel => 'Modèle';
+
+  @override
+  String get aiBaseUrl => 'Adresse du service';
+
+  @override
+  String get aiLatency => 'Dernière latence';
+
+  @override
+  String get aiQueue => 'File (en attente / en cours)';
+
+  @override
+  String get aiDailyQuota => 'Quota du jour';
+
+  @override
+  String get aiOllamaUnreachable =>
+      'Ollama ne répond pas. Lancez `ollama serve` sur le PC du backend.';
+
+  @override
+  String get aiGeminiUnreachable => 'Le service d\'IA n\'est pas joignable.';
+
+  @override
+  String get aiInvalidKey => 'Clé API de l\'assistant invalide.';
+
+  @override
+  String get aiModelNotFound => 'Modèle introuvable.';
+
+  @override
+  String get aiTest => 'Tester';
+
+  @override
+  String get aiTestLatency => 'Latence du test';
+
+  @override
+  String get aiDisabledMessage => 'L\'assistant IA est désactivé.';
+
+  @override
+  String get aiBusyMessage => 'Une suggestion est déjà en cours.';
+
+  @override
+  String get aiNoAgentMessage =>
+      'Aucun agent IA actif pour ce type de conversation.';
+
+  @override
+  String get aiRateLimited =>
+      'Le quota de l\'assistant est atteint, réessayez plus tard.';
+
+  @override
+  String get aiInvalidOutput =>
+      'La réponse de l\'assistant n\'a pas pu être validée.';
+
+  @override
+  String get aiClosedApproval =>
+      'Cette conversation est fermée. La suggestion ne peut pas être envoyée.';
+
+  @override
+  String get aiSuggestReply => 'Suggérer une réponse';
+
+  @override
+  String get aiSuggestionReady => 'Suggestion prête';
+
+  @override
+  String get aiGenerating => 'L\'assistant rédige…';
+
+  @override
+  String get aiGenerationExplanation =>
+      'Cela peut prendre jusqu\'à 1–2 minutes.';
+
+  @override
+  String get aiUse => 'Utiliser';
+
+  @override
+  String get aiSend => 'Envoyer';
+
+  @override
+  String get aiReject => 'Rejeter';
+
+  @override
+  String get aiRejectReason => 'Motif (facultatif)';
+
+  @override
+  String get aiIntent => 'Intention';
+
+  @override
+  String get aiConfidence => 'Confiance';
+
+  @override
+  String get aiLanguage => 'Langue';
+
+  @override
+  String get aiHumanNeeded => 'À traiter par un humain';
+
+  @override
+  String get aiVerifyNumbers => 'Chiffres à vérifier';
+
+  @override
+  String get aiSuggestOnlyExplanation => 'Sera envoyé sous votre nom.';
+
+  @override
+  String get aiApprovalExplanation =>
+      'Sera envoyé comme Assistant AgriConnect (IA).';
+
+  @override
+  String get aiRetry => 'Réessayer';
+
+  @override
+  String get aiQueueTitle => 'Suggestions IA';
+
+  @override
+  String get aiQueueOpen => 'Ouvrir la conversation';
+
+  @override
+  String get aiStatusFilter => 'Statut';
+
+  @override
+  String get aiKindFilter => 'Type';
+
+  @override
+  String get aiNoSuggestions => 'Aucune suggestion pour le moment.';
+
+  @override
+  String get aiStatusGenerating => 'Génération en cours';
+
+  @override
+  String get aiStatusReady => 'Prête';
+
+  @override
+  String get aiStatusFailed => 'Échec';
+
+  @override
+  String get aiStatusExpired => 'Expirée';
+
+  @override
+  String get aiStatusPending => 'En attente';
+
+  @override
+  String get aiEscalate => 'Escalader';
+
+  @override
+  String get aiKindReply => 'Réponse';
+
+  @override
+  String get aiKindTriage => 'Triage';
+
+  @override
+  String get aiKindListingDraft => 'Brouillon d\'annonce';
+
+  @override
+  String get aiIntentProductQuestion => 'Question sur un produit';
+
+  @override
+  String get aiIntentPriceQuote => 'Demande de devis';
+
+  @override
+  String get aiIntentDeliveryQuestion => 'Question sur la livraison';
+
+  @override
+  String get aiIntentVerification => 'Vérification du profil';
+
+  @override
+  String get aiIntentComplaint => 'Réclamation';
+
+  @override
+  String get aiIntentOther => 'Autre demande';
+
+  @override
+  String get aiUrgencyLow => 'Faible';
+
+  @override
+  String get aiUrgencyMedium => 'Normale';
+
+  @override
+  String get aiUrgencyHigh => 'Élevée';
+
+  @override
+  String get aiUrgencyUrgent => 'Urgente';
+
+  @override
+  String get aiListingDraft => 'Brouillon IA';
+
+  @override
+  String get aiDraftGenerating => 'L\'assistant prépare un brouillon…';
+
+  @override
+  String get aiDraftTitle => 'Titre proposé';
+
+  @override
+  String get aiDraftDescription => 'Description proposée';
+
+  @override
+  String get aiAgentCreate => 'Créer un agent IA';
+
+  @override
+  String get aiAgentCreated => 'Agent IA créé.';
+
+  @override
+  String get aiListingCreated => 'Annonce créée à partir du brouillon.';
+
+  @override
+  String get aiProviderOllama => 'Ollama (local)';
+
+  @override
+  String get aiProviderGemini => 'Gemini (cloud)';
+
+  @override
+  String get aiAutonomySuggest => 'Suggérer seulement';
+
+  @override
+  String get aiAutonomyApproval => 'Agir après approbation';
+
+  @override
+  String get aiAutonomyAutonomous => 'Autonome';
+
+  @override
+  String get aiAutonomousDisabled =>
+      'L\'autonomie est désactivée par la configuration du serveur.';
+
+  @override
+  String get aiAutonomousWarning =>
+      'Le modèle local peut se tromper : réservé aux questions simples.';
+
+  @override
+  String get aiNoMoney => 'L\'IA ne manipule jamais d\'argent.';
+
+  @override
+  String get aiModelMismatch =>
+      'Le modèle de cet agent diffère du modèle actuellement configuré.';
+
+  @override
+  String get aiStatusYes => 'Oui';
+
+  @override
+  String get aiStatusNo => 'Non';
 
   @override
   String get notificationsRead => 'Lu';
@@ -3889,7 +4143,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get staffContext => 'Contexte';
 
   @override
-  String get staffSuggestionReserved => 'Suggestion IA — bientôt disponible';
+  String get staffSuggestionReserved => 'Suggestion IA';
 
   @override
   String get staffValidate => 'Valider';

@@ -17,6 +17,7 @@ import 'package:agri_connect/features/ai/domain/ai_repository.dart';
 import 'package:agri_connect/features/ai/presentation/controllers/ai_controllers.dart';
 import 'package:agri_connect/features/ai/presentation/widgets/ai_suggestion_widgets.dart';
 import 'package:agri_connect/features/auth/presentation/controllers/auth_controller.dart';
+
 import '../../support/fake_realtime_transport.dart';
 import '../../support/get_test_harness.dart';
 import '../auth/fake_auth_repository.dart';

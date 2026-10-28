@@ -234,7 +234,9 @@ class StaffOrdersController extends GetxController {
         limit: 100,
         status: 'ACTIVE',
       );
-      listings.addAll(page.items.where((listing) => listing.status == 'ACTIVE'));
+      listings.addAll(
+        page.items.where((listing) => listing.status == 'ACTIVE'),
+      );
       while (page.hasMore) {
         page = await staffRepository.listings(
           page: page.page + 1,
@@ -424,7 +426,8 @@ class StaffOrdersController extends GetxController {
     final orderId = nested['orderId'];
     final deliveryId = nested['id'];
     final current = deliveriesState.value;
-    final knownDelivery = current is Success<List<StaffDelivery>> &&
+    final knownDelivery =
+        current is Success<List<StaffDelivery>> &&
         current.data.any((item) => item.id == deliveryId);
     if ((orderId is num && orderId.toInt() == selected.value?.id) ||
         knownDelivery) {
@@ -444,7 +447,8 @@ class StaffOrdersController extends GetxController {
     final orderId = nested['orderId'];
     final deliveryId = nested['id'];
     final current = deliveriesState.value;
-    final knownDelivery = current is Success<List<StaffDelivery>> &&
+    final knownDelivery =
+        current is Success<List<StaffDelivery>> &&
         current.data.any((item) => item.id == deliveryId);
     if ((orderId is num && orderId.toInt() == selected.value?.id) ||
         knownDelivery) {

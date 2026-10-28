@@ -67,9 +67,8 @@ class ListingDetailPage extends GetView<ListingDetailController> {
                   if (listing.expiresAt != null)
                     Text(
                       l10n.catalogExpiry(
-                        MaterialLocalizations.of(
-                          context,
-                        ).formatShortDate(listing.expiresAt!.toLocal()),
+                        MaterialLocalizations.of(context)
+                            .formatShortDate(listing.expiresAt!.toLocal()),
                       ),
                     ),
                   if (listing.qualityGrade != null)

@@ -13,11 +13,9 @@ import 'package:agri_connect/features/reference/domain/reference_entities.dart';
 
 import '../../support/fake_http_adapter.dart';
 
-Map<String, dynamic> _zoneFixture() =>
-    jsonDecode(
-          File('test/fixtures/api/reference_zones.json').readAsStringSync(),
-        )
-        as Map<String, dynamic>;
+Map<String, dynamic> _zoneFixture() => jsonDecode(
+  File('test/fixtures/api/reference_zones.json').readAsStringSync(),
+) as Map<String, dynamic>;
 
 void main() {
   test('reference zone fixture maps the real paginated item shape', () {

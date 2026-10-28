@@ -33,8 +33,8 @@ lib/
                   domain/{entities,<f>_repository.dart}
                   presentation/{controllers/,bindings/,pages/,widgets/}
   shared/widgets/ composants purement visuels (sans logique réseau)
-lib_legacy/ test_legacy/     ← ancien code, EXCLU de l'analyse, supprimé en P16. Ne jamais l'importer.
 ```
+Aucun dossier legacy n'est présent dans le dépôt. Les anciennes versions sont exclues du périmètre et ne doivent plus être importées.
 
 ## Règles GetX (non négociables)
 1. Un écran = un `GetxController` (dans `presentation/controllers/`) + un `Binding` (`presentation/bindings/`) + une page.
@@ -76,7 +76,7 @@ Utilisateurs peu technophiles : phrases courtes, un seul appel à l'action princ
 ## Mode de travail
 - **Une phase = un commit**, message Conventional Commits (`feat(auth): …`) + **description détaillée** (liste des fichiers, décisions, écarts constatés). Ne jamais `git push`.
 - Rester dans le périmètre de la phase. Pas de refactor « au passage ». Pas de nouvelle dépendance non listée dans le prompt sans le dire.
-- Avant de coder : lire le prompt, `API_REALITY.md`, puis les fichiers de `lib_legacy/` indiqués pour **porter l'UI** (conserver design, textes, thème).
+- Avant de coder : lire le prompt, `API_REALITY.md`, puis les fichiers de l'architecture actuelle correspondante pour **porter l'UI** (conserver design, textes, thème).
 - Si un fait de l'API contredit le prompt : **s'arrêter et le signaler** avec la preuve (extrait de code backend, réponse `curl`).
 - Après **2 tentatives infructueuses** sur le même problème : arrêter et rapporter (commande, erreur, hypothèses). Ne pas contourner par un mock.
 - Backend local pour vérifier : `http://10.0.2.2:4000/api/v2` (émulateur Android), `npm run seed:demo` côté backend.

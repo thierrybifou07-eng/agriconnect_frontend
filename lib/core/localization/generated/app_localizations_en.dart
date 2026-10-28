@@ -173,7 +173,259 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get notificationAiSuggestionBody =>
-      'A suggestion is available in the support queue.';
+      'Suggested reply from the assistant.';
+
+  @override
+  String get aiEngineTitle => 'AI engine';
+
+  @override
+  String get aiEngineLoadFailed => 'Could not load the AI engine status.';
+
+  @override
+  String get aiEnabled => 'Enabled';
+
+  @override
+  String get aiReachable => 'Reachable';
+
+  @override
+  String get aiModelInstalled => 'Model installed';
+
+  @override
+  String get aiProvider => 'Provider';
+
+  @override
+  String get aiModel => 'Model';
+
+  @override
+  String get aiBaseUrl => 'Service address';
+
+  @override
+  String get aiLatency => 'Last latency';
+
+  @override
+  String get aiQueue => 'Queue (pending / running)';
+
+  @override
+  String get aiDailyQuota => 'Daily quota';
+
+  @override
+  String get aiOllamaUnreachable =>
+      'Ollama is not responding. Run `ollama serve` on the backend PC.';
+
+  @override
+  String get aiGeminiUnreachable => 'The AI service is not reachable.';
+
+  @override
+  String get aiInvalidKey => 'The assistant API key is invalid.';
+
+  @override
+  String get aiModelNotFound => 'Model not found.';
+
+  @override
+  String get aiTest => 'Test';
+
+  @override
+  String get aiTestLatency => 'Test latency';
+
+  @override
+  String get aiDisabledMessage => 'The AI assistant is disabled.';
+
+  @override
+  String get aiBusyMessage => 'A suggestion is already in progress.';
+
+  @override
+  String get aiNoAgentMessage =>
+      'No active AI agent for this conversation type.';
+
+  @override
+  String get aiRateLimited =>
+      'The assistant quota has been reached. Please try again later.';
+
+  @override
+  String get aiInvalidOutput =>
+      'The assistant response could not be validated.';
+
+  @override
+  String get aiClosedApproval =>
+      'This conversation is closed. The suggestion cannot be sent.';
+
+  @override
+  String get aiSuggestReply => 'Suggest a reply';
+
+  @override
+  String get aiSuggestionReady => 'Ready suggestion';
+
+  @override
+  String get aiGenerating => 'The assistant is writing…';
+
+  @override
+  String get aiGenerationExplanation => 'This may take up to 1–2 minutes.';
+
+  @override
+  String get aiUse => 'Use';
+
+  @override
+  String get aiSend => 'Send';
+
+  @override
+  String get aiReject => 'Reject';
+
+  @override
+  String get aiRejectReason => 'Reason (optional)';
+
+  @override
+  String get aiIntent => 'Intent';
+
+  @override
+  String get aiConfidence => 'Confidence';
+
+  @override
+  String get aiLanguage => 'Language';
+
+  @override
+  String get aiHumanNeeded => 'Needs human review';
+
+  @override
+  String get aiVerifyNumbers => 'Verify numbers';
+
+  @override
+  String get aiSuggestOnlyExplanation => 'Will be sent under your name.';
+
+  @override
+  String get aiApprovalExplanation =>
+      'Will be sent as Assistant AgriConnect (AI).';
+
+  @override
+  String get aiRetry => 'Try again';
+
+  @override
+  String get aiQueueTitle => 'AI suggestions';
+
+  @override
+  String get aiQueueOpen => 'Open conversation';
+
+  @override
+  String get aiStatusFilter => 'Status';
+
+  @override
+  String get aiKindFilter => 'Type';
+
+  @override
+  String get aiNoSuggestions => 'No suggestions yet.';
+
+  @override
+  String get aiStatusGenerating => 'Generating';
+
+  @override
+  String get aiStatusReady => 'Ready';
+
+  @override
+  String get aiStatusFailed => 'Failed';
+
+  @override
+  String get aiStatusExpired => 'Expired';
+
+  @override
+  String get aiStatusPending => 'Pending';
+
+  @override
+  String get aiEscalate => 'Escalate';
+
+  @override
+  String get aiKindReply => 'Reply';
+
+  @override
+  String get aiKindTriage => 'Triage';
+
+  @override
+  String get aiKindListingDraft => 'Listing draft';
+
+  @override
+  String get aiIntentProductQuestion => 'Product question';
+
+  @override
+  String get aiIntentPriceQuote => 'Quote request';
+
+  @override
+  String get aiIntentDeliveryQuestion => 'Delivery question';
+
+  @override
+  String get aiIntentVerification => 'Profile verification';
+
+  @override
+  String get aiIntentComplaint => 'Complaint';
+
+  @override
+  String get aiIntentOther => 'Other request';
+
+  @override
+  String get aiUrgencyLow => 'Low';
+
+  @override
+  String get aiUrgencyMedium => 'Normal';
+
+  @override
+  String get aiUrgencyHigh => 'High';
+
+  @override
+  String get aiUrgencyUrgent => 'Urgent';
+
+  @override
+  String get aiListingDraft => 'AI draft';
+
+  @override
+  String get aiDraftGenerating => 'The assistant is preparing a draft…';
+
+  @override
+  String get aiDraftTitle => 'Suggested title';
+
+  @override
+  String get aiDraftDescription => 'Suggested description';
+
+  @override
+  String get aiAgentCreate => 'Create AI agent';
+
+  @override
+  String get aiAgentCreated => 'AI agent created.';
+
+  @override
+  String get aiListingCreated => 'Listing created from the draft.';
+
+  @override
+  String get aiProviderOllama => 'Ollama (local)';
+
+  @override
+  String get aiProviderGemini => 'Gemini (cloud)';
+
+  @override
+  String get aiAutonomySuggest => 'Suggest only';
+
+  @override
+  String get aiAutonomyApproval => 'Act after approval';
+
+  @override
+  String get aiAutonomyAutonomous => 'Autonomous';
+
+  @override
+  String get aiAutonomousDisabled =>
+      'Autonomous mode is disabled by server configuration.';
+
+  @override
+  String get aiAutonomousWarning =>
+      'The local model can be wrong: reserve this for simple questions.';
+
+  @override
+  String get aiNoMoney => 'AI never handles money.';
+
+  @override
+  String get aiModelMismatch =>
+      'This agent model differs from the currently configured model.';
+
+  @override
+  String get aiStatusYes => 'Yes';
+
+  @override
+  String get aiStatusNo => 'No';
 
   @override
   String get notificationsRead => 'Read';
@@ -3847,7 +4099,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get staffContext => 'Context';
 
   @override
-  String get staffSuggestionReserved => 'AI suggestion — coming soon';
+  String get staffSuggestionReserved => 'AI suggestions';
 
   @override
   String get staffValidate => 'Validate';

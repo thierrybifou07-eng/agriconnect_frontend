@@ -66,9 +66,9 @@ void main() {
         isNull,
       );
       expect(
-        CapabilityMiddleware({
-          AgentCapability.stockValidation,
-        }).redirect(AppRoutes.staffLots)?.name,
+        CapabilityMiddleware({AgentCapability.stockValidation})
+            .redirect(AppRoutes.staffLots)
+            ?.name,
         AppRoutes.staff,
       );
     },

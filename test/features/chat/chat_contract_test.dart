@@ -9,13 +9,9 @@ import 'package:agri_connect/features/chat/domain/chat_entities.dart';
 
 void main() {
   test('conversation page DTO matches the client API contract', () {
-    final json =
-        jsonDecode(
-              File(
-                'test/fixtures/api/conversations_page.json',
-              ).readAsStringSync(),
-            )
-            as Map<String, dynamic>;
+    final json = jsonDecode(
+      File('test/fixtures/api/conversations_page.json').readAsStringSync(),
+    ) as Map<String, dynamic>;
 
     final page = Paginated<Conversation>.fromJson(json, ChatDto.conversation);
 
@@ -26,11 +22,9 @@ void main() {
   });
 
   test('messages page DTO exposes only the customer-safe sender label', () {
-    final json =
-        jsonDecode(
-              File('test/fixtures/api/messages_page.json').readAsStringSync(),
-            )
-            as Map<String, dynamic>;
+    final json = jsonDecode(
+      File('test/fixtures/api/messages_page.json').readAsStringSync(),
+    ) as Map<String, dynamic>;
 
     final page = Paginated<ChatMessage>.fromJson(json, ChatDto.message);
 

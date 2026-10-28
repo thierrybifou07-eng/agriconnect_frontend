@@ -209,9 +209,8 @@ class SupplierLotDetailPage extends GetView<SupplierLotDetailController> {
                 final quantityValid =
                     amount != null &&
                     amount > 0 &&
-                    RegExp(
-                      r'^\d+(?:\.\d{1,3})?$',
-                    ).hasMatch(quantity.text.trim());
+                    RegExp(r'^\d+(?:\.\d{1,3})?$')
+                        .hasMatch(quantity.text.trim());
                 final priceValid =
                     unitPrice != null &&
                     unitPrice > 0 &&
