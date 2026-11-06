@@ -88,8 +88,10 @@ class RealtimeService {
 
   void _forward(String event, Object? data) {
     final payload = _asPayload(data);
-    final sink = _controllers[event];
-    if (payload != null && sink != null && !sink.isClosed) sink.add(payload);
+    // No local variable for the controller: the close_sinks lint would flag
+    // it, although the controllers are closed in [dispose].
+    if (payload == null || (_controllers[event]?.isClosed ?? true)) return;
+    _controllers[event]!.add(payload);
   }
 
   Stream<Map<String, dynamic>> get messageNew =>
