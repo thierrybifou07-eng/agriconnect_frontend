@@ -5,9 +5,11 @@
 > toute nouvelle tâche, puis vérifier l'état réel du code et de Git (les chiffres
 > ci-dessous sont datés et peuvent être périmés).
 >
-> **Dernière mise à jour : 2026-10-21** — audit de reprise, création de ce document, puis
-> **push vérifié** des commits de documentation sur `origin/master` (cf. § 11.1 et § 11.2).
-> **Prochaine étape prioritaire :** reprendre la refonte UI/UX sur **Buyer** (ordre : Buyer → Supplier → Driver → Agent → Admin → Root/Super-admin).
+> **Dernière mise à jour : 2026-11-06** — ouverture de l'intégration backend, sur instruction explicite
+> du propriétaire du dépôt (§ 12). La refonte visuelle des six espaces se poursuit écran par écran,
+> à mesure que chacun est branché sur l'API.
+> **Prochaine étape prioritaire :** suivre `docs/INTEGRATION_PLAN.md` (phase 1, socle réseau).
+> Contrat réseau : `docs/API_CONTRACT.md`.
 
 ---
 
@@ -696,7 +698,7 @@ La refonte est **TERMINÉE** quand :
 - `dart analyze` est sans erreur ni avertissement nouveau ;
 - un **contrôle visuel réel sur emulator Android** a été effectué pour les 6 espaces, en FR et EN ;
 - le § 11 (historique) est à jour ;
-- **et seulement ensuite**, l'intégration backend peut être abordée.
+- *(levé le 2026-11-06)* ~~et seulement ensuite, l'intégration backend peut être abordée~~ : voir § 12.
 
 ---
 
@@ -1060,9 +1062,11 @@ désormais commités, et l'arbre de travail ne contient plus aucune modification
 
 **Interdits absolus :**
 
-- Commencer l'intégration backend avant la fin validée de la refonte des six dashboards
-  (sauf instruction explicite de l'utilisateur).
-- Modifier les routes, les rôles, les permissions ou la politique de publication.
+- Intégrer le backend hors de l'ordre de `docs/INTEGRATION_PLAN.md` (l'interdit initial, « pas
+  d'intégration avant la fin de la refonte », a été levé le 2026-11-06 sur instruction du propriétaire).
+- Modifier les routes, les rôles, les permissions ou la politique de publication **en dehors** des
+  changements prévus par `docs/INTEGRATION_PLAN.md` (alignement sur le backend : 9 capacités, devis au
+  lieu du panier, lots au lieu des produits, suppression des écrans sans équivalent serveur).
 - Déclarer une étape terminée sans commit, sans tests et sans mention explicite du
   contrôle visuel (réalisé / non réalisé).
 - Écrire « push réussi » sans avoir vérifié la sortie de la commande.
@@ -1090,3 +1094,19 @@ désormais commités, et l'arbre de travail ne contient plus aucune modification
   `core.autocrlf=false`, sinon git affiche tout le fichier comme réécrit.
 - **Après tout build**, revérifier `git status` avant de conclure : le build ne doit
   laisser aucun fichier suivi modifié hors l10n régénéré.
+
+---
+
+## 12. Intégration backend (ouverte le 2026-11-06)
+
+- **Décision** : le propriétaire du dépôt a demandé de connecter l'application au backend
+  (`agriconnect-backend`, branche `feature/mobile-contract`) et de supprimer toutes les données fictives.
+  Riverpod est conservé ; la réécriture GetX de la branche `feature/api-connection-first` est abandonnée
+  (rôles Admin, Root et Agent inertes après connexion), mais sa couche réseau est réutilisée.
+- **Contrat** : `docs/API_CONTRACT.md` (lu dans le code du backend, prioritaire sur la spec OpenAPI pour
+  les formes de réponse).
+- **Plan et suivi** : `docs/INTEGRATION_PLAN.md` (42 commits frontend, 6 backend), plan détaillé :
+  https://claude.ai/artifact/HNhWPnpodzbn7vEkEybjqi
+- **Règles pour les agents de code** : `.github/copilot-instructions.md`.
+- **Branche** : le travail se fait sur `feature/api`, pas sur `master` ; les règles Git du § 10
+  s'appliquent à cette branche.
