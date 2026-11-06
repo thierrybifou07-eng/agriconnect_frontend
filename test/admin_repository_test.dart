@@ -65,7 +65,7 @@ const String _failureFr = 'L\'opération a échoué. Veuillez réessayer.';
 void main() {
   final builders = <String, AdminRepository Function()>{
     'DemoAdminRepository': () => DemoAdminRepository(latency: Duration.zero),
-    'FakeAdminRepository': () => FakeAdminRepository(),
+    'FakeAdminRepository': FakeAdminRepository.new,
   };
 
   for (final entry in builders.entries) {
