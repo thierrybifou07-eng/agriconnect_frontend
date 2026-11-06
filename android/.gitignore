@@ -12,3 +12,6 @@ GeneratedPluginRegistrant.java
 key.properties
 **/*.keystore
 **/*.jks
+
+# Journaux de plantage de la JVM (Gradle)
+hs_err_pid*.log
