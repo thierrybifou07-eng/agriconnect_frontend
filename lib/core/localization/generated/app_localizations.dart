@@ -4585,6 +4585,348 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Payments to track will appear here.'**
   String get agentPaymentEmptyBody;
+
+  /// No description provided for @errNotFound.
+  ///
+  /// In en, this message translates to:
+  /// **'Item not found. It may have been removed.'**
+  String get errNotFound;
+
+  /// No description provided for @errConflict.
+  ///
+  /// In en, this message translates to:
+  /// **'This action conflicts with the current state. Refresh.'**
+  String get errConflict;
+
+  /// No description provided for @errInvalidRequest.
+  ///
+  /// In en, this message translates to:
+  /// **'Some information is invalid. Check the form.'**
+  String get errInvalidRequest;
+
+  /// No description provided for @apiErrAccountSuspended.
+  ///
+  /// In en, this message translates to:
+  /// **'This account has been suspended. Contact the AgriConnect team.'**
+  String get apiErrAccountSuspended;
+
+  /// No description provided for @apiErrRoleForbidden.
+  ///
+  /// In en, this message translates to:
+  /// **'Your role does not allow this action.'**
+  String get apiErrRoleForbidden;
+
+  /// No description provided for @apiErrLevelForbidden.
+  ///
+  /// In en, this message translates to:
+  /// **'Your permissions do not allow this action.'**
+  String get apiErrLevelForbidden;
+
+  /// No description provided for @apiErrCapabilityRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'This action requires a capability your account does not have.'**
+  String get apiErrCapabilityRequired;
+
+  /// No description provided for @apiErrHumanActorRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Only a human team member can perform this action.'**
+  String get apiErrHumanActorRequired;
+
+  /// No description provided for @apiErrTokenInvalid.
+  ///
+  /// In en, this message translates to:
+  /// **'Your session has expired. Please sign in again.'**
+  String get apiErrTokenInvalid;
+
+  /// No description provided for @apiErrTokenMissing.
+  ///
+  /// In en, this message translates to:
+  /// **'Please sign in to continue.'**
+  String get apiErrTokenMissing;
+
+  /// No description provided for @apiErrRateLimited.
+  ///
+  /// In en, this message translates to:
+  /// **'Too many attempts. Try again in a few minutes.'**
+  String get apiErrRateLimited;
+
+  /// No description provided for @apiErrProfileNotVerified.
+  ///
+  /// In en, this message translates to:
+  /// **'Your profile must be verified first. Upload your documents.'**
+  String get apiErrProfileNotVerified;
+
+  /// No description provided for @apiErrNotVerified.
+  ///
+  /// In en, this message translates to:
+  /// **'The profile involved is not verified yet.'**
+  String get apiErrNotVerified;
+
+  /// No description provided for @apiErrProfileMissing.
+  ///
+  /// In en, this message translates to:
+  /// **'Your profile is incomplete.'**
+  String get apiErrProfileMissing;
+
+  /// No description provided for @apiErrInvalidStateTransition.
+  ///
+  /// In en, this message translates to:
+  /// **'This action is no longer possible in the current state. Refresh.'**
+  String get apiErrInvalidStateTransition;
+
+  /// No description provided for @apiErrFileTooLarge.
+  ///
+  /// In en, this message translates to:
+  /// **'File too large.'**
+  String get apiErrFileTooLarge;
+
+  /// No description provided for @apiErrFileRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Add at least one file.'**
+  String get apiErrFileRequired;
+
+  /// No description provided for @apiErrFileMissing.
+  ///
+  /// In en, this message translates to:
+  /// **'The file could not be found.'**
+  String get apiErrFileMissing;
+
+  /// No description provided for @apiErrFileContentMismatch.
+  ///
+  /// In en, this message translates to:
+  /// **'The file content does not match its type.'**
+  String get apiErrFileContentMismatch;
+
+  /// No description provided for @apiErrUnsupportedMediaType.
+  ///
+  /// In en, this message translates to:
+  /// **'File format not accepted.'**
+  String get apiErrUnsupportedMediaType;
+
+  /// No description provided for @apiErrInvalidMultipart.
+  ///
+  /// In en, this message translates to:
+  /// **'The file upload failed. Try again.'**
+  String get apiErrInvalidMultipart;
+
+  /// No description provided for @apiErrUnexpectedFileField.
+  ///
+  /// In en, this message translates to:
+  /// **'The file upload failed (unexpected field).'**
+  String get apiErrUnexpectedFileField;
+
+  /// No description provided for @apiErrTooManyPendingDocuments.
+  ///
+  /// In en, this message translates to:
+  /// **'You already have 5 documents under review.'**
+  String get apiErrTooManyPendingDocuments;
+
+  /// No description provided for @apiErrInsufficientStock.
+  ///
+  /// In en, this message translates to:
+  /// **'Not enough stock for this quantity.'**
+  String get apiErrInsufficientStock;
+
+  /// No description provided for @apiErrPriceBelowSupplier.
+  ///
+  /// In en, this message translates to:
+  /// **'The selling price cannot be below the price agreed with the supplier.'**
+  String get apiErrPriceBelowSupplier;
+
+  /// No description provided for @apiErrZoneNotCovered.
+  ///
+  /// In en, this message translates to:
+  /// **'No delivery agency covers this zone.'**
+  String get apiErrZoneNotCovered;
+
+  /// No description provided for @apiErrLotAlreadyLinked.
+  ///
+  /// In en, this message translates to:
+  /// **'This lot is already linked to a listing.'**
+  String get apiErrLotAlreadyLinked;
+
+  /// No description provided for @apiErrLotNotAvailable.
+  ///
+  /// In en, this message translates to:
+  /// **'This lot is not available.'**
+  String get apiErrLotNotAvailable;
+
+  /// No description provided for @apiErrListingNoLot.
+  ///
+  /// In en, this message translates to:
+  /// **'This listing has no available lot.'**
+  String get apiErrListingNoLot;
+
+  /// No description provided for @apiErrHubNoPickup.
+  ///
+  /// In en, this message translates to:
+  /// **'This hub does not accept pickups.'**
+  String get apiErrHubNoPickup;
+
+  /// No description provided for @apiErrInvalidDeliveryMode.
+  ///
+  /// In en, this message translates to:
+  /// **'Delivery mode not compatible with this action.'**
+  String get apiErrInvalidDeliveryMode;
+
+  /// No description provided for @apiErrInvalidOrderStatus.
+  ///
+  /// In en, this message translates to:
+  /// **'The order status does not allow this action.'**
+  String get apiErrInvalidOrderStatus;
+
+  /// No description provided for @apiErrPaymentRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'A confirmed payment is required before this step.'**
+  String get apiErrPaymentRequired;
+
+  /// No description provided for @apiErrIdempotencyKeyConflict.
+  ///
+  /// In en, this message translates to:
+  /// **'This payment was already sent with different data.'**
+  String get apiErrIdempotencyKeyConflict;
+
+  /// No description provided for @apiErrOverpayment.
+  ///
+  /// In en, this message translates to:
+  /// **'The amount exceeds the balance due.'**
+  String get apiErrOverpayment;
+
+  /// No description provided for @apiErrInvalidAmount.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid amount.'**
+  String get apiErrInvalidAmount;
+
+  /// No description provided for @apiErrInvalidQuantity.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid quantity.'**
+  String get apiErrInvalidQuantity;
+
+  /// No description provided for @apiErrCompensationRateZero.
+  ///
+  /// In en, this message translates to:
+  /// **'The compensation rate is set to zero in the settings.'**
+  String get apiErrCompensationRateZero;
+
+  /// No description provided for @apiErrCompensationQuantityExceeded.
+  ///
+  /// In en, this message translates to:
+  /// **'The quantity exceeds what can be compensated.'**
+  String get apiErrCompensationQuantityExceeded;
+
+  /// No description provided for @apiErrAgencyInsuranceExpired.
+  ///
+  /// In en, this message translates to:
+  /// **'The transport agency\'s insurance has expired.'**
+  String get apiErrAgencyInsuranceExpired;
+
+  /// No description provided for @apiErrBuyerNotActive.
+  ///
+  /// In en, this message translates to:
+  /// **'This buyer\'s account is not active.'**
+  String get apiErrBuyerNotActive;
+
+  /// No description provided for @apiErrDeliveryAlreadyTaken.
+  ///
+  /// In en, this message translates to:
+  /// **'Another driver has already taken this delivery.'**
+  String get apiErrDeliveryAlreadyTaken;
+
+  /// No description provided for @apiErrDeliveryAlreadyActive.
+  ///
+  /// In en, this message translates to:
+  /// **'You already have a delivery in progress.'**
+  String get apiErrDeliveryAlreadyActive;
+
+  /// No description provided for @apiErrDeliveriesAlreadyCreated.
+  ///
+  /// In en, this message translates to:
+  /// **'Deliveries for this order already exist.'**
+  String get apiErrDeliveriesAlreadyCreated;
+
+  /// No description provided for @apiErrNotDeliveryOwner.
+  ///
+  /// In en, this message translates to:
+  /// **'This delivery is not assigned to you.'**
+  String get apiErrNotDeliveryOwner;
+
+  /// No description provided for @apiErrNoDriverProfile.
+  ///
+  /// In en, this message translates to:
+  /// **'Your driver profile could not be found.'**
+  String get apiErrNoDriverProfile;
+
+  /// No description provided for @apiErrReferralCodeUnknown.
+  ///
+  /// In en, this message translates to:
+  /// **'Unknown referral code.'**
+  String get apiErrReferralCodeUnknown;
+
+  /// No description provided for @apiErrReferralCodeUnavailable.
+  ///
+  /// In en, this message translates to:
+  /// **'This referral code cannot be used.'**
+  String get apiErrReferralCodeUnavailable;
+
+  /// No description provided for @apiErrConversationClosed.
+  ///
+  /// In en, this message translates to:
+  /// **'This conversation is closed.'**
+  String get apiErrConversationClosed;
+
+  /// No description provided for @apiErrAiDisabled.
+  ///
+  /// In en, this message translates to:
+  /// **'The AI assistant is disabled.'**
+  String get apiErrAiDisabled;
+
+  /// No description provided for @apiErrAiNoAgent.
+  ///
+  /// In en, this message translates to:
+  /// **'No active AI agent has the required capability.'**
+  String get apiErrAiNoAgent;
+
+  /// No description provided for @apiErrAiBusy.
+  ///
+  /// In en, this message translates to:
+  /// **'A suggestion is already in progress for this conversation.'**
+  String get apiErrAiBusy;
+
+  /// No description provided for @apiErrAiRateLimited.
+  ///
+  /// In en, this message translates to:
+  /// **'AI assistant quota reached. Try again later.'**
+  String get apiErrAiRateLimited;
+
+  /// No description provided for @apiErrAiUnreachable.
+  ///
+  /// In en, this message translates to:
+  /// **'The AI engine is not responding.'**
+  String get apiErrAiUnreachable;
+
+  /// No description provided for @apiErrAiInvalidOutput.
+  ///
+  /// In en, this message translates to:
+  /// **'The AI answer was rejected by the safety rules.'**
+  String get apiErrAiInvalidOutput;
+
+  /// No description provided for @apiErrAiAuthFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'The AI provider key was refused.'**
+  String get apiErrAiAuthFailed;
+
+  /// No description provided for @apiErrAiModelMissing.
+  ///
+  /// In en, this message translates to:
+  /// **'The configured AI model could not be found.'**
+  String get apiErrAiModelMissing;
 }
 
 class _AppLocalizationsDelegate

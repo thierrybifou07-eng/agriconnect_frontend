@@ -2634,4 +2634,206 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get agentPaymentEmptyBody => 'Payments to track will appear here.';
+
+  @override
+  String get errNotFound => 'Item not found. It may have been removed.';
+
+  @override
+  String get errConflict =>
+      'This action conflicts with the current state. Refresh.';
+
+  @override
+  String get errInvalidRequest =>
+      'Some information is invalid. Check the form.';
+
+  @override
+  String get apiErrAccountSuspended =>
+      'This account has been suspended. Contact the AgriConnect team.';
+
+  @override
+  String get apiErrRoleForbidden => 'Your role does not allow this action.';
+
+  @override
+  String get apiErrLevelForbidden =>
+      'Your permissions do not allow this action.';
+
+  @override
+  String get apiErrCapabilityRequired =>
+      'This action requires a capability your account does not have.';
+
+  @override
+  String get apiErrHumanActorRequired =>
+      'Only a human team member can perform this action.';
+
+  @override
+  String get apiErrTokenInvalid =>
+      'Your session has expired. Please sign in again.';
+
+  @override
+  String get apiErrTokenMissing => 'Please sign in to continue.';
+
+  @override
+  String get apiErrRateLimited =>
+      'Too many attempts. Try again in a few minutes.';
+
+  @override
+  String get apiErrProfileNotVerified =>
+      'Your profile must be verified first. Upload your documents.';
+
+  @override
+  String get apiErrNotVerified => 'The profile involved is not verified yet.';
+
+  @override
+  String get apiErrProfileMissing => 'Your profile is incomplete.';
+
+  @override
+  String get apiErrInvalidStateTransition =>
+      'This action is no longer possible in the current state. Refresh.';
+
+  @override
+  String get apiErrFileTooLarge => 'File too large.';
+
+  @override
+  String get apiErrFileRequired => 'Add at least one file.';
+
+  @override
+  String get apiErrFileMissing => 'The file could not be found.';
+
+  @override
+  String get apiErrFileContentMismatch =>
+      'The file content does not match its type.';
+
+  @override
+  String get apiErrUnsupportedMediaType => 'File format not accepted.';
+
+  @override
+  String get apiErrInvalidMultipart => 'The file upload failed. Try again.';
+
+  @override
+  String get apiErrUnexpectedFileField =>
+      'The file upload failed (unexpected field).';
+
+  @override
+  String get apiErrTooManyPendingDocuments =>
+      'You already have 5 documents under review.';
+
+  @override
+  String get apiErrInsufficientStock => 'Not enough stock for this quantity.';
+
+  @override
+  String get apiErrPriceBelowSupplier =>
+      'The selling price cannot be below the price agreed with the supplier.';
+
+  @override
+  String get apiErrZoneNotCovered => 'No delivery agency covers this zone.';
+
+  @override
+  String get apiErrLotAlreadyLinked =>
+      'This lot is already linked to a listing.';
+
+  @override
+  String get apiErrLotNotAvailable => 'This lot is not available.';
+
+  @override
+  String get apiErrListingNoLot => 'This listing has no available lot.';
+
+  @override
+  String get apiErrHubNoPickup => 'This hub does not accept pickups.';
+
+  @override
+  String get apiErrInvalidDeliveryMode =>
+      'Delivery mode not compatible with this action.';
+
+  @override
+  String get apiErrInvalidOrderStatus =>
+      'The order status does not allow this action.';
+
+  @override
+  String get apiErrPaymentRequired =>
+      'A confirmed payment is required before this step.';
+
+  @override
+  String get apiErrIdempotencyKeyConflict =>
+      'This payment was already sent with different data.';
+
+  @override
+  String get apiErrOverpayment => 'The amount exceeds the balance due.';
+
+  @override
+  String get apiErrInvalidAmount => 'Invalid amount.';
+
+  @override
+  String get apiErrInvalidQuantity => 'Invalid quantity.';
+
+  @override
+  String get apiErrCompensationRateZero =>
+      'The compensation rate is set to zero in the settings.';
+
+  @override
+  String get apiErrCompensationQuantityExceeded =>
+      'The quantity exceeds what can be compensated.';
+
+  @override
+  String get apiErrAgencyInsuranceExpired =>
+      'The transport agency\'s insurance has expired.';
+
+  @override
+  String get apiErrBuyerNotActive => 'This buyer\'s account is not active.';
+
+  @override
+  String get apiErrDeliveryAlreadyTaken =>
+      'Another driver has already taken this delivery.';
+
+  @override
+  String get apiErrDeliveryAlreadyActive =>
+      'You already have a delivery in progress.';
+
+  @override
+  String get apiErrDeliveriesAlreadyCreated =>
+      'Deliveries for this order already exist.';
+
+  @override
+  String get apiErrNotDeliveryOwner => 'This delivery is not assigned to you.';
+
+  @override
+  String get apiErrNoDriverProfile => 'Your driver profile could not be found.';
+
+  @override
+  String get apiErrReferralCodeUnknown => 'Unknown referral code.';
+
+  @override
+  String get apiErrReferralCodeUnavailable =>
+      'This referral code cannot be used.';
+
+  @override
+  String get apiErrConversationClosed => 'This conversation is closed.';
+
+  @override
+  String get apiErrAiDisabled => 'The AI assistant is disabled.';
+
+  @override
+  String get apiErrAiNoAgent =>
+      'No active AI agent has the required capability.';
+
+  @override
+  String get apiErrAiBusy =>
+      'A suggestion is already in progress for this conversation.';
+
+  @override
+  String get apiErrAiRateLimited =>
+      'AI assistant quota reached. Try again later.';
+
+  @override
+  String get apiErrAiUnreachable => 'The AI engine is not responding.';
+
+  @override
+  String get apiErrAiInvalidOutput =>
+      'The AI answer was rejected by the safety rules.';
+
+  @override
+  String get apiErrAiAuthFailed => 'The AI provider key was refused.';
+
+  @override
+  String get apiErrAiModelMissing =>
+      'The configured AI model could not be found.';
 }
