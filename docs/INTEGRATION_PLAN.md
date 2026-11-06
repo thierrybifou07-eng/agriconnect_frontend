@@ -33,7 +33,7 @@ Statuts : À FAIRE · EN COURS · FAIT (commit) · ANNULÉ (raison).
 | 0 Préparation | C01 | chore(android): build with the local toolchain and allow network access | FAIT |
 | 0 Préparation | C02 | docs: API contract, integration plan and coding-agent rules | FAIT |
 | 1 Socle | C03 | feat(core): environment config, Dio client and typed API failures | FAIT (à vérifier : dart analyze, flutter test) |
-| 1 Socle | C04 | feat(auth): secure token storage and single-flight refresh | À FAIRE |
+| 1 Socle | C04 | feat(auth): secure token storage and single-flight refresh | FAIT (à vérifier : flutter pub get, dart analyze, flutter test) |
 | 1 Socle | C05 | feat(realtime): Socket.io service with token-aware reconnection | À FAIRE |
 | 2 Auth | C06 | feat(auth)!: remote authentication and backend user model | À FAIRE |
 | 2 Auth | C07 | feat(auth)!: sign-in without role picking, role-aware sign-up and recovery | À FAIRE |
