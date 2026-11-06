@@ -12,7 +12,7 @@ Statuts : À FAIRE · EN COURS · FAIT (commit) · ANNULÉ (raison).
 
 | Vérification | Résultat |
 |---|---|
-| `dart analyze` | Après C05 (2026-11-06) : 0 erreur, 0 avertissement, 7 remarques de style corrigées dans le commit suivant |
+| `dart analyze` | Après C05 (2026-11-06) : 0 erreur, 0 avertissement, 7 remarques de style, corrigées en deux commits (la dernière, `close_sinks`, dans `realtime_service.dart`) |
 | `flutter test` | Après C05 (2026-11-06) : 700 tests réussis |
 
 ## Backend (`agriconnect-backend`)
