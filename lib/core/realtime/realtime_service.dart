@@ -48,21 +48,15 @@ abstract final class RealtimeEvent {
 /// Message content and tokens are never logged.
 class RealtimeService {
   RealtimeService({
-    required RealtimeTransport transport,
-    required TokenStorage tokenStorage,
-    required Future<String?> Function() refreshAccessToken,
-    required SessionEvents sessionEvents,
-  }) : _transport = transport,
-       _tokenStorage = tokenStorage,
-       _refreshAccessToken = refreshAccessToken,
-       _sessionEvents = sessionEvents {
+    required this._transport,
+    required this._tokenStorage,
+    required this._refreshAccessToken,
+    required this._sessionEvents,
+  }) {
     for (final event in RealtimeEvent.all) {
-      final controller = StreamController<Map<String, dynamic>>.broadcast();
-      _controllers[event] = controller;
-      _transport.on(event, (data) {
-        final payload = _asPayload(data);
-        if (payload != null && !controller.isClosed) controller.add(payload);
-      });
+      // Closed in [dispose].
+      _controllers[event] = StreamController<Map<String, dynamic>>.broadcast();
+      _transport.on(event, (data) => _forward(event, data));
     }
     _transport
       ..on('connect', (_) => _onConnected())
@@ -85,11 +79,17 @@ class RealtimeService {
   final ValueNotifier<bool> connected = ValueNotifier(false);
 
   Stream<Map<String, dynamic>> events(String event) {
-    final controller = _controllers[event];
-    if (controller == null) {
+    final stream = _controllers[event]?.stream;
+    if (stream == null) {
       throw ArgumentError.value(event, 'event', 'Unknown realtime event');
     }
-    return controller.stream;
+    return stream;
+  }
+
+  void _forward(String event, Object? data) {
+    final payload = _asPayload(data);
+    final sink = _controllers[event];
+    if (payload != null && sink != null && !sink.isClosed) sink.add(payload);
   }
 
   Stream<Map<String, dynamic>> get messageNew =>
