@@ -44,3 +44,7 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Configuration locale (--dart-define-from-file) : copier un env/*.json.example
+env/*.json
+!env/*.json.example

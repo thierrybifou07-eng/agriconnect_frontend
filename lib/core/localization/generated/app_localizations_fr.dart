@@ -2666,4 +2666,211 @@ class AppLocalizationsFr extends AppLocalizations {
   @override
   String get agentPaymentEmptyBody =>
       'Les paiements à suivre apparaîtront ici.';
+
+  @override
+  String get errNotFound => 'Élément introuvable. Il a peut-être été supprimé.';
+
+  @override
+  String get errConflict =>
+      'Cette action entre en conflit avec l\'état actuel. Actualisez.';
+
+  @override
+  String get errInvalidRequest =>
+      'Certaines informations sont invalides. Vérifiez le formulaire.';
+
+  @override
+  String get apiErrAccountSuspended =>
+      'Ce compte a été suspendu. Contactez l\'équipe AgriConnect.';
+
+  @override
+  String get apiErrRoleForbidden => 'Votre rôle ne permet pas cette action.';
+
+  @override
+  String get apiErrLevelForbidden =>
+      'Vos droits ne permettent pas cette action.';
+
+  @override
+  String get apiErrCapabilityRequired =>
+      'Cette action demande une capacité que votre compte n\'a pas.';
+
+  @override
+  String get apiErrHumanActorRequired =>
+      'Seul un membre humain de l\'équipe peut effectuer cette action.';
+
+  @override
+  String get apiErrTokenInvalid =>
+      'Votre session a expiré. Veuillez vous reconnecter.';
+
+  @override
+  String get apiErrTokenMissing => 'Veuillez vous connecter pour continuer.';
+
+  @override
+  String get apiErrRateLimited =>
+      'Trop de tentatives. Réessayez dans quelques minutes.';
+
+  @override
+  String get apiErrProfileNotVerified =>
+      'Votre profil doit être vérifié avant cette action. Déposez vos documents.';
+
+  @override
+  String get apiErrNotVerified =>
+      'Le profil concerné n\'est pas encore vérifié.';
+
+  @override
+  String get apiErrProfileMissing => 'Votre profil est incomplet.';
+
+  @override
+  String get apiErrInvalidStateTransition =>
+      'Cette action n\'est plus possible dans l\'état actuel. Actualisez.';
+
+  @override
+  String get apiErrFileTooLarge => 'Fichier trop volumineux.';
+
+  @override
+  String get apiErrFileRequired => 'Ajoutez au moins un fichier.';
+
+  @override
+  String get apiErrFileMissing => 'Le fichier est introuvable.';
+
+  @override
+  String get apiErrFileContentMismatch =>
+      'Le contenu du fichier ne correspond pas à son type.';
+
+  @override
+  String get apiErrUnsupportedMediaType => 'Format de fichier non accepté.';
+
+  @override
+  String get apiErrInvalidMultipart =>
+      'L\'envoi du fichier a échoué. Réessayez.';
+
+  @override
+  String get apiErrUnexpectedFileField =>
+      'L\'envoi du fichier a échoué (champ inattendu).';
+
+  @override
+  String get apiErrTooManyPendingDocuments =>
+      'Vous avez déjà 5 documents en cours d\'examen.';
+
+  @override
+  String get apiErrInsufficientStock =>
+      'Stock insuffisant pour cette quantité.';
+
+  @override
+  String get apiErrPriceBelowSupplier =>
+      'Le prix de vente ne peut pas être inférieur au prix convenu avec le fournisseur.';
+
+  @override
+  String get apiErrZoneNotCovered =>
+      'Cette zone n\'est pas desservie par une agence de livraison.';
+
+  @override
+  String get apiErrLotAlreadyLinked => 'Ce lot est déjà lié à une annonce.';
+
+  @override
+  String get apiErrLotNotAvailable => 'Ce lot n\'est pas disponible.';
+
+  @override
+  String get apiErrListingNoLot => 'Cette annonce n\'a pas de lot disponible.';
+
+  @override
+  String get apiErrHubNoPickup =>
+      'Ce point de dépôt n\'accepte pas les retraits.';
+
+  @override
+  String get apiErrInvalidDeliveryMode =>
+      'Mode de livraison incompatible avec cette action.';
+
+  @override
+  String get apiErrInvalidOrderStatus =>
+      'Le statut de la commande ne permet pas cette action.';
+
+  @override
+  String get apiErrPaymentRequired =>
+      'Un paiement confirmé est nécessaire avant cette étape.';
+
+  @override
+  String get apiErrIdempotencyKeyConflict =>
+      'Ce paiement a déjà été envoyé avec d\'autres données.';
+
+  @override
+  String get apiErrOverpayment => 'Le montant dépasse le reste à payer.';
+
+  @override
+  String get apiErrInvalidAmount => 'Montant invalide.';
+
+  @override
+  String get apiErrInvalidQuantity => 'Quantité invalide.';
+
+  @override
+  String get apiErrCompensationRateZero =>
+      'Le taux d\'indemnisation est à zéro dans les réglages.';
+
+  @override
+  String get apiErrCompensationQuantityExceeded =>
+      'La quantité dépasse ce qui peut être indemnisé.';
+
+  @override
+  String get apiErrAgencyInsuranceExpired =>
+      'L\'assurance de l\'agence de transport a expiré.';
+
+  @override
+  String get apiErrBuyerNotActive =>
+      'Le compte de cet acheteur n\'est pas actif.';
+
+  @override
+  String get apiErrDeliveryAlreadyTaken =>
+      'Cette course a déjà été prise par un autre livreur.';
+
+  @override
+  String get apiErrDeliveryAlreadyActive =>
+      'Vous avez déjà une course en cours.';
+
+  @override
+  String get apiErrDeliveriesAlreadyCreated =>
+      'Les livraisons de cette commande existent déjà.';
+
+  @override
+  String get apiErrNotDeliveryOwner =>
+      'Cette course ne vous est pas attribuée.';
+
+  @override
+  String get apiErrNoDriverProfile => 'Votre profil livreur est introuvable.';
+
+  @override
+  String get apiErrReferralCodeUnknown => 'Code de parrainage inconnu.';
+
+  @override
+  String get apiErrReferralCodeUnavailable =>
+      'Ce code de parrainage ne peut pas être utilisé.';
+
+  @override
+  String get apiErrConversationClosed => 'Cette conversation est fermée.';
+
+  @override
+  String get apiErrAiDisabled => 'L\'assistant IA est désactivé.';
+
+  @override
+  String get apiErrAiNoAgent =>
+      'Aucun agent IA actif n\'a la capacité requise.';
+
+  @override
+  String get apiErrAiBusy =>
+      'Une suggestion est déjà en cours pour cette conversation.';
+
+  @override
+  String get apiErrAiRateLimited =>
+      'Quota de l\'assistant IA atteint. Réessayez plus tard.';
+
+  @override
+  String get apiErrAiUnreachable => 'Le moteur IA ne répond pas.';
+
+  @override
+  String get apiErrAiInvalidOutput =>
+      'La réponse de l\'IA a été rejetée par les règles de sécurité.';
+
+  @override
+  String get apiErrAiAuthFailed => 'La clé du fournisseur IA est refusée.';
+
+  @override
+  String get apiErrAiModelMissing => 'Le modèle IA configuré est introuvable.';
 }

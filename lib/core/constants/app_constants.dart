@@ -72,16 +72,6 @@ abstract final class AppDurations {
   static const Duration long = Duration(milliseconds: 600);
 }
 
-/// Central place for api configuration.
-abstract final class ApiConfig {
-  static const String baseUrl = String.fromEnvironment(
-    'API_BASE_URL',
-    defaultValue: 'https://api.agriconnect.app',
-  );
-  static const Duration connectTimeout = Duration(seconds: 15);
-  static const Duration receiveTimeout = Duration(seconds: 30);
-}
-
 /// Supported UI languages.
 abstract final class AppLanguage {
   static const String defaultCode = 'fr';
