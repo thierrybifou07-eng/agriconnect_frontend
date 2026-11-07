@@ -19,7 +19,7 @@
 | Socket.io | racine de l'origine (`http://10.0.2.2:4000`), **pas** `/api/v2` |
 | Médias publics | l'API renvoie `/uploads/<dossier>/<fichier>` (relatif) → préfixer par l'**origine** (sans `/api/v2`) |
 | Santé | `GET /health` → `{status:'ok'}` (hors préfixe) |
-| Rate limit | `/auth/register`, `/auth/login` : 10 / 15 min / IP ; `/auth/refresh` : 60 ; `/auth/forgot-password` : 5. 429 `{error}` **sans code** |
+| Rate limit | `/auth/register`, `/auth/login` : 10 / 15 min / IP ; `/auth/refresh` : 60 ; `/auth/forgot-password` : 5. 429 `{error, code:'RATE_LIMITED'}` |
 
 ## 2. Enveloppes
 
@@ -29,7 +29,7 @@ Champs d'appoint : `PROFILE_NOT_VERIFIED` (403) ajoute `profileVerificationStatu
 ajoute `expectedField` ; `AI_RATE_LIMITED` peut ajouter `retryAfterMs`.
 
 **Beaucoup d'erreurs n'ont pas de `code`** : 401 « Token invalide ou expiré », 403 « Capacité requise » (code
-`CAPABILITY_REQUIRED` côté IA seulement), 403 « Accès refusé pour ce rôle », 403 « Ce compte a été suspendu », 429.
+`CAPABILITY_REQUIRED` côté IA seulement), 403 « Accès refusé pour ce rôle », 403 « Ce compte a été suspendu » (sauf au login et au refresh, qui envoient `ACCOUNT_SUSPENDED`).
 Le client doit donc se replier sur *statut HTTP + message*.
 
 Pagination : `{ items, page, limit, total }`, `page ≥ 1`, `1 ≤ limit ≤ 100`, défaut 20.
@@ -55,12 +55,16 @@ Codes IA [code] : `AI_DISABLED`, `AI_BUSY`, `AI_NO_AGENT` (409) ; `AI_RATE_LIMIT
 ## 3. Authentification et sessions
 
 - `POST /auth/login {email,password}` → `200 {user, accessToken, refreshToken}`. **Aucun champ rôle** : le client
-  lit `user.role.code`. 401 identifiants ; 403 compte suspendu ; 429 trop de tentatives.
+  lit `user.role.code`. `user` = User + `agent`, **sans `media` ni `profile`** (les lire ensuite par `GET /auth/me`).
+  401 identifiants (**sans code**) ; 403 `ACCOUNT_SUSPENDED` ; 429 `RATE_LIMITED`.
 - `POST /auth/register` → `201 {user, accessToken, refreshToken}`. **Rôles publics : SUPPLIER ou BUYER uniquement.**
   Un DRIVER est créé par un ADMIN (`POST /admin/users` avec `agencyId`), jamais en auto-inscription.
   Champs : `firstname`(≥2) `lastname`(≥2) `phone`(`^\+?[0-9]{8,15}$`) `email` `password` `role`
   `acceptTerms`(**doit valoir true**) ; optionnels `location`, `referralCode`(≤20), `farmName`(2–120, SUPPLIER),
-  `buyerType`(RETAILER|FARMER|WHOLESALER|OTHER), `businessName`(≤120). 409 : email ou téléphone déjà pris (codes distincts).
+  `buyerType`(RETAILER|FARMER|WHOLESALER|OTHER), `businessName`(≤120). Réponse : `user` = User seul (ni `agent`, ni
+  `media`, ni `profile`). 409 **sans code** : seul le message distingue « … avec cet email » et « … avec ce numéro ».
+  `REFERRAL_CODE_UNKNOWN` (400) si le code de parrainage n'existe pas. Documents acceptés via `acceptTerms` :
+  BUYER → `CGU` + `BUYER_TERMS` ; SUPPLIER → `CGU` + `SUPPLIER_CONSIGNMENT_TERMS` (`GET /legal/{code}?lang=fr|en`).
 - **Mot de passe** : `^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])(?!.*(.)\1\1\1)[A-Za-z\d@$!%*?&]{8,}$`.
   Seuls `@$!%*?&` sont acceptés comme caractères spéciaux ; 4 caractères identiques d'affilée sont interdits.
 - **Access token** : JWT, 1 h par défaut. **Refresh token** : opaque, 30 j, **rotation à chaque refresh** ;
@@ -93,7 +97,7 @@ User { id:int, firstname, lastname, email, phone, location:string|null,
        role:{code,label}, userStatus:{code,label}, emailVerified:bool,
        profileVerificationStatus:'UNVERIFIED'|'PENDING'|'VERIFIED'|'REJECTED',
        referralCode:string|null, createdAt }
-GET /auth/me et login ajoutent : media:[{id,url,isPrimary,position}], profile, agent
+GET /auth/me ajoute : media:[{id,url,isPrimary,position}], profile, agent ; login n'ajoute que agent ; register n'ajoute rien
 agent: {id, displayName, kind:'HUMAN'|'AI', autonomy|null, capabilities:string[] (triées)} | null   // non nul seulement pour AGENT avec fiche active
 profile: SUPPLIER {farmName, description|null, zoneId|null}
        | BUYER    {buyerType, businessName|null, zoneId|null}
