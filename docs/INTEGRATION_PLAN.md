@@ -90,8 +90,10 @@ Statuts : À FAIRE · EN COURS · FAIT · ANNULÉ (raison).
 
 Pour **chaque** commit, dans l'ordre du tableau :
 
-1. Relire la fiche du commit (section 6), les sections concernées de `docs/API_CONTRACT.md` et le code existant
-   touché. Pour tout ce qui est « porté de la branche GetX », lire d'abord le fichier source sur
+1. Lire la spécification détaillée de la phase dans `docs/specs/` quand elle existe (elle prime sur la fiche),
+   sinon la fiche du commit (section 6). Puis les sections concernées de `docs/API_CONTRACT.md` et le code existant
+   touché. Si la phase n'a pas encore de spécification, s'arrêter et la demander avant d'écrire du code.
+   Pour tout ce qui est « porté de la branche GetX », lire d'abord le fichier source sur
    `origin/feature/api-connection-first`.
 2. Annoncer en quelques lignes les fichiers qui vont changer, puis implémenter **uniquement** cette fiche.
 3. Vérifier : `flutter analyze` (0 erreur, aucun nouvel avertissement), `flutter test` (vert), `git diff --check`.
@@ -145,6 +147,9 @@ code du backend fait foi, pas `openapi.yaml`.
 
 ### Phase 2 — Authentification
 
+> **Spécification détaillée : `docs/specs/phase-02-auth.md`** (elle prime sur les fiches ci-dessous : C06 retire
+> l'inscription et les comptes de démonstration, C07 recrée l'inscription au format du backend).
+>
 > Point de contrôle : C08 doit être vert avant d'aller plus loin. S'il échoue, on corrige la coquille, jamais le test.
 
 #### C06
@@ -238,7 +243,7 @@ feat(account): profile, avatar, sessions and email verification
 - Nouvelle page Mes sessions : liste, fermeture d'une session, fermer
   les autres (POST /auth/logout-all)
 - Bannière e-mail non vérifié avec renvoi du lien (attente de 5 min)
-- updateProfileName local supprimé
+- Modification du nom (supprimée en C06) réintroduite ici, via PATCH /auth/me
 ```
 
 #### C11
